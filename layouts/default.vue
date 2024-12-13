@@ -8,6 +8,7 @@
       </nav>
     </header>
       <slot></slot>
+      
   </div>
 </template>
 
