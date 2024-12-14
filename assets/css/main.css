@@ -1,6 +1,2 @@
-@font-face {
-  font-family: 'Proxima';
-  src: url('~/assets/fonts/Proxima/Proxima-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
+@import "../icomoon/style.css"
+
