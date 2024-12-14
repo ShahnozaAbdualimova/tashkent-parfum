@@ -1,5 +1,5 @@
-<script setup lang="ts"></script>
-
 <template>
-  <div>hi</div>
+  <div>
+    <CommonLogo />
+  </div>
 </template>
