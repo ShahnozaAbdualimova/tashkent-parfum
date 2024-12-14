@@ -1,12 +1,13 @@
+<script setup>
+
+</script>
+
 <template>
   <div>
-    <NuxtPage/>
-    
+    <CommonLogo/>
   </div>
 </template>
 
 <script>
 
-
 </script>
-

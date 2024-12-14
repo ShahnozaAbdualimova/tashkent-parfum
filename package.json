@@ -14,7 +14,10 @@
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "6.12.2",
+    "@rollup/rollup-win32-x64-msvc": "^4.28.1",
     "nuxt": "^3.14.1592",
+    "nuxt-swiper": "^2.0.0",
+    "swiper": "^11.1.15",
     "vue": "latest",
     "vue-router": "latest"
   },
