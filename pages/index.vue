@@ -1,9 +1,13 @@
-<script setup lang="ts">
-import MainSlider from '~/components/main/slider.vue';
+<script setup>
+
 </script>
 
 <template>
   <div>
-    <MainSlider/>
+    <CommonLogo/>
   </div>
 </template>
+
+<script>
+
+</script>
