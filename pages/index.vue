@@ -1,13 +1,5 @@
-<script setup>
-
-</script>
-
 <template>
   <div>
-    <CommonLogo/>
+    <CommonLogo />
   </div>
 </template>
-
-<script>
-
-</script>
