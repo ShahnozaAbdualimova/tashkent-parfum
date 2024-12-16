@@ -1,13 +1,11 @@
-<script setup>
-
-</script>
 
 <template>
   <div>
-    <CommonLogo/>
+    <LoyautHeader />  
+    <!-- <CategorycategorySection /> -->
   </div>
 </template>
 
-<script>
+<script setup>
 
 </script>
