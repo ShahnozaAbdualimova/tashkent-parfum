@@ -1,11 +1,6 @@
 
 <template>
   <div>
-    <LoyautHeader />  
-    <!-- <CategorycategorySection /> -->
+    <CommonLogo />
   </div>
 </template>
-
-<script setup>
-
-</script>
