@@ -12,6 +12,10 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+import BaseDropdown from "@/components/base/dropdown.vue";
+
+const option = [1,2,3,4,5];
 
 </script>
 
