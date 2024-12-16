@@ -7,13 +7,12 @@
         <NuxtLink to="/about">About</NuxtLink>
       </nav>
     </header>
-      <slot></slot>
-      
+    <slot></slot>
   </div>
 </template>
 
 <script setup>
 defineProps({
   // You can define props here if needed for the layout
-})
+});
 </script>
