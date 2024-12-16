@@ -5,6 +5,7 @@
 <template>
   <div>
     <CommonLogo/>
+    <Button>wefwef</Button>
   </div>
 </template>
 
