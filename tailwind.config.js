@@ -33,6 +33,11 @@ export default {
           100: '#FEF9FA',
           200: '#FEF8FA',
           300: '#F9F9F9',
+          400: '#F2F3F5',
+        },
+        gray: {
+          100: '#9E9EA5',
+          200: '#6F6F6F'
         },
       },
       backgroundImage: {
