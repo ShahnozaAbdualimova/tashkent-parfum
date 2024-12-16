@@ -6,12 +6,13 @@
     @click="handleClick"
   >
     <slot></slot>
+
   </button>
 </template>
 
 <script setup>
 import { computed } from "vue"
-
+// Props
 const props = defineProps({
   type: {
     type: String,
@@ -31,7 +32,7 @@ const props = defineProps({
 const computedClass = computed(() => {
   const baseClass =
   "px-4 py-2 rounded text-sm font-medium transition-all duration-300 flex items-center";
-  
+  // Btns
   const variantClass = {
     primary: "bg-blue-500 text-white hover:bg-blue-600",
     darkBtn: "font-proxima px-3 py-2 bg-dark-btn rounded-lg font-normal text-sm text-white-default duration-300 hover:bg-dark-btn-hover hover:text-black-300 group",
