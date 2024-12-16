@@ -17,6 +17,8 @@ export default {
           700: '#FBE0E0',
           800: '#F97495',
           900: '#FA89A5',
+          950: '#FEEBF0',
+
         },
         black: {
           default: '#000000',
@@ -33,6 +35,8 @@ export default {
           100: '#FEF9FA',
           200: '#FEF8FA',
           300: '#F9F9F9',
+          400: '#EAEBED',
+          500: '#CDCDD0'
         },
       },
       backgroundImage: {
