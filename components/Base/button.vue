@@ -37,3 +37,5 @@ const buttonStyle = computed(() => ({
     <slot></slot>
   </button>
 </template>
+
+<!-- created this button component -->
