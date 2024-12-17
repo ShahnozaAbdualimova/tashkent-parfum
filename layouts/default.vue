@@ -1,18 +1,13 @@
-<!-- layouts/error-layout.vue -->
+<!-- layouts/default.vue -->
 <template>
-  <div class="flex flex-col min-h-screen">
-    <header class="h-[182px] bg-gray-200">
-      <nav>
-        <NuxtLink to="/">Home</NuxtLink>
-        <NuxtLink to="/about">About</NuxtLink>
-      </nav>
-    </header>
-    <slot></slot>
+  <div>
+    <h1>Salom, header</h1>
+    <slot></slot> 
   </div>
 </template>
 
 <script setup>
 defineProps({
-  // You can define props here if needed for the layout
+
 });
 </script>
