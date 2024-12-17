@@ -1,100 +1,77 @@
 <template>
-  <div class="w-72 bg-white p-4">
-    <!-- Filter Header -->
-    <div class="flex justify-between items-center mb-6">
-      <h2 class="text-xl font-medium">Фильтр</h2>
+  <div class="bg-white p-4 rounded-xl w-[400px]">
+    <div class="flex justify-between items-center">
+      <h2 class="text-xl font-normal leading-6 text-gray-900">Фильтр</h2>
       <button
         @click="clearFilters"
-        class="text-gray-400 hover:text-gray-600 text-sm"
+        class="text-gray-500 hover:text-gray-700 transition-all duration-200 text-base font-normal"
       >
         очистить
       </button>
     </div>
 
-    <!-- Sections -->
-    <div class="mb-6">
+    <div class="border-b border-gray-200">
       <button
-        class="flex justify-between items-center w-full mb-4"
+        class="flex justify-between items-center w-full py-5"
         @click="toggleSections"
       >
-        <span class="font-medium">Разделы</span>
-        <!-- <ChevronUpIcon
-          :class="{ 'transform rotate-180': !sectionsOpen }"
-          class="w-5 h-5 transition-transform duration-200"
-        /> -->
-        <svg
-          :class="{ 'transform rotate-180': !sectionsOpen }"
-          class="w-5 h-5 transition-transform duration-200"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="m18 15-6-6-6 6" />
-        </svg>
+        <h3 class="font-normal text-base text-gray-900">Разделы</h3>
+        <i
+          :class="{ 'transform rotate-180 text-red-500': sectionsOpen }"
+          class="icon-chevron-down flex items-center justify-center w-5 h-5 transition-transform duration-200 text-gray-500"
+        ></i>
       </button>
 
-      <div v-show="sectionsOpen" class="space-y-3">
-        <label class="flex items-center">
-          <input
-            type="checkbox"
-            v-model="allSections"
-            class="w-4 h-4 rounded border-gray-300 text-pink-500 focus:ring-pink-500"
-          />
-          <span class="ml-2">Все разделы</span>
-        </label>
-
-        <div v-for="section in sections" :key="section.id" class="ml-0">
-          <label class="flex items-center">
-            <input
-              type="checkbox"
-              v-model="section.checked"
-              :disabled="allSections"
-              class="w-4 h-4 rounded border-gray-300 text-pink-500 focus:ring-pink-500"
-            />
-            <span class="ml-2">{{ section.name }}</span>
-          </label>
-          <ChevronDownIcon
-            v-if="section.hasSubmenu"
-            class="w-4 h-4 ml-8 text-gray-400"
-          />
+      <div v-show="sectionsOpen" class="flex flex-col">
+        <BaseCCheckBox v-model="allSections" class="mb-2"
+          >Все разделы</BaseCCheckBox
+        >
+        <div
+          v-for="section in sections"
+          :key="section.id"
+          class="flex m-0 p-0 justify-between"
+        >
+          <BaseCCheckBox
+            :submenu="section.hasSubmenu"
+            v-model="section.checked"
+            >{{ section.name }}</BaseCCheckBox
+          >
         </div>
 
         <button
           @click="showMore = !showMore"
-          class="text-pink-500 text-sm flex items-center mt-2"
+          class="text-sm font-normal flex text-red-500 gap-2 items-center mt-2 mb-5"
         >
-          <ChevronDownIcon
-            :class="{ 'transform rotate-180': showMore }"
-            class="w-4 h-4 mr-1"
-          />
+          <i
+            :class="{ 'transform rotate-180': !showMore }"
+            class="icon-chevron-down flex items-center justify-center w-5 h-5 transition-transform duration-200 text-red-500"
+          ></i>
           Еще +12
         </button>
       </div>
     </div>
 
-    <!-- Manufacturers -->
-    <div class="mb-6">
+    <div class="border-b border-gray-200">
       <button
-        class="flex justify-between items-center w-full"
+        class="flex justify-between items-center w-full py-5"
         @click="toggleManufacturers"
       >
-        <span class="font-medium">Производители</span>
-        <ChevronDownIcon
-          :class="{ 'transform rotate-180': manufacturersOpen }"
-          class="w-5 h-5 transition-transform duration-200"
-        />
+        <h3 class="font-normal text-base text-gray-900">Производители</h3>
+        <i
+          :class="{ 'transform rotate-180 text-red-500': manufacturersOpen }"
+          class="icon-chevron-down flex items-center justify-center w-5 h-5 transition-transform duration-200 text-gray-500"
+        ></i>
       </button>
+      <div v-show="manufacturersOpen" class="space-y-3">
+        <p class="text-gray-500">...</p>
+      </div>
     </div>
 
-    <!-- Discounted Items -->
-    <div class="flex justify-between items-center mb-6">
-      <span class="font-medium">Скидочные товары</span>
+    <div
+      @click="discountedOnly = !discountedOnly"
+      class="py-5 border-b border-gray-200 flex items-center justify-between cursor-pointer"
+    >
+      <h3 class="font-normal text-base text-gray-900">Скидочные товары</h3>
       <label class="relative inline-flex items-center cursor-pointer">
         <input type="checkbox" v-model="discountedOnly" class="sr-only peer" />
         <div
@@ -103,9 +80,10 @@
       </label>
     </div>
 
-    <!-- Price Range -->
-    <div class="mb-6">
-      <span class="font-medium block mb-3">Диапазон цены (сум)</span>
+    <div class="pt-5">
+      <span class="font-normal text-base text-gray-900 block mb-1.5"
+        >Диапазон цены (сум)</span
+      >
       <div class="flex items-center space-x-2">
         <div class="flex-1">
           <span class="text-sm text-gray-500 mb-1 block">от</span>
@@ -129,14 +107,13 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-// import { ChevronUpIcon, ChevronDownIcon } from 'lucide-vue-next';
+import { ref, watch } from 'vue';
 
 const sectionsOpen = ref(true);
 const manufacturersOpen = ref(false);
-const showMore = ref(false);
+const showMore = ref(true);
 const allSections = ref(true);
-const discountedOnly = ref(false);
+const discountedOnly = ref(true);
 const priceFrom = ref(0);
 const priceTo = ref(0);
 
@@ -167,4 +144,22 @@ const clearFilters = () => {
   priceFrom.value = 0;
   priceTo.value = 0;
 };
+
+watch(allSections, (newValue) => {
+  if (newValue) {
+    sections.value.forEach((section) => (section.checked = false));
+  }
+});
+
+watch(
+  sections,
+  (newSections) => {
+    if (newSections.every((section) => !section.checked)) {
+      allSections.value = true;
+    } else {
+      allSections.value = false;
+    }
+  },
+  { deep: true }
+);
 </script>
