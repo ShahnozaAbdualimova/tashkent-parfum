@@ -1,6 +1,10 @@
 @import '../icomoon/style.css';
 @import '../fonts/Proxima/stylesheet.css';
 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html,
 body {
   @apply bg-bodyBg;
