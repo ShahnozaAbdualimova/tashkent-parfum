@@ -7,7 +7,6 @@ const props = defineProps({
 </script>
 
 <template>
-  <!-- Layoutni ishlatish uchun NuxtLayout -->
   <NuxtLayout name="default">
     <main
       class="flex items-center justify-center bg-red-gradient"

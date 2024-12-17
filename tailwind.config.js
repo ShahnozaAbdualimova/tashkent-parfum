@@ -18,7 +18,6 @@ export default {
           800: '#F97495',
           900: '#FA89A5',
           950: '#FEEBF0',
-
         },
         black: {
           default: '#000000',
@@ -36,7 +35,10 @@ export default {
           200: '#FEF8FA',
           300: '#F9F9F9',
           400: '#EAEBED',
-          500: '#CDCDD0'
+          500: '#CDCDD0',
+        },
+        grey: {
+          100: '#6F6F6F',
         },
       },
       backgroundImage: {
@@ -47,7 +49,6 @@ export default {
         'dark-gradient':
           'linear-gradient(90deg, rgba(26,26,26,1) 0%, rgba(26,26,26,0.8) 74%, rgba(26,26,26,1) 100%)',
       },
-      
     },
   },
   plugins: [],
