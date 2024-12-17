@@ -7,6 +7,7 @@ export default {
         proxima: ['Proxima', 'sans-serif'],
       },
       colors: {
+        bodyBg: '#F7F8FA',
         red: {
           100: '#FDD3DE',
           200: '#FDDFE7',
@@ -20,7 +21,7 @@ export default {
           950: '#FEEBF0',
         },
         black: {
-          default: '#000000',
+          DEFAULT: '#000000',
           100: '#292929',
           200: '#282828',
           300: '#1A1A1A',
@@ -30,15 +31,12 @@ export default {
           700: '#2B2B2B',
         },
         white: {
-          default: '#fff',
+          DEFAULT: '#ffffff',
           100: '#FEF9FA',
           200: '#FEF8FA',
           300: '#F9F9F9',
           400: '#EAEBED',
-          500: '#CDCDD0',
-        },
-        grey: {
-          100: '#6F6F6F',
+          500: '#CDCDD0'
         },
       },
       backgroundImage: {
@@ -48,6 +46,10 @@ export default {
           'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(9,8,8,1) 100%)',
         'dark-gradient':
           'linear-gradient(90deg, rgba(26,26,26,1) 0%, rgba(26,26,26,0.8) 74%, rgba(26,26,26,1) 100%)',
+        'dark-btn':
+          'linear-gradient(90deg, rgba(56,56,56,1) 0%, rgba(111,111,111,1) 100%)',
+          'dark-btn-hover':
+          'linear-gradient(84.8deg,#d7d7d7,#f4f4f4 131.39%)'
       },
     },
   },

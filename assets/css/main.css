@@ -1,12 +1,8 @@
 @import '../icomoon/style.css';
 @import '../fonts/Proxima/stylesheet.css';
 
-@tailwind base;
-
-@tailwind components;
-
-@tailwind utilities;
-
-html{
-    font-family: 'Proxima', sans-serif;
+html,
+body {
+  @apply bg-bodyBg;
+  font-family: 'Proxima Nova Rg', sans-serif;
 }

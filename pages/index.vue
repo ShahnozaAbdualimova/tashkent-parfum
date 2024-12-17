@@ -1,4 +1,3 @@
-
 <template>
   <div>
     <h1>Salom, bu index sahifa!</h1>
