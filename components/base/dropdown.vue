@@ -4,18 +4,26 @@
             
         </div>
         <div class="options-wrapper">
-            <div class="option">
-
+            <div 
+                class="option"
+                v-for="(option, index) in options"
+                :key="index"
+            >
+            {{ option }}
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import BaseDropdown from "@/components/base/dropdown.vue";
+import { defineProps } from "vue";
 
-const option = [1,2,3,4,5];
+const props = defineProps({
+    options: {
+        type:  Array,
+        required: true
+    }
+})
 
 </script>
 
