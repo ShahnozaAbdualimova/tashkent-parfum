@@ -12,7 +12,7 @@
       </svg>
 
     </button>
-    <ul v-if="isOpen" class="absolute left-0 mt-2 w-full rounded-lg bg-white-default shadow-lg z-10 pl-3">
+    <ul v-if="isOpen" class="absolute left-0 mt-2 w-full rounded-lg bg-white-default shadow-lg z-10">
       <li v-for="(option, index) in options" :key="index" :class="[
         getVariantClasses(option),
         index === 0 ? 'rounded-t-lg' : '',
