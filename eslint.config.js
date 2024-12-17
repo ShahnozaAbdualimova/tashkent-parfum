@@ -1,6 +1,4 @@
-import globals from 'globals';
-import pluginJs from '@eslint/js';
-import pluginVue from 'eslint-plugin-vue';
+import pluginNuxt from 'eslint-plugin-nuxt';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -8,10 +6,16 @@ export default [
     files: ['**/*.{js,mjs,cjs,vue}'],
   },
   {
-    languageOptions: { globals: globals.browser },
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        definePageMeta: 'readonly',
+      },
+    },
   },
   pluginJs.configs.recommended,
   ...pluginVue.configs['flat/essential'],
+  pluginNuxt.configs.recommended, // Add Nuxt plugin config
   {
     rules: {
       'vue/multi-word-component-names': ['off'],
