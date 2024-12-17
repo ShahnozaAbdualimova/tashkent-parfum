@@ -27,10 +27,13 @@
                 <div class="flex  gap-8 ">
                     <CommonLogo />
                     <div class="flex items-center gap-4">
-                        <button class="flex gap-2 py-2 ps-2 pe-3 border rounded-lg text-sm catalog text-white hover:bg-gray-100">
-                            <span class="icon-list text-2xl"></span>
-                            Каталог
-                        </button>
+                        <BaseButton
+                        class="font-proxima px-3 py-2 bg-dark-btn rounded-lg font-normal text-sm text-white-default duration-300 hover:bg-dark-btn-hover hover:text-black-300 group"
+                        ><i
+                          class="icon-list text-2xl text-white-default duration-300 group-hover:text-black-100"
+                        ></i
+                        >Каталог</BaseButton
+                      >
                         <div class="flex items-center gap-2 px-2 bg-[#F2F3F5] text-[#6F6F6F] rounded-lg">
                             <div class="w-7 h-7 d-flex items-center justify-center">
                                 <i class="icon-search"></i>
@@ -45,16 +48,15 @@
                         v-for="i of items"
                         :key="i"              
                     >
-                        <i class="text-[20px]" :class="i.iconName"></i>
+                        <i class="text-xl" :class="i.iconName"></i>
                         <p class="text-xs">{{ i.itemName }}</p>
                     </div>
                 </div>
-                <button 
-                    class="text-sm flex justify-center items-center px-5 py-2.5 border rounded-lg bg-[#F62559] text-white hover:bg-red-500 transition-all duration-300"
-                >
-                    <i class="icon-login text-[24px]"></i>
-                    Войти
-                </button>
+               <BaseButton
+                    variant="danger"
+                    type="button"
+                ><i class="icon-login text-[24px]"></i>Войти
+                </BaseButton>
             </div>
         </header>
 

@@ -12,7 +12,7 @@ const categoryName = [
   {
     id: "bestseller",
     category:  "Бестселлеры",
-    img: "../../public/images/cards/bestsellers.svg"
+    img: "/images/cards/bestsellers.svg"
   }
 ]
 
