@@ -40,7 +40,7 @@ export default {
           600: '#F2F3F5',
         },
         grey: {
-          100: '#9E9EA5',,
+          100: '#9E9EA5',
         },
         grey: {
           100: '#6F6F6F',
