@@ -2,14 +2,14 @@
 <template>
   <div class="flex flex-col min-h-screen">
     <header class="h-[182px] bg-gray-200">
-      <nav>
+      <nav>                                                                                               
         <NuxtLink to="/">Home</NuxtLink>
         <NuxtLink to="/about">About</NuxtLink>
       </nav>
     </header>
     <slot></slot>
   </div>
-</template>
+</template>                                                                 
 
 <script setup>
 defineProps({
