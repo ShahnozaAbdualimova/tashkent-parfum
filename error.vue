@@ -1,20 +1,22 @@
 <script setup lang="ts">
-import type { NuxtError } from '#app'
+import type { NuxtError } from '#app';
 
 const props = defineProps({
-  error: Object as () => NuxtError
-})
+  error: Object as () => NuxtError,
+});
 </script>
 
 <template>
-  <!-- Layoutni ishlatish uchun NuxtLayout -->
   <NuxtLayout name="default">
-    <main class="flex items-center justify-center" :style="{ height: `calc(100vh - 182px)` }">
+    <main
+      class="flex items-center justify-center bg-red-gradient"
+      :style="{ height: `calc(100vh - 182px)` }"
+    >
       <div class="container mx-auto flex flex-col justify-center items-center">
         <img src="/images/error.svg" alt="Error Image" />
         <h3 class="font-bold text-3xl my-3">Ошибка!</h3>
         <p class="my-3">Страница не существует или недоступна</p>
-        <NuxtLink class="text-green-500" to="/">Go back home</NuxtLink>
+        <NuxtLink to="/">Go back home</NuxtLink>
       </div>
     </main>
   </NuxtLayout>
@@ -22,7 +24,7 @@ const props = defineProps({
 
 <style scoped>
 main {
-  background-image: url("/images/error-bg.svg");
+  background-image: url('/images/error-bg.svg');
   background-size: 100vw;
   background-repeat: no-repeat;
   background-position: center;
