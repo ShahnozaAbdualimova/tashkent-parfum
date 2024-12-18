@@ -8,7 +8,7 @@
       </h1>
       <i class="icon-chevron-down text-sm text-gray-400" :class="{ rotated : isRotated}"></i>
       <ul
-        class="mt-1 absolute z-10 rounded-md flex flex-col w-full top-10 left-0 drop-show h-auto border border-blue-100 bg-white drop-shadow-xl"
+        class="mt-1 absolute z-10 rounded-md flex flex-col w-full top-10 left-0 drop-show h-auto border border-blue-100 bg-white drop-shadow-xl bg-white-100"
         v-if="show"
         
       >
