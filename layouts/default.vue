@@ -1,4 +1,3 @@
-<!-- layouts/default.vue -->
 <template>
   <div>
     <LayoutHeader />
@@ -7,7 +6,9 @@
 </template>
 
 <script setup>
-defineProps({
+import LHeader from './LHeader.vue';
 
+defineProps({
+  layout: 'LHeader',  
 });
 </script>
