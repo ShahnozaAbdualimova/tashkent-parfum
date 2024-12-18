@@ -1,7 +1,8 @@
 <template>
   <div>
-    <LayoutHeader />
+    <LHeader /> 
     <CategorySection />
+    
   </div>
 </template>
 

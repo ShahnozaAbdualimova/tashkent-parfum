@@ -1,9 +1,9 @@
 <template>
     <div>
         <!-- <LoyautHeader /> -->
-        <LayoutCard :items="categoryName" class="px-32">
+        <BaseCard :items="categoryName" class="px-32">
           <slot />
-        </LayoutCard>
+        </BaseCard>
       </div>
 </template>
 
@@ -11,7 +11,7 @@
 const categoryName = [
   {
     id: "bestseller",
-    category:  "Бестселлеры",
+    category: "Бестселлеры",
     img: "/images/cards/bestsellers.svg"
   },
   {

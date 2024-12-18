@@ -43,7 +43,7 @@ export default {
           100: '#9E9EA5',
         },
         grey: {
-          100: '#6F6F6F'
+          100: '#6F6F6F',
           500: '#CDCDD0'
         },
       },

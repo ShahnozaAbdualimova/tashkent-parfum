@@ -1,5 +1,5 @@
 <template>
-    <div class="grid grid-cols-4 gap-y-4 gap-x-6 w-full p-4">
+    <RouterLink to="#" class="grid grid-cols-4 gap-y-4 gap-x-6 w-full p-4">
         <div 
             class="pt-4 ps-5 pb-4 bg-white rounded-xl flex justify-between w-auto h-auto border relative category-card hover:shadow-xl"
             v-for="i of items"
@@ -14,7 +14,7 @@
             </div>
             <img :src="i.img" alt="#" class="absolute right-0 bottom-0 rounded-br-lg">
         </div>
-    </div>
+    </RouterLink>
 </template>
 
 <script setup>

@@ -19,7 +19,7 @@
         index === options.length - 1 ? 'rounded-b-lg' : '',
         index !== 0 && index !== options.length - 1 ? 'border-y border-gray-300' : '',
         selectedValue === option ? 'bg-red-100 text-black-500' : '', 
-      ]" class="px-4 py-4 cursor-pointer hover:bg-white-200 text-xs text-grey-100" @click="selectOption(option)">
+      ]" class="px-4 py-4 cursor-pointer bg-white hover:bg-white-200 text-xs text-grey-100" @click="selectOption(option)">
         {{ option }}
         <span v-if="selectedValue === option" class="ml-2 text-red-500">✔</span> 
       </li>
