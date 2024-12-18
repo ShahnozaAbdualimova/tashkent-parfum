@@ -1,7 +1,8 @@
 <template>
   <div>
     <h1>Salom, bu index sahifa!</h1>
-    
+    <!-- <CommonCFilterSidebar/> -->
+    <CommonCSectionWrapper title="popular product"/>
   </div>
 </template>
 
