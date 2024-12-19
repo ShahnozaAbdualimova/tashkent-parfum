@@ -1,22 +1,27 @@
+
 <template>
-  <div class="flex items-center justify-center space-x-6 h-24">
+  <div class="flex items-center justify-center h-16 px-32">
     <div
       v-for="(link, index) in links"
       :key="index"
-      class="relative group overflow-hidden cursor-pointer"
+      class="relative group overflow-hidden cursor-pointer flex items-center"
     >
       <span
-        class="block text-sm font-semibold text-gray-800 group-hover:translate-y-[-100%] transition-transform duration-300"
+        class="block text-sm font-medium text-gray-800 group-hover:translate-y-[-100%] transition-transform duration-300"
       >
         {{ link.title }}
       </span>
       <span
-        class="absolute inset-0 text-sm font-semibold text-red-500 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300"
+        class="absolute inset-0 text-sm font-medium text-red-500 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300"
       >
         {{ link.title }}
       </span>
+      <!-- Chiziqcha faqat oxirgi elementdan oldin ko'rinadi -->
+      <div
+        v-if="index !== links.length - 1"
+        class="w-px h-4 bg-gray-300 mx-4"
+      ></div>
     </div>
-    <!-- add toolbar -->
   </div>
 </template>
 
@@ -32,4 +37,3 @@ const links = [
   { title: "Дезодоранты и антиперспиранты" },
 ];
 </script>
-
