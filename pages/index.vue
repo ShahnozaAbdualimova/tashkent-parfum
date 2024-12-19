@@ -1,13 +1,14 @@
 <template>
   <div>
-    <!-- <h1>Salom, bu index sahifa!</h1> -->
-    <!-- <CommonCFilterSidebar/> -->
-    <CustomSlider/>
+    <Home/>
+    
   </div>
 </template>
 
 <script setup>
-import CustomSlider from '~/components/common/CustomSlider.vue';
+import Home from './home.vue';
+
+
 
 definePageMeta({
   layout: 'default',  

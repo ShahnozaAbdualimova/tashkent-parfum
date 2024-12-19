@@ -27,7 +27,7 @@
                 <div class="flex  gap-8 ">
                     <CommonLogo />
                     <div class="flex items-center gap-4">
-                        <button class="flex gap-2 py-2 ps-2 pe-3 border rounded-lg text-sm catalog text-white hover:bg-gray-100">
+                        <button class="flex gap-2 py-2 ps-2 pe-3 border rounded-lg text-sm catalog text-white-default hover:bg-gray-100">
                             <span class="icon-list text-2xl"></span>
                             Каталог
                         </button>

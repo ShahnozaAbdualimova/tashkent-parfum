@@ -1,6 +1,7 @@
 <template>
   <div>
     <LHeader/>
+    <BaseToolbar/>
     <slot></slot> 
   </div>
 </template>
