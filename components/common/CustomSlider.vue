@@ -26,13 +26,12 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 
-export default {
   components: {
     Swiper,
     SwiperSlide,
@@ -55,7 +54,7 @@ export default {
       activeSlide: 1,
     };
   },
-};
+
 </script>
 
 <style scoped>

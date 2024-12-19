@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <div class="w-full">
         <div class="w-full py-2 bg-gray-50 px-32">
             <div class="w-full py-1 flex justify-between">
@@ -83,6 +84,42 @@
 
         <!-- create header -->
     </div>
+=======
+    <div>
+      <Input
+        v-model="username"
+        placeholder="Enter your username"
+        :error="hasError"
+        inputClass="bg-white"
+      >
+        <template #prefix>
+          <span class="mr-2">👤</span>
+        </template>
+        <template #suffix>
+          <span v-if="hasError" class="text-red-500">!</span>
+        </template>
+      </Input>
+
+      hi
+    </div>
+  </template>
+  
+  <script setup>
+  import Input from '@/components/Input.vue';
+  import { ref } from 'vue';
+  
+  const username = ref('');
+  const hasError = ref(false);
+  </script>
+  <header class="p-4">
+    <h1 class="text-xl font-semibold">Select Language</h1>
+    <Dropdown
+      :selectedValue="selectedLanguage"
+      :options="languages"
+      @update:selectedValue="setSelectedLanguage"
+    />
+  </header>
+>>>>>>> 7115d7afbdebf6d8e89e791686325871594be6ac
 </template>
 
 <script>
