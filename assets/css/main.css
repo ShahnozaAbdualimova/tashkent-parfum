@@ -7,6 +7,5 @@
 @tailwind utilities;
 html,
 body {
-  @apply bg-bodyBg;
   font-family: 'Proxima Nova Rg', sans-serif;
 }
