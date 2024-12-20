@@ -20,6 +20,12 @@ export default {
           900: '#FA89A5',
           950: '#FEEBF0',
         },
+        yellow:{
+          100: '#F8AF02'
+        },
+        green:{
+          100: '#26D176'
+        },
         black: {
           DEFAULT: '#000000',
           100: '#292929',
@@ -40,10 +46,11 @@ export default {
           600: '#F2F3F5',
         },
         grey: {
-          100: '#9E9EA5',
+          
         },
         grey: {
-          100: '#6F6F6F'
+          100: '#9E9EA5',
+          200: '#6F6F6F',
           500: '#CDCDD0'
         },
       },
