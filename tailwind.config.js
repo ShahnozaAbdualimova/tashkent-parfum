@@ -7,7 +7,6 @@ export default {
         proxima: ['Proxima', 'sans-serif'],
       },
       colors: {
-        bodyBg: '#F7F8FA',
         red: {
           100: '#FDD3DE',
           200: '#FDDFE7',
@@ -36,6 +35,7 @@ export default {
           200: '#FEF8FA',
           300: '#F9F9F9',
           400: '#F2F3F5',
+          500: '#F7F8FA',
         },
         gray: {
           100: '#9E9EA5',

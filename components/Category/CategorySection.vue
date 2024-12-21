@@ -15,5 +15,3 @@ const categoryName = [
   },
 ];
 </script>
-
-<style scoped></style>

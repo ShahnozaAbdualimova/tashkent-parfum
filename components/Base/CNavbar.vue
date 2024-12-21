@@ -17,7 +17,6 @@
           >
             {{ link.title }}
           </span>
-          <!-- Chiziqcha faqat oxirgi elementdan oldin ko'rinadi -->
           <div
             v-if="index !== links.length - 1"
             class="w-px h-4 bg-gray-300 mx-4"
