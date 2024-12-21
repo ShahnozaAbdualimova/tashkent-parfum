@@ -7,7 +7,6 @@ export default {
         proxima: ['Proxima', 'sans-serif'],
       },
       colors: {
-        bodyBg: '#F7F8FA',
         red: {
           100: '#FDD3DE',
           200: '#FDDFE7',
@@ -27,7 +26,7 @@ export default {
           100: '#26D176'
         },
         black: {
-          DEFAULT: '#000000',
+          default: '#000000',
           100: '#292929',
           200: '#282828',
           300: '#1A1A1A',
@@ -37,26 +36,22 @@ export default {
           700: '#2B2B2B',
         },
         white: {
-          DEFAULT: '#ffffff',
+          default: '#ffffff',
           100: '#FEF9FA',
           200: '#FEF8FA',
           300: '#F9F9F9',
           400: '#F2F3F5',
+          500: '#F7F8FA',
         },
         gray: {
           100: '#9E9EA5',
           200: '#6F6F6F',
           400: '#EAEBED',
           500: '#CDCDD0',
-          600: '#F2F3F5',
         },
         grey: {
-         
-        },
-        grey: {
-          100: '#6F6F6F',
-          200: '#9E9EA5',
-          500: '#CDCDD0'
+          100: '#9E9EA5',
+          500: '#CDCDD0',
         },
       },
       backgroundImage: {
@@ -68,8 +63,7 @@ export default {
           'linear-gradient(90deg, rgba(26,26,26,1) 0%, rgba(26,26,26,0.8) 74%, rgba(26,26,26,1) 100%)',
         'dark-btn':
           'linear-gradient(90deg, rgba(56,56,56,1) 0%, rgba(111,111,111,1) 100%)',
-          'dark-btn-hover':
-          'linear-gradient(84.8deg,#d7d7d7,#f4f4f4 131.39%)'
+        'dark-btn-hover': 'linear-gradient(84.8deg,#d7d7d7,#f4f4f4 131.39%)',
       },
     },
   },
