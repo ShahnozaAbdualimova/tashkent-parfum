@@ -1,16 +1,13 @@
 <template>
   <div>
-    <Home/>
-    
+    <Home />
   </div>
 </template>
 
 <script setup>
-import Home from './home.vue';
-
-
+import Home from '../components/Home/Home.vue';
 
 definePageMeta({
-  layout: 'default',  
+  layout: 'default',
 });
 </script>
