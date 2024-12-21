@@ -3,5 +3,7 @@
 <template>
   <div>
     <CommonCustomSlider />
+    <CommonProductSection/>
+
   </div>
 </template>

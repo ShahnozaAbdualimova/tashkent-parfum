@@ -1,13 +1,13 @@
 <template>
   <div
-    class="col-span-1 w-[180px] bg-grey-00 shadow-lg rounded-xl border-2 border-white-600 overflow-hidden"
+    class="col-span-1 w-[180px] bg-white-400 shadow-lg rounded-xl overflow-hidden"
   >
     <div class="relative">
       <!-- images -->
       <img
         :src="product.image"
         alt="img"
-        class="w-full  object-cover object-center"
+        class="w-full object-cover object-center"
       />
       <!-- discount -->
       <div
@@ -18,16 +18,20 @@
       </div>
     </div>
 
-    <div class="p-4  gap-1">
+    <div class="p-4 gap-1">
       <!-- Product name -->
       <h3 class="text-red-500 text-xs font-normal truncate font-proxima">
         {{ product.name }}
       </h3>
-      <p class="text-black-500 font-normal text-sm font-proxima">{{ product.brand }}</p>
+      <p class="text-black-500 font-normal text-sm font-proxima">
+        {{ product.brand }}
+      </p>
 
       <!-- price -->
       <div class="flex flex-col mt-1">
-        <span class="text-red-500 line-through text-sm font-normal font-proxima">
+        <span
+          class="text-red-500 line-through text-sm font-normal font-proxima"
+        >
           {{ product.oldPrice }} UZS
         </span>
         <span class="text-black-500 font-normal text-base font-proxima">
@@ -45,42 +49,64 @@
       </div>
 
       <!-- Counter -->
-      <div v-if="isCounterVisible" class="flex items-center justify-center mt-4">
+      <div
+        v-if="isCounterVisible"
+        class="flex items-center relative justify-center mt-4 gap-1"
+      >
         <button
           class="px-3 py-2.5 flex items-center justify-center bg-white-100 rounded-l-lg rounded-r-sm"
           @click="decrement"
         >
-          <i class="icon-minus text-red-500"></i>
+          <i class="icon-minus text-[20px] text-red-500"></i>
         </button>
 
-        <span class="mx-4 px-3 py-1.5 text-base text-black-500 bg-white-100 font-normal">
+        <span
+          class="text-lg rounded-lg px-6 py-1.5 text-black-500 bg-white-100 font-normal"
+        >
           {{ counter }}
         </span>
 
         <button
-          class="px-3 py-2.5  flex items-center justify-center bg-white-100 rounded-r-lg rounded-l-sm"
+          :class="{
+            'bg-gray-400': counter === maxLimit,
+            'bg-white-100': counter < maxLimit,
+          }"
+          class="px-3 py-2.5  flex items-center justify-center rounded-r-lg rounded-l-sm"
           @click="increment"
         >
-          <i class="icon-plus text-green-100"></i>
+          <i
+            :class="{
+              'text-gray-500': counter === maxLimit,
+              'text-green-100': counter < maxLimit,
+            }"
+            class="icon-plus text-[20px]"
+          ></i>
         </button>
+
+        <div
+          v-if="showMaxTooltip"
+          class="absolute top-[-10px] -right-5 transform -translate-x-1/2 bg-black-700 text-white-default px-2 py-1 rounded-md text-xs"
+        >
+          Max
+        </div>
+        
       </div>
-      <BaseButton
-        v-else
-        variant="danger"
-        class="text-white-100 items-center justify-center flex mt-2"
-        @click="showCounter"
-      >
-        <i
-          class="icon-basket text-[24px] items-center flex text-white-100 duration-300 group-hover:text-white-100"
-        ></i>
-        В корзину
-      </BaseButton>
+      <div v-else class="flex justify-center mt-2">
+        <BaseButton
+          variant="danger"
+          class="text-white-100"
+          @click="showCounter"
+        >
+          <i
+            class="icon-basket text-[24px] items-center flex text-white-100 duration-300 group-hover:text-white-100"
+          ></i>
+          В корзину
+        </BaseButton>
+      </div>
     </div>
   </div>
 </template>
-
 <script setup>
-
 // Props for the product data
 defineProps({
   product: {
@@ -90,24 +116,48 @@ defineProps({
 });
 
 // Reactive state variables
-const isCounterVisible = ref(false);
-const counter = ref(1);
+const isCounterVisible = ref(false); // Display counter visibility
+const counter = ref(1); // Current counter value
+const maxLimit = 2; // Maximum value for the counter
+const showMaxTooltip = ref(false); // Display the "Max" tooltip
 
-// Methods
+// Show the counter
 const showCounter = () => {
   isCounterVisible.value = true;
 };
 
+// Increment the counter value
 const increment = () => {
-  counter.value++;
+  if (counter.value < maxLimit) {
+    counter.value++;
+    hideMaxTooltip(); // Hide the "Max" tooltip if it was displayed
+  } else {
+    displayMaxTooltip(); // Show the "Max" tooltip
+  }
 };
 
+// Decrement the counter value
 const decrement = () => {
   if (counter.value > 1) {
     counter.value--;
+  } else {
+    isCounterVisible.value = false; // Hide the counter when decreasing to 1
   }
 };
+
+// Show the "Max" tooltip
+const displayMaxTooltip = () => {
+  showMaxTooltip.value = true;
+  setTimeout(hideMaxTooltip, 500); // Hide the tooltip after 1.5 seconds
+};
+
+// Hide the "Max" tooltip
+const hideMaxTooltip = () => {
+  showMaxTooltip.value = false;
+};
+
 </script>
+
 
 <style scoped>
 .rotate {
