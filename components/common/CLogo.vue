@@ -129,12 +129,11 @@ import { computed } from 'vue';
 const props = defineProps({
   type: {
     type: String,
-    default: 'dark', // light, dark
+    default: 'dark', // 'light' yoki 'dark' ni qabul qiladi
   },
 });
 
-logoStyles = computed(() => {
-  // Check the condition, if light it will be red, otherwise black
+const logoStyles = computed(() => {
   return props.type === 'light' ? 'text-red-500' : 'text-black';
 });
 </script>

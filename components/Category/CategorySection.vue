@@ -1,9 +1,8 @@
 <template>
   <div>
-    <!-- <LoyautHeader /> -->
-    <LoyautCard :items="categoryName">
+    <BaseCCard :items="categoryName">
       <slot />
-    </LoyautCard>
+    </BaseCCard>
   </div>
 </template>
 
@@ -12,9 +11,7 @@ const categoryName = [
   {
     id: 'bestseller',
     category: 'Бестселлеры',
-    img: '../../public/images/cards/bestsellers.svg',
+    img: '/images/cards/bestsellers.svg',
   },
 ];
 </script>
-
-<style scoped></style>

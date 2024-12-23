@@ -1,12 +1,13 @@
 <template>
   <div>
-    <h1>Salom, bu index sahifa!</h1>
-    <CommonCFilterSidebar/>
+    <Home />
   </div>
 </template>
 
 <script setup>
+import Home from '../components/Home/Home.vue';
+
 definePageMeta({
-  layout: 'default',  
+  layout: 'default',
 });
 </script>
