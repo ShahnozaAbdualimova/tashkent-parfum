@@ -5,8 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
 body {
   font-family: 'Proxima Nova Rg', sans-serif;
-  background-color: #F7F8FA;
 }
-
+.noscroll {
+    overflow: hidden;
+}
