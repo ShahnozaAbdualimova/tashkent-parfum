@@ -35,6 +35,25 @@ export default {
           100: '#FEF9FA',
           200: '#FEF8FA',
           300: '#F9F9F9',
+<<<<<<< HEAD
+=======
+          400: '#F2F3F5',
+        },
+        gray: {
+          100: '#9E9EA5',
+          200: '#6F6F6F'
+          400: '#EAEBED',
+          500: '#CDCDD0',
+          600: '#F2F3F5',
+        },
+        grey: {
+         
+        },
+        grey: {
+          100: '#6F6F6F',
+          200: '#9E9EA5',
+          500: '#CDCDD0'
+>>>>>>> 59ca00bb4a6b5c62613996cc975851540c4511a7
         },
       },
       backgroundImage: {
