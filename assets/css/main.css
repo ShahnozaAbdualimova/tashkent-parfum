@@ -1,12 +1,5 @@
 @import '../icomoon/style.css';
 @import '../fonts/Proxima/stylesheet.css';
-<<<<<<< HEAD
-=======
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
->>>>>>> 59ca00bb4a6b5c62613996cc975851540c4511a7
 
 
 @tailwind base;
@@ -16,10 +9,3 @@ html,
 body {
   font-family: 'Proxima Nova Rg', sans-serif;
 }
-<<<<<<< HEAD
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-=======
->>>>>>> 59ca00bb4a6b5c62613996cc975851540c4511a7
