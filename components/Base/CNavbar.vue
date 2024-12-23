@@ -1,7 +1,7 @@
 <template>
   <navbar class="border-t border-white-400 mt-3">
     <div class="container mx-auto">
-      <div class="flex items-center justify-between h-16 px-12">
+      <div class="flex items-center justify-between h-16 px-32">
         <div
           v-for="(link, index) in links"
           :key="index"
@@ -19,7 +19,7 @@
           </span>
           <div
             v-if="index !== links.length - 1"
-            class="w-px h-4 bg-gray-300 mx-4"
+            class="w-px h-4 bg-gray-300 mx-7"
           ></div>
         </div>
       </div>
