@@ -8,10 +8,8 @@
     />
   </header>
 </template>
-
 <script>
 import Dropdown from '~/components/base/dropdown.vue'; 
-
 export default {
   components: {
     Dropdown, 

@@ -1,0 +1,210 @@
+<template>
+    <div class="h-screen w-screen">
+        <Swiper
+            class="h-full w-full"
+            :slides-per-view="3.5"
+            :space-between="30"
+            :breakpoints="{
+                0: { slidesPerView: 1, spaceBetween: 10 },
+                640: { slidesPerView: 1.5, spaceBetween: 20 },
+                768: { slidesPerView: 2.5, spaceBetween: 25 },
+                1024: { slidesPerView: 3.5, spaceBetween: 30 }
+            }"
+            pagination
+        >
+            <SwiperSlide v-for="(testimonial, index) in testimonials" :key="index">
+                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm text-left max-h-52">
+                    <img
+                        :src="testimonial.image"
+                        alt="Product Image"
+                        class="w-12 h-12 object-cover -mb-12"
+                    />
+                    <h3 class="text-lg font-bold pl-20">{{ testimonial.title }}</h3>
+                    <p class="text-sm text-gray-600 max-w-64 ml-20">
+                        {{ testimonial.description }}
+                    </p>
+                    <div class="flex items-center gap-3 mt-3">
+                        <img
+                            :src="testimonial.reviewerImage"
+                            alt="Reviewer Image"
+                            class="w-8 h-8 rounded-full object-cover"
+                        />
+                        <div>
+                            <p class="text-sm font-semibold">{{ testimonial.reviewerName }}</p>
+                            <p class="text-xs text-gray-500">
+                                {{ testimonial.date }} - {{ testimonial.time }}
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-sm font-bold text-yellow-400 mt-3">
+                        ⭐ ⭐ ⭐ ⭐ {{ testimonial.rating }}
+                    </p>
+                </div>
+            </SwiperSlide>
+        </Swiper>
+    </div>  
+</template>
+
+<script>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/swiper-bundle.css';
+export default {
+    components: { Swiper, SwiperSlide },
+    data() {
+        return {
+            testimonials: [
+                {
+                    image: '~/images/cards/face.svg',
+                    title: 'Cборка Coco chanel',
+                    description: 'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+                    reviewerImage: '/path/to/reviewer2.jpg',
+                    reviewerName: 'Шохрух Шавкиев',
+                    date: '09.01.2023',
+                    time: '14:21',
+                    rating: 4.5,
+                },
+                {
+                    image: '/path/to/product3.jpg',
+                    title: 'Cборка Coco chanel',
+                    description: 'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+                    reviewerImage: '/path/to/reviewer3.jpg',
+                    reviewerName: 'Жасур Наразуллаев',
+                    date: '09.01.2023',
+                    time: '14:21',
+                    rating: 4.5,
+                },
+
+                {
+                    image: '/path/to/product3.jpg',
+                    title: 'Cборка Coco chanel',
+                    description: 'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+                    reviewerImage: '/path/to/reviewer3.jpg',
+                    reviewerName: 'Жасур Наразуллаев',
+                    date: '09.01.2023',
+                    time: '14:21',
+                    rating: 4.5,
+                },
+
+                {
+                    image: '/path/to/product3.jpg',
+                    title: 'Cборка Coco chanel',
+                    description: 'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+                    reviewerImage: '/path/to/reviewer3.jpg',
+                    reviewerName: 'Жасур Наразуллаев',
+                    date: '09.01.2023',
+                    time: '14:21',
+                    rating: 4.5,
+                },
+
+                {
+                    image: '/path/to/product3.jpg',
+                    title: 'Cборка Coco chanel',
+                    description: 'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+                    reviewerImage: '/path/to/reviewer3.jpg',
+                    reviewerName: 'Жасур Наразуллаев',
+                    date: '09.01.2023',
+                    time: '14:21',
+                    rating: 4.5,
+                },
+
+                {
+                    image: '/path/to/product3.jpg',
+                    title: 'Cборка Coco chanel',
+                    description: 'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+                    reviewerImage: '/path/to/reviewer3.jpg',
+                    reviewerName: 'Жасур Наразуллаев',
+                    date: '09.01.2023',
+                    time: '14:21',
+                    rating: 4.5,
+                },
+
+                {
+                    image: '/path/to/product3.jpg',
+                    title: 'Cборка Coco chanel',
+                    description: 'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+                    reviewerImage: '/path/to/reviewer3.jpg',
+                    reviewerName: 'Жасур Наразуллаев',
+                    date: '09.01.2023',
+                    time: '14:21',
+                    rating: 4.5,
+                },
+
+                {
+                    image: '/path/to/product3.jpg',
+                    title: 'Cборка Coco chanel',
+                    description: 'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+                    reviewerImage: '/path/to/reviewer3.jpg',
+                    reviewerName: 'Жасур Наразуллаев',
+                    date: '09.01.2023',
+                    time: '14:21',
+                    rating: 4.5,
+                },
+
+                {
+                    image: '/path/to/product3.jpg',
+                    title: 'Cборка Coco chanel',
+                    description: 'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+                    reviewerImage: '/path/to/reviewer3.jpg',
+                    reviewerName: 'Жасур Наразуллаев',
+                    date: '09.01.2023',
+                    time: '14:21',
+                    rating: 4.5,
+                },
+
+
+                {
+                    image: '/path/to/product3.jpg',
+                    title: 'Cборка Coco chanel',
+                    description: 'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+                    reviewerImage: '/path/to/reviewer3.jpg',
+                    reviewerName: 'Жасур Наразуллаев',
+                    date: '09.01.2023',
+                    time: '14:21',
+                    rating: 4.5,
+                },
+
+
+                {
+                    image: '/path/to/product 3.jpg',
+                    title: 'Cборка Coco chanel',
+                    description: 'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+                    reviewerImage: '/path/to/reviewer3.jpg',
+                    reviewerName: 'Жасур Наразуллаев',
+                    date: '09.01.2023',
+                    time: '14:21',
+                    rating: 4.5,
+                },
+
+
+                {
+                    image: '/path/to/product3.jpg',
+                    title: 'Cборка Coco chanel',
+                    description: 'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+                    reviewerImage: '/path/to/reviewer3.jpg',
+                    reviewerName: 'Жасур Наразуллаев',
+                    date: '09.01.2023',
+                    time: '14:21',
+                    rating: 4.5,
+                },
+
+                {
+                    image: '/path/to/product3.jpg',
+                    title: 'Cборка Coco chanel',
+                    description: 'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+                    reviewerImage: '/path/to/reviewer3.jpg',
+                    reviewerName: 'Жасур Наразуллаев',
+                    date: '09.01.2023',
+                    time: '14:21',
+                    rating: 4.5,
+                },
+            ],
+        };
+    },
+};
+
+</script>
+
+<style>
+@import 'tailwindcss/tailwind.css';
+</style>
+

@@ -11,8 +11,8 @@
         {{ link.title }}
       </span>
       <span
-        class="absolute inset-0 text-sm font-medium text-red-500 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300"
-      > 
+        class="absolute inset-0 text-sm font-semibold text-red-500 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300"
+      >
         {{ link.title }}
       </span>
       <!-- Chiziqcha faqat oxirgi elementdan oldin ko'rinadi -->
