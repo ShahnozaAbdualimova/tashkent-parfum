@@ -1,6 +1,6 @@
 export const products = [
     {
-      image: '/images/card.png',
+      image: ['/images/card.png'],
       name: 'Miraculum духи..',
       brand: 'Louis Vuitton',
       oldPrice: 0,
@@ -9,7 +9,7 @@ export const products = [
       rating: 5,
     },
     {
-      image: '/images/card.png',
+      image: ['/images/card.png'],
       name: 'Chanel духи...',
       brand: 'Chanel',
       oldPrice: '150 000',
@@ -18,7 +18,7 @@ export const products = [
       rating: 3,
     },
     {
-      image: '/images/card.png',
+      image: ['/images/card.png'],
       name: 'Dior духи...',
       brand: 'Dior',
       oldPrice: '200 000',
@@ -27,7 +27,7 @@ export const products = [
       rating: 4,
     },
     {
-      image: '/images/card.png',
+      image: ['/images/card.png'],
       name: 'Dior духи...',
       brand: 'Dior',
       oldPrice: '200 000',
@@ -36,7 +36,7 @@ export const products = [
       rating: 4,
     },
     {
-      image: '/images/card.png',
+      image: ['/images/card.png'],
       name: 'Dior духи...',
       brand: 'Dior',
       oldPrice: '200 000',
@@ -45,7 +45,7 @@ export const products = [
       rating: 4,
     },
     {
-      image: '/images/card.png',
+      image: ['/images/card.png'],
       name: 'Dior духи...',
       brand: 'Dior',
       oldPrice: '200 000',
@@ -54,7 +54,7 @@ export const products = [
       rating: 4,
     },
     {
-      image: '/images/card.png',
+      image: ['/images/card.png'],
       name: 'Dior духи...',
       brand: 'Dior',
       oldPrice: '200 000',
@@ -63,7 +63,7 @@ export const products = [
       rating: 4,
     },
     {
-      image: '/images/card.png',
+      image: ['/images/card.png'],
       name: 'Dior духи...',
       brand: 'Dior',
       oldPrice: '200 000',

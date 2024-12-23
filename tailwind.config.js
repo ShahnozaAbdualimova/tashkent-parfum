@@ -24,6 +24,7 @@ export default {
         },
         green:{
           100: '#26D176'
+          
         },
         black: {
           default: '#000000',
