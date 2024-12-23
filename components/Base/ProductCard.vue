@@ -1,6 +1,6 @@
 <template>
   <div
-    class="col-span-1 w-full sm:w-[180px] bg-white-400 shadow-lg rounded-xl overflow-hidden cursor-pointer transition-300 border border-white-400  hover:border-gray-500"
+    class="col-span-1 w-full sm:w-[180px] bg-white-400 rounded-xl overflow-hidden cursor-pointer transition-300 border border-white-400 hover:border-gray-500 hover:shadow-xl"
   >
     <div class="relative">
       <!-- Swiper -->
@@ -22,13 +22,30 @@
         </swiper-slide>
       </swiper>
 
-      <!-- скидка -->
+      <!-- discount -->
       <div
         v-if="product.discountTag"
         class="absolute top-3 left-3 border-2 border-green-200 rotate bg-green-100 text-white text-xs px-4 rounded-xl"
       >
         <i class="icon-sale text-white-100 text-2xl"></i>
       </div>
+      <button
+        @click="toggleFavorite"
+        :class="[
+          'absolute top-3 right-3 border border-white-400/80 bg-white-400/80 text-black-500 text-xs p-2 hover:border-red-500/20 transition duration-300 w-9 h-9 rounded-md flex justify-center items-center group',
+          { 'border-red-500': isFavorite },
+        ]"
+      >
+        <i
+          :class="[
+            'icon-heart text-base transition-all duration-200',
+            {
+              'text-red-500 scale': isFavorite,
+              'text-black scale': !isFavorite,
+            },
+          ]"
+        ></i>
+      </button>
     </div>
 
     <div class="p-4 gap-1">
@@ -50,7 +67,7 @@
           {{ product.price }} UZS
         </span>
       </div>
-      <!-- рейтинг -->
+      <!-- rating -->
       <div class="mt-2 flex items-center gap-1">
         <span v-for="n in 5" :key="n" class="text-yellow-100 text-sm">
           <i v-if="n <= product.rating" class="icon-star"></i>
@@ -64,29 +81,23 @@
         class="flex items-center relative justify-center mt-2 gap-1"
       >
         <button
-          class="px-3 py-2.5 flex items-center justify-center bg-white-default rounded-l-lg duration-300 rounded-r-sm border border-white-100 hover:bg-red-500/10 hover:border-red-500"
+          class="px-3 py-2.5 flex items-center justify-center bg-white-default rounded-l-lg duration-300 rounded-r-sm border border-white-100 hover:bg-red-1150/10 hover:border-red-500"
           @click="decrement"
         >
           <i class="icon-minus text-[20px] text-red-500"></i>
         </button>
-        <!-- <span
-          class="text-lg rounded px-6 py-1.5 text-black-500 bg-white-100 font-normal"
-        >
-          {{ counter }}
-        </span> -->
         <input
           v-model.number="counter"
           @input="validateCounter"
           type="number"
           class="no-spin text-lg rounded py-1.5 focus:border-red-500 w-[64px] transition-all duration-300 border border-white-default hover:border-red-500 border font-normal text-center appearance-none outline-none"
         />
-
         <button
           :class="{
             'bg-gray-400': counter === maxLimit,
             'bg-white-100': counter < maxLimit,
           }"
-          class="px-3 py-2.5 flex items-center justify-center rounded-r-lg duration-300 rounded-l-sm border border-white-default hover:bg-green-100/10 hover:border-green-100"
+          class="px-3 py-2.5 flex items-center justify-center rounded-r-lg duration-300 rounded-l-sm border border-white-default hover:bg-green-200/10 hover:border-green-100"
           @click="increment"
         >
           <i
@@ -99,9 +110,9 @@
         </button>
         <div
           v-if="showMaxTooltip"
-          class="absolute top-[-10px] -right-5 transform -translate-x-1/2 bg-black-700 text-white-default px-2 py-1 rounded-md text-xs"
+          class="absolute top-[-10px] -right-9 transform -translate-x-1/2 bg-black-700 text-white-default px-2 py-1 rounded-md text-xs"
         >
-          Max
+          Max {{ maxLimit }}
         </div>
       </div>
       <div v-else class="flex justify-center mt-2">
@@ -121,6 +132,7 @@
 </template>
 
 <script setup>
+// import { ref } from 'vue';
 // import { Swiper, SwiperSlide } from 'swiper/vue';
 // import 'swiper/css';
 // import 'swiper/css/pagination';
@@ -135,27 +147,30 @@ defineProps({
 });
 
 // Reactive state variables
+const isFavorite = ref(false); // For tracking the favorite state
 const isCounterVisible = ref(false); // Display counter visibility
 const counter = ref(1); // Current counter value
 const maxLimit = 5; // Maximum value for the counter
 const showMaxTooltip = ref(false); // Display the "Max" tooltip
 
-// Show the counter
+// Methods
+const toggleFavorite = () => {
+  isFavorite.value = !isFavorite.value; // Toggle favorite state
+};
+
 const showCounter = () => {
   isCounterVisible.value = true;
 };
 
-// Increment the counter value
 const increment = () => {
   if (counter.value < maxLimit) {
     counter.value++;
-    hideMaxTooltip(); // Hide the "Max" tooltip if it was displayed
+    hideMaxTooltip();
   } else {
-    displayMaxTooltip(); // Show the "Max" tooltip
+    displayMaxTooltip();
   }
 };
 
-// Decrement the counter value
 const decrement = () => {
   if (counter.value > 1) {
     counter.value--;
@@ -166,19 +181,17 @@ const decrement = () => {
 
 const validateCounter = () => {
   if (counter.value < 1) {
-    counter.value = 1; // Минимальное значение
+    counter.value = 1; // Minimum value
   } else if (counter.value > maxLimit) {
-    counter.value = maxLimit; // Максимальное значение
+    counter.value = maxLimit; // Maximum value
   }
 };
 
-// Show the "Max" tooltip
 const displayMaxTooltip = () => {
   showMaxTooltip.value = true;
-  setTimeout(hideMaxTooltip, 500); // Hide the tooltip after 1.5 seconds
+  setTimeout(hideMaxTooltip, 500);
 };
 
-// Hide the "Max" tooltip
 const hideMaxTooltip = () => {
   showMaxTooltip.value = false;
 };

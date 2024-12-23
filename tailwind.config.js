@@ -18,12 +18,14 @@ export default {
           800: '#F97495',
           900: '#FA89A5',
           950: '#FEEBF0',
+          1150: '#faa5ac'
         },
         yellow:{
           100: '#F8AF02'
         },
         green:{
-          100: '#26D176'
+          100: '#26D176',
+          200: '#70ff92',
           
         },
         black: {
@@ -66,6 +68,7 @@ export default {
           'linear-gradient(90deg, rgba(56,56,56,1) 0%, rgba(111,111,111,1) 100%)',
         'dark-btn-hover': 'linear-gradient(84.8deg,#d7d7d7,#f4f4f4 131.39%)',
       },
+      
     },
   },
   plugins: [],
