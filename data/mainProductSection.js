@@ -78,6 +78,7 @@ export const products = [
 export const brands = [
   { 
     logo: '/svg/logoBrand.svg',
+    imgId: 1,
     image: [
       '/images/brandcard.png',
       '/images/brandcard2.png',
