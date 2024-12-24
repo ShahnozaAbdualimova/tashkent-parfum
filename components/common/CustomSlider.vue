@@ -10,8 +10,8 @@
           <div v-if="index !== activeSlide"
             class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/50 to-transparent"></div>
           <!-- Matn qismi -->
-          <div class="absolute bottom-5 left-5 text-white">
-            <h2 class="text-xl font-bold">{{ slide.title }}</h2>
+          <div class="absolute bottom-12 left-5 text-white">
+            <h2 class="text-xl font-bold text-white">{{ slide.title }}</h2>
             <p class="text-sm">{{ slide.description }}</p>
             <button class="mt-3 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
               Batafsil
@@ -48,11 +48,6 @@ export default {
           description: 'Eng yaxshi brendlar: Dior, Armani, Carolina Herrera',
         },
         {
-          image: '/images/MainSlider-2.png',
-          title: 'Premium Parfyumeriya',
-          description: 'Yuqori sifatli brend mahsulotlari',
-        },
-        {
           image: '/images/MainSlider-3.png',
           title: 'Yangi Mahsulotlar',
           description: 'Moda va zamonaviy parfyumeriya kollektsiyasi',
@@ -63,11 +58,6 @@ export default {
           description: 'Eng yaxshi brendlar: Dior, Armani, Carolina Herrera',
         },
         {
-          image: '/images/MainSlider-2.png',
-          title: 'Premium Parfyumeriya',
-          description: 'Yuqori sifatli brend mahsulotlari',
-        },
-        {
           image: '/images/MainSlider-3.png',
           title: 'Yangi Mahsulotlar',
           description: 'Moda va zamonaviy parfyumeriya kollektsiyasi',
@@ -76,11 +66,6 @@ export default {
           image: '/images/MainSlider-1.png',
           title: 'Kollektsiya',
           description: 'Eng yaxshi brendlar: Dior, Armani, Carolina Herrera',
-        },
-        {
-          image: '/images/MainSlider-2.png',
-          title: 'Premium Parfyumeriya',
-          description: 'Yuqori sifatli brend mahsulotlari',
         },
         {
           image: '/images/MainSlider-3.png',
