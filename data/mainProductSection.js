@@ -74,7 +74,7 @@ export const products = [
     rating: 4,
   },
 ];
-
+// brands
 export const brands = [
   { 
     logo: '/svg/logoBrand.svg',
