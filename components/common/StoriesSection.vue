@@ -5,7 +5,6 @@
         <span>Loading...</span>
       </div>
 
-
       <swiper v-else class="mySwiper" :slidesPerView="7" spaceBetween="8">
         <swiper-slide v-for="(story, index) in stories" :key="story.id">
           <div class="flex items-center gap-2">
@@ -15,31 +14,40 @@
       </swiper>
     </CommonSectionWrapper>
 
-
-    <ModalStories v-if="showModal" :isVisible="showModal" @closeModal="closeModal" :story="stories[selectedStoryIndex]"
-      :currentIndex="selectedStoryIndex" :totalStories="stories.length" @updateIndex="updateStoryIndex"
-      @hoverPause="pauseAutoSlideAndProgress" @hoverResume="resumeAutoSlideAndProgress">
-      <div v-if="showModal" class="relative w-full h-1.5 bg-gray-300 rounded mt-3">
-        <div class="absolute top-0 left-0 h-full bg-red-500 transition-200 rounded"
-          :style="{ width: progressBarWidth + '%' }"></div>
+    <ModalStories
+      v-if="showModal"
+      :isVisible="showModal"
+      @closeModal="closeModal"
+      :story="stories[selectedStoryIndex]"
+      :currentIndex="selectedStoryIndex"
+      :totalStories="stories.length"
+      @updateIndex="updateStoryIndex"
+      @hoverPause="pauseAutoSlideAndProgress"
+      @hoverResume="resumeAutoSlideAndProgress"
+    >
+      <div
+        v-if="showModal"
+        class="relative w-full h-1.5 bg-gray-300 rounded mt-3"
+      >
+        <div
+          class="absolute top-0 left-0 h-full bg-red-500 transition-200 rounded"
+          :style="{ width: progressBarWidth + '%' }"
+        ></div>
       </div>
     </ModalStories>
   </div>
 </template>
 
 <script setup>
-
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/swiper-bundle.css';
 
-
-const { data} = useDataFetcher();
+const { data } = useDataFetcher();
 const stories = computed(() => data.value?.results || []);
 const showModal = ref(false);
 const selectedStoryIndex = ref(0);
 const isLoading = ref(true);
 const isDataLoaded = ref(false);
-
 
 const progressBarWidth = ref(0);
 let progressInterval = null;
@@ -47,15 +55,12 @@ let autoSlideInterval = null;
 let pausedProgress = null;
 let pausedTimeRemaining = null;
 
-
 onMounted(() => {
   if (data.value) {
     isLoading.value = false;
     isDataLoaded.value = true;
-
   }
 });
-
 
 watch(data, (newData) => {
   if (newData) {
@@ -63,7 +68,6 @@ watch(data, (newData) => {
     isDataLoaded.value = true;
   }
 });
-
 
 const openModal = (index) => {
   selectedStoryIndex.value = index;
@@ -80,22 +84,23 @@ const closeModal = () => {
   selectedStoryIndex.value = 0;
 };
 
-
 const updateStoryIndex = (direction) => {
   progressBarWidth.value = 0;
   stopAutoSlide();
   stopProgressBar();
 
   if (direction === 'prev') {
-    selectedStoryIndex.value = (selectedStoryIndex.value - 1 + stories.value.length) % stories.value.length;
+    selectedStoryIndex.value =
+      (selectedStoryIndex.value - 1 + stories.value.length) %
+      stories.value.length;
   } else if (direction === 'next') {
-    selectedStoryIndex.value = (selectedStoryIndex.value + 1) % stories.value.length;
+    selectedStoryIndex.value =
+      (selectedStoryIndex.value + 1) % stories.value.length;
   }
 
   startAutoSlide();
   startProgressBar();
 };
-
 
 const startAutoSlide = () => {
   stopAutoSlide();
@@ -110,9 +115,7 @@ const stopAutoSlide = () => {
   }
 };
 
-
 const startProgressBar = () => {
-
   stopProgressBar();
   const progressSpeed = 0.25;
   const intervalTime = 12;
@@ -132,7 +135,6 @@ const stopProgressBar = () => {
     clearInterval(progressInterval);
   }
 };
-
 
 const pauseAutoSlideAndProgress = () => {
   pausedProgress = progressBarWidth.value;
