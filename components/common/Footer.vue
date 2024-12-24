@@ -1,104 +1,136 @@
 <template>
-    <footer class="bg-gray-100 text-gray-700">
-      <div class="container mx-auto py-10 px-4 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8">
-        <CommonLogo/>
-         <div class="space-y-4 md:col-span-2">
-          <!-- Logotip -->
-          <div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="40" viewBox="0 0 150 40">
-              <text x="0" y="30" font-size="30" fill="#000" font-weight="bold">Toshkent Parfum</text>
-            </svg>
-          </div>
-          <!-- Telefon -->
-          <div class="flex items-center text-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10l11-11m0 0l11 11m-11-11v8.5m0 0l6.3 6.3M21 21h-6a4 4 0 01-4-4v-3.5a4 4 0 014-4h6a4 4 0 014 4V21a4 4 0 01-4 4z" />
-            </svg>
-            <a href="tel:+998712097887" class="hover:underline">+998 71 209 78 87</a>
-          </div>
-          <!-- Email -->
-          <div class="flex items-center text-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l6 4 6-4M5 21V9m14 12V9M21 8l-6 4-6-4M3 8l6 4m6-4l6 4" />
-            </svg>
-            <a href="mailto:tashkentparfume@gmail.com" class="hover:underline">tashkentparfume@gmail.com</a>
-          </div>
-          <!-- Mobil ilovalar -->
-          <div class="flex space-x-4">
-            <a href="#" class="block w-32">
-              <img src="" alt="App Store" />
-            </a>
-            <a href="#" class="block w-32">
-              <img src=" "alt="Google Play" />
-            </a>
-          </div>
+  <footer class=" py-10">
+    <div class="container mx-auto flex flex-wrap justify-between px-20">
+
+      <!-- Contact Section -->
+      <div class=" h-20 px-5 py-4 w-full flex justify-between bg-gray-100 rounded-2xl">
+        <svg width="117" height="48" viewBox="0 0 117 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M109.628 24.1367L103.613 24.1651L98.8074 31.2367C97.6803 30.6495 94.9072 25.7373 93.5747 24.1649L87.582 24.1546C88.1259 25.1622 88.7404 25.5186 89.4017 26.1869L89.4993 40.363L93.5678 40.3804L93.6475 31.1638C94.5221 32.2002 95.2499 33.3849 96.0546 34.5338C96.8093 35.611 97.6419 37.1134 98.4713 37.7902C99.841 37.2785 102.087 32.227 103.541 31.2176L103.683 40.3806L107.719 40.3351L107.828 26.2508L109.628 24.1367Z"
+            fill="#383838" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M60.3614 21.1455C62.014 20.7216 91.009 20.9784 95.2901 20.9784C105.016 20.9784 104.264 20.0867 104.651 23.2102L107.663 23.1521C108.334 16.0578 103.668 17.6155 97.7386 17.6162L66.643 17.6149C60.744 17.6149 56.3771 16.0893 56.977 23.1799L59.9799 23.1929L60.3614 21.1455Z"
+            fill="#383838" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M66.8874 46.8552H97.9831C103.456 46.8552 108.624 48.2608 107.638 41.3204L104.679 41.2837L104.31 43.3533C102.739 43.7076 61.6388 43.6681 60.2493 43.3458L59.9571 41.2881L56.9932 41.3638C56.169 48.4063 61.1997 46.8552 66.8874 46.8552Z"
+            fill="#383838" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M43.41 31.8196L43.3273 27.6613C45.6799 27.575 49.9312 26.852 49.975 29.6664C50.0209 32.615 45.9165 31.8099 43.41 31.8196ZM50.2039 34.5735C52.0038 33.6082 53.4062 33.1497 53.9844 30.9677C54.6027 28.6349 53.4291 26.685 52.235 25.6994C50.4055 24.1892 49.1402 24.139 46.3196 24.1516C43.9602 24.1623 41.5308 24.0835 39.168 24.168L39.1918 40.3788L43.3316 40.255L43.3424 35.0398L45.8292 35.0969C48.7583 40.0803 49.4134 40.5399 54.1145 40.3412L54.1124 36.5835C52.001 36.4444 50.6795 36.4018 50.2039 34.5735Z"
+            fill="#383838" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M70.7032 24.177C70.3323 25.868 70.5878 31.2608 70.587 33.3464C70.5857 36.7757 70.9562 38.351 73.3041 39.6843C76.9188 41.7372 84.7417 41.0298 84.7496 35.0642C84.7544 31.4239 84.8734 27.7736 84.6371 24.1404L80.6425 24.1352L80.596 34.3399C80.5372 38.4811 75.9381 36.9298 75.4506 36.5253C74.6301 35.8444 74.79 34.4486 74.7899 33.3464L74.6457 24.1338L70.7032 24.177Z"
+            fill="#383838" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M11.8706 27.762C14.1655 27.2766 18.3237 27.0838 18.1324 29.8865C17.9709 32.2517 14.2099 32.1428 11.9065 31.721L11.8706 27.762ZM11.9146 35.2805C15.0909 35.2965 17.5537 35.6377 19.891 34.11C21.4479 33.0924 23.0994 30.7074 21.9582 27.8194C20.1337 23.2023 13.4058 23.943 7.70898 24.1624L7.76809 40.382L11.8861 40.2986L11.9146 35.2805Z"
+            fill="#383838" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M27.099 35.3745C27.3168 34.3579 27.578 33.7973 27.9206 32.8133L28.5852 31.0221C28.8391 30.6007 28.7336 30.8096 28.9959 30.5536L30.6224 35.3309L27.099 35.3745ZM25.8975 24.1617C26.4451 26.4464 26.9791 25.8969 26.0393 28.2217C24.9513 30.9132 21.8649 38.5465 21.375 40.4736L25.2036 40.4206L25.9951 38.2882L31.7903 38.356L32.6067 40.4593L36.3273 40.4811C35.998 38.7697 30.4613 24.766 30.0643 24.1362L25.8975 24.1617Z"
+            fill="#383838" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M61.1144 27.7316L68.0667 27.6515L67.9553 24.1465L56.9277 24.2009L56.9722 40.3826L61.108 40.2768L61.1301 34.4143L65.7413 34.3772L65.7707 30.9199L61.115 30.7672L61.1144 27.7316Z"
+            fill="#383838" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M92.9525 4.14484C95.7402 3.03142 96.9325 7.42679 94.488 8.26028C92.9759 8.7759 91.8491 7.96609 91.5184 6.92554C91.029 5.38568 91.8745 4.57537 92.9525 4.14484ZM88.7388 1.41435C87.0394 2.099 87.4475 3.51671 87.4456 5.61582C87.4443 7.13274 87.1391 9.8801 88.0364 10.681C88.8143 11.3751 97.284 11.465 98.6683 10.9728C100.176 10.4368 99.8121 8.21006 99.8119 6.59747C99.8117 4.98385 100.178 2.35952 99.0611 1.58969C98.3304 1.08618 89.6775 1.03626 88.7388 1.41435Z"
+            fill="#383838" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M35.6074 13.8125L38.3741 13.8176C38.8408 11.9854 37.5448 7.15581 39.7583 6.90391C42.0583 6.64211 41.2253 12.0421 41.2219 13.7484L44.1472 13.8047C44.1684 6.79002 44.9317 3.36031 38.5146 5.3575L38.5005 1L35.6447 1.01364L35.6074 13.8125Z"
+            fill="#383838" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M46.0645 13.7554L49.0154 13.8144C49.0109 12.5509 48.8233 11.2332 49.324 10.3622L51.6396 13.8161L54.927 13.7952L51.5089 8.58374C52.0043 7.99308 52.391 7.43935 52.9513 6.84618C53.7566 5.99343 54.0071 5.90575 54.5449 4.79814L51.1598 4.82137C50.708 5.75098 49.757 7.04318 49.0733 7.8142L48.9916 1.01475L46.1139 1.00195L46.0645 13.7554Z"
+            fill="#383838" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M85.1188 16.9087L102.154 16.8959L102.123 13.2344L85.1172 13.3374L85.1188 16.9087Z" fill="#383838" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M67.8424 5.57792C67.2287 4.89346 68.1607 4.72053 64.9609 4.89006L64.9834 13.7347L67.9032 13.8128C67.9079 12.1638 67.8443 10.3995 67.9052 8.79659C67.9687 7.12418 69.2849 6.13765 70.3885 7.52321C71.1212 9.21575 70.3416 11.8257 70.7384 13.7618L73.3868 13.8272C73.7729 12.5921 73.6893 7.51213 73.1996 6.40221C72.3186 4.40635 69.3945 4.03998 67.8424 5.57792Z"
+            fill="#383838" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M21.0432 6.84424L21.795 6.56654L22.6546 6.75034C24.223 8.66416 24.2601 11.8014 21.1774 11.8014C20.1054 11.5135 19.7963 8.27021 21.0432 6.84424ZM20.7857 4.68054C15.0862 5.95008 16.4431 15.1632 22.9423 13.8475C28.6463 12.6928 27.2962 3.23028 20.7857 4.68054Z"
+            fill="#383838" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M57.9415 8.20184C58.0013 6.14439 60.8318 5.82951 60.7416 8.23812L57.9415 8.20184ZM63.0606 13.4591L62.7345 11.5244C60.4422 11.8633 58.5419 12.4415 57.8473 10.2585L63.4073 10.1787C64.8335 4.36853 57.8596 2.82044 55.6521 6.87153C54.2319 9.47759 54.5312 15.5238 63.0606 13.4591Z"
+            fill="#383838" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M7.36914 3.87166L10.5803 3.91257L10.6147 13.7427L13.5081 13.805L13.5064 3.91721L16.7186 3.89894L16.7212 1.50928L7.44709 1.51583L7.36914 3.87166Z"
+            fill="#383838" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M76.0409 3.21484L75.8095 4.73264L74.6426 5.12516L74.6482 6.59772L75.8665 7.08842C75.9474 11.6922 75.1311 14.65 80.737 13.7497L80.6768 11.6761L78.9367 11.5329L78.7553 6.85351L80.8593 6.84725L80.8725 4.83737L78.7844 4.75085L78.744 2.59424L76.0409 3.21484Z"
+            fill="#383838" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M31.3508 11.5056C30.2707 12.2833 28.9799 11.7168 27.9793 11.3456L27.3965 13.3929C29.8858 14.0869 33.1992 14.2989 34.0695 11.9931C34.558 10.6991 33.913 9.50422 33.1866 8.96181C32.6716 8.57722 32.1961 8.42478 31.7153 8.23911C30.6036 7.80955 30.6304 7.96411 30.386 6.98624C31.5604 6.31671 32.0314 6.73774 33.3753 7.09772L33.8767 5.13234C28.2975 3.17347 25.9492 7.70901 28.8875 9.58379C30.0736 10.3405 31.2868 10.1142 31.3508 11.5056Z"
+            fill="#383838" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M88.9232 12.8233C90.5253 12.8233 98.6562 13.1693 99.7257 12.487L99.7775 11.6504C97.8623 11.5217 88.4684 11.1697 87.7773 11.604C86.612 12.3365 87.9382 12.8233 88.9232 12.8233Z"
+            fill="#383838" />
+        </svg>
+
+        <div class="py-4">
+          <span class="text-sm"><i class="icon-phone"></i> +998 71 209 78 87</span>
+          <strong>📧</strong> <a href="mailto:toshkentparfum@gmail.com"
+            class="text-blue-500 hover:underline">toshkentparfum@gmail.com</a>
+
         </div>
-  
-        <!-- Xaridorlar bo'limi -->
-        <div>
-          <h3 class="font-bold mb-3">Покупателям</h3>
-          <ul class="space-y-2 text-sm">
-            <li><a href="#" class="hover:underline">О магазине</a></li>
-            <li><a href="#" class="hover:underline">Рекомендации</a></li>
-            <li><a href="#" class="hover:underline">Бренды</a></li>
-            <li><a href="#" class="hover:underline">Конфиденциальность</a></li>
-            <li><a href="#" class="hover:underline">Обратная связь</a></li>
-          </ul>
-        </div>
-  
-        <!-- Bo'limlar -->
-        <div>
-          <h3 class="font-bold mb-3">Разделы</h3>
-          <ul class="space-y-2 text-sm">
-            <li><a href="#" class="hover:underline">Парфюмерия</a></li>
-            <li><a href="#" class="hover:underline">Тело и ванна</a></li>
-            <li><a href="#" class="hover:underline">Волосы</a></li>
-            <li><a href="#" class="hover:underline">Лицо</a></li>
-            <li><a href="#" class="hover:underline">Все разделы</a></li>
-          </ul>
-        </div>
-  
-        <!-- Foydalanuvchilar uchun -->
-        <div>
-          <h3 class="font-bold mb-3">Пользователь</h3>
-          <ul class="space-y-2 text-sm">
-            <li><a href="#" class="hover:underline">Вход</a></li>
-            <li><a href="#" class="hover:underline">Регистрация</a></li>
-          </ul>
-          <div class="mt-4">
-            <h3 class="font-bold mb-3">Наши соц. сети</h3>
-            <div class="flex space-x-4">
-              <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6">
-                  <circle cx="12" cy="12" r="10" fill="#3b5998" />
-                </svg>
-              </a>
-              <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6">
-                  <circle cx="12" cy="12" r="10" fill="#E1306C" />
-                </svg>
-              </a>
-              <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6">
-                  <circle cx="12" cy="12" r="10" fill="#FF0000" />
-                </svg>
-              </a>
-            </div>
-          </div>
+        <div class="mt-4 flex space-x-4">
+          <a href="#"><img src="" alt="App Store" class="w-30"></a>
+          <a href="#"><img src="" alt="Google Play" class="w-30"></a>
         </div>
       </div>
-  
-      <!-- Quyidagi o'q -->
-      <div class="bg-gray-200 py-4 text-center text-sm">
-        <p>© Toshkent Parfum 2023. Все права защищены.</p>
-        <a href="#" class="hover:underline">Политика конфиденциальности</a>
+
+      <!-- Customer Links -->
+      <div class="flex-1 min-w-[200px] mt-20">
+        <h4 class="text-lg font-semibold">Покупателям</h4>
+        <ul class="mt-2 space-y-2">
+          <li><a href="#" class="text-gray-700 hover:text-blue-500">О магазине</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-blue-500">Рекомендации</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-blue-500">Бренды</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-blue-500">Конфиденциальность</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-blue-500">Обратная связь</a></li>
+        </ul>
       </div>
-    </footer>
-  </template>
-  
-  <style scoped>
-  footer a:hover {
-    color: #0056b3;
-  }
-  </style>
-  
+
+      <!-- Sections Links -->
+      <div class="flex-1 min-w-[200px] mt-20">
+        <h4 class="text-lg font-semibold">Разделы</h4>
+        <ul class="mt-2 space-y-2">
+          <li><a href="#" class="text-gray-700 hover:text-blue-500">Парфюмерия</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-blue-500">Тело и ванна</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-blue-500">Волосы</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-blue-500">Лицо</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-blue-500">Все разделы</a></li>
+        </ul>
+      </div>
+
+      <!-- User Links -->
+      <div class="flex-1 min-w-[200px] mt-20">
+        <h4 class="text-lg font-semibold">Пользователь</h4>
+        <ul class="mt-2 space-y-2">
+          <li><a href="#" class="text-gray-700 hover:text-blue-500">Вход</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-blue-500">Регистрация</a></li>
+        </ul>
+        <h4 class="mt-6 text-lg font-semibold">Наши соц. сети</h4>
+        <div class="flex space-x-4 mt-2">
+          <a href="#"><img src="" alt="Facebook" class="w-6"></a>
+          <a href="#"><img src="" alt="Instagram" class="w-6"></a>
+          <a href="#"><img src="" alt="Telegram" class="w-6"></a>
+        </div>
+      </div>
+
+      <!-- Telegram Section -->
+      <div class="flex-1 min-w-[200px] mb-6">
+        <p class="text-lg font-semibold">Будьте в курсе всех последних новостей через Telegram</p>
+        <a href="#" class="inline-block bg-blue-500 text-white py-2 px-4 rounded mt-4 hover:bg-blue-600">Связаться через
+          Telegram</a>
+      </div>
+    </div>
+
+    <div class="text-center border-t border-gray-300 pt-4 mt-20">
+      <p class="text-sm text-gray-600">&copy; Toshkent Parfum, 2023. Все права защищены.</p>
+      <a href="#" class="text-gray-500 hover:text-blue-500 text-sm">Политика конфиденциальности</a>
+    </div>
+  </footer>
+</template>
+
+
+
+<style scoped>
+/* Add any additional styles if needed */
+</style>

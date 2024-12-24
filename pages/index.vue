@@ -2,6 +2,7 @@
   <div>
 
     <CommonProductReviewSlider/>
+    <CommonFooter/>
   </div>
 </template>
 
