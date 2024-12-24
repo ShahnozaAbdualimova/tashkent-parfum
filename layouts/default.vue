@@ -1,9 +1,7 @@
 <template>
   <div>
     <LayoutHeader />
-    <!-- <BaseNavbar /> -->
+    <LayoutNavbar />
     <slot></slot>
   </div>
 </template>
-
-<script setup></script>
