@@ -98,7 +98,7 @@
 </template>
 
 <script>
-import Dropdown from '~/components/Base/CDropdown.vue';
+import Dropdown from '~/components/Base/Dropdown.vue';
 
 export default {
   components: {

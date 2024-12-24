@@ -1,5 +1,5 @@
 <template>
-  <section class="px-32">
+  <section>
     <div class="container mx-auto flex justify-between items-center">
       <!-- Title Section -->
       <div>
