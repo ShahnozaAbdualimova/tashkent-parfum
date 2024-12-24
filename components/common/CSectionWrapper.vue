@@ -19,7 +19,7 @@
             to="#"
             class="text-sm text-[#9E9EA5] hover:text-gray-800 flex items-center"
           >
-            Default Link <i class="icon-left ml-2 text-[#9E9EA5]"></i>
+            {{ linkText }} <i class="icon-left ml-2 text-[#9E9EA5] group-hover:text-gray-800"></i>
           </NuxtLink>
         </slot>
       </div>

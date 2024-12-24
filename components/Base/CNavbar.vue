@@ -1,11 +1,11 @@
 <template>
-  <navbar class="border-t border-white-400 mt-3">
+  <navbar class="border-t border-gray-400 mt-3">
     <div class="container mx-auto">
-      <div class="flex items-center justify-between h-16 px-12">
+      <div class="flex items-center justify-between h-16 px-16">
         <div
           v-for="(link, index) in links"
           :key="index"
-          class="relative group overflow-hidden cursor-pointer flex items-center"
+          class="relative group overflow-hidden cursor-pointer flex items-center whitespace-nowrap mx-1 sm:mx-2"
         >
           <span
             class="block text-sm font-medium text-gray-800 group-hover:translate-y-[-100%] transition-transform duration-300"
@@ -19,7 +19,7 @@
           </span>
           <div
             v-if="index !== links.length - 1"
-            class="w-px h-4 bg-gray-300 mx-4"
+            class="hidden sm:block w-px h-4 bg-gray-300  ml-6"
           ></div>
         </div>
       </div>
@@ -39,3 +39,8 @@ const links = [
   { title: 'Дезодоранты и антиперспиранты' },
 ];
 </script>
+
+<style>
+/* Customize container max width for larger screens if needed */
+
+</style>
