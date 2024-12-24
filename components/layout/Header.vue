@@ -61,11 +61,10 @@
               <div class="w-7 h-full d-flex items-center justify-center">
                 <i class="icon-search"></i>
               </div>
-              <input
-                type="text"
-                class="w-[436px] py-2 bg-[#F2F3F5] outline-none"
-                placeholder="Поиск"
-              />
+              <Input
+              class="w-[436px] py-2 bg-[#F2F3F5] outline-none"
+              placeholder="Поиск"
+              type="search"/>
             </div>
           </div>
         </div>
@@ -99,6 +98,7 @@
 
 <script>
 import Dropdown from '~/components/Base/CDropdown.vue';
+import IInput from '../Base/Input.vue';
 
 export default {
   components: {
