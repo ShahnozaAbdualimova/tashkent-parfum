@@ -45,7 +45,7 @@
     <header class="w-full py-4 px-32">
       <div class="w-full flex items-center justify-between container mx-auto">
         <div class="flex gap-8">
-          <CommonCLogo />
+          <CommonCLogo  type="light"/>
           <div class="flex items-center gap-4">
             <BaseButton
               class=" px-3 py-2 bg-dark-btn rounded-lg font-normal text-sm text-white-default duration-300 hover:bg-dark-btn-hover hover:text-black-300 group"

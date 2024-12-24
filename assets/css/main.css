@@ -9,3 +9,6 @@ html,
 body {
   /* font-family: 'Proxima Nova Rg', sans-serif; */
 }
+.noscroll {
+    overflow: hidden;
+}
