@@ -3,8 +3,7 @@
 <template>
   <div>
     <CommonCustomSlider />
-    <CommonProductSection/>
-    <CommonStoriesSection/>
-
+    <CommonProductSection />
+    <CommonStoriesSection />
   </div>
 </template>

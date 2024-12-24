@@ -19,11 +19,11 @@ export default {
           900: '#FA89A5',
           950: '#FEEBF0',
         },
-        yellow:{
-          100: '#F8AF02'
+        yellow: {
+          100: '#F8AF02',
         },
-        green:{
-          100: '#26D176'
+        green: {
+          100: '#26D176',
         },
         black: {
           default: '#000000',

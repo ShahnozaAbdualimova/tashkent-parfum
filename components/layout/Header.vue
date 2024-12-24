@@ -23,11 +23,11 @@
                 class="icon-facebook cursor-pointer hover:text-red-500 transition-all duration-300 text-xl"
               ></i>
             </NuxtLink>
-            <NuxtLinkk to="https://www.instagram.com/toshkent_parfum_/">
+            <NuxtLink to="https://www.instagram.com/toshkent_parfum_/">
               <i
                 class="icon-instagram cursor-pointer hover:text-red-500 transition-all duration-300 text-xl"
               ></i>
-            </NuxtLinkk>
+            </NuxtLink>
             <NuxtLink to="https://t.me/toshkent_parfume">
               <i
                 class="icon-telegram cursor-pointer hover:text-red-500 transition-all duration-300 text-xl"
@@ -45,7 +45,7 @@
     <header class="w-full py-4 px-32">
       <div class="w-full flex items-center justify-between container mx-auto">
         <div class="flex gap-8">
-          <CommonCLogo  type="light"/>
+          <CommonCLogo type="light" />
           <div class="flex items-center gap-4">
             <BaseCButton
               class="font-proxima px-3 py-2 bg-dark-btn rounded-lg font-normal text-sm text-white-default duration-300 hover:bg-dark-btn-hover hover:text-black-300 group"
@@ -58,13 +58,14 @@
             <div
               class="flex items-center px-2 bg-[#F2F3F5] text-[#6F6F6F] rounded-lg"
             >
-              <div class="w-7 h-full d-flex items-center justify-center">
+              <div class="w-7 h-full flex items-center justify-center">
                 <i class="icon-search"></i>
               </div>
-              <Input
-              class="w-[436px] py-2 bg-[#F2F3F5] outline-none"
-              placeholder="Поиск"
-              type="search"/>
+              <input
+                type="text"
+                class="w-[436px] py-2 bg-[#F2F3F5] outline-none"
+                placeholder="Поиск"
+              />
             </div>
           </div>
         </div>
@@ -88,32 +89,21 @@
             <p class="text-xs">Избранные</p>
           </div>
         </div>
-        <BaseCButton variant="danger" type="button"
-          ><i class="icon-login text-[24px]"></i>Войти
+        <BaseCButton variant="danger" type="button">
+          <i class="icon-login text-[24px]"></i>Войти
         </BaseCButton>
       </div>
     </header>
   </div>
 </template>
 
-<script>
+<script setup>
 import Dropdown from '~/components/Base/CDropdown.vue';
-import IInput from '../Base/Input.vue';
 
-export default {
-  components: {
-    Dropdown,
-  },
-  data() {
-    return {
-      selectedLanguage: 'O‘zbekcha',
-      languages: ['O‘zbekcha', 'Русский', 'English'],
-    };
-  },
-  methods: {
-    setSelectedLanguage(language) {
-      this.selectedLanguage = language;
-    },
-  },
-};
+const selectedLanguage = ref('O‘zbekcha');
+const languages = ['O‘zbekcha', 'Русский', 'English'];
+
+function setSelectedLanguage(language) {
+  selectedLanguage.value = language;
+}
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto my-6">
     <CommonCSectionWrapper title="Истории" linkText="Все истории">
-      <div class="flex items-center  gap-2">
+      <div class="flex items-center gap-2">
         <BaseCStoriesCard
           v-for="i of 7"
           :image="image"
@@ -9,7 +9,11 @@
         />
       </div>
     </CommonCSectionWrapper>
-    <ModalStories :isVisible="showModal" @closeModal="showModal = false" :image="image"/>
+    <ModalStories
+      :isVisible="showModal"
+      @closeModal="showModal = false"
+      :image="image"
+    />
   </div>
 </template>
 

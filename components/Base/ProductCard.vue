@@ -71,7 +71,7 @@
             'bg-gray-400': counter === maxLimit,
             'bg-white-100': counter < maxLimit,
           }"
-          class="px-3 py-2.5  flex items-center justify-center rounded-r-lg rounded-l-sm"
+          class="px-3 py-2.5 flex items-center justify-center rounded-r-lg rounded-l-sm"
           @click="increment"
         >
           <i
@@ -89,7 +89,6 @@
         >
           Max
         </div>
-        
       </div>
       <div v-else class="flex justify-center mt-2">
         <BaseButton
@@ -155,9 +154,7 @@ const displayMaxTooltip = () => {
 const hideMaxTooltip = () => {
   showMaxTooltip.value = false;
 };
-
 </script>
-
 
 <style scoped>
 .rotate {

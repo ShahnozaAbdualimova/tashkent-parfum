@@ -19,7 +19,7 @@
           </span>
           <div
             v-if="index !== links.length - 1"
-            class="hidden sm:block w-px h-4 bg-gray-300  ml-6"
+            class="hidden sm:block w-px h-4 bg-gray-300 ml-6"
           ></div>
         </div>
       </div>
@@ -42,5 +42,4 @@ const links = [
 
 <style>
 /* Customize container max width for larger screens if needed */
-
 </style>

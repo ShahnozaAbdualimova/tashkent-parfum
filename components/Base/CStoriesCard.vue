@@ -3,7 +3,7 @@
     class="w-[134px] h-[182px] p-2 flex items-center justify-center border-[1.6px] border-red-500 bg-red-100 bg-opacity-20 rounded-xl cursor-pointer group"
   >
     <img
-      :src='image'
+      :src="image"
       alt="stories img"
       class="transition-transform ease-in-out duration-200 w-full h-full object-cover group-hover:scale-95 rounded-lg"
     />
@@ -12,9 +12,9 @@
 
 <script setup>
 defineProps({
-  image:{
+  image: {
     type: String,
     required: true,
-  }
-})
+  },
+});
 </script>
