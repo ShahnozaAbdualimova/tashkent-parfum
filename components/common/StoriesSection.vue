@@ -1,8 +1,6 @@
 <template>
   <div class="container mx-auto my-6">
-    <CommonCSectionWrapper title="Истории" linkText="Все истории">
-
-
+    <CommonSectionWrapper title="Истории" linkText="Все истории">
       <div v-if="isLoading" class="flex justify-center items-center py-6">
         <span>Loading...</span>
       </div>
@@ -11,31 +9,19 @@
       <swiper v-else class="mySwiper" :slidesPerView="7" spaceBetween="8">
         <swiper-slide v-for="(story, index) in stories" :key="story.id">
           <div class="flex items-center gap-2">
-            <BaseCStoriesCard :story="story" @click="openModal(index)" />
+            <BaseStoriesCard :story="story" @click="openModal(index)" />
           </div>
         </swiper-slide>
       </swiper>
-    </CommonCSectionWrapper>
+    </CommonSectionWrapper>
 
 
-
-
-    <ModalStories
-        v-if="showModal"
-        :isVisible="showModal"
-        @closeModal="closeModal"
-        :story="stories[selectedStoryIndex]"
-        :currentIndex="selectedStoryIndex"
-        :totalStories="stories.length"
-        @updateIndex="updateStoryIndex"
-        @hoverPause="pauseAutoSlideAndProgress"
-        @hoverResume="resumeAutoSlideAndProgress"
-    >
+    <ModalStories v-if="showModal" :isVisible="showModal" @closeModal="closeModal" :story="stories[selectedStoryIndex]"
+      :currentIndex="selectedStoryIndex" :totalStories="stories.length" @updateIndex="updateStoryIndex"
+      @hoverPause="pauseAutoSlideAndProgress" @hoverResume="resumeAutoSlideAndProgress">
       <div v-if="showModal" class="relative w-full h-1.5 bg-gray-300 rounded mt-3">
-        <div
-            class="absolute top-0 left-0 h-full bg-red-500 transition-200 rounded"
-            :style="{ width: progressBarWidth + '%' }"
-        ></div>
+        <div class="absolute top-0 left-0 h-full bg-red-500 transition-200 rounded"
+          :style="{ width: progressBarWidth + '%' }"></div>
       </div>
     </ModalStories>
   </div>

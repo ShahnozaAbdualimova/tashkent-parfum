@@ -1,7 +1,7 @@
 <template>
   <div>
     <LayoutHeader />
-    <BaseCNavbar />
+    <!-- <BaseNavbar /> -->
     <slot></slot>
   </div>
 </template>
