@@ -75,7 +75,7 @@
         </span>
         <span class="ml-1 text-gray-500 text-sm">({{ product.rating }})</span>
       </div>
-      <!-- сouter -->
+      <!-- counter -->
       <div
         v-if="isCounterVisible"
         class="flex items-center relative justify-center mt-2 gap-1"
@@ -158,7 +158,7 @@ const showMaxTooltip = ref(false); // Display the "Max" tooltip
 const toggleFavorite = () => {
   isFavorite.value = !isFavorite.value; // Toggle favorite state
 };
-
+// Bascket
 const basketProduct = () => {
   isCounterVisible.value = true;
 };

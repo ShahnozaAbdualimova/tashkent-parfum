@@ -5,7 +5,7 @@
       link-text="Все бренды"
     />
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-3"
     >
       <BaseTopBrandCard
         v-for="(brand, index) in brands.slice(0, 4)"

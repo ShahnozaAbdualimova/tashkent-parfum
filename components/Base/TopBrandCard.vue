@@ -14,14 +14,17 @@
     </div>
     <div v-for="image in brand.image" :key="image.id">
       <img :src="image.src" :alt="'Image' + image.id" />
-    </div>
-    <div v-for="price in brand.price" :key="price.id">
+      <div v-for="price in brand.price" :key="price.id">
   <p>{{ price.value }} UZS</p>
 </div>
+    </div>
+    
 
   </div>
 </template>
 <script setup>
+import { brands } from '~/data/mainProductSection';
+
 defineProps({
   brand: {
     type: Object,
