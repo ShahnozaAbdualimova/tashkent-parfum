@@ -47,14 +47,14 @@
         <div class="flex gap-8">
           <CommonCLogo />
           <div class="flex items-center gap-4">
-            <BaseCButton
-              class="font-proxima px-3 py-2 bg-dark-btn rounded-lg font-normal text-sm text-white-default duration-300 hover:bg-dark-btn-hover hover:text-black-300 group"
+            <BaseButton
+              class=" px-3 py-2 bg-dark-btn rounded-lg font-normal text-sm text-white-default duration-300 hover:bg-dark-btn-hover hover:text-black-300 group"
             >
               <i
                 class="icon-list text-2xl text-white-default duration-300 group-hover:text-black-200"
               ></i>
               Каталог
-            </BaseCButton>
+            </BaseButton>
             <div
               class="flex items-center px-2 bg-[#F2F3F5] text-[#6F6F6F] rounded-lg"
             >

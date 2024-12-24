@@ -4,6 +4,6 @@
   <div>
     <CommonCustomSlider />
     <CommonProductSection/>
-
+    <!-- <CommonBrandSection/> -->
   </div>
 </template>

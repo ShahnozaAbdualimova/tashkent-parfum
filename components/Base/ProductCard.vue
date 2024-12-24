@@ -49,14 +49,14 @@
     </div>
 
     <div class="p-4 gap-1">
-      <!-- название товара -->
+      <!-- product name -->
       <h3 class="text-red-500 text-xs font-normal truncate font-proxima">
         {{ product.name }}
       </h3>
       <p class="text-black-500 font-normal text-sm font-proxima">
         {{ product.brand }}
       </p>
-      <!-- цена -->
+      <!-- price -->
       <div class="flex flex-col mt-1">
         <span
           class="text-red-500 line-through text-sm font-normal font-proxima"
@@ -90,7 +90,7 @@
           v-model.number="counter"
           @input="validateCounter"
           type="number"
-          class="no-spin text-lg rounded py-1.5 focus:border-red-500 w-[64px] transition-all duration-300 border border-white-default hover:border-red-500 border font-normal text-center appearance-none outline-none"
+          class="no-spin text-lg rounded py-1.5 focus:border-red-500 w-[64px] transition-all duration-300 border border-white-default hover:border-red-500  font-normal text-center appearance-none outline-none"
         />
         <button
           :class="{
@@ -115,15 +115,16 @@
           Max {{ maxLimit }}
         </div>
       </div>
-      <div v-else class="flex justify-center mt-2">
+      <div v-else class="flex group justify-center mt-2">
         <BaseButton
-          variant="danger"
-          class="text-white-100"
-          @click="showCounter"
+          :variant="'basketBtn'"
+          class=""
+          :type="'button'"
+          :disabled="false"
+          :icon="'icon-basket'"
+          :icon-position="'left'"
+          @click="basketProduct"
         >
-          <i
-            class="icon-basket text-[24px] items-center flex text-white-100 duration-300 group-hover:text-white-100"
-          ></i>
           В корзину
         </BaseButton>
       </div>
@@ -158,7 +159,7 @@ const toggleFavorite = () => {
   isFavorite.value = !isFavorite.value; // Toggle favorite state
 };
 
-const showCounter = () => {
+const basketProduct = () => {
   isCounterVisible.value = true;
 };
 
@@ -202,13 +203,13 @@ const hideMaxTooltip = () => {
   transform: rotate(-11deg);
 }
 
-/* Убираем стрелки */
+/* no spin */
 .no-spin::-webkit-inner-spin-button,
 .no-spin::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-/* no spin */
+
 .no-spin {
   -moz-appearance: textfield;
 }
