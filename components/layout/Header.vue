@@ -99,7 +99,7 @@
 
 <script setup>
 import Dropdown from '~/components/Base/CDropdown.vue';
-
+// language
 const selectedLanguage = ref('O‘zbekcha');
 const languages = ['O‘zbekcha', 'Русский', 'English'];
 
