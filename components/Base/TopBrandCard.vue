@@ -24,7 +24,7 @@
 </template>
 <script setup>
 import { brands } from '~/data/mainProductSection';
-
+// props
 defineProps({
   brand: {
     type: Object,
