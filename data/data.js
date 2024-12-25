@@ -1,5 +1,5 @@
 export const categoryName = [
-    {git
+    {
       id: "bestseller",
       category: "Бестселлеры",
       img: "/images/cards/bestsellers.svg"
