@@ -1,29 +1,25 @@
 <template>
-  <div class="container mx-auto my-6">
+  <div class="mx-auto my-6">
     <CommonSectionWrapper title="Истории" linkText="Все истории">
-      <div v-if="isLoading" class="flex justify-center items-center py-6">
-        <span>Loading...</span>
+      <div class="slider-container overflow-hidden relative container mx-auto">
+        <swiper class="mySwiper" :slidesPerView="8.5" :initialSlide="10">
+          <swiper-slide v-for="(story, index) in stories" :key="story.id">
+            <BaseStoriesCard :story="story" @click="openModal(index)" :borderColor="getStoryBorderColor(story.id)" />
+          </swiper-slide>
+        </swiper>
       </div>
-
-      <swiper v-else class="mySwiper" :slidesPerView="7" spaceBetween="8">
-        <swiper-slide v-for="(story, index) in stories" :key="story.id">
-          <div class="flex items-center gap-2">
-            <BaseStoriesCard :story="story" @click="openModal(index)" />
-          </div>
-        </swiper-slide>
-      </swiper>
     </CommonSectionWrapper>
 
     <ModalStories
       v-if="showModal"
       :isVisible="showModal"
-      @closeModal="closeModal"
       :story="stories[selectedStoryIndex]"
       :currentIndex="selectedStoryIndex"
       :totalStories="stories.length"
       @updateIndex="updateStoryIndex"
       @hoverPause="pauseAutoSlideAndProgress"
       @hoverResume="resumeAutoSlideAndProgress"
+      @closeModal="closeModal"
     >
       <div
         v-if="showModal"
@@ -48,6 +44,7 @@ const showModal = ref(false);
 const selectedStoryIndex = ref(0);
 const isLoading = ref(true);
 const isDataLoaded = ref(false);
+const viewedStoryIds = ref([]);
 
 const progressBarWidth = ref(0);
 let progressInterval = null;
@@ -74,6 +71,14 @@ const openModal = (index) => {
   showModal.value = true;
   startAutoSlide();
   startProgressBar();
+  markStoryAsViewed(index);
+};
+
+const markStoryAsViewed = (index) => {
+  const storyId = stories.value[index]?.id;
+  if (storyId && !viewedStoryIds.value.includes(storyId)) {
+    viewedStoryIds.value.push(storyId);
+  }
 };
 
 const closeModal = () => {
@@ -97,7 +102,7 @@ const updateStoryIndex = (direction) => {
     selectedStoryIndex.value =
       (selectedStoryIndex.value + 1) % stories.value.length;
   }
-
+  markStoryAsViewed(selectedStoryIndex.value);
   startAutoSlide();
   startProgressBar();
 };
@@ -149,8 +154,35 @@ const resumeAutoSlideAndProgress = () => {
   startProgressBar();
 };
 
+const getStoryBorderColor = (storyId) => {
+  return viewedStoryIds.value.includes(storyId) ? 'border-gray-500' : 'border-red-500';
+};
+
 onBeforeUnmount(() => {
   stopAutoSlide();
   stopProgressBar();
 });
 </script>
+<style scoped>
+.slider-container::before,
+.slider-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.slider-container::before {
+  left: 0;
+  background: linear-gradient(to right, #fff, transparent);
+}
+
+.slider-container::after {
+  right: 0;
+  background: linear-gradient(to left, #fff, transparent);
+}
+
+</style>
