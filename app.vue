@@ -5,12 +5,3 @@
     </NuxtLayout>
   </div>
 </template>
-
-<script>
-import { NuxtPage } from '#build/components';
-
-
-
-
-</script>
-

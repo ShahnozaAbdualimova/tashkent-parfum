@@ -10,7 +10,6 @@
 </template>
 
 <script setup>
-import { computed } from "vue"
 
 const props = defineProps({
   type: {
@@ -38,7 +37,7 @@ const computedClass = computed(() => {
     secondaryGray: "bg-white-500 text-white-default font-proxima rounded-md duration-300 px-4 py-2.5 font-normal text-sm",
     lightDanger: "font-proxima rounded-md transform transition-transform active:scale-95 bg-red-950 duration-300 px-4 py-2.5 font-normal text-sm text-red-500",
     danger:
-      "font-proxima rounded-md transform transition-transform active:scale-95 bg-red-500 hover:shadow-[0_0_10px_1px_rgba(246,37,89,0.5)] duration-300 px-4 py-2.5 font-normal text-sm text-white-default",
+      "font-proxima rounded-md transform transition-transform active:scale-95 bg-red-500 hover:shadow-[0_0_10px_1px_rgba(246,37,89,0.5)] duration-300 px-7 py-2.5 font-normal text-sm text-white-default",
       light: "font-proxima px-4 py-3 bg-transparent rounded-lg font-normal text-base text-white-default duration-300 hover:bg-white-default hover:text-black-300 group border border-white-default"
   }[props.variant];
 
