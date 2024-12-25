@@ -1,6 +1,6 @@
 <template>
   <ModalWrapper>
-    <div class="flex items-center justify-center gap-4">
+    <div class="flex items-center justify-center gap-4 relative">
       <button
         @click="navigate('prev')"
         class="active:scale-90 duration-200 ease-in-out bg-gray-100 rounded-md p-1.5 rotate-180 text-3xl text-gray-300 flex items-center justify-center w-11 h-11 hover:bg-white/[0.24]"
@@ -49,7 +49,14 @@
       >
         <i class="icon-left" />
       </button>
+      <button
+          @click="closeModal"
+          class="z-1000 h-8 w-8 text-xl text-white border-2 border-white absolute right-0 top-0 rounded-[100%] flex items-center justify-center duration-200 ease-in-out hover:text-red-500 hover:border-red-500 hover:rotate-90"
+      >
+        &#x2715;
+      </button>
     </div>
+
   </ModalWrapper>
 </template>
 
@@ -69,9 +76,14 @@ defineProps({
   },
 });
 
-const emit = defineEmits(['updateIndex']);
+const emit = defineEmits(['updateIndex','closeModal']);
 
 const navigate = (direction) => {
   emit('updateIndex', direction);
+};
+
+
+const closeModal = () => {
+  emit('closeModal');
 };
 </script>
