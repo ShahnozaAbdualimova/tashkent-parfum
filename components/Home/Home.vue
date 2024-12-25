@@ -5,6 +5,6 @@
     <CommonCustomSlider />
     <CommonProductSection/>
     <CommonStoriesSection/>
-
+    <CategoryCategorySection />
   </div>
 </template>
