@@ -139,7 +139,7 @@ import { product } from '~/data/mainProductSection';
 // import 'swiper/css/pagination';
 // import 'swiper/css/navigation';
 
-// Props for the product data
+// Props
 defineProps({
   product: {
     type: Object,
