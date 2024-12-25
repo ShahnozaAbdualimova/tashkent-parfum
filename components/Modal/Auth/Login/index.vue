@@ -1,8 +1,9 @@
 <template>
   <ModalWrapper>
-    <div class="flex gap-2">
+    <div class="flex gap-4">
 
     <div class="flex rounded-xl">
+
       <ModalAuthBanner/>
     </div>
 
