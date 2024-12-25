@@ -147,7 +147,7 @@ defineProps({
   },
 });
 
-// Reactive state variables
+
 const isFavorite = ref(false); // For tracking the favorite state
 const isCounterVisible = ref(false); // Display counter visibility
 const counter = ref(1); // Current counter value
