@@ -1,8 +1,6 @@
 <template>
   <div>
-    <BaseCCard :items="categoryName">
-      <slot />
-    </BaseCCard>
+    <BaseCard :items="categoryName" />
   </div>
 </template>
 

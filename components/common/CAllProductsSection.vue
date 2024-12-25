@@ -8,6 +8,19 @@
         <div class="flex flex-row">
           <h3 class="font-normal text-3xl text-black-500">Все продукты</h3>
         </div>
+
+        <div class="mt-10">
+          <Input placeholder="search" type="text">
+            <template #prefix>
+              <i
+                class="icon-search text-[20px] pl-2.5 text-grey-100"
+              ></i> </template
+          ></Input>
+          <PasswordInput class="mt-5" />
+          <CardInput class="mt-5"/>
+          <PhoneInput class="mt-10"/>
+        </div>
+
         <div class="p-5 bg-red-500 rounded-xl mt-5">
           <h4 class="text-2xl font-normal text-black-500">
             Популярные предложения
@@ -44,9 +57,11 @@
 </template>
 
 <script setup>
-import CFilterSidebar from './CFilterSidebar.vue';
-
 import { products } from '~/data/mainProductSection';
+import Input from '../Base/Input.vue';
+import PasswordInput from './PasswordInput.vue';
+import CardInput from './CardInput.vue';
+import PhoneInput from './PhoneInput.vue';
 </script>
 
 <style></style>

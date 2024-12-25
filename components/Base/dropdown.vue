@@ -39,7 +39,7 @@
             : '',
           selectedValue === option ? 'bg-red-100 text-black-500' : '',
         ]"
-        class="px-4 py-4 cursor-pointer hover:bg-white-200 text-xs text-grey-100"
+        class="px-4 py-4 cursor-pointer bg-white hover:bg-white-200 text-xs text-grey-100"
         @click="selectOption(option)"
       >
         {{ option }}

@@ -10,5 +10,6 @@ import CAllProducts from '../common/CAllProductsSection.vue';
     <CommonProductSection />
     <CommonStoriesSection />
     <CAllProductsSection />
+    
   </div>
 </template>

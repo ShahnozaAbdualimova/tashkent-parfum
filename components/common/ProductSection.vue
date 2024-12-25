@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto mt-6">
-    <CommonCSectionWrapper title="Рекомендуемые товары" linkText="Все товары">
+    <CommonSectionWrapper title="Рекомендуемые товары" linkText="Все товары">
       <div class="grid grid-cols-6 gap-3">
         <BaseProductCard
           v-for="(product, index) in products.slice(0, 6)"
@@ -8,7 +8,7 @@
           :product="product"
         />
       </div>
-    </CommonCSectionWrapper>
+    </CommonSectionWrapper>
   </div>
 </template>
 

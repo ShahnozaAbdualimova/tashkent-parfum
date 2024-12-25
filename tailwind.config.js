@@ -36,7 +36,7 @@ export default {
           700: '#2B2B2B',
         },
         white: {
-          default: '#ffffff',
+          DEFAULT: '#ffffff',
           100: '#FEF9FA',
           200: '#FEF8FA',
           300: '#F9F9F9',

@@ -6,7 +6,7 @@
           <slot></slot>
           <button
             @click="closeModal"
-            class="h-8 w-8 text-xl text-white-default border-2 border-white-default absolute right-0 top-0 rounded-[100%] flex items-center justify-center duration-200 ease-in-out hover:text-red-500 hover:border-red-500 hover:rotate-90"
+            class="h-8 w-8 text-xl text-white border-2 border-white absolute right-0 top-0 rounded-[100%] flex items-center justify-center duration-200 ease-in-out hover:text-red-500 hover:border-red-500 hover:rotate-90"
           >
             &#x2715;
           </button>
