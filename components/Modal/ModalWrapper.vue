@@ -13,21 +13,18 @@
 </template>
 
 <script setup>
+
 const props = defineProps({
   isVisible: { type: Boolean, default: false },
 });
 
 
-watch(
-  () => props.isVisible,
-  (newValue) => {
-    if (newValue) {
-      document.body.classList.add('noscroll');
-    } else {
-      document.body.classList.remove('noscroll');
-    }
-  }
-);
+onMounted(() => {
+  document.body.classList.add('noscroll');
+});
+onUnmounted(() => {
+  document.body.classList.remove('noscroll');
+});
 </script>
 <style scoped>
 .modal-enter-active,
