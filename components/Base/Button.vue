@@ -10,7 +10,6 @@
 </template>
 
 <script setup>
-import { computed } from "vue"
 
 const props = defineProps({
   type: {
@@ -36,12 +35,11 @@ const computedClass = computed(() => {
     headeBtn: "",
     primary: "bg-blue-500 text-white hover:bg-blue-600",
     secondary: "font-proxima rounded-md transform transition-transform active:scale-95 bg-white-400 duration-300 px-4 py-2.5 font-normal text-sm text-black",
-    secondaryGray: "bg-white-500 text-white-default font-proxima rounded-md duration-300 px-4 py-2.5 font-normal text-sm",
-    headerBtn: "",
+    secondaryGray: "bg-white-500 text-white font-proxima rounded-md duration-300 px-4 py-2.5 font-normal text-sm",
     lightDanger: "font-proxima rounded-md transform transition-transform active:scale-95 bg-red-950 duration-300 px-4 py-2.5 font-normal text-sm text-red-500",
     danger:
-      "font-proxima rounded-md transform transition-transform active:scale-95 bg-red-500 hover:shadow-[0_0_10px_1px_rgba(246,37,89,0.5)] duration-300 px-4 py-2.5 font-normal text-sm text-white-default",
-      light: "font-proxima px-4 py-3 bg-transparent rounded-lg font-normal text-base text-white-default duration-300 hover:bg-white-default hover:text-black-300 group border border-white-default"
+      "font-proxima rounded-md transform transition-transform active:scale-95 bg-red-500 hover:shadow-[0_0_10px_1px_rgba(246,37,89,0.5)] duration-300 px-7 py-2.5 font-normal text-sm text-white",
+      light: "font-proxima px-4 py-3 bg-transparent rounded-lg font-normal text-base text-white duration-300 hover:bg-white hover:text-black-300 group border border-white"
   }[props.variant];
 
   // const disabledClass = props.disabled
