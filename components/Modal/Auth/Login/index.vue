@@ -3,7 +3,7 @@
     <div class="flex gap-4">
 
     <div class="flex rounded-xl">
-
+      <ModalAuthLoginForm/>
       <ModalAuthBanner/>
     </div>
 
