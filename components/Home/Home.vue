@@ -1,10 +1,9 @@
-<script setup lang="ts"></script>
-
 <template>
   <div>
     <CommonCustomSlider />
     <CommonProductSection/>
     <CommonStoriesSection/>
-
+    <CommonTopBrandsSection/>
+    <CommonBrandSection/>
   </div>
 </template>

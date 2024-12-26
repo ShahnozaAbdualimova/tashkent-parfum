@@ -1,7 +1,7 @@
 <template>
   <div>
-    <LayoutHeader />
-    <LayoutNavbar />
+    <LayoutHeader class="mb-7" />
     <slot></slot>
+    <LayoutFooter />
   </div>
 </template>

@@ -1,18 +1,8 @@
 <template>
   <div>
-    <!-- <CommonCFilterSidebar/> -->
-
-    <!-- <CommonFooter/> -->
-    <Home />
+    <HomeHeroSection />
+    <HomeRecommendedSection />
+    <HomeStoriesSection />
     <CommonProductReviewSlider/>
-    <CommonFooter/>
   </div>
 </template>
-
-<script setup>
-import Home from '../components/Home/Home.vue';
-
-definePageMeta({
-  layout: 'default',
-});
-</script>

@@ -1,11 +1,28 @@
 @import '../icomoon/style.css';
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-body{
+body {
+  background-color: #f7f8fa;
   overflow-x: hidden;
+}
+
+.container {
+  max-width: 1184px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
 }

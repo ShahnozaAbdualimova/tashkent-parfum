@@ -4,7 +4,11 @@
       <div class="slider-container overflow-hidden relative container mx-auto">
         <swiper class="mySwiper" :slidesPerView="8.5" :initialSlide="10">
           <swiper-slide v-for="(story, index) in stories" :key="story.id">
-            <BaseStoriesCard :story="story" @click="openModal(index)" :borderColor="getStoryBorderColor(story.id)" />
+            <StoriesCard
+              :story="story"
+              @click="openModal(index)"
+              :borderColor="getStoryBorderColor(story.id)"
+            />
           </swiper-slide>
         </swiper>
       </div>
@@ -155,7 +159,9 @@ const resumeAutoSlideAndProgress = () => {
 };
 
 const getStoryBorderColor = (storyId) => {
-  return viewedStoryIds.value.includes(storyId) ? 'border-gray-500' : 'border-red-500';
+  return viewedStoryIds.value.includes(storyId)
+    ? 'border-gray-500'
+    : 'border-red-500';
 };
 
 onBeforeUnmount(() => {
@@ -184,5 +190,4 @@ onBeforeUnmount(() => {
   right: 0;
   background: linear-gradient(to left, #fff, transparent);
 }
-
 </style>
