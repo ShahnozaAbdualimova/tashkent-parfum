@@ -3,6 +3,12 @@ export default {
   content: ['./pages/**/*.{js,ts,vue}', './components/**/*.{js,ts,vue}'],
   theme: {
     extend: {
+      width:{
+        '982': '982px'
+      },
+      height: {
+        '439': '439px'
+      },
       fontFamily: {
         proxima: ['Proxima', 'sans-serif'],
       },
@@ -63,7 +69,9 @@ export default {
           'linear-gradient(90deg, rgba(26,26,26,1) 0%, rgba(26,26,26,0.8) 74%, rgba(26,26,26,1) 100%)',
         'dark-btn':
           'linear-gradient(90deg, rgba(56,56,56,1) 0%, rgba(111,111,111,1) 100%)',
-        'dark-btn-hover': 'linear-gradient(84.8deg,#d7d7d7,#f4f4f4 131.39%)',
+          'dark-btn-hover':
+          'linear-gradient(84.8deg,#d7d7d7,#f4f4f4 131.39%)',
+        'header-btn': ''
       },
     },
   },
