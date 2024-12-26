@@ -49,10 +49,10 @@
         <CommonLogo type="light" />
         <div class="flex items-center gap-4">
           <BaseButton
-            class="font-proxima px-3 py-2 bg-dark-btn rounded-lg font-normal text-sm text-white duration-300 hover:bg-dark-btn-hover hover:text-black-300 group"
+            class="font-proxima px-3 py-2 bg-dark-btn rounded-lg font-normal text-sm text-white-default duration-300 hover:bg-dark-btn-hover hover:text-black-300 group"
           >
             <i
-              class="icon-list text-2xl text-white duration-300 group-hover:text-black-200"
+              class="icon-list text-2xl text-white-default duration-300 group-hover:text-black-200"
             ></i>
             Каталог
           </BaseButton>
@@ -90,7 +90,11 @@
           <p class="text-xs">Избранные</p>
         </div>
       </div>
-      <BaseButton type="button" @click="showModal = !showModal">
+      <BaseButton
+        @click="showModal = !showModal"
+        variant="danger"
+        type="button"
+      >
         <i class="icon-login text-[24px]"></i>
         Войти
       </BaseButton>
