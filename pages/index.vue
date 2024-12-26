@@ -3,5 +3,6 @@
     <HomeHeroSection />
     <HomeRecommendedSection />
     <HomeStoriesSection />
+    <CommonProductReviewSlider/>
   </div>
 </template>
