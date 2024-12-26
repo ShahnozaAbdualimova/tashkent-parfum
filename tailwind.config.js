@@ -3,12 +3,6 @@ export default {
   content: ['./pages/**/*.{js,ts,vue}', './components/**/*.{js,ts,vue}'],
   theme: {
     extend: {
-      width: {
-        '982': '982px'
-      },
-      height: {
-        '439': '439px'
-      },
       fontFamily: {
         proxima: ['Proxima', 'sans-serif'],
       },
@@ -24,7 +18,6 @@ export default {
           800: '#F97495',
           900: '#FA89A5',
           950: '#FEEBF0',
-          1150: '#faa5ac'
         },
         yellow: {
           100: '#F8AF02'
@@ -76,7 +69,6 @@ export default {
           'linear-gradient(84.8deg,#d7d7d7,#f4f4f4 131.39%)',
         'header-btn': ''
       },
-
     },
   },
   plugins: [],
