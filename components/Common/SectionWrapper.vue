@@ -16,7 +16,7 @@
       <div>
         <slot name="link">
           <NuxtLink
-            to="#"
+            :to="linkHref"
             class="text-sm text-[#9E9EA5] hover:text-gray-800 flex items-center"
           >
             {{ linkText }} <i class="icon-left ml-2 text-[#9E9EA5] group-hover:text-gray-800"></i>
