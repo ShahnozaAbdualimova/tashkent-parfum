@@ -1,12 +1,12 @@
 <template>
   <!-- created input components -->
-  <div class="input relative flex" :class="{ 'border-[red]': error }">
+  <div class="input relative flex mt-2" :class="{ 'border-[red]': error }">
     <slot name="prefix" />
     <input
       v-model="model"
       :type
       :placeholder
-      class="w-full h-auto text-base font-normal font-proxima bg-white-400 rounded-lg py-2.5 outline-none transition-all duration-300"
+      class="w-full h-full text-base font-normal font-proxima bg-white-400 rounded-lg py-2.5 pl-3 outline-none transition-all duration-300"
     />
     <slot name="suffix" />
   </div>

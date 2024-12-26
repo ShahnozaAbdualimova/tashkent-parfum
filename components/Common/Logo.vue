@@ -121,23 +121,22 @@
       fill="currentColor"
     />
   </svg>
-  
-  
-  
-  </template>
-  
-  <script setup>
-  import { computed } from 'vue';
-  
-  const props = defineProps({
-    type: {
-      type: String,
-      default: 'light', // light, dark
-    },
-  });
-  
-  const logoStyles = computed(() => {
-    // Shartni tekshirib, light bo'lsa qizil rang, aks holda qora
-    return props.type === 'light' ? 'text-red-500' : 'text-black';
-  });
-  </script>
+</template>
+
+<script setup>
+import { computed } from 'vue';
+
+const props = defineProps({
+  type: {
+    type: String,
+    default: 'dark', // 'light' yoki 'dark' ni qabul qiladi
+  },
+});
+
+const logoStyles = computed(() => {
+  if(props.type === 'white') {
+    return 'text-white'
+  }
+  return props.type === 'light' ? 'text-red-500' : 'text-black';
+});
+</script>
