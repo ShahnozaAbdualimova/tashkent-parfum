@@ -1,5 +1,5 @@
 <template>
-    <CommonCSectionWrapper title="Отзывы"/>
+    <CommonCSectionWrapper title="Отзывы" />
     <div class="h-screen">
         <Swiper class="h-full " :slides-per-view="3.5" :space-between="30" :breakpoints="{
             0: { slidesPerView: 1, spaceBetween: 10 },
@@ -199,5 +199,4 @@ export default {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
 }
-
 </style>
