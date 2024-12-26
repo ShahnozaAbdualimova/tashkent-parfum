@@ -46,10 +46,15 @@
     </div>
     <header class="container w-full py-4 flex items-center justify-between">
       <div class="flex gap-8">
+        <i
+          class="icon-list block lg:hidden text-2xl font-bold"
+          @click="openMenyuList"
+        ></i>
         <CommonLogo type="light" />
         <div class="flex items-center gap-4">
           <BaseButton
             class="font-proxima px-3 py-2 bg-dark-btn rounded-lg font-normal text-sm text-white-default duration-300 hover:bg-dark-btn-hover hover:text-black-300 group"
+            @click="openList"
           >
             <i
               class="icon-list text-2xl text-white-default duration-300 group-hover:text-black-200"
@@ -90,11 +95,7 @@
           <p class="text-xs">Избранные</p>
         </div>
       </div>
-      <BaseButton
-        @click="showModal = !showModal"
-        variant="danger"
-        type="button"
-      >
+      <BaseButton @click="showModal = !showModal" type="button">
         <i class="icon-login text-[24px]"></i>
         Войти
       </BaseButton>
@@ -107,6 +108,14 @@
       @closeModal="closeModal"
     >
     </ModalAuthLogin>
+
+    <!-- Catalog list section -->
+    <CommonCatalogList v-if="openCatalogList" />
+    <CommonMenuList
+      v-if="openMenuList"
+      @close-menu="openMenuList = false"
+      class="lg:hidden"
+    />
   </div>
 </template>
 
@@ -123,9 +132,22 @@ const closeModal = () => {
 const selectedLanguage = ref('O‘zbekcha');
 const languages = ref(['O‘zbekcha', 'Русский', 'English']);
 
-// Funksiyalar
 const updateLanguage = (language) => {
   selectedLanguage.value = language;
+};
+
+const openMenuList = ref(false);
+
+const openCatalogList = ref(false);
+
+const openList = () => {
+  openCatalogList.value = !openCatalogList.value;
+  return openCatalogList;
+};
+
+const openMenyuList = () => {
+  openMenuList.value = !openMenuList.value;
+  return openMenuList;
 };
 </script>
 

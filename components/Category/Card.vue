@@ -30,9 +30,7 @@
 </template>
 
 <script setup>
-
-import { categoryName } from '~/data/data.js'
-
+import { categoryName } from '~/data/data.js';
 </script>
 
 <style scoped>
@@ -40,3 +38,4 @@ import { categoryName } from '~/data/data.js'
   opacity: 100;
 }
 </style>
+
