@@ -2,9 +2,13 @@
 
 <template>
   <div>
-    <!-- <CommonCustomSlider /> -->
-    <!-- <CommonProductSection/> -->
-    <!-- <CommonStoriesSection/> -->
-    <!-- <CommonPopularCard /> -->
+    <CommonCustomSlider />
+    <CommonProductSection/>
+    <CommonStoriesSection/>
+    <CommonPopularCard />
   </div>
 </template>
+
+<script setup lang="ts"></script>
+
+

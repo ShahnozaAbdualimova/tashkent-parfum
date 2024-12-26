@@ -40,7 +40,7 @@
             ></i>
           </a>
         </div>
-        <Dropdown
+        <BaseDropdown
           :selectedValue="selectedLanguage"
           :options="languages"
           @update:selectedValue="updateLanguage"
@@ -59,10 +59,6 @@ const updateLanguage = (language) => {
   selectedLanguage.value = language;
 };
 
-const Salom = () => {
-  console.log("Salom");
-  
-}
 
 </script>
 
