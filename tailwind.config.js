@@ -24,12 +24,15 @@ export default {
           800: '#F97495',
           900: '#FA89A5',
           950: '#FEEBF0',
+          1150: '#faa5ac'
         },
         yellow:{
           100: '#F8AF02'
         },
         green:{
-          100: '#26D176'
+          100: '#26D176',
+          200: '#70ff92',
+          
         },
         black: {
           default: '#000000',
@@ -42,7 +45,7 @@ export default {
           700: '#2B2B2B',
         },
         white: {
-          DEFAULT: '#ffffff',
+          default: '#ffffff',
           100: '#FEF9FA',
           200: '#FEF8FA',
           300: '#F9F9F9',
@@ -73,6 +76,7 @@ export default {
           'linear-gradient(84.8deg,#d7d7d7,#f4f4f4 131.39%)',
         'header-btn': ''
       },
+      
     },
   },
   plugins: [],
