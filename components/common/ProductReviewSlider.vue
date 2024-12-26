@@ -8,14 +8,14 @@
             1000: { slidesPerView: 3.5, spaceBetween: 30 }
         }" pagination>
             <SwiperSlide v-for="(testimonial, index) in testimonials" :key="index">
-                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm text-left max-h-52 custom-shadow cursor-pointer">
+                <div class="bg-white rounded-lg p-4 shadow-sm text-left max-h-52 custom-shadow cursor-pointer">
                     <img :src="testimonial.image" alt="Product Image" class="w-12 h-12 object-cover -mb-12" />
                     <h3 class="text-lg font-bold pl-20">{{ testimonial.title }}</h3>
                     <p class="text-sm text-gray-600 max-w-64 ml-20">
                         {{ testimonial.description }}
                     </p>
                     <div class="flex items-center gap-3 mt-3">
-                        <i mg :src="testimonial.reviewerImage" alt="Reviewer Image"
+                        <img :src="testimonial.reviewerImage" alt="Reviewer Image"
                             class="w-8 h-8 rounded-full object-cover" />
                         <div>
                             <p class="text-sm font-semibold">{{ testimonial.reviewerName }}</p>

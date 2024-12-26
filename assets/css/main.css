@@ -1,7 +1,11 @@
 @import '../icomoon/style.css';
 
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body{
+  overflow-x: hidden;
+}
