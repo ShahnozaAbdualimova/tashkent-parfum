@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto mt-3 mb-12 items-center justify-center">
-    <div class="bg-bodyBg">
+    <div class="bg-white-500">
       <div class="flex items-center justify-between mt-5">
         <h2 class="font-normal text-3xl text-black-500 leading-10">
           Все бренды
@@ -13,7 +13,7 @@
       </div>
       <div class="grid grid-cols-4 gap-6 items-center justify-center mt-5">
         <div
-          class="bg-white p-4 rounded-2xl justify-center items-center outline-none"
+          class="bg-white p-4 rounded-2xl justify-center items-center shadow-xl overflow-hidden"
           v-for="(brand, index) in brands"
           :key="index"
         >

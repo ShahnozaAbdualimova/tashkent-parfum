@@ -1,28 +1,34 @@
 <template>
   <Input
+  :type="inputPhone" 
     placeholder="(___) ___-__-__"
-    v-model="phoneNumber"
-    :mask="phoneMask"
-    :error="hasError"
+    v-model="model"
+    v-mask="mask"
   >
     <template #prefix>
-      <div
-        class="flex items-center px-3 bg-gray-100 text-gray-500 rounded-l-lg"
+      <span
+        class="px-3 py-2.5 bg-gray-400  text-black-500 text-base font-normal rounded-l-lg"
       >
         +998
-      </div>
+      </span>
     </template>
   </Input>
 </template>
 
 <script setup>
-const phoneNumber = ref('');
-const hasError = ref(false);
 
-// Маска для форматирования номера телефона
-const phoneMask = (value) => {
-  return value
-    .replace(/\D/g, '') // Удаляем всё, кроме цифр
-    .replace(/(\d{2})(\d{3})(\d{2})(\d{2})/, '($1) $2-$3-$4'); // Форматируем как (XX) XXX-XX-XX
-};
+
+import Input from '../Base/Input.vue';
+
+defineProps({
+  placeholder: {
+    type: String,
+    required: true
+  }
+  
+})
+
+const inputPhone = ref('String')
+
+const model = defineModel()
 </script>

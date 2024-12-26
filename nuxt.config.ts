@@ -2,7 +2,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
-  plugins: ['~/plugins/v-mask.js'],
+  plugins: ['~/plugins/maska.client.js'],
   modules: ['@nuxtjs/tailwindcss'], // Only include this once
   app: {
     head: {

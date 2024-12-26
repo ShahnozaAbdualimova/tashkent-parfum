@@ -3,21 +3,16 @@
     class="relative bg-white-400 rounded-lg flex items-center border border-transparent border-solid focus:within-border-black-500"
     :class="{ 'border-red-400': error }"
   >
-    <!-- <span
-      v-if="isPhoneNumber"
-      class="px-3 py-2.5 bg-gray-200 border-r text-black-500 text-base font-normal rounded-l-lg"
-    >
-      +998
-    </span> -->
 
     <slot name="prefix" />
     <input
       v-model="model"
+      v-mask="mask"
       autocomplete="off"
       :type
       :placeholder
       class="w-full h-full text-base font-normal bg-white-400 py-2.5 pl-3 outline-none text-black-500"
-      @input="formatCardInput"
+   
     />
     <slot name="suffix" />
   </div>
@@ -43,7 +38,13 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  mask: {
+      type: String,
+      default: '',
+    },
 });
+
+
 
 // const formattedValue = ref('');
 

@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import CAllProductsSection from '../common/CAllProductsSection.vue';
-import CAllProducts from '../common/CAllProductsSection.vue';
+
+
+
+
 
 </script>
 
@@ -9,7 +11,10 @@ import CAllProducts from '../common/CAllProductsSection.vue';
     <CommonCustomSlider />
     <CommonProductSection />
     <CommonStoriesSection />
-    <CAllProductsSection />
+    <CommonAllProductsSection />
+   
+    
+    
     
   </div>
 </template>

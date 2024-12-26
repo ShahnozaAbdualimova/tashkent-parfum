@@ -6,7 +6,7 @@
   :error="error">
     <template #suffix>
       <button class="px-2" type="button" @click="toogleInputType">
-        <!-- <img class="w-[24px]" src="/svg/eye.svg" alt="eye-for-" /> -->
+        
       </button>
     </template>
   </Input>
