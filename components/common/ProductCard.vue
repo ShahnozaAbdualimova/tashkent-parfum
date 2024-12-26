@@ -76,6 +76,7 @@
         <span class="ml-1 text-gray-500 text-sm">({{ product.rating }})</span>
       </div>
       <!-- counter -->
+
       <div
         v-if="isCounterVisible"
         class="flex items-center relative justify-center mt-2 gap-1"
@@ -115,6 +116,7 @@
           Max {{ maxLimit }}
         </div>
       </div>
+      
       <div v-else class="flex group justify-center mt-2">
         <BaseButton
           :variant="'basketBtn'"
@@ -133,7 +135,8 @@
 </template>
 
 <script setup>
-import { product } from '~/data/mainProductSection';
+import { products } from '~/data/mainProductSection';
+
 // import { Swiper, SwiperSlide } from 'swiper/vue';
 // import 'swiper/css';
 // import 'swiper/css/pagination';

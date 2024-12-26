@@ -1,15 +1,15 @@
 <template>
   <div class="container mx-auto mt-16 mb-11">
-    <CommonCSectionWrapper
-      title="Парфюм от топ брендов"
+   
+    <CommonSectionWrapper
+      title="Популярные бренды"
       link-text="Все бренды"
     />
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-3"
-    >
-      <BaseTopBrandCard
-        v-for="(brand, index) in brands.slice(0, 4)"
-        :key="index"
+
+    <div class="grid grid-cols-5 grid-rows-1 gap-4 ">
+      <CommonPopularBrands
+        v-for="(brand, index) in brands"
+        :key="brand.name + index"
         :brand="brand"
       />
     </div>
@@ -17,5 +17,5 @@
 </template>
 
 <script setup>
-import { brands } from '~/data/mainProductSection';
+import { brands } from '~/data/brands';
 </script>

@@ -1,5 +1,3 @@
-
-
 export const products = [
   {
     image: ['/images/card.png'],
@@ -77,21 +75,97 @@ export const products = [
 // brands
 export const brands = [
   { 
-    logo: '/svg/logoBrand.svg',
-    imgId: 1,
-    image: [
-      '/images/brandcard.png',
-      '/images/brandcard2.png',
-      '/images/brandcard3.png'
-    ].map((src, index) => ({ id: index + 1, src })), // added id for image
-    name: 'Dior',
+    avatar: '/svg/logoBrand.svg',
+    title: 'Dior',
     description: 'Аромат который запомнят',
-    price: [
-      '3 560 000',
-      '1 202 000',
-      '760 500'
-    ].map((value, index) => ({ id: index + 1, value })) // added id for price
-  }
+    products: [
+      {
+        id: 1,
+        img: '/images/brandcard.png',
+        price:'3 560 000',
+      },
+      {
+        id: 2,
+        img: '/images/brandcard2.png',
+        price:'1 202 000',
+      },
+      {
+        id: 3,
+        img: '/images/brandcard3.png',
+        price:'760 500',
+      },
+      
+    ]
+  },
+  { 
+    avatar: '/svg/logoBrand.svg',
+    title: 'Dior',
+    description: 'Аромат который запомнят',
+    products: [
+      {
+        id: 1,
+        img: '/images/brandcard.png',
+        price:'3 560 000',
+      },
+      {
+        id: 2,
+        img: '/images/brandcard2.png',
+        price:'1 202 000',
+      },
+      {
+        id: 3,
+        img: '/images/brandcard3.png',
+        price:'760 500',
+      },
+      
+    ]
+  },
+  { 
+    avatar: '/svg/logoBrand.svg',
+    title: 'Dior',
+    description: 'Аромат который запомнят',
+    products: [
+      {
+        id: 1,
+        img: '/images/brandcard.png',
+        price:'3 560 000',
+      },
+      {
+        id: 2,
+        img: '/images/brandcard2.png',
+        price:'1 202 000',
+      },
+      {
+        id: 3,
+        img: '/images/brandcard3.png',
+        price:'760 500',
+      },
+      
+    ]
+  },
+  { 
+    avatar: '/svg/logoBrand.svg',
+    title: 'Dior',
+    description: 'Аромат который запомнят',
+    products: [
+      {
+        id: 1,
+        img: '/images/brandcard.png',
+        price:'3 560 000',
+      },
+      {
+        id: 2,
+        img: '/images/brandcard2.png',
+        price:'1 202 000',
+      },
+      {
+        id: 3,
+        img: '/images/brandcard3.png',
+        price:'760 500',
+      },
+      
+    ]
+  },
 ];
 
 
