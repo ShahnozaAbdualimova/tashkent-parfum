@@ -1,7 +1,7 @@
 <template>
   <div
-    class="w-[134px] h-[182px] p-2 flex items-center justify-center border-[1.6px]  bg-red-100 bg-opacity-20 rounded-xl cursor-pointer group"
-  :class="borderColor"
+    class="w-[134px] h-[182px] p-2 flex items-center justify-center border-[1.6px] bg-red-100 bg-opacity-20 rounded-xl cursor-pointer group"
+    :class="borderColor"
   >
     <img
       :src="story?.image_src?.default"
@@ -14,12 +14,12 @@
 <script setup>
 defineProps({
   story: {
-    type: Array,
+    type: Object,
     required: true,
   },
-  borderColor:{
+  borderColor: {
     type: String,
     default: 'border-red-500',
-  }
+  },
 });
 </script>
