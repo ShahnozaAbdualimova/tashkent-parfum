@@ -134,6 +134,9 @@ const props = defineProps({
 });
 
 const logoStyles = computed(() => {
+  if(props.type === 'white') {
+    return 'text-white'
+  }
   return props.type === 'light' ? 'text-red-500' : 'text-black';
 });
 </script>
