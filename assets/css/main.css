@@ -1,11 +1,10 @@
 @import '../icomoon/style.css';
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-body{
+body {
+  background-color: #f7f8fa;
   overflow-x: hidden;
 }
