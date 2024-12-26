@@ -17,6 +17,10 @@ logs
 package-lock.json
 yarn.lock
 
+.yarn
+.yarn/
+.yarn/install-stage.gz
+
 # Misc
 .DS_Store
 .fleet
