@@ -1,24 +1,3 @@
-<script setup>
-import { ref } from 'vue';
-// import Dropdown from '~/components/Base/Dropdown.vue';
-
-// Reaktiv ma'lumotlar
-const selectedLanguage = ref('O‘zbekcha');
-const languages = ref(['O‘zbekcha', 'Русский', 'English']);
-
-const openCatalogList = ref(false);
-
-const openList = () => {
-  openCatalogList.value = !openCatalogList.value;
-  return openCatalogList;
-};
-
-// Funksiyalar
-const updateLanguage = (language) => {
-  selectedLanguage.value = language;
-};
-</script>
-
 <template>
   <div class="w-full">
     <div class="w-full py-2 bg-gray-50 px-5 xl:px-32">
@@ -153,3 +132,17 @@ const updateLanguage = (language) => {
     <CommonCatalogList v-if="openCatalogList" />
   </div>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+
+const selectedLanguage = ref('O‘zbekcha');
+const languages = ref(['O‘zbekcha', 'Русский', 'English']);
+
+const openCatalogList = ref(false);
+
+const openList = () => {
+  openCatalogList.value = !openCatalogList.value;
+  return openCatalogList;
+};
+</script>

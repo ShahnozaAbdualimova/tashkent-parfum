@@ -1,16 +1,12 @@
 <template>
   <Teleport to="body">
     <Transition name="modal">
-      <div class="modal-overlay" v-show="props.isVisible">
-        <div class="flex items-center justify-center relative">
+      <div class="modal-overlay" v-if="props.isVisible">
+        <div class="flex items-center justify-center">
           <slot></slot>
-          <button
-            @click="closeModal"
-            class="h-8 w-8 text-xl text-white-default border-2 border-white-default absolute right-0 top-0 rounded-[100%] flex items-center justify-center duration-200 ease-in-out hover:text-red-500 hover:border-red-500 hover:rotate-90"
-          >
-            &#x2715;
-          </button>
+
         </div>
+
       </div>
     </Transition>
   </Teleport>
@@ -21,22 +17,13 @@ const props = defineProps({
   isVisible: { type: Boolean, default: false },
 });
 
-const emits = defineEmits(['closeModal']);
 
-const closeModal = () => {
-  emits('closeModal');
-};
-
-watch(
-  () => props.isVisible,
-  (newValue) => {
-    if (newValue) {
-      document.body.classList.add('noscroll');
-    } else {
-      document.body.classList.remove('noscroll');
-    }
-  }
-);
+onMounted(() => {
+  document.body.classList.add('noscroll');
+});
+onUnmounted(() => {
+  document.body.classList.remove('noscroll');
+});
 </script>
 <style scoped>
 .modal-enter-active,
