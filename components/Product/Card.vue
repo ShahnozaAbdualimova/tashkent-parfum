@@ -92,7 +92,6 @@
       </div>
       <div v-else class="flex justify-center mt-2">
         <BaseButton
-          variant="danger"
           class="text-white-100"
           @click="showCounter"
         >
