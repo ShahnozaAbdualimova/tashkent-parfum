@@ -1,5 +1,5 @@
 <template>
-    <CommonCSectionWrapper title="Отзывы" linkText="null" />
+    <CommonCSectionWrapper title="Отзывы"/>
     <div class="h-screen">
         <Swiper class="h-full " :slides-per-view="3.5" :space-between="30" :breakpoints="{
             0: { slidesPerView: 1, spaceBetween: 10 },
