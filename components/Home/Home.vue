@@ -1,10 +1,10 @@
-<script setup lang="ts"></script>
+<script setup></script>
 
 <template>
   <div>
-    <CommonCustomSlider />
-    <CommonProductSection/>
-    <CommonStoriesSection/>
-    <CategoryCategorySection />
+    <!-- <CommonCustomSlider /> -->
+    <!-- <CommonProductSection/> -->
+    <!-- <CommonStoriesSection/> -->
+    <!-- <CommonPopularCard /> -->
   </div>
 </template>

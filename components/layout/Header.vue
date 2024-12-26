@@ -5,6 +5,7 @@ import { ref } from 'vue';
 // Reaktiv ma'lumotlar
 const selectedLanguage = ref('O‘zbekcha');
 const languages = ref(['O‘zbekcha', 'Русский', 'English']);
+const openMenuList = ref(false)
 
 const openCatalogList = ref(false);
 
@@ -12,6 +13,11 @@ const openList = () => {
   openCatalogList.value = !openCatalogList.value;
   return openCatalogList;
 };
+
+const openMenyuList = () => {
+    openMenuList.value = !openMenuList.value
+    return openMenuList
+}
 
 // Funksiyalar
 const updateLanguage = (language) => {
@@ -21,62 +27,12 @@ const updateLanguage = (language) => {
 
 <template>
   <div class="w-full">
-    <div class="w-full py-2 bg-gray-50 px-5 xl:px-32">
-      <div class="w-full py-1 lg:flex justify-between hidden">
-        <div class="flex gap-6">
-          <a
-            class="w-auto h-auto flex items-center gap-2 cursor-pointer hover:text-red-500"
-            href="tel:+998712007007"
-            target="_blank"
-          >
-            <i class="icon-phone text-2xl text-gray-300"></i>
-            <span class="text-gray-200 text-xs">+998 (71) 200 70 07</span>
-          </a>
-          <a
-            class="w-auto h-auto flex items-center gap-2 cursor-pointer hover:text-red-500"
-            href="https://www.google.com/maps/dir/Inha+University+in+Tashkent,+Ziyolilar+Street,+Tashk[…]41.338525?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
-            target="_blank"
-          >
-            <i class="icon-adress text-2xl text-gray-300"></i>
-            <span class="text-gray-200 text-xs"
-              >Yunusobod, Ahmad Donish ko'chasi, 4/80</span
-            >
-          </a>
-        </div>
-        <div class="flex items-center gap-3">
-          <div class="flex gap-4 text-gray-200">
-            <a href="" target="_blank">
-              <i
-                class="icon-facebook cursor-pointer hover:text-red-500 transition-all duration-300 text-xl"
-              ></i>
-            </a>
-            <a
-              href="https://www.instagram.com/toshkent_parfum_/"
-              target="_blank"
-            >
-              <i
-                class="icon-instagram cursor-pointer hover:text-red-500 transition-all duration-300 text-xl"
-              ></i>
-            </a>
-            <a href="https://t.me/toshkent_parfume" target="_blank">
-              <i
-                class="icon-telegram cursor-pointer hover:text-red-500 transition-all duration-300 text-xl"
-              ></i>
-            </a>
-          </div>
-          <Dropdown
-            :selectedValue="selectedLanguage"
-            :options="languages"
-            @update:selectedValue="setSelectedLanguage"
-          />
-        </div>
-      </div>
-    </div>
+    <LayoutSubHeader class="hidden lg:block"/>
     <!-- Header section -->
     <header class="w-full py-4 px-5 xl:px-32">
       <div class="w-full flex items-center justify-between container mx-auto">
         <div class="flex items-center gap-8">
-          <i class="icon-list block lg:hidden text-2xl font-bold"></i>
+          <i class="icon-list block lg:hidden text-2xl font-bold" @click="openMenyuList"></i>
           <CommonLogo />
           <div class="flex items-center gap-4">
             <NuxtLink to="">
@@ -151,5 +107,7 @@ const updateLanguage = (language) => {
 
     <!-- Catalog list section -->
     <CommonCatalogList v-if="openCatalogList" />
+    <CommonMenuList v-if="openMenuList" @close-menu="openMenuList = false" class="lg:hidden"/>
   </div>
 </template>
+  
