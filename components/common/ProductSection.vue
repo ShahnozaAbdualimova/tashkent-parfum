@@ -7,6 +7,8 @@
           :key="index"
           :product="product"
         />
+
+        
       </div>
     </CommonSectionWrapper>
   </div>
