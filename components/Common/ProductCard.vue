@@ -82,7 +82,7 @@
         class="flex items-center relative justify-center mt-2 gap-1"
       >
         <button
-          class="px-3 py-2.5 flex items-center justify-center bg-white-default rounded-l-lg duration-300 rounded-r-sm border border-white-100 hover:bg-red-1150/10 hover:border-red-500"
+          class="px-3 py-2.5 flex items-center justify-center bg-white rounded-l-lg duration-300 rounded-r-sm border border-white-100 hover:bg-red-1150/10 hover:border-red-500"
           @click="decrement"
         >
           <i class="icon-minus text-[20px] text-red-500"></i>
@@ -91,14 +91,14 @@
           v-model.number="counter"
           @input="validateCounter"
           type="number"
-          class="no-spin text-lg rounded py-1.5 focus:border-red-500 w-[64px] transition-all duration-300 border border-white-default hover:border-red-500  font-normal text-center appearance-none outline-none"
+          class="no-spin text-lg rounded py-1.5 focus:border-red-500 w-[64px] transition-all duration-300 border border-white hover:border-red-500 font-normal text-center appearance-none outline-none"
         />
         <button
           :class="{
             'bg-gray-400': counter === maxLimit,
             'bg-white-100': counter < maxLimit,
           }"
-          class="px-3 py-2.5 flex items-center justify-center rounded-r-lg duration-300 rounded-l-sm border border-white-default hover:bg-green-200/10 hover:border-green-100"
+          class="px-3 py-2.5 flex items-center justify-center rounded-r-lg duration-300 rounded-l-sm border border-white hover:bg-green-200/10 hover:border-green-100"
           @click="increment"
         >
           <i
@@ -111,12 +111,12 @@
         </button>
         <div
           v-if="showMaxTooltip"
-          class="absolute top-[-10px] -right-9 transform -translate-x-1/2 bg-black-700 text-white-default px-2 py-1 rounded-md text-xs"
+          class="absolute top-[-10px] -right-9 transform -translate-x-1/2 bg-black-700 text-white px-2 py-1 rounded-md text-xs"
         >
           Max {{ maxLimit }}
         </div>
       </div>
-      
+
       <div v-else class="flex group justify-center mt-2">
         <BaseButton
           :variant="'basketBtn'"
@@ -149,7 +149,6 @@ defineProps({
     required: true,
   },
 });
-
 
 const isFavorite = ref(false); // For tracking the favorite state
 const isCounterVisible = ref(false); // Display counter visibility

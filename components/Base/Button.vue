@@ -36,31 +36,31 @@ const computedClass = computed(() => {
     'px-4 py-2 rounded text-sm font-medium transition-all duration-300 flex items-center justify-center';
 
   const variantClass = {
-    headeBtn: '',
-    primary: 'bg-blue-500 text-white hover:bg-blue-600',
+    primary:
+      'transform transition-transform active:scale-95 bg-red-500 hover:shadow-[0_0_10px_1px_rgba(246,37,89,0.5)]  px-4 py-2.5 font-normal  text-white',
     catalogBtn:
-      ' px-3 py-2 bg-dark-btn rounded-lg font-normal  text-white-default  hover:bg-dark-btn-hover hover:text-black-300 group',
+      ' px-3 py-2 bg-dark-btn rounded-lg font-normal  text-white  hover:bg-dark-btn-hover hover:text-black-300 group',
     secondary:
-      ' rounded-md transform transition-transform active:scale-95 bg-white-400  px-4 py-2.5 font-normal  text-black',
-    secondaryGray:
-      'bg-white-500 text-white-default  rounded-md  px-4 py-2.5 font-normal ',
+      'transform transition-transform active:scale-95 bg-white-400  px-4 py-2.5 font-normal  text-black',
+    secondaryGray: 'bg-white-500 text-white px-4 py-2.5 font-normal ',
     headerBtn: '',
     basketBtn:
-      'rounded-md transform  transition-transform active:scale-95 bg-red-500 hover:shadow-[0_0_10px_1px_rgba(246,37,89,0.5)] w-full font-normal  text-white-default',
+      'transform  transition-transform active:scale-95 bg-red-500 hover:shadow-[0_0_10px_1px_rgba(246,37,89,0.5)] w-full font-normal  text-white',
     lightDanger:
-      ' rounded-md transform transition-transform active:scale-95 bg-red-950  px-4 py-2.5 font-normal  text-red-500',
-    danger:
-      ' rounded-md transform transition-transform active:scale-95 bg-red-500 hover:shadow-[0_0_10px_1px_rgba(246,37,89,0.5)]  px-4 py-2.5 font-normal  text-white-default',
+      'transform transition-transform active:scale-95 bg-red-950  px-4 py-2.5 font-normal  text-red-500',
     light:
-      ' px-4 py-3 bg-transparent rounded-lg font-normal text-base text-white-default  hover:bg-white-default hover:text-black-300 group border border-white-default',
-  };
+      ' px-4 py-3 bg-transparent rounded-lg font-normal text-base text-white  hover:bg-white hover:text-black-300 group border border-white',
+  }
+
+  let iconPositionClass;
 
   if (props.iconPosition === 'right') {
     iconPositionClass = 'flex-row-reverse';
   }
 
   const btnVariantClass = variantClass[props.variant];
-  return [baseClass, btnVariantClass, iconPosition].join(' ');
+
+  return [baseClass, btnVariantClass, iconPositionClass];
 });
 
 const emit = defineEmits(['click']);

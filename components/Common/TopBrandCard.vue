@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-white-default w-[278px] border border-white-default rounded-xl overflow-hidden p-4 group cursor-pointer hover:shadow-xl transition-shadow duration-300"
+    class="bg-white w-[278px] border border-white rounded-xl overflow-hidden p-4 group cursor-pointer hover:shadow-xl transition-shadow duration-300"
   >
     <!-- logo -->
     <div class="flex items-center mb-4">
@@ -23,7 +23,7 @@
         class="object-cover w-[246px] h-[200px] rounded-xl brightness-75 transition duration-300"
       />
       <p
-        class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black-300 via-black/70 to-transparent text-white-default text-sm font-normal px-2 py-1 opacity-0 group-hover:opacity-100 group-hover:rounded-xl rounded-xl transition-opacity duration-300"
+        class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black-300 via-black/70 to-transparent text-white text-sm font-normal px-2 py-1 opacity-0 group-hover:opacity-100 group-hover:rounded-xl rounded-xl transition-opacity duration-300"
       >
         {{ brand.products[0].price }} сум
       </p>
@@ -42,7 +42,7 @@
           class="w-[119px] h-[119px] object-cover rounded-xl brightness-75 transition duration-300"
         />
         <p
-          class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black-300 via-black/70 to-transparent text-white-default text-sm font-normal py-1 px-2 opacity-0 group-hover:opacity-100 group-hover:rounded-xl rounded-xl transition-opacity duration-300"
+          class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black-300 via-black/70 to-transparent text-white text-sm font-normal py-1 px-2 opacity-0 group-hover:opacity-100 group-hover:rounded-xl rounded-xl transition-opacity duration-300"
         >
           {{ product.price }} сум
         </p>
