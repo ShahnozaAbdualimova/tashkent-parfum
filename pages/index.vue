@@ -2,7 +2,8 @@
   <div>
     <HomeHeroSection />
     <HomeRecommendedSection />
-    <HomeStoriesSection />
-    <CommonProductReviewSlider/>
+    <CategoryCard />
+    <StoriesStoriesSection />
+    <CommonProductReviewSlider />
   </div>
 </template>
