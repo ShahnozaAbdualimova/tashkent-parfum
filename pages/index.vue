@@ -1,9 +1,10 @@
 <template>
   <div>
     <HomeHeroSection />
-    <HomeRecommendedSection />
     <CategoryCard />
-    <StoriesStoriesSection />
+    <HomeRecommendedSection />
+    <StoriesSection />
     <CommonProductReviewSlider />
+    <!-- <CategoryForManCard /> -->
   </div>
 </template>

@@ -7,11 +7,11 @@
     <slot name="prefix" />
     <input
       v-model="model"
-      v-mask="mask"
+      v-maska="maska"
       autocomplete="off"
       :type
       :placeholder
-      class="w-full h-full text-base font-normal bg-white-400 py-2.5 pl-3 outline-none text-black-500"
+      class="w-full h-full text-base font-normal bg-white-400 py-2.5 outline-none text-black-500"
    
     />
     <slot name="suffix" />
@@ -38,7 +38,7 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-  mask: {
+  maska: {
       type: String,
       default: '',
     },
