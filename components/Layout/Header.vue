@@ -1,7 +1,7 @@
 <template>
   <div class="header sticky top-0 left-0 z-20 w-full bg-white">
     <header
-      class="px-4 xl:container mx-auto w-full py-4 flex items-center justify-between"
+      class="container mx-auto w-full py-4 flex items-center justify-between"
     >
       <div class="flex gap-8 items-center">
         <i
