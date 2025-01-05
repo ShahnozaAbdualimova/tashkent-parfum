@@ -91,6 +91,7 @@
         <div
           class="flex flex-col items-center gap-1 cursor-pointer text-[#6F6F6F] hover:text-red-500 transition-all duration-300 ease-in"
         >
+        
           <i class="text-xl icon-heart"></i>
           <p class="text-xs">Избранные</p>
         </div>
