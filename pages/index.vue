@@ -1,10 +1,17 @@
+<script setup>
+
+</script>
+
 <template>
   <div>
     <HomeHeroSection />
     <CategoryCard />
     <HomeRecommendedSection />
     <StoriesSection />
-    <CommonProductReviewSlider />
-    <!-- <CategoryForManCard /> -->
+    <CommonProductReviewSlider/>
+    <CommonBrandSection/>
+    <CategoryForManCard />
+    <CommonTopBrandsSection/>
+    <!-- <PagesFavorites/> -->
   </div>
 </template>
