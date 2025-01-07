@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#F62559] h-2 w-screen relative -top-9"></div>
+  <div class="bg-red-500 h-1 w-screen relative -top-9"></div>
   <footer class="pr-10">
     <div class="container mx-auto flex flex-wrap justify-between px-20 relative">
       <!-- Contact Section -->
@@ -7,10 +7,10 @@
         <CommonLogo type="dark" />
 
         <div class="absolute pl-44 py-4">
-          <span class="text-sm">
+          <span class="text-sm hover:text-red-500 cursor-pointer">
             <i class="icon-phone mr-2"></i> +998 71 209 78 87
           </span>
-          <a href="mailto:toshkentparfum@gmail.com" class="pl-4 py-4">
+          <a href="mailto:toshkentparfum@gmail.com" class="pl-4 py-4 hover:text-red-500 cursor-pointer">
             <i class="icon-email"></i>
             <span class="pl-4">toshkentparfum@gmail.com</span>
           </a>
@@ -172,19 +172,19 @@
         <h4 class="text-lg font-semibold">Покупателям</h4>
         <ul class="mt-2 space-y-2">
           <li>
-            <a href="#" class="text-gray-700 hover:text-blue-500">О магазине</a>
+            <a href="#" class="text-gray-700 hover:text-red-500">О магазине</a>
           </li>
           <li>
-            <a href="#" class="text-gray-700 hover:text-blue-500">Рекомендации</a>
+            <a href="#" class="text-gray-700 hover:text-red-500">Рекомендации</a>
           </li>
           <li>
-            <a href="#" class="text-gray-700 hover:text-blue-500">Бренды</a>
+            <a href="#" class="text-gray-700 hover:text-red-500">Бренды</a>
           </li>
           <li>
-            <a href="#" class="text-gray-700 hover:text-blue-500">Конфиденциальность</a>
+            <a href="#" class="text-gray-700 hover:text-red-500">Конфиденциальность</a>
           </li>
           <li>
-            <a href="#" class="text-gray-700 hover:text-blue-500">Обратная связь</a>
+            <a href="#" class="text-gray-700 hover:text-red-500">Обратная связь</a>
           </li>
         </ul>
       </div>
@@ -214,25 +214,24 @@
         <h4 class="text-lg font-semibold">Пользователь</h4>
         <ul class="mt-2 space-y-2">
           <li>
-            <a href="#" class="text-gray-700 hover:text-blue-500">Вход</a>
+            <a href="#" class="text-gray-700 hover:text-red-500">Вход</a>
           </li>
           <li>
-            <a href="#" class="text-gray-700 hover:text-blue-500">Регистрация</a>
+            <a href="#" class="text-gray-700 hover:text-red-500">Регистрация</a>
           </li>
         </ul>
         <h4 class="mt-6 text-lg font-semibold">Наши соц. сети</h4>
         <div class="flex space-x-4 mt-2">
-          <a href="#"><i class="icon-facebook text-xl text-gray-200"></i></a>
-          <a href="#"><i class="icon-instagram text-xl text-gray-200"></i></a>
-          <a href="#"><i class="icon-telegram text-xl text-gray-200"></i></a>
+          <a href="#"><i class="icon-facebook text-xl text-gray-200  hover:text-red-500"></i></a>
+          <a href="#"><i class="icon-instagram text-xl text-gray-200  hover:text-red-500"></i></a>
+          <a href="#"><i class="icon-telegram text-xl text-gray-200  hover:text-red-500"></i></a>
         </div>
       </div>
 
-      <div
-        class="bg-gray-400 rounded-2xl mt-16 max-h-40 min-w-[580px] justify-center relative pt-5 px-5">
+      <div class="bg-gray-400 rounded-2xl mt-16 max-h-40 min-w-[580px] justify-center relative pt-5 px-5">
         <div class="flex flex-col">
           <h4 class="text-dark font-bold text-xl flex-wrap w-[359px]">
-            Будьте в курсе всех последних 
+            Будьте в курсе всех последних
             новостей через Telegram
           </h4>
           <a href="https:/ /t.me/toshkent_parfume"
