@@ -1,5 +1,5 @@
 <template>
-  <div class="header sticky top-0 left-0 z-10 w-full bg-white">
+  <div class="header sticky top-0 left-0 z-30 w-full bg-white">
     <div class="py-2 bg-gray-50">
       <div class="container">
         <div class="w-full py-1 flex justify-between">
@@ -87,6 +87,7 @@
         >
           <i class="text-2xl icon-basket"></i>
           <p class="text-xs">Корзина</p>
+          
         </div>
         <div
           class="flex flex-col items-center gap-1 cursor-pointer text-[#6F6F6F] hover:text-red-500 transition-all duration-300 ease-in"

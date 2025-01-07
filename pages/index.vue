@@ -1,11 +1,13 @@
 <template>
   <div>
-    <HomeHeroSection />
+    <!-- <HomeHeroSection />
     <HomeRecommendedSection />
     <HomeStoriesSection />
     <CommonProductReviewSlider/>
-    <CommonBrandSection/>
     <CommonTopBrandsSection/>
-    <!-- <PagesFavorites/> -->
+    <CommonBrandSection/>
+    <CommonFavorites/> -->
+    <!-- <CommonAbout/>  -->
+     <CommonArticlePages/>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-white w-[278px] border border-white rounded-xl overflow-hidden p-4 group cursor-pointer hover:shadow-xl transition-shadow duration-300"
+    class="bg-white w-[278px] border border-white rounded-xl overflow-hidden p-4 group cursor-pointer hover:shadow-xl transition-all duration-300"
   >
     <!-- logo -->
     <div class="flex items-center mb-4">

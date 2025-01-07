@@ -1,41 +1,40 @@
 <template>
   <div class="flex flex-col gap-4">
-    <!-- Первая строка -->
+    <!-- First line -->
     <div class="relative overflow-hidden group">
-     <NuxtLink to="#" class="flex animate-marquee-rtl gap-4 pause-animation transition-all duration-300 cursor-pointer">
-        
+     <NuxtLink to="#" class="flex animate-marquee-rtl gap-4 pause-animation transition-all duration-300 cursor-pointer w[234px] object-cover">
           <img
           v-for="(item, index) in brandList.concat(brandList)" 
           :key="'row1-' + index"
           :src="item.logo"
           :alt="item.name"
-          class="px-4 py-4 rounded-2xl bg-white-500 w-[200px]"
+          class="px-4 py-4 rounded-2xl bg-white-500 grayscale hover:grayscale-0 transition-all duration-300 object-center w-[200px]"
         />
       </NuxtLink>
     </div>
 
-    <!-- Вторая строка -->
+    <!-- Second line -->
     <div class="relative overflow-hidden group">
-      <NuxtLink to="#" class="flex animate-marquee-ltr gap-4 pause-animation transition-all duration-300 cursor-pointer">
+      <NuxtLink to="#" class="flex animate-marquee-ltr gap-4 pause-animation transition-all duration-300 cursor-pointer w[234px] object-cover">
         <img
           v-for="(item, index) in brandList.concat(brandList)"
           :key="'row2-' + index"
           :src="item.logo"
           :alt="item.name"
-          class="px-4 py-4 rounded-2xl bg-white-500 w-[200px]"
+          class="px-4 py-4 rounded-2xl bg-white-500 grayscale hover:grayscale-0 transition-all duration-300 object-center w-[200px]"
         />
       </NuxtLink>
     </div>
 
-    <!-- Третья строка -->
+    <!-- Third line -->
     <div class="relative overflow-hidden group">
-      <NuxtLink to="#" class="flex animate-marquee-rtl gap-4 pause-animation transition-all duration-300 cursor-pointer">
+      <NuxtLink to="#" class="flex animate-marquee-rtl gap-4 pause-animation transition-all duration-300 cursor-pointer w[234px] object-cover">
         <img
           v-for="(item, index) in brandList.concat(brandList)"
           :key="'row3-' + index"
           :src="item.logo"
           :alt="item.name"
-          class="px-4 py-4 rounded-2xl bg-white-500 w-[200px]"
+          class="px-4 py-4 rounded-2xl bg-white-500 grayscale hover:grayscale-0 transition-all duration-300 object-center w-[200px]"
         />
       </NuxtLink>
     </div>

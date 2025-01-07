@@ -1,6 +1,6 @@
 <template>
   <div
-    class="col-span-1 w-full sm:w-[180px] bg-white-400 rounded-xl overflow-hidden cursor-pointer transition-300 border border-white-400 hover:border-gray-500 hover:shadow-xl"
+    class="col-span-1 w-full sm:w-[180px] bg-white-400 rounded-xl overflow-hidden cursor-pointer transition-300 border border-white  hover:shadow-md"
   >
     <div class="relative">
       <!-- Swiper -->
@@ -31,19 +31,17 @@
       </div>
       <button
         @click="toggleFavorite"
-        :class="[
-          'absolute top-3 right-3 border border-white-400/80 bg-white-400/80 text-black-500 text-xs p-2 hover:border-red-500/20 transition duration-300 w-9 h-9 rounded-md flex justify-center items-center group',
-          { 'border-red-500': isFavorite },
-        ]"
+        :class="[{
+          'border-red-500': isFavorite
+        }]"
+        class="absolute top-3 right-3 border border-white-400/80 bg-white-400/80 text-black-500 text-xs p-2 hover:border-red-500/20 transition duration-300 w-9 h-9 rounded-md flex justify-center items-center group"
       >
         <i
-          :class="[
-            'icon-heart text-base transition-all duration-200',
-            {
-              'text-red-500 scale': isFavorite,
-              'text-black scale': !isFavorite,
-            },
-          ]"
+          :class="[{
+            'text-red-500 scale': isFavorite,
+            'text-black scale': !isFavorite
+          }]"
+          class="icon-heart text-base transition-all duration-200"
         ></i>
       </button>
     </div>
@@ -76,8 +74,9 @@
         <span class="ml-1 text-gray-500 text-sm">({{ product.rating }})</span>
       </div>
       <!-- counter -->
-
-      <BaseCounter/>
+      <div v-if="isCounterVisible">
+        <BaseCounter v-model="counter" :maxLimit="maxLimit" />
+      </div>
       <div v-else class="flex group justify-center mt-2">
         <BaseButton
           :variant="'basketBtn'"
