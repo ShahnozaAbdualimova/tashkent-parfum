@@ -38,4 +38,3 @@ import { categoryName } from '~/data/data.js';
   opacity: 100;
 }
 </style>
-

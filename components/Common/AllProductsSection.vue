@@ -8,12 +8,7 @@
         <div class="items-center justify-center">
           <div class="flex items-center justify-between">
             <h3 class="font-normal text-3xl text-black-500">Все продукты</h3>
-
-            <Dropdown
-              :selectedValue="selectedItems"
-              :options="items"
-              @update:selectedValue="updateItems"
-            />
+            <Select :options="chooseOptions" />
           </div>
 
           <div class="p-5 bg-white rounded-xl mt-5">
@@ -21,7 +16,7 @@
               Популярные предложения
             </h4>
             <div class="grid grid-cols-4 gap-5 mt-4">
-              <BaseProductCard
+              <CommonProductCard
                 v-for="(product, index) in products.slice(0, 4)"
                 :key="index"
                 :product="product"
@@ -30,7 +25,7 @@
           </div>
 
           <div class="grid grid-cols-4 gap-5 mt-5">
-            <BaseProductCard
+            <CommonProductCard
               v-for="(product, index) in products.slice(0, 8)"
               :key="index"
               :product="product"
@@ -43,7 +38,7 @@
               class="w-[884px] h-[117px] rounded-lg"
             />
             <div class="grid grid-cols-4 gap-5 mt-5">
-              <BaseProductCard
+              <CommonProductCard
                 v-for="(product, index) in products.slice(0, 4)"
                 :key="index"
                 :product="product"
@@ -71,7 +66,6 @@
 
 <script setup>
 import { products } from '~/data/mainProductSection';
-import Dropdown from '/components/Base/Dropdown.vue';
 
 const selectedItems = ref('По популярности');
 const items = ref(['Для мужчин', 'Для женщин']);
@@ -79,6 +73,21 @@ const items = ref(['Для мужчин', 'Для женщин']);
 const updateItems = (item) => {
   selectedItems.value = item;
 };
+
+const chooseOptions = [
+  {
+    id: 1,
+    name: 'По популярности',
+  },
+  {
+    id: 2,
+    name: 'По цене',
+  },
+  {
+    id: 3,
+    name: 'По рейтингу',
+  },
+];
 </script>
 
 <style></style>

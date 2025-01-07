@@ -1,9 +1,10 @@
 <template>
   <div>
-    <HomeHeroSection />
+     <!-- <HomeHeroSection />
     <HomeRecommendedSection />
     <HomeStoriesSection />
-    <CommonProductReviewSlider/>
-    
+    <CommonProductReviewSlider /> -->
+    <CommonAllProductsSection /> 
+    <CommonOrders/>
   </div>
 </template>

@@ -14,6 +14,7 @@
         <p class="text-xs font-normal text-gray-200">{{ brand.description }}</p>
       </div>
     </div>
+    
 
     <!-- main -->
     <div class="relative mb-2">
