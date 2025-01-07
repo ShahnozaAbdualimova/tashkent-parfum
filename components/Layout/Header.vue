@@ -103,12 +103,12 @@
     </header>
     <LayoutNavbar />
 
-    <ModalAuthLogin
+    <ModalAuth
       v-if="showModal"
       :isVisible="showModal"
       @closeModal="closeModal"
     >
-    </ModalAuthLogin>
+    </ModalAuth>
 
     <!-- Catalog list section -->
     <CommonCatalogList v-if="openCatalogList" />
