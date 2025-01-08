@@ -12,7 +12,7 @@
         <label class="font-proxima text-sm text-gray-200 leading-[13.8px]"
         >Номер телефона</label
         >
-        <BaseInput
+        <CommonPhoneInput
           type="tel"
           placeholder="(__) ___-__-__"
         />
