@@ -16,7 +16,12 @@
             />
             <ModalAuthResetPassword
               @switchToLogin="showLogin"
+              @switchToConfirmation="showConfirmation"
               v-if="activeComponent === 'reset'"
+            />
+            <ModalAuthResetPasswordConfirmation
+              @switchToReset="showReset"
+              v-if="activeComponent === 'confirmation'"
             />
           </div>
         </Transition>
@@ -52,6 +57,9 @@ const showRegister = () => {
 };
 const showReset = () => {
   activeComponent.value = 'reset';
+};
+const showConfirmation = () => {
+  activeComponent.value = 'confirmation';
 };
 </script>
 
