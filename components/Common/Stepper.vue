@@ -32,7 +32,7 @@ defineProps({
 
 <template>
   <div
-    class="bg-white relative -z-20 rounded-[44px] my-20 flex items-center justify-between p-4 overflow-hidden gap-5"
+    class="bg-white relative -z-20 rounded-[44px] flex items-center justify-between p-4 overflow-hidden gap-5"
   >
     <div
       v-for="step in steps"
