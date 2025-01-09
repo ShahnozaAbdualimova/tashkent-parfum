@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto mt-6">
     <CommonSectionWrapper title="Рекомендуемые товары" linkText="Все товары" linkHref="/products">
-      <div class="grid grid-cols-6 gap-3">
+      <div class="grid grid-cols-6 gap-5">
         <ProductCard
           v-for="(product, index) in products.slice(0, 6)"
           :key="index"

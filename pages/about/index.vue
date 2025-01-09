@@ -56,7 +56,7 @@
   </template>
   
   <script setup>
-  import { ref, defineComponent, h, onMounted } from 'vue';
+  // import { ref, defineComponent, h, onMounted } from 'vue';
   
   // Simple CountUp component with number formatting
   const CountUp = defineComponent({

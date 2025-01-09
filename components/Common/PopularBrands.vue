@@ -2,41 +2,62 @@
   <div class="flex flex-col gap-4">
     <!-- First line -->
     <div class="relative overflow-hidden group">
-     <NuxtLink to="#" class="flex animate-marquee-rtl gap-4 pause-animation transition-all duration-300 cursor-pointer w[234px] object-cover">
-          <img
-          v-for="(item, index) in brandList.concat(brandList)" 
+      <div
+        class="flex animate-marquee-rtl gap-4 pause-animation transition-all duration-300 cursor-pointer object-cover"
+      >
+        <NuxtLink
+          v-for="(item, index) in brandList.concat(brandList)"
           :key="'row1-' + index"
-          :src="item.logo"
-          :alt="item.name"
-          class="px-4 py-4 rounded-2xl bg-white-500 grayscale hover:grayscale-0 transition-all duration-300 object-center w-[200px]"
-        />
-      </NuxtLink>
+          to="#"
+          class=""
+        >
+          <img
+            :src="item.logo"
+            :alt="item.name"
+            class="min-w-[234px] h-[112px] px-4 py-4 rounded-2xl bg-white-500 grayscale hover:grayscale-0 transition-all duration-300 object-center w-[200px]"
+          />
+        </NuxtLink>
+      </div>
     </div>
 
     <!-- Second line -->
     <div class="relative overflow-hidden group">
-      <NuxtLink to="#" class="flex animate-marquee-ltr gap-4 pause-animation transition-all duration-300 cursor-pointer w[234px] object-cover">
-        <img
+      <div
+        class="flex animate-marquee-ltr gap-4 pause-animation transition-all duration-300 cursor-pointer object-cover"
+      >
+        <NuxtLink
+          to="#"
           v-for="(item, index) in brandList.concat(brandList)"
           :key="'row2-' + index"
-          :src="item.logo"
-          :alt="item.name"
-          class="px-4 py-4 rounded-2xl bg-white-500 grayscale hover:grayscale-0 transition-all duration-300 object-center w-[200px]"
-        />
-      </NuxtLink>
+          class=""
+        >
+          <img
+            :src="item.logo"
+            :alt="item.name"
+            class="min-w-[234px] h-[112px] px-4 py-4 rounded-2xl bg-white-500 grayscale hover:grayscale-0 transition-all duration-300 object-center w-[200px]"
+          />
+        </NuxtLink>
+      </div>
     </div>
 
     <!-- Third line -->
     <div class="relative overflow-hidden group">
-      <NuxtLink to="#" class="flex animate-marquee-rtl gap-4 pause-animation transition-all duration-300 cursor-pointer w[234px] object-cover">
-        <img
+      <div
+        class="flex animate-marquee-rtl pause-animation gap-4 transition-all duration-300 cursor-pointer object-cover"
+      >
+        <NuxtLink
           v-for="(item, index) in brandList.concat(brandList)"
-          :key="'row3-' + index"
-          :src="item.logo"
-          :alt="item.name"
-          class="px-4 py-4 rounded-2xl bg-white-500 grayscale hover:grayscale-0 transition-all duration-300 object-center w-[200px]"
-        />
-      </NuxtLink>
+          :key="'row1-' + index"
+          to="#"
+          class=""
+        >
+          <img
+            :src="item.logo"
+            :alt="item.name"
+            class="min-w-[234px] h-[112px] px-4 py-4 rounded-2xl bg-white-500 grayscale hover:grayscale-0 transition-all duration-300 object-center w-[200px]"
+          />
+        </NuxtLink>
+      </div>
     </div>
   </div>
 </template>
