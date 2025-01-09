@@ -4,6 +4,8 @@
     <HomeRecommendedSection />
     <HomeStoriesSection />
     <CommonProductReviewSlider/>
+    <CommonTopBrandsSection />
+    <CommonBrandSection />
     
   </div>
 </template>

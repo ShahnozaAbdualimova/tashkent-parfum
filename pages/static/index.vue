@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- static -->
     <div class="container mx-auto p-10 bg-white rounded-2xl">
       <div class="p-10">
         <h1 class="text-3xl font-bold mb-2">
