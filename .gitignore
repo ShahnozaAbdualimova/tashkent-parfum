@@ -9,11 +9,17 @@ dist
 # Node dependencies
 node_modules
 
+
+
 # Logs
 logs
 *.log
 package-lock.json
 yarn.lock
+
+.yarn
+.yarn/
+.yarn/install-stage.gz
 
 # Misc
 .DS_Store
@@ -24,3 +30,5 @@ yarn.lock
 .env
 .env.*
 !.env.example
+
+.yarn

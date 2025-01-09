@@ -1,12 +1,7 @@
-<!-- layouts/default.vue -->
 <template>
   <div>
-    <h1>Salom, header</h1>
-    <CommonBreadcrumb />
+    <LayoutHeader class="mb-7" />
     <slot></slot>
+    <LayoutFooter />
   </div>
 </template>
-
-<script setup>
-defineProps({});
-</script>

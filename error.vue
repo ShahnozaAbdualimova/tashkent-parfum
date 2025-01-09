@@ -1,13 +1,4 @@
-<script setup lang="ts">
-import type { NuxtError } from '#app';
-
-const props = defineProps({
-  error: Object as () => NuxtError,
-});
-</script>
-
 <template>
-  <!-- Layoutni ishlatish uchun NuxtLayout -->
   <NuxtLayout name="default">
     <main
       class="flex items-center justify-center bg-red-gradient"
@@ -22,6 +13,16 @@ const props = defineProps({
     </main>
   </NuxtLayout>
 </template>
+
+<script setup lang="ts">
+import type { NuxtError } from '#app';
+
+const props = defineProps({
+  error: Object as () => NuxtError,
+});
+
+console.log(props.error);
+</script>
 
 <style scoped>
 main {
