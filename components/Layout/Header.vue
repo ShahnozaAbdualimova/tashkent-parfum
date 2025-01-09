@@ -50,7 +50,8 @@
           class="icon-list block lg:hidden text-2xl font-bold"
           @click="openMenyuList"
         ></i>
-        <CommonLogo type="light" />
+        <NuxtLink to="/"><CommonLogo type="light" /></NuxtLink>
+
         <div class="flex items-center gap-4">
           <BaseButton
             class="font-proxima px-3 py-2 bg-dark-btn rounded-lg font-normal text-sm text-white-default duration-300 hover:bg-dark-btn-hover hover:text-black-300 group"
@@ -82,16 +83,18 @@
           <i class="text-xl icon-box"></i>
           <p class="text-xs">Мои заказы</p>
         </div>
-        <div
-          class="flex flex-col items-center cursor-pointer text-[#6F6F6F] hover:text-red-500 transition-all duration-300 ease-in"
-        >
-          <i class="text-2xl icon-basket"></i>
-          <p class="text-xs">Корзина</p>
-        </div>
+        <NuxtLink to="/basket">
+          <div
+            class="flex flex-col items-center cursor-pointer text-[#6F6F6F] hover:text-red-500 transition-all duration-300 ease-in"
+          >
+            <i class="text-2xl icon-basket"></i>
+            <p class="text-xs">Корзина</p>
+          </div>
+        </NuxtLink>
+
         <div
           class="flex flex-col items-center gap-1 cursor-pointer text-[#6F6F6F] hover:text-red-500 transition-all duration-300 ease-in"
         >
-        
           <i class="text-xl icon-heart"></i>
           <p class="text-xs">Избранные</p>
         </div>
@@ -103,11 +106,7 @@
     </header>
     <LayoutNavbar />
 
-    <ModalAuth
-      v-if="showModal"
-      :isVisible="showModal"
-      @closeModal="closeModal"
-    >
+    <ModalAuth v-if="showModal" :isVisible="showModal" @closeModal="closeModal">
     </ModalAuth>
 
     <!-- Catalog list section -->
