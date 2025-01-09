@@ -12,6 +12,6 @@
     <CommonBrandSection/>
     <CategoryForManCard />
     <CommonTopBrandsSection/>
-    <!-- <PagesFavorites/> -->
+    <PagesFavorites/>
   </div>
 </template>

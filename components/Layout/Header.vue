@@ -1,17 +1,17 @@
 <template>
   <div class="header sticky top-0 left-0 z-20 w-full bg-white">
-    <header
-      class="container mx-auto w-full py-4 flex items-center justify-between"
-    >
+    <header class="container mx-auto w-full py-4 flex items-center justify-between">
       <div class="flex gap-8 items-center">
         <i
           class="icon-list block lg:hidden text-2xl font-bold"
           @click="openMenyuList"
         ></i>
-        <CommonLogo type="light" />
+        <NuxtLink to="/"><CommonLogo type="light" /></NuxtLink>
+
         <div class="flex items-center gap-4">
           <BaseButton
-            class="hidden lg:flex font-proxima px-3 bg-dark-btn rounded-lg font-normal text-sm text-white-default duration-300 hover:bg-dark-btn-hover hover:text-black-300 group"
+            class="hidden lg:flex"
+            variant="catalogBtn"
             @click="openList"
           >
             <i
@@ -20,10 +20,10 @@
             Каталог
           </BaseButton>
           <div
-            class="hidden lg:flex items-center px-2 bg-[#F2F3F5] text-[#6F6F6F] rounded-lg"
+            class="hidden lg:flex items-center bg-[#F2F3F5] text-[#6F6F6F] rounded-lg"
           >
-            <div class="w-7 h-full d-flex items-center justify-center">
-              <i class="icon-search"></i>
+            <div class="w-8 h-full flex items-center justify-center">
+              <i class="icon-search text-xl"></i>
             </div>
             <BaseInput
               type="text"
@@ -40,16 +40,17 @@
           <i class="text-xl icon-box"></i>
           <p class="text-xs hidden lg:block">Мои заказы</p>
         </div>
-        <div
-          class="flex flex-col items-center cursor-pointer text-[#6F6F6F] hover:text-red-500 transition-all duration-300 ease-in"
-        >
-          <i class="text-2xl icon-basket"></i>
-          <p class="text-xs hidden lg:block">Корзина</p>
-        </div>
+        <NuxtLink to="/basket">
+          <div
+            class="flex flex-col items-center cursor-pointer text-[#6F6F6F] hover:text-red-500 transition-all duration-300 ease-in"
+          >
+            <i class="text-2xl icon-basket"></i>
+            <p class="text-xs hidden lg:block">Корзина</p>
+          </div>
+        </NuxtLink>
         <div
           class="flex flex-col items-center gap-1 cursor-pointer text-[#6F6F6F] hover:text-red-500 transition-all duration-300 ease-in"
         >
-        
           <i class="text-xl icon-heart"></i>
           <p class="text-xs hidden lg:block">Избранные</p>
         </div>
@@ -94,6 +95,7 @@ const openMenuList = ref(false);
 const openCatalogList = ref(false);
 
 const openList = () => {
+  openCatalogList.value = !openCatalogList.value
   return openCatalogList;
 };
 
