@@ -1,8 +1,8 @@
 <template>
-  <div class="container mx-auto mt-3 mb-12 items-center justify-center">
+  <div class="container mx-auto mt-3  items-center justify-center">
     <div class="bg-white-500">
-      <div class="flex items-center justify-between mt-5">
-        <h2 class="font-normal text-3xl text-black-500 leading-10">
+      <div class="flex items-center justify-between mt-5 ">
+        <h2 class="font-bold text-3xl text-black-500 leading-10">
           Все бренды
         </h2>
         <BaseInput class="pl-2.5" placeholder="search">
@@ -13,14 +13,14 @@
       </div>
       <div class="grid grid-cols-4 gap-6 items-center justify-center mt-5">
         <div
-          class="bg-white p-4 rounded-2xl justify-center items-center shadow-xl overflow-hidden"
+          class="bg-white p-4 rounded-2xl justify-center items-center  overflow-hidden"
           v-for="(brand, index) in brands"
           :key="index"
         >
           <img :src="brand.imgBrand" alt="brand-img" />
         </div>
       </div>
-      <div class="items-center justify-center flex mt-8">
+      <div class="items-center justify-center flex mt-8 mb-16">
         <BaseButton variant="lightDanger">
           <i class="icon-left text-[20px] rotate-90"></i>
           Загрузить еще</BaseButton
