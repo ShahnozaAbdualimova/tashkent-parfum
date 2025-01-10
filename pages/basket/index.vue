@@ -1,10 +1,12 @@
 <template>
-  <div class="container w-full min-h-screen">
-    <h1 class="text-black-500 font-proxima leading-[130%] text-[32px] font-semibold">
+  <div class="container w-full min-h-screen pb-40">
+    <h1
+      class="text-black-500 font-proxima leading-[130%] text-[32px] font-semibold"
+    >
       Корзина
     </h1>
-    <div class="flex gap-6 items-center mt-6">
-      <div class="bg-white rounded-xl">
+    <div class="grid grid-cols-12 space-x-6  mt-6 items-start">
+      <div class="bg-white rounded-xl w-full lg:col-span-8 col-span-12">
         <BasketItem
           v-for="el in arr"
           :key="el.id"
@@ -12,13 +14,20 @@
           @updateAmount="updateAmount"
         />
       </div>
+      <div class="lg:col-span-4 col-span-12">
+        <BasketInvoice />
+        <button
+          class="mt-4 w-full font-semibold py-3 px-[22px] rounded-xl bg-red-500 hover:bg-[#FA0738] text-white leading-[26px] active:scale-95 duration-200 ease-in-out"
+        >
+          Перейти к оформлению
+        </button>
+      </div>
+
     </div>
   </div>
 </template>
 
 <script setup>
-
-
 const arr = ref([
   {
     id: 1,
@@ -28,7 +37,7 @@ const arr = ref([
     review_amount: 2,
     price: 650000,
     amount: 1,
-    old_price: null
+    old_price: null,
   },
   {
     id: 2,
@@ -38,7 +47,7 @@ const arr = ref([
     review_amount: 68,
     price: 940000,
     amount: 3,
-    old_price: 1500000
+    old_price: 1500000,
   },
   {
     id: 3,
@@ -48,10 +57,9 @@ const arr = ref([
     review_amount: 38,
     price: 670000,
     amount: 2,
-    old_price: null
+    old_price: null,
   },
 ]);
-
 
 const updateAmount = (id, amount) => {
   const item = arr.value.find((item) => item.id === id);
