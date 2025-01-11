@@ -3,15 +3,15 @@
     class="w-full relative h-auto py-2 px-3 border bg-[#E0E7FF]/40 text-black rounded-md cursor-pointer mt-1 select-none flex justify-between items-center gap-2"
     @click="handelClick"
   >
-    <h1 class="text-black relative">
+    <h1 class="relative text-black">
       {{ selectedOptionsText }}
     </h1>
     <i
-      class="icon-chevron-down text-sm text-gray-400"
+      class="text-sm text-gray-400 icon-chevron-down"
       :class="{ rotated: isRotated }"
     ></i>
     <ul
-      class="mt-1 absolute z-10 rounded-md flex flex-col w-full top-10 left-0 drop-show h-auto border border-blue-100 bg-white drop-shadow-xl"
+      class="absolute left-0 z-10 flex flex-col w-full h-auto mt-1 bg-white border border-blue-100 rounded-md top-10 drop-show drop-shadow-xl"
       v-if="show"
     >
       <li
@@ -59,10 +59,6 @@ const props = defineProps({
   valueKey: {
     type: String,
     default: 'id',
-  },
-  currensyKey: {
-    type: String,
-    default: 'currensy',
   },
   defaultValue: {
     type: Object,

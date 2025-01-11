@@ -1,11 +1,31 @@
 <template>
   <div>
+    <CommonStepper
+      :steps="[
+        {
+          id: 1,
+          label: 'Адрес доставки',
+          icon: 'icon-location',
+        },
+        {
+          id: 2,
+          label: 'Контактные данные',
+          icon: 'icon-contact',
+        },
+        {
+          id: 3,
+          label: 'Оплата',
+          icon: ' icon-wallet',
+        },
+      ]"
+      :activeStep="2"
+    />
     <HomeHeroSection />
     <HomeRecommendedSection />
     <HomeStoriesSection />
-    <CommonProductReviewSlider/>
-    <CommonBrandSection/>
-    <CommonTopBrandsSection/>
+    <CommonProductReviewSlider />
+    <CommonBrandSection />
+    <CommonTopBrandsSection />
     <!-- <PagesFavorites/> -->
   </div>
   <Breadcrumb />
