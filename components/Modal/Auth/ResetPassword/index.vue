@@ -12,12 +12,13 @@
         <label class="font-proxima text-sm text-gray-200 leading-[13.8px]"
         >Номер телефона</label
         >
-        <BaseInput
+        <CommonPhoneInput
           type="tel"
           placeholder="(__) ___-__-__"
         />
       </div>
       <button
+        @click="$emit('switchToConfirmation')"
         class="w-full text-sm py-2.5 px-5 rounded-lg bg-red-500 hover:bg-[#FA0738] text-white active:scale-95 duration-200 ease-in-out"
       >
         Подтвердить
@@ -33,14 +34,3 @@
 <script setup>
 </script>
 
-<style scoped>
-.auth-or::before,
-.auth-or::after {
-  content: '';
-  width: 20%;
-  height: 1px;
-  background: #cdcdd0;
-  opacity: 0.7;
-  display: block;
-}
-</style>
