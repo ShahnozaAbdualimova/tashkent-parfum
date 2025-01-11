@@ -11,11 +11,14 @@
         <label class="font-proxima text-sm text-gray-200 leading-[13.8px]"
           >Номер телефона</label
         >
-        <CommonPhoneInput type="tel" placeholder="(__) ___-__-__" />
+        <CommonPhoneInput
+          type="tel"
+          placeholder="(__) ___-__-__"
+        />
         <label class="font-proxima text-sm text-gray-200 leading-[13.8px]"
           >Пароль</label
         >
-        <CommonPasswordInput  placeholder="Введите пароль" />
+        <CommonPasswordInput placeholder="Введите пароль" />
         <p
           @click="$emit('switchToReset')"
           class="text-red-900 hover:text-red-500 text-sm self-end duration-200 ease-in-out cursor-pointer"
@@ -45,7 +48,9 @@
   </form>
 </template>
 
-<script setup></script>
+<script setup>
+import Input from '~/components/Base/Input.vue';
+</script>
 
 <style scoped>
 .auth-or::before,
