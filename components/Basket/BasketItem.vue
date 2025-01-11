@@ -7,7 +7,7 @@
         <img :src="data.img" alt="item img" class="w-full h-full" />
       </div>
 
-      <div class="flex flex-col min-h-[120px]">
+      <div class="flex flex-col min-h-[120px] pl-2.5">
         <h3
           class="cursor-pointer text-black-500 hover:text-red-500 duration-200 ease-in-out font-proxima leading-[130%] text-xl font-semibold max-w-[315px]"
         >
@@ -28,9 +28,9 @@
       <div class="min-h-[120px] w-[1px] bg-white-400"></div>
     </div>
 
-    <div class="py-3 pl-3 flex justify-between items-start min-w-[244px]">
+    <div class="py-3 pl-[22px] flex justify-between items-start flex-grow">
       <div class="min-h-[120px] flex flex-col justify-between">
-        <div class="font-proxima">
+        <div>
           <p
             class="text-xs text-red-500 leading-[130%] font-proxima line-through"
           >
@@ -52,22 +52,22 @@
         <div class="flex gap-1 items-center">
           <button
             @click="decreaseAmount"
-            class="py-2.5 px-[13px] bg-white-500 rounded-r-sm rounded-l-lg icon-minus text-red-500 text-2xl border-[0.5px] border-white-500 hover:border-red-500 duration-300 ease-in-out active:scale-90"
+            class="py-1.5 px-[13px] bg-white-500 rounded-r-sm rounded-l-lg icon-minus text-red-500 text-2xl border-[0.5px] border-white-500 hover:border-red-500 duration-300 ease-in-out active:scale-90"
           />
           <div
-            class="py-4 px-5 bg-white-500 rounded-sm font-proxima text-[16px] leading-[130%]"
+            class="py-3 px-5 bg-white-500 rounded-sm font-proxima text-[16px] leading-[130%]"
           >
             {{ data.amount }}
           </div>
           <button
             @click="increaseAmount"
-            class="py-2.5 px-[13px] bg-white-500 rounded-l-sm rounded-r-lg icon-plus text-green-100 text-2xl border-[0.5px] border-white-500 hover:border-green-100 duration-300 ease-in-out active:scale-90"
+            class="py-1.5 px-[13px] bg-white-500 rounded-l-sm rounded-r-lg icon-plus text-green-100 text-2xl border-[0.5px] border-white-500 hover:border-green-100 duration-300 ease-in-out active:scale-90"
           />
         </div>
       </div>
 
       <button
-        class="min-h-8 min-w-8 p-1.5 text-gray-100 bg-white-500 rounded-lg icon-trash active:scale-90 duration-200 ease-in-out hover:bg-white-400 hover:text-gray-200"
+        class="min-h-8 min-w-8 p-1.5 text-gray-100 bg-white-500 rounded-lg icon-trash text-[20px] active:scale-90 duration-200 ease-in-out hover:bg-white-400 hover:text-gray-200"
       />
     </div>
   </div>
