@@ -10,7 +10,7 @@
             @click="activeTab = 'active'"
           >
             <div
-              class="bg-gray-500 p-2 rounded items-center"
+              class="bg-gray-500 p-1 rounded items-center"
               :class="activeTab === 'active' ? 'bg-red-500' : 'bg-gray-500'"
               @click="activeTab = 'active'"
             >
@@ -29,7 +29,7 @@
             @click="activeTab = 'history'"
           >
             <div
-              class="bg-gray-500 p-2 rounded items-center"
+              class="bg-gray-500 p-1 rounded items-center"
               :class="activeTab === 'active' ? 'bg-red-500' : 'bg-gray-500'"
               @click="activeTab = 'active'"
             >
@@ -92,7 +92,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+
 
 interface Order {
   id: string;

@@ -8,7 +8,6 @@
         <div class="items-center justify-center">
           <div class="flex items-center justify-between">
             <h3 class="font-normal text-3xl text-black-500">Все продукты</h3>
-            <Select :options="chooseOptions" />
           </div>
 
           <div class="p-5 bg-white rounded-xl mt-5">
@@ -73,21 +72,6 @@ const items = ref(['Для мужчин', 'Для женщин']);
 const updateItems = (item) => {
   selectedItems.value = item;
 };
-
-const chooseOptions = [
-  {
-    id: 1,
-    name: 'По популярности',
-  },
-  {
-    id: 2,
-    name: 'По цене',
-  },
-  {
-    id: 3,
-    name: 'По рейтингу',
-  },
-];
 </script>
 
 <style></style>
