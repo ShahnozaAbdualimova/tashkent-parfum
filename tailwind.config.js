@@ -8,6 +8,7 @@ export default {
       },
       colors: {
         red: {
+          50: '#FFF6F9',
           100: '#FDD3DE',
           200: '#FDDFE7',
           300: '#FF4433',
@@ -69,6 +70,21 @@ export default {
           'linear-gradient(84.8deg,#d7d7d7,#f4f4f4 131.39%)',
         'header-btn': ''
       },
+      keyframes: {
+        marqueeRtl: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        marqueeLtr: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
+      },
+      animation: {
+        "marquee-rtl": "marqueeRtl 100s linear infinite",
+        "marquee-ltr": "marqueeLtr 100s linear infinite",
+      },
+      
     },
   },
   plugins: [],
