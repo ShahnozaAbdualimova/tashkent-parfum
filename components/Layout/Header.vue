@@ -1,6 +1,6 @@
 <template>
   <div class="header sticky top-0 left-0 z-20 w-full bg-white">
-    <header class="container mx-auto w-full py-4 flex items-center justify-between">
+    <header class="px-4 lg:container mx-auto w-full py-4 flex items-center justify-between">
       <div class="flex gap-8 items-center">
         <i
           class="icon-list block lg:hidden text-2xl font-bold"
@@ -68,6 +68,7 @@
         <BaseInput type="text" placeholder="Поиск" />
       </div>
     </div>
+    
     <LayoutNavbar />
 
     <ModalAuthLogin v-if="showModal" :isVisible="showModal" @closeModal="closeModal">
@@ -80,6 +81,34 @@
       @close-menu="openMenuList = false"
       class="lg:hidden"
     />
+    <!-- <CommonMenuList
+      class="lg:hidden"
+    /> -->
+    <Teleport to="body">
+      <div class="w-full px-2 py-2 text-gray-100 bg-white fixed bottom-0 flex justify-between lg:hidden border-t border-gray-500 z-10">
+        <NuxLink to="#" class="flex flex-col items-center">
+          <i class="icon-home text-3xl"></i>
+          <h5 class="text-sm">Home</h5>
+        </NuxLink>
+        <NuxLink to="#" class="flex flex-col items-center">
+          <i class="icon-home text-3xl"></i>
+          <h5 class="text-sm">Home</h5>
+        </NuxLink>
+        <NuxLink to="#" class="flex flex-col items-center">
+          <i class="icon-home text-3xl"></i>
+          <h5 class="text-sm">Home</h5>
+        </NuxLink>
+        <NuxLink to="#" class="flex flex-col items-center">
+          <i class="icon-home text-3xl"></i>
+          <h5 class="text-sm">Home</h5>
+        </NuxLink>
+        <NuxLink to="#" class="flex flex-col items-center">
+          <i class="icon-contact text-3xl"></i>
+          <h5 class="text-sm">profile</h5>
+        </NuxLink>
+        
+      </div>
+    </Teleport>
   </div>
 </template>
 
