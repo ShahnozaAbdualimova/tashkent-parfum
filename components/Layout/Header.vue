@@ -1,6 +1,8 @@
 <template>
   <div class="header sticky top-0 left-0 z-20 w-full bg-white">
-    <header class="px-4 lg:container mx-auto w-full py-4 flex items-center justify-between">
+    <header
+      class="px-4 lg:container mx-auto w-full py-4 flex items-center justify-between"
+    >
       <div class="flex gap-8 items-center">
         <i
           class="icon-list block lg:hidden text-2xl font-bold"
@@ -55,24 +57,34 @@
           <p class="text-xs hidden lg:block">Избранные</p>
         </div>
       </div>
-      <BaseButton @click="showModal = !showModal" type="button" class="hidden lg:flex">
+      <BaseButton
+        @click="showModal = !showModal"
+        type="button"
+        class="hidden lg:flex"
+      >
         <i class="icon-login text-[24px]"></i>
         Войти
       </BaseButton>
     </header>
     <div class="px-5 py-5 bg-white flex lg:hidden">
-      <div class="w-full flex items-center bg-white-400 text-[#6F6F6F] rounded-lg">
+      <div
+        class="w-full flex items-center bg-white-400 text-[#6F6F6F] rounded-lg"
+      >
         <div class="w-7 h-full flex items-center justify-center">
           <i class="icon-search"></i>
         </div>
         <BaseInput type="text" placeholder="Поиск" />
       </div>
     </div>
-    
+
     <LayoutNavbar />
 
-    <ModalAuthLogin v-if="showModal" :isVisible="showModal" @closeModal="closeModal">
-    </ModalAuthLogin>
+    <ModalAuthWrapper
+      v-if="showModal"
+      :isVisible="showModal"
+      @closeModal="closeModal"
+    />
+
 
     <!-- Catalog list section -->
     <CommonCatalogList v-if="openCatalogList" />
@@ -85,28 +97,29 @@
       class="lg:hidden"
     /> -->
     <Teleport to="body">
-      <div class="w-full px-2 py-2 text-gray-100 bg-white fixed bottom-0 flex justify-between lg:hidden border-t border-gray-500 z-10">
-        <NuxLink to="#" class="flex flex-col items-center">
+      <div
+        class="w-full px-2 py-2 text-gray-100 bg-white fixed bottom-0 flex justify-between lg:hidden border-t border-gray-500 z-10"
+      >
+        <NuxtLink to="#" class="flex flex-col items-center">
           <i class="icon-home text-3xl"></i>
           <h5 class="text-sm">Home</h5>
-        </NuxLink>
-        <NuxLink to="#" class="flex flex-col items-center">
+        </NuxtLink>
+        <NuxtLink to="#" class="flex flex-col items-center">
           <i class="icon-home text-3xl"></i>
           <h5 class="text-sm">Home</h5>
-        </NuxLink>
-        <NuxLink to="#" class="flex flex-col items-center">
+        </NuxtLink>
+        <NuxtLink to="#" class="flex flex-col items-center">
           <i class="icon-home text-3xl"></i>
           <h5 class="text-sm">Home</h5>
-        </NuxLink>
-        <NuxLink to="#" class="flex flex-col items-center">
+        </NuxtLink>
+        <NuxtLink to="#" class="flex flex-col items-center">
           <i class="icon-home text-3xl"></i>
           <h5 class="text-sm">Home</h5>
-        </NuxLink>
-        <NuxLink to="#" class="flex flex-col items-center">
+        </NuxtLink>
+        <NuxtLink to="#" class="flex flex-col items-center">
           <i class="icon-contact text-3xl"></i>
           <h5 class="text-sm">profile</h5>
-        </NuxLink>
-        
+        </NuxtLink>
       </div>
     </Teleport>
   </div>
@@ -124,7 +137,7 @@ const openMenuList = ref(false);
 const openCatalogList = ref(false);
 
 const openList = () => {
-  openCatalogList.value = !openCatalogList.value
+  openCatalogList.value = !openCatalogList.value;
   return openCatalogList;
 };
 
