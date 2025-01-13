@@ -3,14 +3,14 @@
     <!-- static -->
     <div class="container mx-auto p-10 bg-white rounded-2xl">
       <div class="p-10">
-        <h1 class="text-3xl font-bold mb-2">
+        <h1 class="lg:text-3xl text-xl md:text-2xl font-bold mb-2">
           Новогодние скидки от Tashkent Parfum
         </h1>
-        <h2 class="text-2xl font-semibold mb-6">
+        <h2 class="lg:text-2xl text-xl md:text-2xl font-semibold mb-6">
           И заголовок 2 будет выглядеть так
         </h2>
 
-        <p class="mb-6 text-base text-black-500">
+        <p class="mb-6 lg:text-base md:text-sm text-sm ">
           Интернет-магазин элитной парфюмерии и косметики PARFUM TASHKENT был
           создан в 2019 году. Каждый день мы заботимся о расширении
           ассортимента, улучшении функциональных возможностей электронного
@@ -18,7 +18,7 @@
           приносили исключительно положительные эмоции.
         </p>
 
-        <p class="mb-6 text-base text-black-500">
+        <p class="mb-6 lg:text-base md:text-sm text-sm ">
           Наша основная задача - качественная работа с клиентами с одной
           единственной целью, чтобы как можно большее количество наших
           покупателей стали нашими постоянными клиентами и рекомендовали нас
@@ -29,51 +29,51 @@
           <img
             src="/images/article.png"
             alt="Parfum display"
-            class="w-full h-[332px] rounded-lg shadow-lg object-cover"
+            class="w-full h-[332px] rounded-lg shadow-lg object-cover "
           />
         </div>
 
-        <p class="mb-6 text-base text-black-500">
+        <p class="mb-6 lg:text-base md:text-sm text-sm ">
           Французская парфюмерно-косметическая сеть Sephora сообщила о намерении
           прекратить работу своих магазинов на территории Российской Федерации.
           Об этом сеть, принадлежащая группе компаний LVMH (Louis Vuitton Moët
           Hennessy), сообщила в воскресенье на своей странице в Instagram.
         </p>
 
-        <h2 class="text-lg font-bold text-black-500 mt-8 mb-4">
+        <h2 class="text-lg lg:text-lg md:text-base font-bold  mt-8 mb-4">
           Как рассчитать доходность портфеля?
         </h2>
 
         <blockquote class="border-l-2 border-red-500 pl-2 my-6">
           <div class="rounded-2xl p-3 bg-red-700 flex gap-4">
             <img src="/svg/quote.svg" alt="" class="w-5 h-5" />
-            <p class="text-lg font-normal text-black-500">
+            <p class="text-sm lg:text-lg md:text-base  ">
               Доходность инвестиционного портфеля в Тинькофф Инвестициях не
               придется считать самостоятельно: абсолютная — в числах и
               относительная — в процентах — доходности ваших вложений
               отображаются на главном экране приложения
-              <span class="font-medium text-black-500">Parfume Investor.</span>
+              <span class="font-medium ">Parfume Investor.</span>
             </p>
           </div>
         </blockquote>
 
-        <p class="text-base text-black-500">
+        <p class="lg:text-base md:text-sm text-sm ">
           Лучший совет в этом случае — продумать собственную инвестиционную
           стратегию и принимать решения о покупке или продаже активов исходя из
           нее.
         </p>
-        <p class="text-base text-black-500">
+        <p class="lg:text-base md:text-sm text-sm ">
           Например, вы верите в рост «зеленой энергетики» и решаете купить акции
           компании Х по 50 $ за штуку. Предварительно вы провели анализ отрасли
           и внимательно изучили бизнес этой компании, после чего поняли: через 5
           лет ее акции будут стоить уже 500 $.
         </p>
-        <p class="text-base text-black-500">
+        <p class="lg:text-base md:text-sm text-sm ">
           Спустя 3 месяца после покупки на рынке началась коррекция и акции
           компании Х подешевели вдвое — до 25 $. Но вы восприняли это лишь как
           прекрасную возможность купить перспективные активы «со скидкой».
         </p>
-        <p class="text-base text-black-500">
+        <p class="lg:text-base md:text-sm text-sm ">
           И хотя у вас нет гарантий, что прогноз на рост «зеленой энергетики» в
           итоге сбудется полностью или хотя бы частично, зато у вас есть план,
           который поможет вам избежать эмоциональных и необдуманных действий

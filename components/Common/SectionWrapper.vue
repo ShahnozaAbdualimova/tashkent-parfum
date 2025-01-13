@@ -1,9 +1,9 @@
 <template>
   <section>
-    <div class="container mx-auto flex justify-between items-center">
+    <div class="container mx-auto mt-6 flex justify-between items-center">
       <!-- Title Section -->
       <div>
-        <h2 v-if="title" class="text-2xl font-bold text-gray-800">
+        <h2 v-if="title" class=" font-bold text-gray-800 lg:text-2xl text-lg md:text-xl">
           {{ title }}
         </h2>
         <slot name="title" v-else>

@@ -14,7 +14,7 @@
           <img
             :src="item.logo"
             :alt="item.name"
-            class="min-w-[234px] h-[112px] px-4 py-4 rounded-2xl bg-white-500 grayscale hover:grayscale-0 transition-all duration-300 object-center w-[200px]"
+            class="min-w-[220px] sm:min-w-[234px] h-[106px] sm:h-[112px] px-2 sm:px-4 py-2 sm:py-4 rounded-2xl bg-white-500 grayscale hover:grayscale-0 transition-all duration-300 object-center"
           />
         </NuxtLink>
       </div>
@@ -34,7 +34,7 @@
           <img
             :src="item.logo"
             :alt="item.name"
-            class="min-w-[234px] h-[112px] px-4 py-4 rounded-2xl bg-white-500 grayscale hover:grayscale-0 transition-all duration-300 object-center w-[200px]"
+            class="min-w-[220px] sm:min-w-[234px] h-[106px] sm:h-[112px] px-2 sm:px-4 py-2 sm:py-4 rounded-2xl bg-white-500 grayscale hover:grayscale-0 transition-all duration-300 object-center"
           />
         </NuxtLink>
       </div>
@@ -54,7 +54,7 @@
           <img
             :src="item.logo"
             :alt="item.name"
-            class="min-w-[234px] h-[112px] px-4 py-4 rounded-2xl bg-white-500 grayscale hover:grayscale-0 transition-all duration-300 object-center w-[200px]"
+            class="min-w-[220px] sm:min-w-[234px] h-[106px] sm:h-[112px] px-2 sm:px-4 py-2 sm:py-4 rounded-2xl bg-white-500 grayscale hover:grayscale-0 transition-all duration-300 object-center"
           />
         </NuxtLink>
       </div>

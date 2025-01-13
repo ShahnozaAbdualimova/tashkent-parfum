@@ -4,19 +4,19 @@
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <!-- Left Content -->
           <div>
-            <h1 class="text-3xl font-bold mb-4">О нас</h1>
+            <h1 class="lg:text-3xl text-2xl md:text-xl font-bold mb-4">О нас</h1>
             <div class=" space-y-4">
-              <p class=" text-lg font-normal text-black-500">
+              <p class=" text-base font-normal text-black-500 lg:text-lg md:text-sm">
                 Интернет-магазин элитной парфюмерии и косметики <span class=" font-medium">PARFUM TASHKENT</span> был создан в 2019 году. Каждый день мы заботимся о расширении ассортимента, улучшении функциональных возможностей электронного обслуживания и доставки, чтобы ваши покупки были комфортными и приносили удовольствие с первого клика!
               </p>
-              <p class=" text-lg font-normal text-black-500">
+              <p class=" text-base font-normal text-black-500 lg:text-lg md:text-sm">
                 Наша основная задача - качественная работа с клиентами с одной единственной целью, чтобы как можно большее количество наших покупателей стали нашими постоянными клиентами и рекомендовали нас своим близким, друзьям и знакомым.
               </p>
             </div>
           </div>
   
           <!-- Right Content -->
-          <div class="relative flex items-center justify-center">
+          <div class="relative flex items-center justify-center ">
             <div class="bg-white absolute rounded-2xl border-2 border-red-100 shadow-[0px_0px_40px_#FDD3DE] px-8 py-6 z-10">
               <img src="/public/images/logo.svg" alt="Toshkent Parfum Logo" class="w-40 object-cover" />
             </div>
@@ -39,13 +39,13 @@
       <!-- Statistics -->
       <div class="bg-white pt-8 pb-14 my-16">
         <div class="container mx-auto px-4 py-12">
-          <h2 class="text-3xl font-bold  mb-8">Статистика</h2>
+          <h2 class="lg:text-3xl text-lg md:text-xl font-bold  mb-8">Статистика</h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div v-for="(item, index) in stats" :key="index" class=" statistics-item flex items-center text-start gap-4">
                 <img :src="item.images" alt="">
-              <div class="text-3xl font-bold ">
-                <CountUp class=" text-3xl font-bold gap-1" :end-val="item.value" :suffix="item.suffix" />
-                <p class="mt-2 text-base font-normal text-gray-100">{{ item.label }}</p>
+              <div class="lg:text-3xl text-xl font-bold ">
+                <CountUp class="lg:text-3xl text-xl font-bold gap-1" :end-val="item.value" :suffix="item.suffix" />
+                <p class="mt-2 lg:text-xl text-base md:text-sm font-normal text-gray-100">{{ item.label }}</p>
               </div>
             </div>
           </div>
