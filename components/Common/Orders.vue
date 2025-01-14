@@ -92,8 +92,6 @@
 </template>
 
 <script setup lang="ts">
-
-
 interface Order {
   id: string;
   items: number;

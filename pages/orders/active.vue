@@ -1,6 +1,7 @@
 <template>
   <div class="container mx-auto  items-center">
-    <div class="max-w-[780px] mb-14 bg-white rounded-lg p-5 shadow-md">
+    
+    <div class="w-[780px] mb-14 bg-white rounded-lg p-5 shadow-md">
     <div
       v-for="order in orders"
       :key="order.id"

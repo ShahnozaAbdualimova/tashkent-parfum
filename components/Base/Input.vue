@@ -7,7 +7,7 @@
     <slot name="prefix" />
     <input
       v-model="model"
-      v-mask="mask"
+      
       autocomplete="off"
       :type
       :placeholder
