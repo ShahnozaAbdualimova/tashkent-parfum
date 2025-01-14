@@ -13,7 +13,7 @@
         >
           {{ data.name }}
         </h3>
-        <div class="flex gap-2 items-center mt-1">
+        <div class="flex gap-2 items-center mt-1 ">
           <CommonProductStars :rating="data.stars" />
           <p class="font-proxima text-sm text-gray-100 leading-[130%]">
             {{ data.review_amount }}
