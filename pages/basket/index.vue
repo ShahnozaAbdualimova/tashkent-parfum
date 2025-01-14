@@ -14,7 +14,7 @@
           @updateAmount="updateAmount"
         />
       </div>
-      <div class="lg:col-span-4 col-span-12">
+      <div class="lg:col-span-4 col-span-12 mt-4 lg:mt-0">
         <BasketInvoice :totalPrice="totalPrice" :totalItems="totalItems" :totalDiscount="totalDiscount" :totalArr="totalArr"/>
 
         <button
@@ -76,7 +76,6 @@ const totalPrice = computed(() => {
 const totalItems = computed(() => {
   return arr.value.reduce((sum, item) => sum + item.amount, 0);
 });
-
 const totalArr = computed(() => {
   return arr.value
 })
