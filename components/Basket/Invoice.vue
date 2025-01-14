@@ -56,7 +56,7 @@
       <p class="price red">+ {{(totalPrice*0.05).toLocaleString('fr-FR')}} uzs (5%)</p>
     </div>
 
-    <div class="flex items-center justify-between py-3">
+    <div  v-if="isToggled" class="flex items-center justify-between py-3">
       <p class="label">Остаток кэшбека:</p>
       <p class="price">0 uzs</p>
     </div>
