@@ -18,7 +18,7 @@
         <CommonPhoneInput type="tel" placeholder="(__) ___-__-__" />
       </div>
 
-      <div class="flex flex-col gap-5">
+      <div class="flex flex-col gap-5 mt-8 sm:mt-0">
         <button
           class="w-full text-sm py-2.5 px-5 rounded-lg bg-red-500 hover:bg-[#FA0738] text-white active:scale-95 duration-200 ease-in-out"
         >
