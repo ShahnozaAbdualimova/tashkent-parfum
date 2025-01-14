@@ -242,7 +242,7 @@
         </div>
         <img src="" class="hidden md:block mt-[20px] md:mt-0" alt="" />
       </div>
-
+      
     </div>
 
     <div class="flex justify-between justify-items-center w-scree py-7 mt-20 bg-white-500 px-32">

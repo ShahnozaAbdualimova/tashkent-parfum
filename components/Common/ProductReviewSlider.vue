@@ -11,7 +11,7 @@
                     <div class="bg-white rounded-lg p-4 shadow-sm text-left max-h-52 custom-shadow cursor-pointer">
                         <img :src="testimonial.image" alt="Product Image" class="w-12 h-12 object-cover -mb-12" />
                         <h3 class="text-lg font-bold pl-20">{{ testimonial.title }}</h3>
-                        <p class="text-sm text-gray-600 max-w-64 ml-20">
+                        <p class="text-sm text-gray-600 max-w-64 ml-20 font-normal">
                             {{ testimonial.description }}
                         </p>
                         <div class="flex items-center gap-3 mt-3">
