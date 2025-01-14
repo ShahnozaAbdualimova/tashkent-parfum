@@ -1,21 +1,19 @@
 <template>
-  <div class="bg-red-500 h-1 w-screen relative -top-9"></div>
-  <footer class="pr-10">
-    <div class="container mx-auto flex flex-wrap justify-between px-20 relative">
+  <footer class="bg-white">
+    <div class="bg-red-500 h-1 w-screen"></div>
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row flex-wrap justify-between px-4 sm:px-6 lg:px-8 relative">
       <!-- Contact Section -->
-      <div class="h-20 px-5 py-4 w-full flex justify-between bg-gray-400 rounded-2xl">
+      <div class="h-20 px-5 py-4 mt-8 w-full flex justify-between bg-gray-400 rounded-2xl">
         <CommonLogo type="dark" />
-
         <div class="absolute pl-44 py-4">
-          <span class="text-sm hover:text-red-500 cursor-pointer">
-            <i class="icon-phone mr-2"></i> +998 71 209 78 87
+          <span class="hover:text-red-500 cursor-pointer text-base">
+            <i class="icon-phone mr-2 text-gray-100 text-base"></i> <span class="black-500">+998 71 209 78 87</span>
           </span>
           <a href="mailto:toshkentparfum@gmail.com" class="pl-4 py-4 hover:text-red-500 cursor-pointer">
-            <i class="icon-email"></i>
-            <span class="pl-4">toshkentparfum@gmail.com</span>
+            <i class="icon-email text-gray-100 text-base"></i>
+            <span class="pl-4 black-500 text-base">toshkentparfum@gmail.com</span>
           </a>
         </div>
-
         <div class="py-2 flex space-x-4">
           <a href="#"><svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -172,19 +170,19 @@
         <h4 class="text-lg font-semibold">Покупателям</h4>
         <ul class="mt-2 space-y-2">
           <li>
-            <a href="#" class="text-gray-700 hover:text-red-500">О магазине</a>
+            <a href="#" class="text-gray-100 hover:text-red-500">О магазине</a>
           </li>
           <li>
-            <a href="#" class="text-gray-700 hover:text-red-500">Рекомендации</a>
+            <a href="#" class="text-gray-100 hover:text-red-500">Рекомендации</a>
           </li>
           <li>
-            <a href="#" class="text-gray-700 hover:text-red-500">Бренды</a>
+            <a href="#" class="text-gray-100 hover:text-red-500">Бренды</a>
           </li>
           <li>
-            <a href="#" class="text-gray-700 hover:text-red-500">Конфиденциальность</a>
+            <a href="#" class="text-gray-100 hover:text-red-500">Конфиденциальность</a>
           </li>
           <li>
-            <a href="#" class="text-gray-700 hover:text-red-500">Обратная связь</a>
+            <a href="#" class="text-gray-100 hover:text-red-500">Обратная связь</a>
           </li>
         </ul>
       </div>
@@ -194,17 +192,17 @@
         <h4 class="text-lg font-semibold">Разделы</h4>
         <ul class="mt-2 space-y-2">
           <li>
-            <a href="#" class="text-gray-700 hover:text-red-500">Парфюмерия</a>
+            <a href="#" class="text-gray-100 hover:text-red-500">Парфюмерия</a>
           </li>
           <li>
-            <a href="#" class="text-gray-700 hover:text-red-500">Тело и ванна</a>
+            <a href="#" class="text-gray-100 hover:text-red-500">Тело и ванна</a>
           </li>
           <li>
-            <a href="#" class="text-gray-700 hover:text-red-500">Волосы</a>
+            <a href="#" class="text-gray-100 hover:text-red-500">Волосы</a>
           </li>
-          <li><a href="#" class="text-gray-700 hover:text-red-500">Лицо</a></li>
+          <li><a href="#" class="text-gray-100 hover:text-red-500">Лицо</a></li>
           <li>
-            <a href="#" class="text-gray-700 hover:text-red-500">Все разделы</a>
+            <a href="#" class="text-gray-100 hover:text-red-500">Все разделы</a>
           </li>
         </ul>
       </div>
@@ -214,17 +212,17 @@
         <h4 class="text-lg font-semibold">Пользователь</h4>
         <ul class="mt-2 space-y-2">
           <li>
-            <a href="#" class="text-gray-700 hover:text-red-500">Вход</a>
+            <a href="#" class="text-gray-100 hover:text-red-500">Вход</a>
           </li>
           <li>
-            <a href="#" class="text-gray-700 hover:text-red-500">Регистрация</a>
+            <a href="#" class="text-gray-100 hover:text-red-500">Регистрация</a>
           </li>
         </ul>
         <h4 class="mt-6 text-lg font-semibold">Наши соц. сети</h4>
         <div class="flex space-x-4 mt-2">
-          <a href="#"><i class="icon-facebook text-xl text-gray-200  hover:text-red-500"></i></a>
-          <a href="#"><i class="icon-instagram text-xl text-gray-200  hover:text-red-500"></i></a>
-          <a href="#"><i class="icon-telegram text-xl text-gray-200  hover:text-red-500"></i></a>
+          <a href="#"><i class="icon-facebook text-xl text-gray-100  hover:text-red-500"></i></a>
+          <a href="#"><i class="icon-instagram text-xl text-gray-100  hover:text-red-500"></i></a>
+          <a href="#"><i class="icon-telegram text-xl text-gray-100  hover:text-red-500"></i></a>
         </div>
       </div>
 
@@ -247,8 +245,8 @@
 
     </div>
 
-    <div class="flex justify-between justify-items-center w-screen border-gray-300 py-8 mt-20 bg-gray-400 px-32">
-      <p class="text-sm text-gray-600">
+    <div class="flex justify-between justify-items-center w-scree py-7 mt-20 bg-white-500 px-32">
+      <p class="text-sm text-gray-600 font-medium">
         &copy; Toshkent Parfum, 2023. Все права защищены.
       </p>
       <svg width="32" height="18" viewBox="0 0 32 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -268,7 +266,7 @@
           d="M12.8128 6.58823C10.2907 6.64132 9.64615 8.54686 7.52194 7.92741C7.19686 7.83301 7.30896 7.57343 7.48271 7.54984C9.91519 7.14278 10.0328 6.76521 10.9352 6.54103C11.7815 6.32865 12.8128 6.58823 12.8128 6.58823Z"
           fill="#383838" />
         <path
-          d="M11.3723 4.30514C11.3555 4.33464 11.3163 4.34053 11.2883 4.32874C10.767 4.01606 10.2795 3.65029 9.71904 3.24913C9.19214 2.87746 8.05997 2.3701 5.70599 2.48809C4.58505 2.54709 2.88122 2.78897 1.12133 1.52058C0.695373 1.2197 0.263808 0.706441 0.0396189 0.22859C0.0172015 0.187287 0.00599302 0.134189 0.000388678 0.081091C-0.00521566 0.0279928 0.0508274 -0.0132932 0.101282 0.00440082C4.45615 1.84505 5.70039 1.12531 8.44109 1.79195C9.5676 2.06924 10.9632 3.79189 11.3668 4.22254C11.3892 4.24025 11.3892 4.27564 11.3723 4.30514Z"
+          d="M11.3723 4.30514C11.3555 4.33464 11.3163 4.34053 11.2883 4.32874C10.767 4.01606 10.2795 3.65029 9.71904 3.24913C9.19214 2.87746 8.05997 2.3701 5.70599 2.48809C4.58505 2.54709 2.88122 2.78897 1.12133 1.52058C0.695373 1.2197 0.263808 0.706441 0.0396189 0.22859C0.0172015 0.187287 0.00599302 0.134189 0.000388678 0.081091C-0.00521566 0.0279928 0.0508274 -0.0132932 0.101282 0.00440082C4.45615 1.84505 5.10039 1.12531 8.44109 1.79195C9.5676 2.06924 10.9632 3.79189 11.3668 4.22254C11.3892 4.24025 11.3892 4.27564 11.3723 4.30514Z"
           fill="#383838" />
         <path
           d="M15.1612 14.3933C15.1107 14.5584 15.1219 14.7532 15.0211 14.8947C14.8977 15.0836 14.5951 15.1012 14.4493 14.9301C14.3541 14.8417 14.3541 14.7001 14.3204 14.5879C14.1019 13.5792 13.8889 12.5702 13.6759 11.5555C13.6536 11.4848 13.6759 11.4376 13.7431 11.4082C13.8497 11.3786 13.8609 11.5025 13.8944 11.5734C14.1354 12.2636 14.3596 12.9596 14.6063 13.6499C14.6847 13.886 14.9482 13.8092 15.1219 13.8683C15.3068 13.992 15.1948 14.2222 15.1612 14.3933Z"
@@ -293,7 +291,7 @@
           fill="#383838" />
       </svg>
 
-      <h5 class="text-sm text-gray-600">Политика конфеденциальности</h5>
+      <h5 class="text-sm text-gray-600 cursor-pointer hover:text-red-500 font-medium">Политика конфеденциальности</h5>
     </div>
   </footer>
 </template>
