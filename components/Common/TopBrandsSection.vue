@@ -19,6 +19,6 @@
 </template>
 
 <script setup>
-// import { brands } from '~/data/mainProductSection';
+
 import { brands } from '~/data/mainProductSection';
 </script>

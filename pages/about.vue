@@ -45,7 +45,7 @@
                 <img :src="item.images" alt="">
               <div class="lg:text-3xl text-xl font-bold ">
                 <CountUp class="lg:text-3xl text-xl font-bold gap-1" :end-val="item.value" :suffix="item.suffix" />
-                <p class="mt-2 lg:text-xl text-base md:text-sm font-normal text-gray-100">{{ item.label }}</p>
+                <p class="mt-2 lg:text-base text-xs md:text-xs font-normal text-gray-100">{{ item.label }}</p>
               </div>
             </div>
           </div>
@@ -56,7 +56,6 @@
   </template>
   
   <script setup>
-  // import { ref, defineComponent, h, onMounted } from 'vue';
   
   // Simple CountUp component with number formatting
   const CountUp = defineComponent({
