@@ -3,7 +3,10 @@
     <div class="container mx-auto mt-6 flex justify-between items-center">
       <!-- Title Section -->
       <div>
-        <h2 v-if="title" class=" font-bold text-gray-800 lg:text-2xl text-lg md:text-xl">
+        <h2
+          v-if="title"
+          class="font-bold text-gray-800 lg:text-2xl text-sm md:text-xl"
+        >
           {{ title }}
         </h2>
         <slot name="title" v-else>
