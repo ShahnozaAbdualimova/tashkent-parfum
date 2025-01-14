@@ -1,8 +1,17 @@
 <template>
-  <div class="mx-auto my-6">
+  <div class="mx-auto my-4 sm:my-6 px-2 sm:px-6">
     <CommonSectionWrapper title="Истории" linkText="Все истории">
       <div class="overflow-hidden relative container mx-auto">
-        <swiper class="mySwiper" :slidesPerView="8.5" :initialSlide="10">
+        <swiper
+          class="mySwiper"
+          :slidesPerView="2.5"
+          :spaceBetween="12"
+          :initialSlide="0"
+          :breakpoints="{
+            640: { slidesPerView: 4.5, spaceBetween: 16 },
+            1024: { slidesPerView: 8.5, spaceBetween: 24 },
+          }"
+        >
           <swiper-slide v-for="(story, index) in stories" :key="story.id">
             <StoriesCard
               :story="story"
@@ -169,4 +178,3 @@ onBeforeUnmount(() => {
   stopProgressBar();
 });
 </script>
-

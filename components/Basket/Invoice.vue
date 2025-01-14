@@ -53,7 +53,7 @@
 
     <div class="flex items-center justify-between -mx-5 px-5 py-3 bg-red-50">
       <p class="label red">Кэшбек:</p>
-      <p class="price red">+{{(totalPrice*0.05).toLocaleString('fr-FR')}} uzs (5%)</p>
+      <p class="price red">+ {{(totalPrice*0.05).toLocaleString('fr-FR')}} uzs (5%)</p>
     </div>
 
     <div class="flex items-center justify-between py-3">
@@ -86,7 +86,7 @@
       <div v-if="isOpen" ref="dropdownContent">
         <div v-for="(el,index) of totalArr" :key="index" class="py-5 border-b border-white-500">
           <div class="flex items-center justify-between">
-            <p class="label">{{el.name}}:</p>
+            <p class="label max-w-48">{{el.name}}:</p>
             <p class="price">{{ (el.price * el.amount).toLocaleString('fr-FR') }} UZS</p>
           </div>
           <p class="pt-1 font-semibold text-black-500 text-xs leading-[130%]">{{el.price.toLocaleString('fr-FR')}} UZS x {{el.amount}}</p>
