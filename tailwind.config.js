@@ -3,6 +3,9 @@ export default {
   content: ['./pages/**/*.{js,ts,vue}', './components/**/*.{js,ts,vue}'],
   theme: {
     extend: {
+      lineHeight: {
+        '130': '130%',
+      },
       fontFamily: {
         proxima: ['Proxima', 'sans-serif'],
       },
@@ -83,6 +86,7 @@ export default {
         'marquee-rtl': 'marqueeRtl 100s linear infinite',
         'marquee-ltr': 'marqueeLtr 100s linear infinite',
       },
+     
     },
   },
   plugins: [],

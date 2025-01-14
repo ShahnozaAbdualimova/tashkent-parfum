@@ -1,4 +1,4 @@
-<!-- <template>
+ <template>
     <nav aria-label="Breadcrumb">
         <ol class="flex items-center space-x-2 text-sm text-gray-500">
             <li>
@@ -42,4 +42,4 @@ const breadcrumbs = computed(() => {
             };
         });
 });
-</script> -->
+</script> 
