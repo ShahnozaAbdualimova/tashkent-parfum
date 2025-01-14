@@ -1,34 +1,24 @@
 <template>
-  <Input
-  :type="inputPhone" 
-    placeholder="(___) ___-__-__"
-    v-model="model"
-    v-mask="mask"
-  >
+  <BaseInput :type="inputPhone" placeholder="(___) ___-__-__" v-model="model">
     <template #prefix>
       <span
-        class="px-3 py-2.5 bg-gray-400  text-black-500 text-base font-normal rounded-l-lg"
+        class="px-3 py-2.5 bg-gray-400 text-black-500 text-base font-normal rounded-l-lg"
       >
         +998
       </span>
     </template>
-  </Input>
+  </BaseInput>
 </template>
 
 <script setup>
-
-
-import Input from '../Base/Input.vue';
-
 defineProps({
   placeholder: {
     type: String,
-    required: true
-  }
-  
-})
+    required: true,
+  },
+});
 
-const inputPhone = ref('String')
+const inputPhone = ref('String');
 
-const model = defineModel()
+const model = defineModel();
 </script>
