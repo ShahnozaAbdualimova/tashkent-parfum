@@ -164,11 +164,11 @@
 </template>
 
 <script setup>
-const form = reactive({
-  name: '',
-  phone: '',
-  message: '',
-});
+// const form = reactive({
+//   name: '',
+//   phone: '',
+//   message: '',
+// });
 
 // Handle form submission
 // const submitForm = () => {
