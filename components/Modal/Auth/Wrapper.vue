@@ -3,7 +3,7 @@
     <div class="flex gap-4">
       <div class="flex rounded-xl">
         <Transition name="fade" mode="out-in">
-          <div class="flex flex-col p-6 bg-white rounded-l-xl">
+          <div class="flex flex-col p-6 bg-white rounded-xl  lg:rounded-r-none">
             <ModalAuthLogin
               @switchToRegister="showRegister"
               @switchToReset="showReset"
@@ -25,7 +25,7 @@
             />
           </div>
         </Transition>
-        <ModalAuthBanner />
+        <ModalAuthBanner class="hidden lg:block"/>
       </div>
 
       <button

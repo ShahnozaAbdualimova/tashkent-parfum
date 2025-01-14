@@ -18,17 +18,6 @@
           icon: ' icon-wallet',
         },
       ]"
-      :activeStep="2"
     />
-    <HomeHeroSection />
-    <CategoryCard />
-    <HomeRecommendedSection />
-    <StoriesSection />
-    <CommonProductReviewSlider />
-    <CommonBrandSection />
-    <CategoryForManCard />
-    <CommonTopBrandsSection />
-    <!--    <PagesFavorites/>-->
   </div>
-  <Breadcrumb />
 </template>
