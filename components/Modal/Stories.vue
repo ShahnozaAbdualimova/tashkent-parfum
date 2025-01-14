@@ -128,6 +128,23 @@ const onDragRight = () => {
 const onDragLeft = () => {
   navigate('prev');
 };
+
+const handleKeyDown = (event) => {
+  if (event.key === 'ArrowLeft') {
+    navigate('prev');
+  } else if (event.key === 'ArrowRight') {
+    navigate('next');
+  }
+};
+
+onMounted(() => {
+  window.addEventListener('keydown', handleKeyDown);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('keydown', handleKeyDown);
+});
+
 </script>
 
 <style scoped>
