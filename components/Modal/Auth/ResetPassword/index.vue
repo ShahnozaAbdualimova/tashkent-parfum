@@ -19,7 +19,7 @@
       </div>
       <button
         @click="$emit('switchToConfirmation')"
-        class="w-full text-sm py-2.5 px-5 rounded-lg bg-red-500 hover:bg-[#FA0738] text-white active:scale-95 duration-200 ease-in-out"
+        class="mt-8 sm:mt-0 w-full text-sm py-2.5 px-5 rounded-lg bg-red-500 hover:bg-[#FA0738] text-white active:scale-95 duration-200 ease-in-out"
       >
         Подтвердить
       </button>
