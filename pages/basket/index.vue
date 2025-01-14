@@ -5,7 +5,7 @@
     >
       Корзина
     </h1>
-    <div class="grid grid-cols-12 space-x-6  mt-6 items-start">
+    <div class="grid grid-cols-12 space-x-6 mt-6 items-start">
       <div class="bg-white rounded-xl w-full lg:col-span-8 col-span-12">
         <BasketItem
           v-for="el in arr"
@@ -15,14 +15,14 @@
         />
       </div>
       <div class="lg:col-span-4 col-span-12">
-        <BasketInvoice />
+        <BasketInvoice :totalPrice="totalPrice" :totalItems="totalItems" :totalDiscount="totalDiscount" :totalArr="totalArr"/>
+
         <button
           class="mt-4 w-full font-semibold py-3 px-[22px] rounded-xl bg-red-500 hover:bg-[#FA0738] text-white leading-[26px] active:scale-95 duration-200 ease-in-out"
         >
           Перейти к оформлению
         </button>
       </div>
-
     </div>
   </div>
 </template>
@@ -37,7 +37,7 @@ const arr = ref([
     review_amount: 2,
     price: 650000,
     amount: 1,
-    old_price: null,
+    discount: null,
   },
   {
     id: 2,
@@ -46,8 +46,8 @@ const arr = ref([
     stars: 3.25,
     review_amount: 68,
     price: 940000,
-    amount: 3,
-    old_price: 1500000,
+    amount: 1,
+    discount: 560000,
   },
   {
     id: 3,
@@ -57,7 +57,7 @@ const arr = ref([
     review_amount: 38,
     price: 670000,
     amount: 2,
-    old_price: null,
+    discount: null,
   },
 ]);
 
@@ -67,4 +67,21 @@ const updateAmount = (id, amount) => {
     item.amount = amount;
   }
 };
+
+const totalPrice = computed(() => {
+  return arr.value.reduce((sum, item) => sum + item.price * item.amount, 0);
+});
+
+
+const totalItems = computed(() => {
+  return arr.value.reduce((sum, item) => sum + item.amount, 0);
+});
+
+const totalArr = computed(() => {
+  return arr.value
+})
+
+const totalDiscount = computed(() => {
+  return arr.value.reduce((sum, item) => sum + item.discount * item.amount, 0);
+});
 </script>

@@ -35,10 +35,10 @@
             class="text-xs text-red-500 leading-[130%] font-proxima line-through"
           >
             {{
-              data.old_price !== null
-                ? (data.old_price * data.amount).toLocaleString('fr-FR') +
+              data.discount !== null
+                ? ((data.discount+data.price) * data.amount).toLocaleString('fr-FR') +
                   ' UZS'
-                : data.old_price
+                : data.discount
             }}
           </p>
           <h1 class="text-black-500 leading-[140%] text-xl font-semibold">
@@ -74,7 +74,6 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits, reactive } from 'vue';
 
 const props = defineProps({
   data: {
