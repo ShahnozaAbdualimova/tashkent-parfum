@@ -11,6 +11,7 @@ export default {
       },
       colors: {
         red: {
+          50: '#FFF6F9',
           100: '#FDD3DE',
           200: '#FDDFE7',
           300: '#FF4433',
