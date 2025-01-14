@@ -1,8 +1,8 @@
 <template>
   <div>
-    <HomeHeroSection />
+    <!-- <HomeHeroSection /> -->
     <CategoryCard />
-    <HomeRecommendedSection />
+    <!-- <HomeRecommendedSection /> -->
     <StoriesSection />
     <CommonProductReviewSlider />
     <CommonBrandSection />
