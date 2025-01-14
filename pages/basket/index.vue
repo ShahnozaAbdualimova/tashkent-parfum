@@ -18,6 +18,7 @@
         <BasketInvoice :totalPrice="totalPrice" :totalItems="totalItems" :totalDiscount="totalDiscount" :totalArr="totalArr"/>
 
         <button
+          @click="basketSubmit"
           class="mt-4 w-full font-semibold py-3 px-[22px] rounded-xl bg-red-500 hover:bg-[#FA0738] text-white leading-[26px] active:scale-95 duration-200 ease-in-out"
         >
           Перейти к оформлению
@@ -28,6 +29,9 @@
 </template>
 
 <script setup>
+
+const router = useRouter();
+
 const arr = ref([
   {
     id: 1,
@@ -83,4 +87,16 @@ const totalArr = computed(() => {
 const totalDiscount = computed(() => {
   return arr.value.reduce((sum, item) => sum + item.discount * item.amount, 0);
 });
+
+const basketSubmit = () => {
+  const data = {
+    totalArr: totalArr.value,
+    totalPrice: totalPrice.value,
+    totalItems: totalItems.value,
+    totalDiscount: totalDiscount.value,
+  };
+  localStorage.setItem('basketData', JSON.stringify(data));
+
+  window.location.href = '/checkout';
+};
 </script>
