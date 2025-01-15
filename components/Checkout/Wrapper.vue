@@ -5,7 +5,7 @@
     >
       Адрес доставки
     </h3>
-    <div class="min-h-[600px]"><CheckoutMap/></div>
+    <div class="min-h-[600px]"><slot/></div>
     <div class="pt-5 border-t border-white-500 flex justify-between">
       <button
         @click="router.back()"

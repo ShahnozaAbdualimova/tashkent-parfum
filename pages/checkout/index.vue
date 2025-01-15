@@ -7,7 +7,7 @@
     </h2>
     <div class="grid grid-cols-12 space-x-6 mt-6 items-start">
       <div class="bg-white rounded-xl w-full lg:col-span-8 col-span-12">
-        <CheckoutWrapper/>
+        <CheckoutAddress/>
       </div>
       <div class="lg:col-span-4 col-span-12 mt-4 lg:mt-0">
         <BasketInvoice :totalPrice="basketData.totalPrice" :totalItems="basketData.totalItems" :totalDiscount="basketData.totalDiscount" :totalArr="basketData.totalArr"/>
