@@ -1,61 +1,59 @@
 <template>
-  <div class="flex  items-center  gap-4 pt-5">
+  <div class="flex items-center gap-4 pt-5">
     <div class="w-1/2">
-      <p class="text-gray-200  text-sm font-medium">Регион</p>
+      <p class="text-gray-200 text-sm font-medium">Регион</p>
       <BaseSelect
-        :items="items"
+        :items="regionList"
         placeholder="Выберите регион"
         labelKey="title"
         valueKey="id"
-        v-model="selectedItem"
+        v-model="selectedRegion"
+
       />
     </div>
-
 
     <div class="w-1/2">
       <p class="text-gray-200 text-sm font-medium">Район/город</p>
       <BaseSelect
-        :items="items2"
+        :items="selectedRegion ? filteredDistricts : districtList"
         placeholder="Выберите район/город"
         labelKey="title"
         valueKey="id"
-        v-model="selectedItem2"
+        v-model="selectedDistrict"
+        :class="{'pointer-events-none opacity-50': !selectedRegion}"
       />
     </div>
-
   </div>
   <div class="w-full pt-4">
     <p class="text-gray-200 text-sm font-medium pb-2">Адрес</p>
-    <BaseInput
-      placeholder="Введите адрес доставки "
-    />
+    <BaseInput placeholder="Введите адрес доставки" />
   </div>
 </template>
 
 <script setup>
-const items = ref([
-  { id: 1, title: 'Option' },
-  { id: 2, title: 'Option' },
-  { id: 3, title: 'Option' },
-  { id: 4, title: 'Option' },
-  { id: 5, title: 'Option' },
-  { id: 6, title: 'Option' },
-  { id: 7, title: 'Option' },
-  { id: 8, title: 'Option' },
-  { id: 9, title: 'Option' },
-]);
-const items2 = ref([
-  { id: 1, title: 'Option' },
-  { id: 2, title: 'Option' },
-  { id: 3, title: 'Option' },
-  { id: 4, title: 'Option' },
-  { id: 5, title: 'Option' },
-  { id: 6, title: 'Option' },
-  { id: 7, title: 'Option' },
-  { id: 8, title: 'Option' },
-  { id: 9, title: 'Option' },
-]);
+const { regionList, fetchRegionData } = useRegionData();
+const { districtList, fetchDistrictData } = useDistrictData();
+const selectedRegion = ref(null);
+const selectedDistrict = ref(null);
+const filteredDistricts = ref([]);
 
-const selectedItem = ref(null);
-const selectedItem2 = ref(null);
+onMounted(() => {
+  fetchRegionData();
+  fetchDistrictData().then(() => {
+    console.log('District List:', districtList.value);
+  });
+});
+
+watch(selectedRegion, (newRegion) => {
+  console.log('Selected Region :', newRegion);
+
+  if (newRegion) {
+    filteredDistricts.value = districtList.value.filter((district) => {
+      const regionId = district.region.id;
+      return regionId === newRegion.id;
+    });
+  } else {
+    filteredDistricts.value = [];
+  }
+});
 </script>
