@@ -1,3 +1,43 @@
 <template>
-
+  <div id="map" class="h-[336px] mt-8"></div>
 </template>
+
+<script setup>
+import { onMounted } from 'vue'
+import L from 'leaflet'
+
+const accessToken = 'JFnGBtHuJqKGqV4hmDWT9Li3gQ6zTCTks28FetIKx2dJ9WB7jmwtCokZBudRvEfv'
+
+onMounted(() => {
+  const map = L.map('map').setView([41.3112652, 69.2674975], 14)
+
+  L.tileLayer(`https://tile.jawg.io/jawg-streets/{z}/{x}/{y}{r}.png?access-token=${accessToken}`).addTo(map)
+
+  const svgIcon = L.divIcon({
+    className: 'custom-svg-icon',
+    html: `
+      <svg xmlns="http://www.w3.org/2000/svg" width="110" height="100" viewBox="0 0 110 100" fill="none">
+        <g filter="url(#filter0_f_1_41130)">
+          <ellipse cx="55" cy="50" rx="12" ry="7" fill="#F62559"/>
+        </g>
+        <path opacity="0.2" d="M66.5 50C66.5 51.6813 65.3281 53.2959 63.2333 54.5179C61.1509 55.7326 58.2411 56.5 55 56.5C51.7589 56.5 48.8491 55.7326 46.7667 54.5179C44.6719 53.2959 43.5 51.6813 43.5 50C43.5 48.3187 44.6719 46.7041 46.7667 45.4821C48.8491 44.2674 51.7589 43.5 55 43.5C58.2411 43.5 61.1509 44.2674 63.2333 45.4821C65.3281 46.7041 66.5 48.3187 66.5 50Z" stroke="#F62559"/>
+        <path d="M51 35H59L56 52H54L51 35Z" fill="#F62559"/>
+        <circle cx="55" cy="27" r="12" fill="#F62559"/>
+        <circle cx="55" cy="27" r="6" fill="white"/>
+        <defs>
+          <filter id="filter0_f_1_41130" x="0" y="0" width="110" height="100" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="21.5" result="effect1_foregroundBlur_1_41130"/>
+          </filter>
+        </defs>
+      </svg>
+    `,
+    iconSize: [110, 100],
+    iconAnchor: [55, 50],
+  })
+
+  L.marker([41.3112652, 69.2674975], { icon: svgIcon }).addTo(map)
+})
+</script>
+
