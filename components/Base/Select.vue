@@ -1,7 +1,7 @@
 <template>
   <div
     class="w-full relative h-auto py-2.5 px-3 bg-white-400 text-black-500 rounded-lg cursor-pointer mt-2 select-none flex justify-between items-center gap-2"
-    @click="handelClick"
+    @click="handleClick"
   >
     <h1
       class="text-black-500 font-proxima leading-[130%] relative"
@@ -41,7 +41,7 @@
 const show = ref(false);
 const isRotated = ref(false);
 
-const handelClick = () => {
+const handleClick = () => {
   toggleRotation();
   toggleShow();
 };
