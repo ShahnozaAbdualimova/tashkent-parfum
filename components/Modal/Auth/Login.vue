@@ -11,11 +11,14 @@
         <label class="font-proxima text-sm text-gray-200 leading-[13.8px]"
           >Номер телефона</label
         >
-        <CommonPhoneInput type="tel" placeholder="(__) ___-__-__" />
+        <CommonPhoneInput
+          type="tel"
+          placeholder="(__) ___-__-__"
+        />
         <label class="font-proxima text-sm text-gray-200 leading-[13.8px]"
           >Пароль</label
         >
-        <CommonPasswordInput  placeholder="Введите пароль" />
+        <CommonPasswordInput placeholder="Введите пароль" />
         <p
           @click="$emit('switchToReset')"
           class="text-red-900 hover:text-red-500 text-sm self-end duration-200 ease-in-out cursor-pointer"
@@ -24,7 +27,7 @@
         </p>
       </div>
 
-      <div class="flex flex-col gap-5">
+      <div class="flex flex-col gap-5 mt-8 sm:mt-0">
         <button
           class="w-full text-sm py-2.5 px-5 rounded-lg bg-red-500 hover:bg-[#FA0738] text-white active:scale-95 duration-200 ease-in-out"
         >
@@ -45,7 +48,7 @@
   </form>
 </template>
 
-<script setup></script>
+
 
 <style scoped>
 .auth-or::before,

@@ -1,36 +1,50 @@
 <template>
-  <div class="relative mt-2">
-    <div
-      class="flex justify-between border rounded-md border-grey-100 bg-grey-600 py-2.5 pl-3 pr-2.5 cursor-pointer select-none"
-      @click="isOpen = !isOpen"
+  <div
+    class="w-full relative h-auto py-2 px-3 border bg-[#E0E7FF]/40 text-black rounded-md cursor-pointer mt-1 select-none flex justify-between items-center gap-2"
+    @click="handelClick"
+  >
+    <h1 class="text-black relative">
+      {{ selectedOptionsText }}
+    </h1>
+    <i
+      class="icon-chevron-down text-sm text-gray-400"
+      :class="{ rotated: isRotated }"
+    ></i>
+    <ul
+      class="mt-1 absolute z-10 rounded-md flex flex-col w-full top-10 left-0 drop-show h-auto border border-blue-100 bg-white drop-shadow-xl"
+      v-if="show"
     >
-      <span class="text-base font-normal text-dark-100">{{
-        selectedOptionText
-      }}</span>
-      <i class="icon-chevron-small text-grey-200 text-[10px]"></i>
-    </div>
-    <Transition name="dropdown">
-      <ul
-        v-if="isOpen"
-        class="absolute top-[calc(100%+4px) border border-grey-100 rounded-md bg-white w-full z-10"
+      <li
+        class="w-full h-auto py-2 px-3 border-b flex flex-col border-blue-100 duration-300 last:border-none cursor-pointer hover:bg-blue-50 transition-all 0.3s ease-in-out"
+        v-for="(i, index) in items"
+        :key="index"
+        @click="onSelect(i)"
       >
-        <li
-          v-for="(option, index) of options"
-          :key="index"
-          class="px-4 py-3 border-b border-grey-100 last-border-none cursor-pointer select-none text-dark-200"
-          @click="onSelect(option)"
-        >
-          {{ option[props.labelKey] }}
-        </li>
-      </ul>
-    </Transition>
+        <h2>
+          {{ i[labelKey] }}
+        </h2>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed, watch } from 'vue';
+const show = ref(false);
+const isRotated = ref(false);
 
-const isOpen = ref(false);
+const handelClick = () => {
+  toggleRotation();
+  toggleShow();
+};
+
+const toggleRotation = () => {
+  isRotated.value = !isRotated.value;
+};
+
+const toggleShow = () => {
+  show.value = !show.value;
+};
 
 const props = defineProps({
   options: {
@@ -45,16 +59,39 @@ const props = defineProps({
     type: String,
     default: 'id',
   },
+  currensyKey: {
+    type: String,
+    default: 'currensy',
+  },
+  defaultValue: {
+    type: Object,
+    default: undefined,
+  },
 });
 
-const selectedOption = ref();
-const selectedOptionText = ref('');
+const selectedOptions = defineModel();
 
-const onSelect = (option) => {
-  console.log(option);
-  isOpen.value = false;
-  selectedOption.value = option;
-  selectedOptionText.value = option[props.labelKey];
+watch(
+  () => props.items,
+  (newValue) => {
+    if (newValue.length > 0 && !props.defaultValue) {
+      selectedOptions.value = newValue[0];
+    } else if (props.defaultValue) {
+      selectedOptions.value = props.defaultValue;
+    }
+  },
+  {
+    immediate: true,
+  }
+);
+
+const selectedOptionsText = computed(() => {
+  return selectedOptions.value?.[props.labelKey];
+});
+
+const onSelect = (i) => {
+  selectedOptions.value = i;
+  show.value = true;
 };
 </script>
 
@@ -65,5 +102,18 @@ const onSelect = (option) => {
 .dropdown-enter-from .dropdown-leave-to {
   opacity: 0;
   transform: translateY(-10px);
+}
+.dropdown-enter-active {
+  transition: all 0.2s ease;
+}
+
+.dropdown-leave-active {
+  transition: all 0.2s ease;
+}
+
+.dropdown-enter-from,
+.dropdown-leave-to {
+  transform: translateY(20px);
+  opacity: 0;
 }
 </style>
