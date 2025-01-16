@@ -32,3 +32,6 @@ yarn.lock
 !.env.example
 
 .yarn
+
+
+pages/playground.vue
