@@ -1,7 +1,7 @@
 <template>
   <div
-    class="w-full relative h-auto py-2 px-3 border bg-[#E0E7FF]/40 text-black rounded-md cursor-pointer mt-1 select-none flex justify-between items-center gap-2"
-    @click="handelClick"
+    class="w-full relative h-auto py-2.5 px-3 bg-white-400 text-black-500 rounded-lg cursor-pointer mt-2 select-none flex justify-between items-center gap-2"
+    @click="handleClick"
   >
     <h1 class="relative text-black">
       {{ selectedOptionsText }}
@@ -29,11 +29,10 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue';
 const show = ref(false);
 const isRotated = ref(false);
 
-const handelClick = () => {
+const handleClick = () => {
   toggleRotation();
   toggleShow();
 };
@@ -60,6 +59,10 @@ const props = defineProps({
     type: String,
     default: 'id',
   },
+  placeholder: {
+    type: String,
+    default: 'Select an option:',
+  },
   defaultValue: {
     type: Object,
     default: undefined,
@@ -72,7 +75,7 @@ watch(
   () => props.items,
   (newValue) => {
     if (newValue.length > 0 && !props.defaultValue) {
-      selectedOptions.value = newValue[0];
+      selectedOptions.value = null;
     } else if (props.defaultValue) {
       selectedOptions.value = props.defaultValue;
     }
@@ -83,7 +86,9 @@ watch(
 );
 
 const selectedOptionsText = computed(() => {
-  return selectedOptions.value?.[props.labelKey];
+  return selectedOptions.value
+    ? selectedOptions.value[props.labelKey]
+    : props.placeholder;
 });
 
 const onSelect = (i) => {
@@ -95,5 +100,18 @@ const onSelect = (i) => {
 <style scoped>
 .rotated {
   transform: rotate(180deg);
+}
+.dropdown-enter-active {
+  transition: all 0.2s ease;
+}
+
+.dropdown-leave-active {
+  transition: all 0.2s ease;
+}
+
+.dropdown-enter-from,
+.dropdown-leave-to {
+  transform: translateY(20px);
+  opacity: 0;
 }
 </style>
