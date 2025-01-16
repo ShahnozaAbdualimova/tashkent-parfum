@@ -29,8 +29,9 @@
   </CommonCSectionWrapper>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { categoryName } from '~/data/data.js';
+
 </script>
 
 <style scoped>

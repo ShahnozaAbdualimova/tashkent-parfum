@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-import { catalogs } from '~/data/data.js';
+import { catalogs } from "~/data/data.js";
 
 defineProps({
   isCatalogOpen: {

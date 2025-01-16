@@ -2,7 +2,7 @@
   <div class="header sticky top-0 left-0 z-40 w-full bg-white">
     <LayoutSubHeader class="hidden lg:block" />
     <header
-      class="px-4 lg:container mx-auto w-full py-4 flex items-center justify-between"
+      class="px-4 container mx-auto w-full py-4 flex items-center justify-between"
     >
       <div class="flex gap-8 items-center">
         <i
