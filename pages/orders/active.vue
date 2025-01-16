@@ -1,10 +1,9 @@
 <template>
   <div class="container mx-auto">
-    <div class="w-full lg:w-[780px] mb-14 bg-white rounded-lg p-4 md:p-5 shadow-md">
-      <div
-        v-for="order in orders"
-        :key="order.id"
-      >
+    <div
+      class="w-full lg:w-[780px] mb-14 bg-white rounded-lg p-4 md:p-5 shadow-md"
+    >
+      <div v-for="order in orders" :key="order.id">
         <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5">
           <div class="w-full sm:w-auto">
             <img
@@ -14,7 +13,9 @@
             />
           </div>
           <div class="flex-grow">
-            <h3 class="text-lg font-bold mb-2 text-black-500">#{{ order.id }}</h3>
+            <h3 class="text-lg font-bold mb-2 text-black-500">
+              #{{ order.id }}
+            </h3>
             <p class="text-sm text-gray-500 mb-1">
               Всего: {{ order.itemCount }} товаров
             </p>

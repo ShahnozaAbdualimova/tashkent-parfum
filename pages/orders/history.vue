@@ -1,6 +1,8 @@
 <template>
   <div class="container mx-auto">
-    <div class="w-full lg:w-[780px] mb-14 bg-white rounded-lg p-4 md:p-5 shadow-sm">
+    <div
+      class="w-full lg:w-[780px] mb-14 bg-white rounded-lg p-4 md:p-5 shadow-sm"
+    >
       <div v-for="order in orders" :key="order.id">
         <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5">
           <div class="w-full sm:w-auto">
@@ -12,7 +14,9 @@
           </div>
           <div class="flex-grow">
             <NuxtLink :to="`/order/${order.id}`">
-              <h3 class="text-lg font-bold mb-2 text-black-500 hover:text-red-500 transition-colors">
+              <h3
+                class="text-lg font-bold mb-2 text-black-500 hover:text-red-500 transition-colors"
+              >
                 #{{ order.id }}
               </h3>
             </NuxtLink>
