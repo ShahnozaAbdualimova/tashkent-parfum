@@ -1,7 +1,7 @@
 <template>
-  <div class="">
   <div
-    class="overflow-y-scroll bg-blue-500 border-2 border-blue-700 rotate-90 grid grid-cols-4 gap-y-[50px] px-32 py-16"
+    class="w-full h-screen transition-300 fixed overflow-y-scroll z-20 bg-white grid grid-cols-4 gap-y-[50px] px-32 pt-16 pb-[200px]"
+    :class="{ 'rotate-x-90': !isCatalogOpen }"
   >
     <ul
       class="flex flex-col gap-3 container mx-auto"
@@ -9,11 +9,15 @@
       :key="catalog"
     >
       <h3 class="text-xl font-medium">{{ catalog.name }}</h3>
-      <li v-for="item of catalog.subcategories" :key="item">
-        <NuxtLink to="/" class="text-base mt-3 font-medium subcatalog">
+      <NuxtLink to="#">
+        <li
+          v-for="item of catalog.subcategories"
+          :key="item"
+          class="text-base mt-3 font-medium subcatalog"
+        >
           {{ item }}
-        </NuxtLink>
-      </li>
+        </li>
+      </NuxtLink>
     </ul>
   </div>
 </template>
@@ -21,10 +25,10 @@
 <script setup>
 import { catalogs } from '~/data/data.js';
 
-const props = defineProps({
+defineProps({
   isCatalogOpen: {
     type: Boolean,
-    default: false,
+    required: true,
   },
 });
 </script>
@@ -33,5 +37,9 @@ const props = defineProps({
 .subcatalog:hover {
   color: red;
   transition: all 0.2s ease-in;
+}
+
+.rotate-x-90 {
+  transform: rotateX(90deg);
 }
 </style>

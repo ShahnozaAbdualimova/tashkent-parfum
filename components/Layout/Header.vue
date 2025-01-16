@@ -110,7 +110,7 @@ const openMenuList = ref(false);
 
 const isCatalogOpen = ref(false);
 
-const openList = () => {
+const handleCatalog = () => {
   isCatalogOpen.value = !isCatalogOpen.value;
 };
 
