@@ -2,7 +2,7 @@
     <CommonCSectionWrapper title="Отзывы">
         <div class="h-screen">
             <Swiper class="h-full w-screen" :slides-per-view="3.5" :space-between="30" :breakpoints="{
-                0: { slidesPerView: 1, spaceBetween: 10 },
+                500: { slidesPerView: 1, spaceBetween: 10 },
                 640: { slidesPerView: 1.5, spaceBetween: 20 },
                 768: { slidesPerView: 2.5, spaceBetween: 25 },
                 1000: { slidesPerView: 3.5, spaceBetween: 30 }

@@ -25,7 +25,7 @@
     </button>
     <ul
       v-if="isOpen"
-      class="absolute left-0 mt-2 w-full rounded-lg bg-white shadow-lg z-10"
+      class="absolute left-0 mt-2 w-full rounded-lg bg-white shadow-lg z-30"
     >
       <li
         v-for="(option, index) in options"
