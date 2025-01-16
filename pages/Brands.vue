@@ -1,10 +1,8 @@
 <template>
-  <div class="container mx-auto mt-3  items-center justify-center">
+  <div class="container mx-auto mt-3 items-center justify-center">
     <div class="bg-white-500">
-      <div class="flex items-center justify-between mt-5 ">
-        <h2 class="font-bold text-3xl text-black-500 leading-10">
-          Все бренды
-        </h2>
+      <div class="flex items-center justify-between mt-5">
+        <h2 class="font-bold text-3xl text-black-500 leading-10">Все бренды</h2>
         <BaseInput class="pl-2.5" placeholder="search">
           <template #prefix>
             <i class="icon-search text-[20px] text-grey-100"></i>
@@ -13,7 +11,7 @@
       </div>
       <div class="grid grid-cols-4 gap-6 items-center justify-center mt-5">
         <div
-          class="bg-white p-4 rounded-2xl justify-center items-center  overflow-hidden"
+          class="bg-white p-4 rounded-2xl justify-center items-center overflow-hidden"
           v-for="(brand, index) in brands"
           :key="index"
         >
