@@ -1,6 +1,8 @@
 <template>
   <div class="header sticky top-0 left-0 z-20 w-full bg-white">
-    <header class="container mx-auto w-full py-4 flex items-center justify-between">
+    <header
+      class="container mx-auto w-full py-4 flex items-center justify-between"
+    >
       <div class="flex gap-8 items-center">
         <i
           class="icon-list block lg:hidden text-2xl font-bold"
@@ -12,7 +14,7 @@
           <BaseButton
             class="hidden lg:flex"
             variant="catalogBtn"
-            @click="openList"
+            @click="handleCatalog"
           >
             <i
               class="icon-list text-2xl text-white-default duration-300 group-hover:text-black-200"
@@ -55,13 +57,19 @@
           <p class="text-xs hidden lg:block">Избранные</p>
         </div>
       </div>
-      <BaseButton @click="showModal = !showModal" type="button" class="hidden lg:flex">
+      <BaseButton
+        @click="showModal = !showModal"
+        type="button"
+        class="hidden lg:flex"
+      >
         <i class="icon-login text-[24px]"></i>
         Войти
       </BaseButton>
     </header>
     <div class="px-5 py-5 bg-white flex lg:hidden">
-      <div class="w-full flex items-center bg-white-400 text-[#6F6F6F] rounded-lg">
+      <div
+        class="w-full flex items-center bg-white-400 text-[#6F6F6F] rounded-lg"
+      >
         <div class="w-7 h-full flex items-center justify-center">
           <i class="icon-search"></i>
         </div>
@@ -70,11 +78,15 @@
     </div>
     <LayoutNavbar />
 
-    <ModalAuthLogin v-if="showModal" :isVisible="showModal" @closeModal="closeModal">
+    <ModalAuthLogin
+      v-if="showModal"
+      :isVisible="showModal"
+      @closeModal="closeModal"
+    >
     </ModalAuthLogin>
 
     <!-- Catalog list section -->
-    <CommonCatalogList v-if="openCatalogList" />
+    <CommonCatalogList :isCatalogOpen />
     <CommonMenuList
       v-if="openMenuList"
       @close-menu="openMenuList = false"
@@ -92,11 +104,10 @@ const closeModal = () => {
 
 const openMenuList = ref(false);
 
-const openCatalogList = ref(false);
+const isCatalogOpen = ref(false);
 
-const openList = () => {
-  openCatalogList.value = !openCatalogList.value
-  return openCatalogList;
+const handleCatalog = () => {
+  isCatalogOpen.value = !isCatalogOpen.value;
 };
 
 const openMenyuList = () => {
