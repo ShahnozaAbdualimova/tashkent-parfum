@@ -101,7 +101,7 @@
             </a>
           </div>
           <div class="w-full sm:w-1/4 flex justify-center sm:justify-end">
-            <img src="/svg/sentimg.svg" alt="footerLogo" class="w-16 h-16 lg:visible  max-sm:invisible md:invisible">
+            <img src="/svg/sentimg.svg" alt="footerLogo" class="w-16 h-16 mt-6 lg:visible  max-sm:invisible md:invisible">
           </div>
         </div>
       </div>
