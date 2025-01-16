@@ -8,7 +8,6 @@
         labelKey="title"
         valueKey="id"
         v-model="selectedRegion"
-
       />
     </div>
 
@@ -20,7 +19,7 @@
         labelKey="title"
         valueKey="id"
         v-model="selectedDistrict"
-        :class="{'pointer-events-none opacity-50': !selectedRegion}"
+        :class="{ 'pointer-events-none opacity-50': !selectedRegion }"
       />
     </div>
   </div>
@@ -39,14 +38,10 @@ const filteredDistricts = ref([]);
 
 onMounted(() => {
   fetchRegionData();
-  fetchDistrictData().then(() => {
-    console.log('District List:', districtList.value);
-  });
+  fetchDistrictData();
 });
 
 watch(selectedRegion, (newRegion) => {
-  console.log('Selected Region :', newRegion);
-
   if (newRegion) {
     filteredDistricts.value = districtList.value.filter((district) => {
       const regionId = district.region.id;
