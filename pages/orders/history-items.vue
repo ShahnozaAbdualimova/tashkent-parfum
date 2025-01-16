@@ -48,7 +48,6 @@
       </div>
 
       <div class="w-[380px] mb-11">
-        
         <div class="bg-white p-5 rounded-lg shadow-sm">
           <div class="flex items-center justify-between mb-4">
             <h4 class="text-black-500 text-2xl font-bold">#346283</h4>
@@ -60,8 +59,7 @@
             </div>
           </div>
 
-          
-          <div class="space-y-2 ">
+          <div class="space-y-2">
             <div class="flex justify-between">
               <p class="text-gray-200 font-normal text-base">Получатель:</p>
               <p class="font-normal text-base">Мухаммадамин Долмаханов</p>
@@ -83,7 +81,6 @@
           </div>
         </div>
 
-        
         <div class="mt-6 bg-white p-5 rounded-lg shadow-sm">
           <h3 class="font-bold text-2xl text-black-500">Всего товаров</h3>
           <div class="space-y-2 mt-11">
@@ -101,7 +98,6 @@
             </div>
           </div>
           <div class="space-y-3 mt-11">
-            
             <div
               @click="isOpen = !isOpen"
               class="flex gap-3 items-center cursor-pointer"
@@ -113,7 +109,6 @@
               ></i>
             </div>
 
-            
             <div
               v-show="isOpen"
               class="space-y-4 transition-all duration-300 mt-6"
