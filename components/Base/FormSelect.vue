@@ -1,5 +1,5 @@
 <template>
-  <div class="relative font-sans w-[363px] text-gray-100">
+  <div class="relative font-sans w-[363px] text-gray-100 mt-2">
     <div
       class="flex items-center justify-between px-4 py-2 border-none rounded-lg cursor-pointer border-gray-5x00"
       :class="[
@@ -10,7 +10,7 @@
       <span>{{ selectedOption || placeholder }}</span>
       <i
         :class="[
-          'icon-chevron-down',
+          'icon-chevron-down text-black-500',
           dropdownOpen ? 'rotate-180' : '',
           'transition-transform duration-300 ease-in-out',
         ]"

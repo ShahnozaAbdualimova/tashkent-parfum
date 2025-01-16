@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-[100px]">
+  <div class="mb-20">
     <label
       :class="labelStyle"
       :for="id"

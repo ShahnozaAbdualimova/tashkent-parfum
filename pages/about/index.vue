@@ -1,13 +1,13 @@
 <template>
   <div>
-    <FormGroup :label="'salom'">
-      <FormSelect
+    <BaseFormGroup :label="'salom'">
+      <BaseFormSelect
         :options="customOptions"
         placeholder="Select your option"
         v-model="selected"
         :backgroundColor="'white'"
       />
-    </FormGroup>
+    </BaseFormGroup>
   </div>
 </template>
 
