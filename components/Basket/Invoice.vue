@@ -8,7 +8,7 @@
         <h3
           class="text-black-500 text-2xl font-semibold leading-[130%] flex-shrink-0"
         >
-          {{ totalPrice.toLocaleString('fr-FR') }}
+          {{ totalPrice?.toLocaleString('fr-FR') }}
           <span
             class="text-gray-100 font-proxima text-xl leading-[130%] font-medium"
             >uzs</span
@@ -28,14 +28,14 @@
       class="flex items-center justify-between py-3 border-b border-white-500"
     >
       <p class="label">Всего:</p>
-      <p class="price">{{(totalDiscount+totalPrice).toLocaleString('fr-FR')}} uzs</p>
+      <p class="price">{{(totalDiscount+totalPrice)?.toLocaleString('fr-FR')}} uzs</p>
     </div>
 
     <div
       class="flex items-center justify-between py-3 border-b border-white-500"
     >
       <p class="label">Скидка:</p>
-      <p class="price">- {{totalDiscount.toLocaleString('fr-FR')}} uzs</p>
+      <p class="price">- {{totalDiscount?.toLocaleString('fr-FR')}} uzs</p>
     </div>
 
     <div
@@ -48,12 +48,12 @@
 
     <div class="flex items-center justify-between pt-3 pb-5">
       <p class="label">НДС:</p>
-      <p class="price">{{(totalPrice*0.12).toLocaleString('fr-FR')}} uzs (12%)</p>
+      <p class="price">{{(totalPrice*0.12)?.toLocaleString('fr-FR')}} uzs (12%)</p>
     </div>
 
     <div class="flex items-center justify-between -mx-5 px-5 py-3 bg-red-50">
       <p class="label red">Кэшбек:</p>
-      <p class="price red">+ {{(totalPrice*0.05).toLocaleString('fr-FR')}} uzs (5%)</p>
+      <p class="price red">+ {{(totalPrice*0.05)?.toLocaleString('fr-FR')}} uzs (5%)</p>
     </div>
 
     <div  v-if="isToggled" class="flex items-center justify-between py-3">
@@ -68,7 +68,7 @@
       <p class="text-black-500 leading-[140%]">
         Товары
         <span class="font-regular text-gray-100 text-[16px] leading-[140%]"
-          >({{totalArr.length}})</span
+          >({{totalArr?.length}})</span
         >
       </p>
       <i
@@ -87,9 +87,9 @@
         <div v-for="(el,index) of totalArr" :key="index" class="py-5 border-b border-white-500">
           <div class="flex items-center justify-between">
             <p class="label max-w-48">{{el.name}}:</p>
-            <p class="price">{{ (el.price * el.amount).toLocaleString('fr-FR') }} UZS</p>
+            <p class="price">{{ (el.price * el.amount)?.toLocaleString('fr-FR') }} UZS</p>
           </div>
-          <p class="pt-1 font-semibold text-black-500 text-xs leading-[130%]">{{el.price.toLocaleString('fr-FR')}} UZS x {{el.amount}}</p>
+          <p class="pt-1 font-semibold text-black-500 text-xs leading-[130%]">{{el?.price?.toLocaleString('fr-FR')}} UZS x {{el.amount}}</p>
         </div>
 
       </div>
