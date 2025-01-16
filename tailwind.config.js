@@ -10,6 +10,7 @@ export default {
         proxima: ['Proxima', 'sans-serif'],
       },
       colors: {
+
         red: {
           50: '#FFF6F9',
           100: '#FDD3DE',
@@ -54,6 +55,7 @@ export default {
           200: '#6F6F6F',
           400: '#EAEBED',
           500: '#CDCDD0',
+         
         },
         grey: {
           100: '#9E9EA5',

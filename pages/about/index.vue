@@ -1,27 +1,19 @@
 <template>
-  <FormSelect
-    id="example-select"
-    :options="[
-      { value: '1', label: 'Option 1' },
-      { value: '2', label: 'Option 2' },
-      { value: '3', label: 'Option 3' }
-    ]"
-    variant="outline"
-    size="lg"
-    wrapperClass="mb-4"
-    selectClass="custom-class"
-    v-model="selectedOption"
-  >
-    <template #prefix>
-      <span class="text-sm text-gray-500">Choose:</span>
-    </template>
-    <template #suffix>
-      <span class="text-sm text-gray-500">End</span>
-    </template>
-  </FormSelect>
+  <div>
+    <FormGroup :label="'salom'">
+      <FormSelect
+        :options="customOptions"
+        placeholder="Select your option"
+        v-model="selected"
+        :backgroundColor="'white'"
+      />
+    </FormGroup>
+  </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 
-const selectedOption = ref(null)
+const customOptions = ['Abubakr', 'Asadbek'];
+const selected = ref(null);
 </script>

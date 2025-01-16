@@ -8,7 +8,7 @@
                 <img src="/images/circle.svg" alt="" />
             </div>
             <li v-for="(crumb, index) in breadcrumbs" :key="index">
-                <span :class="[
+                <span :class="[ 
                     {
                         'text-white-500 leading-[130%]': index === breadcrumbs.length - 1,
                     },

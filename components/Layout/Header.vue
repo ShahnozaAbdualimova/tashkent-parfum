@@ -98,7 +98,7 @@
     /> -->
     <Teleport to="body">
       <div
-        class="w-full px-2 py-2 text-gray-100 bg-white fixed bottom-0 flex justify-between lg:hidden border-t border-gray-500 z-10"
+        class="w-full px-4 py-2 text-gray-100 bg-white fixed bottom-0 flex justify-between lg:hidden border-t border-gray-500 z-10"
       >
         <NuxtLink to="#" class="flex flex-col items-center">
           <i class="icon-home text-3xl"></i>
