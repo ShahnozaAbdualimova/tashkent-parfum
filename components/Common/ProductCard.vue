@@ -1,6 +1,6 @@
 <template>
   <div
-    class="col-span-1 w-full sm:w-[180px] bg-white-400 rounded-xl overflow-hidden cursor-pointer transition-300 border border-white  hover:shadow-md"
+    class="mx-auto  w-[166px] sm:w-[166px] md:w-[180px] lg:w-[180px] bg-white-400 rounded-xl overflow-hidden cursor-pointer transition-300 border border-white  hover:shadow-md"
   >
     <div class="relative">
       <!-- Swiper -->
@@ -17,7 +17,7 @@
           <img
             :src="images"
             alt="product image"
-            class="w-full object-cover object-center rounded"
+            class="w-full object-cover object-center rounded-t-xl h-[150px] sm:h-[180px] md:h-[180px] lg:h-[180px]"
           />
         </swiper-slide>
       </swiper>
@@ -48,20 +48,20 @@
 
     <div class="p-4 gap-1">
       <!-- product name -->
-      <h3 class="text-red-500 text-xs font-normal truncate font-proxima">
+      <h3 class="text-red-500 text-xs truncate  sm:text-sm md:text-base">
         {{ product.name }}
       </h3>
-      <p class="text-black-500 font-normal text-sm font-proxima">
+      <p class="text-black-500 text-sm sm:text-xs md:text-sm ">
         {{ product.brand }}
       </p>
       <!-- price -->
       <div class="flex flex-col mt-1">
         <span
-          class="text-red-500 line-through text-sm font-normal font-proxima"
+          class="text-red-500 line-through font-medium text-sm sm:text-xs md:text-sm"
         >
           {{ product.oldPrice }} UZS
         </span>
-        <span class="text-black-500 font-normal text-base font-proxima">
+        <span class="text-black-500 font-bold text-base sm:text-xs md:text-sm ">
           {{ product.price }} UZS
         </span>
       </div>

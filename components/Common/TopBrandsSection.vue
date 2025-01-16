@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-4 py-12 mt-16 mb-11">
+  <div class="container mx-auto py-4 mt-8 mb-11 items-center">
     <!--title link -->
     <CommonSectionWrapper
       title="Парфюм от топ брендов"

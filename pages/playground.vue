@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CommonStepper
+    <!-- <CommonStepper
       :steps="[
         {
           id: 1,
@@ -18,6 +18,6 @@
           icon: ' icon-wallet',
         },
       ]"
-    />
+    /> -->
   </div>
 </template>

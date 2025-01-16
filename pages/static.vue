@@ -1,8 +1,8 @@
 <template>
   <div class="mb-10">
     <!-- static -->
-    <div class="container mx-auto p-10 bg-white rounded-2xl">
-      <div class="p-10">
+    <div class="container mx-auto md:p-10 lg:p-10 p-5 bg-white rounded-2xl">
+      <div class="">
         <h1 class="lg:text-3xl text-xl md:text-2xl font-bold mb-2">
           Новогодние скидки от Tashkent Parfum
         </h1>

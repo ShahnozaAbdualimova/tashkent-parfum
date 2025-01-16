@@ -5,7 +5,7 @@
       <div>
         <h2
           v-if="title"
-          class="font-bold text-gray-800 lg:text-2xl text-sm md:text-xl"
+          class="font-bold text-gray-800 lg:text-2xl text-xs sm:text-sm md:text-xl"
         >
           {{ title }}
         </h2>
@@ -20,7 +20,7 @@
         <slot name="link">
           <NuxtLink
             :to="linkHref"
-            class="text-sm text-[#9E9EA5] hover:text-gray-800 flex items-center"
+            class="lg:text-sm text-xs sm:text-sm md:text-sm text-[#9E9EA5] hover:text-gray-800 flex items-center"
           >
             {{ linkText }}
             <i
