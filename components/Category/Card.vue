@@ -2,10 +2,10 @@
   <CommonCSectionWrapper title="Популярные разделы">
     <RouterLink
       to="#"
-      class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-y-4 gap-x-6"
+      class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-y-4 gap-x-6 category-card"
     >
       <div
-        class="pt-4 ps-5 pb-4 bg-white rounded-xl flex justify-between w-auto h-auto relative category-card hover:shadow-xl"
+        class="pt-4 ps-5 pb-4 bg-white rounded-xl flex justify-between w-auto h-auto relative hover:shadow-xl"
         v-for="i of categoryName"
         :key="i"
       >
