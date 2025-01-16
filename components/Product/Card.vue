@@ -1,5 +1,5 @@
 <template>
-  <div
+  <article
     class="col-span-1 w-[180px] bg-white-400 shadow-lg rounded-xl overflow-hidden"
   >
     <div class="relative">

@@ -1,7 +1,7 @@
 <template>
   <div class="pb-16">
     <div class="max-w-7xl container mx-auto px-6 py-12">
-      <div class="grid lg:grid-cols-2 gap-12 items-center ">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
         <!-- Left Content -->
         <div>
           <h1 class="lg:text-3xl text-2xl md:text-xl font-bold mb-4">О нас</h1>
@@ -37,7 +37,7 @@
     </div>
 
     <!-- Statistics -->
-    <div class="bg-white  ">
+    <div class="bg-white">
       <div class="max-w-7xl container mx-auto px-6 py-8">
         <h2 class="lg:text-3xl text-lg md:text-xl font-bold mb-8">
           Статистика
@@ -70,6 +70,10 @@
 </template>
 
 <script setup>
+// TODO:jaxangir
+// 1. write in Composition API
+// 2. Make your transition animation global
+
 // Simple CountUp component with number formatting
 const CountUp = defineComponent({
   props: {
@@ -135,6 +139,7 @@ const stats = ref([
   },
 ]);
 </script>
+
 <style scoped>
 @keyframes fadeIn {
   from {
