@@ -85,7 +85,6 @@
       @closeModal="closeModal"
     />
 
-
     <!-- Catalog list section -->
     <CommonCatalogList :isCatalogOpen />
     <CommonMenuList
@@ -126,6 +125,8 @@
 </template>
 
 <script setup>
+const { hideOverflow, showOverflow } = useOverflow();
+
 const showModal = ref(false);
 
 const closeModal = () => {
@@ -138,6 +139,12 @@ const isCatalogOpen = ref(false);
 
 const handleCatalog = () => {
   isCatalogOpen.value = !isCatalogOpen.value;
+
+  if (isCatalogOpen.value) {
+    hideOverflow();
+  } else {
+    showOverflow();
+  }
 };
 
 const openMenyuList = () => {
