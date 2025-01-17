@@ -1,11 +1,13 @@
 <template>
   <div
-    class="w-full relative h-auto py-2.5 px-3 bg-white-400 text-black-500 rounded-lg cursor-pointer mt-2 select-none flex justify-between items-center gap-2"
+    class="w-full relative h-auto py-2.5 px-3 bg-white-400 rounded-lg cursor-pointer mt-2 select-none flex justify-between items-center gap-2"
     @click="handleClick"
   >
     <h1
-      class="text-black-500 font-proxima leading-[130%] relative"
-      :class="selectedOptions === null && !locationDistrict ? 'text-gray-100' : ''"
+      class="text-black-500 font-proxima leading-[130%] relative "
+      :class="
+        selectedOptions === null && !locationDistrict ? 'text-gray-100' : ''
+      "
     >
       {{ locationDistrict ? locationDistrict : selectedOptionsText }}
     </h1>
@@ -15,7 +17,7 @@
     ></i>
     <Transition name="dropdown">
       <ul
-        class="max-h-64 overflow-y-auto mt-2 absolute z-50 rounded-lg flex flex-col w-full top-10 left-0 drop-show h-auto bg-white shadow-[0_4px_36px_rgba(56,56,56,0.16)]"
+        class="font-proxima text-black-500 text-sm font-medium max-h-64 overflow-y-auto mt-2 absolute z-50 rounded-lg flex flex-col w-full top-10 left-0 drop-show h-auto bg-white shadow-[0_4px_36px_rgba(56,56,56,0.16)]"
         v-if="show"
       >
         <li
