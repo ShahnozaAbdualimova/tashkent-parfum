@@ -13,6 +13,14 @@
 <script setup>
 import L from 'leaflet';
 
+const props = defineProps({
+  locationFromInput: {
+    type: Object,
+    required: false,
+    default: () => null,
+  },
+});
+
 const { isLoading, position, error, getPosition } = useGeolocation();
 const { data } = useBranchesData();
 const emit = defineEmits();
@@ -31,7 +39,7 @@ onMounted(() => {
   map.value = L.map('map', {
     zoomControl: false,
     attributionControl: false,
-  }).setView([41.3112652, 69.2674975], 12);
+  }).setView([41.3112652, 69.2674975], 11);
 
   L.tileLayer(
     `https://tile.jawg.io/jawg-streets/{z}/{x}/{y}{r}.png?access-token=JFnGBtHuJqKGqV4hmDWT9Li3gQ6zTCTks28FetIKx2dJ9WB7jmwtCokZBudRvEfv`
@@ -105,4 +113,21 @@ watch(position, async (newPosition) => {
     emitLocationData(locationData.value);
   }
 });
+
+watch(
+  () => props.locationFromInput,
+  async (newLocation) => {
+    if (newLocation?.lat && newLocation?.lng) {
+      const lat = parseFloat(newLocation.lat);
+      const lng = parseFloat(newLocation.lng);
+
+      marker.value.setLatLng([lat, lng]);
+      map.value.setView([lat, lng], 18);
+
+      locationData.value = await getLocationInfo(lat, lng);
+      emitLocationData(locationData.value);
+    }
+  },
+  { immediate: true }
+);
 </script>
