@@ -5,9 +5,9 @@
   >
     <h1
       class="text-black-500 font-proxima leading-[130%] relative"
-      :class="selectedOptions === null ? 'text-gray-100' : ''"
+      :class="selectedOptions === null && !locationDistrict ? 'text-gray-100' : ''"
     >
-      {{ selectedOptionsText }}
+      {{ locationDistrict ? locationDistrict : selectedOptionsText }}
     </h1>
     <i
       class="icon-chevron-down text-sm text-black-500 duration-300 ease-in-out"
@@ -15,7 +15,7 @@
     ></i>
     <Transition name="dropdown">
       <ul
-        class="max-h-64 overflow-y-auto mt-2 absolute z-10 rounded-lg flex flex-col w-full top-10 left-0 drop-show h-auto bg-white shadow-[0_4px_36px_rgba(56,56,56,0.16)]"
+        class="max-h-64 overflow-y-auto mt-2 absolute z-50 rounded-lg flex flex-col w-full top-10 left-0 drop-show h-auto bg-white shadow-[0_4px_36px_rgba(56,56,56,0.16)]"
         v-if="show"
       >
         <li
@@ -75,6 +75,10 @@ const props = defineProps({
   defaultValue: {
     type: Object,
     default: undefined,
+  },
+  locationDistrict: {
+    type: String,
+    required: false,
   },
 });
 

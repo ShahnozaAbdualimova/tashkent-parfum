@@ -19,17 +19,28 @@
         labelKey="title"
         valueKey="id"
         v-model="selectedDistrict"
-        :class="{ 'pointer-events-none opacity-50': !selectedRegion }"
+        :locationDistrict="location?.info?.county"
+        :class="{ 'pointer-events-none opacity-50': !selectedRegion}"
       />
     </div>
   </div>
   <div class="w-full pt-4">
     <p class="text-gray-200 text-sm font-medium pb-2">Адрес</p>
-    <BaseInput placeholder="Введите адрес доставки" />
+    <BaseInput
+      placeholder="Введите адрес доставки"
+      :model-value="location?.address"
+    />
   </div>
 </template>
 
 <script setup>
+const props = defineProps({
+  location: {
+    type: Object,
+    required: false,
+    default: () => null,
+  },
+});
 const { regionList, fetchRegionData } = useRegionData();
 const { districtList, fetchDistrictData } = useDistrictData();
 const selectedRegion = ref(null);
@@ -44,11 +55,22 @@ onMounted(() => {
 watch(selectedRegion, (newRegion) => {
   if (newRegion) {
     filteredDistricts.value = districtList.value.filter((district) => {
-      const regionId = district.region.id;
-      return regionId === newRegion.id;
+      return district.region.soato === newRegion.soato;
     });
+    selectedDistrict.value = null;
   } else {
     filteredDistricts.value = [];
   }
 });
+
+watch(
+  () => props.location,
+  (newLocation) => {
+    if (newLocation) {
+      selectedRegion.value = regionList.value.find(
+        (region) => region.soato === newLocation.region.soato
+      );
+    }
+  }
+);
 </script>
