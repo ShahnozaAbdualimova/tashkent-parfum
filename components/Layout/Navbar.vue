@@ -19,15 +19,10 @@
   </div>
 </template>
 
-<script setup>
-const links = [
-  { title: 'Красота' },
-  { title: 'Сумки' },
-  { title: 'Парфюмерия' },
-  { title: 'Уход за волосами' },
-  { title: 'Бытовая химия' },
-  { title: 'Мужской отдел' },
-  { title: 'Депиляция и эпиляция' },
-  { title: 'Дезодоранты и антиперспиранты' },
-];
+<script setup lang="ts">
+const { data } = useCategoriesFetcher()
+
+const links = computed(() => data.value?.results || []);
+
 </script>
+
