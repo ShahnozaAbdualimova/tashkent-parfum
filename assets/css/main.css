@@ -1,10 +1,12 @@
 @import '../icomoon/style.css';
+@import '../fonts/Proxima/stylesheet.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
+  font-family: 'Proxima Nova', sans-serif;
   background-color: #f7f8fa;
   overflow-x: hidden;
 }
@@ -28,4 +30,3 @@ body {
     padding: 0 10px;
   }
 }
-

@@ -33,7 +33,7 @@
             <p class="text-gray-500 text-[14px] font-medium">
               {{ story.items[0].title }}
             </p>
-            <h3 class="font-proxima text-white font-medium text-lg leading-7">
+            <h3 class=" text-white font-medium text-lg leading-7">
               {{ story.items[0].description }}
             </h3>
           </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="container w-full min-h-screen pb-40">
     <h2
-      class="text-black-500 font-proxima leading-[130%] text-[32px] font-semibold"
+      class="text-black-500  leading-[130%] text-[32px] font-semibold"
     >
       Оформление заказа
     </h2>
