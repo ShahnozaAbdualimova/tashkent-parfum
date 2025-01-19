@@ -31,12 +31,12 @@
             </div>
             <div class="w-full mt-4">
               <label class="block text-sm mb-2">Текст</label>
-              <textarea 
+              <textarea
                 placeholder="Напишите свое имя"
                 class="w-full pb-20 rounded-lg text-base font-normal bg-white-400 py-2.5 pl-3 outline-none text-black-500 placeholder-gray-100"
-                />
+              ></textarea>
             </div>
-            <div class="w-full mt-4 flex justify-end ">
+            <div class="w-full mt-4 flex justify-end">
               <BaseButton
                 :variant="'basketBtn'"
                 class="w-full py-2 sm:w-[150px]"
@@ -176,15 +176,4 @@
   </div>
 </template>
 
-<script setup>
-// const form = reactive({
-//   name: '',
-//   phone: '',
-//   message: '',
-// });
-
-// Handle form submission
-// const submitForm = () => {
-//   console.log(form);
-// };
-</script>
+<script setup></script>
