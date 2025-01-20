@@ -21,7 +21,7 @@
         valueKey="id"
         v-model="selectedDistrict"
         :locationDistrict="location?.info?.county"
-        :class="{ 'pointer-events-none opacity-50': !selectedRegion}"
+
       />
     </div>
   </div>
