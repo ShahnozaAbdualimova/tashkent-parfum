@@ -85,7 +85,6 @@
       @closeModal="closeModal"
     />
 
-
     <!-- Catalog list section -->
     <CommonCatalogList v-if="openCatalogList" />
     <CommonMenuList

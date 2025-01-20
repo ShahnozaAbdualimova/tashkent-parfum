@@ -2,7 +2,7 @@
   <div class="container w-full mb-32">
     <BaseBreadCrumb />
     <h1
-      class="text-black-500 leading-[130%] text-[32px] font-semibold mt-5 mb-6"
+      class="text-black-500 leading-[130%] text-[32px] font-bold mt-5 mb-6"
     >
       Профиль
     </h1>
@@ -20,9 +20,9 @@
             />
           </div>
           <div>
-            <h2 class="font-semibold text-xl text-black-500">
+            <h3 class="font-semibold text-xl text-black-500">
               Мухаммадамин Домлахонов
-            </h2>
+            </h3>
           </div>
         </div>
         <!-- Profile Divider -->
@@ -34,17 +34,11 @@
               :to="item.link"
               class="flex items-center w-full p-3 font-semibold border-[1.2px] border-transparent group rounded-lg gap-3 hover:bg-white-100 hover:border-red-500 transition-300"
               :class="
-                $route.path.split('/').reverse()[0] === item.active
-                  ? 'bg-red-500/10'
-                  : 'bg-white-500'
+                isActive === item.active ? 'bg-red-500/10' : 'bg-white-500'
               "
               ><span
                 class="w-8 h-8 rounded flex items-center justify-center bg-gray-500 group-hover:bg-red-200 transition-300"
-                :class="
-                  $route.path.split('/').reverse()[0] === item.active
-                    ? 'bg-red-500'
-                    : ''
-                "
+                :class="isActive === item.active ? 'bg-red-500' : ''"
               >
                 <i
                   :class="item.icon"
@@ -64,6 +58,9 @@
 </template>
 
 <script setup>
+const route = useRoute();
+const isActive = computed(() => route.path.split('/').reverse()[0]);
+
 const navItems = reactive([
   {
     title: 'Персональные данные',
