@@ -4,10 +4,7 @@ export default {
   theme: {
     extend: {
       lineHeight: {
-        '130': '130%',
-      },
-      fontFamily: {
-        proxima: ['Proxima', 'sans-serif'],
+        130: '130%',
       },
       colors: {
 
@@ -93,7 +90,6 @@ export default {
         'marquee-rtl': 'marqueeRtl 100s linear infinite',
         'marquee-ltr': 'marqueeLtr 100s linear infinite',
       },
-     
     },
   },
   plugins: [],

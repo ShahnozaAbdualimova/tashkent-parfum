@@ -1,7 +1,7 @@
 <template>
   <div class="p-5">
     <h3
-      class="text-black-500 font-proxima text-2xl font-semibold pb-4 border-b border-white-500"
+      class="text-black-500  text-2xl font-semibold pb-4 border-b border-white-500"
     >
       {{ title }}
     </h3>

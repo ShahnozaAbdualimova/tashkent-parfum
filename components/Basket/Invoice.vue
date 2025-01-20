@@ -2,7 +2,7 @@
   <div class="bg-white p-5 rounded-xl w-full">
     <div class="pb-5 border-b border-white-500">
       <div class="flex justify-between items-center">
-        <p class="font-proxima text-gray-100 text-xl leading-[130%]">
+        <p class=" text-gray-100 text-xl leading-[130%]">
           Оплачиваемая сумма:
         </p>
         <h3
@@ -10,7 +10,7 @@
         >
           {{ totalPrice?.toLocaleString('fr-FR') }}
           <span
-            class="text-gray-100 font-proxima text-xl leading-[130%] font-medium"
+            class="text-gray-100  text-xl leading-[130%] font-medium"
             >uzs</span
           >
         </h3>
@@ -63,7 +63,7 @@
 
     <div
       @click="toggleDropdown"
-      class="flex items-center gap-1 pt-3 pb-5 font-proxima cursor-pointer"
+      class="flex items-center gap-1 pt-3 pb-5  cursor-pointer"
     >
       <p class="text-black-500 leading-[140%]">
         Товары

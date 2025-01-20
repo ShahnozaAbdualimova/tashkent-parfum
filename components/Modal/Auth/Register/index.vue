@@ -1,18 +1,18 @@
 <template>
-  <h1 class="font-proxima text-2xl text-black-500 leading-[30px] font-bold">
+  <h1 class=" text-2xl text-black-500 leading-[30px] font-bold">
     Регистрация
   </h1>
-  <h3 class="font-proxima text-xl text-black-500 font-bold mb-4 mt-[52px]">
+  <h3 class=" text-xl text-black-500 font-bold mb-4 mt-[52px]">
     Введите свои данные
   </h3>
   <form @submit.prevent class="min-w-[323px] h-full">
     <div class="flex flex-col justify-between h-full">
       <div class="flex flex-col gap-4 mt-4">
-        <label class="font-proxima text-sm text-gray-200 leading-[13.8px]"
+        <label class=" text-sm text-gray-200 leading-[13.8px]"
           >Ф.И.О</label
         >
         <BaseInput placeholder="Введите Ф.И.О." />
-        <label class="font-proxima text-sm text-gray-200 leading-[13.8px]"
+        <label class=" text-sm text-gray-200 leading-[13.8px]"
           >Номер телефона</label
         >
         <CommonPhoneInput type="tel" placeholder="(__) ___-__-__" />

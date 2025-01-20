@@ -10,19 +10,19 @@
 
       <div class="flex flex-col min-h-[120px] pl-2.5">
         <h3
-          class="cursor-pointer text-black-500 hover:text-red-500 duration-200 ease-in-out font-proxima leading-[130%] text-lg md:text-xl font-semibold max-w-full md:max-w-[315px]"
+          class="cursor-pointer text-black-500 hover:text-red-500 duration-200 ease-in-out  leading-[130%] text-lg md:text-xl font-semibold max-w-full md:max-w-[315px]"
         >
           {{ data.name }}
         </h3>
         <div class="flex gap-2 items-center mt-1">
           <CommonProductStars :rating="data.stars" />
-          <p class="font-proxima text-sm text-gray-100 leading-[130%]">
+          <p class=" text-sm text-gray-100 leading-[130%]">
             {{ data.review_amount }}
           </p>
         </div>
         <div class="flex gap-1 items-center mt-4 md:mt-6 text-gray-100 cursor-pointer">
           <i class="icon-heart"></i>
-          <p class="font-proxima text-sm">Добавить в избранное</p>
+          <p class=" text-sm">Добавить в избранное</p>
         </div>
       </div>
 
@@ -35,7 +35,7 @@
       <div class="min-h-[120px] flex flex-col justify-between">
         <div>
           <p
-            class="text-xs text-red-500 leading-[130%] font-proxima line-through"
+            class="text-xs text-red-500 leading-[130%]  line-through"
             v-if="data.discount !== null"
           >
             {{ ((data.discount + data.price) * data.amount).toLocaleString('fr-FR') + ' UZS' }}
@@ -55,7 +55,7 @@
             class="py-1.5 px-[10px] md:px-[13px] bg-white-500 rounded-r-sm rounded-l-lg icon-minus text-red-500 text-xl md:text-2xl border-[0.5px] border-white-500 hover:border-red-500 duration-300 ease-in-out active:scale-90"
           />
 
-          <div class="py-2 px-4 md:py-3 md:px-5 bg-white-500 rounded-sm font-proxima text-[14px] md:text-[16px] leading-[130%]">
+          <div class="py-2 px-4 md:py-3 md:px-5 bg-white-500 rounded-sm  text-[14px] md:text-[16px] leading-[130%]">
             {{ data.amount }}
           </div>
 
