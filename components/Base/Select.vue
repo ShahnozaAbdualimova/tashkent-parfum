@@ -12,7 +12,7 @@
       {{ locationDistrict || locationCity ? locationDistrict || locationCity : selectedOptionsText }}
     </h1>
     <i
-      class="text-sm text-gray-400 icon-chevron-down"
+      class="text-sm text-gray-100 icon-chevron-down"
       :class="{ rotated: isRotated }"
     ></i>
     <Transition name="dropdown">
