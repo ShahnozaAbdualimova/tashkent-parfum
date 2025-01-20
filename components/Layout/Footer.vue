@@ -1,7 +1,6 @@
 <template>
-  <div class="bg-[#F62559] h-2 w-screen relative -top-9"></div>
-  <footer class="pr-10">
-    <div class="container mx-auto flex flex-wrap justify-between px-20 relative">
+  <footer class="pr-10 border-t-2 border-[#F62559]">
+    <div class="container mx-auto flex flex-wrap justify-between px-20 relative mt-4">
       <!-- Contact Section -->
       <div class="h-20 px-5 py-4 w-full flex justify-between bg-gray-400 rounded-2xl">
         <CommonLogo type="dark" />
@@ -228,11 +227,10 @@
         </div>
       </div>
 
-      <div
-        class="bg-gray-400 rounded-2xl mt-16 max-h-40 min-w-[580px] justify-center relative pt-5 px-5">
+      <div class="bg-gray-400 rounded-2xl mt-16 max-h-40 min-w-[580px] justify-center relative pt-5 px-5">
         <div class="flex flex-col">
           <h4 class="text-dark font-bold text-xl flex-wrap w-[359px]">
-            Будьте в курсе всех последних 
+            Будьте в курсе всех последних
             новостей через Telegram
           </h4>
           <a href="https:/ /t.me/toshkent_parfume"
