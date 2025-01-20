@@ -8,6 +8,7 @@
         labelKey="title"
         valueKey="id"
         v-model="selectedRegion"
+        :locationCity="location?.info?.city"
       />
     </div>
 

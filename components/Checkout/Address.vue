@@ -18,7 +18,6 @@ const handleLocationFetched = (data) => {
   locationInfo.value = data;
 };
 const handleLocationUpdate = (locationData) => {
-  console.log('Selected Location:', locationData);
   locationFromInput.value = locationData;
 };
 </script>

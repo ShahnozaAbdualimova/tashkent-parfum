@@ -6,10 +6,10 @@
     <h1
       class="text-black-500 font-proxima leading-[130%] relative "
       :class="
-        selectedOptions === null && !locationDistrict ? 'text-gray-100' : ''
+        selectedOptions === null && !locationDistrict  ? 'text-gray-100' : ''
       "
     >
-      {{ locationDistrict ? locationDistrict : selectedOptionsText }}
+      {{ locationDistrict || locationCity ? locationDistrict || locationCity : selectedOptionsText }}
     </h1>
     <i
       class="icon-chevron-down text-sm text-black-500 duration-300 ease-in-out"
@@ -79,6 +79,10 @@ const props = defineProps({
     default: undefined,
   },
   locationDistrict: {
+    type: String,
+    required: false,
+  },
+  locationCity: {
     type: String,
     required: false,
   },
