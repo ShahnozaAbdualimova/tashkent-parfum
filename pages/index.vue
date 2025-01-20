@@ -1,13 +1,15 @@
 <template>
   <div>
-    <HomeHeroSection />
-    <CategoryCard />
+    <!-- <HomeHeroSection /> -->
     <HomeRecommendedSection />
-    <StoriesSection />
-    <CommonProductReviewSlider />
-    <CommonBrandSection />
-    <CategoryForManCard />
-    <CommonTopBrandsSection />
-    
+    <HomeStoriesSection />
+    <!--    <CommonProductReviewSlider />-->
   </div>
+  <Breadcrumb />
 </template>
+
+<script>
+definePageMeta({
+  breadcrumb: [{ name: 'Home', link: '/' }],
+});
+</script>
