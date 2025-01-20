@@ -11,7 +11,7 @@
             <img
               :src="order.mainImage"
               :alt="'Order ' + order.id"
-              class="sm:w-[180px] md:w-[180px] lg:w-[180px] h-[150px] rounded-lg object-cover"
+              class="sm:w-[120px] md:w-[120px] lg:w-[180px] h-[150px] rounded-lg object-cover"
             />
           </div>
           <div class="flex-row">
