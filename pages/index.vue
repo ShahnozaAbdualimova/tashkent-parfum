@@ -5,6 +5,7 @@
     <HomeStoriesSection />
     <CommonProductReviewSlider/>
   </div>
+  <Breadcrumb />
 </template>
 <script>
 definePageMeta({

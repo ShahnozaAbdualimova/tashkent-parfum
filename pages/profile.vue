@@ -16,10 +16,12 @@
                 </ul>
             </aside>
 
+            
             <!-- Section: Nested routing -->
             <section class="w-3/4">
                 <NuxtPage />
             </section>
+            
         </div>
     </div>
 </template>

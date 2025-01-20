@@ -1,7 +1,7 @@
 <template>
-  <footer class="pr-10 border-t-2 border-[#F62559]">
-    <div class="container mx-auto flex flex-wrap justify-between px-20 relative mt-4">
-  <footer class="pr-10">
+ <footer class="pr-10 border-t-2 border-[#F62559]"> 
+    <!-- <div class="container mx-auto flex flex-wrap justify-between px-20 relative mt-4"> -->
+  
     
     <div class="container mx-auto flex flex-wrap justify-between px-20 relative">
       <!-- Contact Section -->

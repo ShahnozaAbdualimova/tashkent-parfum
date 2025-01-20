@@ -12,7 +12,7 @@
       {{ locationDistrict || locationCity ? locationDistrict || locationCity : selectedOptionsText }}
     </h1>
     <i
-      class="icon-chevron-down text-sm text-black-500 duration-300 ease-in-out"
+      class="text-sm text-gray-400 icon-chevron-down"
       :class="{ rotated: isRotated }"
     ></i>
     <Transition name="dropdown">
@@ -20,20 +20,9 @@
         class="font-proxima text-black-500 text-sm font-medium max-h-64 overflow-y-auto mt-2 absolute z-50 rounded-lg flex flex-col w-full top-10 left-0 drop-show h-auto bg-white shadow-[0_4px_36px_rgba(56,56,56,0.16)]"
         v-if="show"
       >
-        <li
-          class="w-full h-auto py-2 px-3 border-b flex flex-col border-gray-400 last:border-none cursor-pointer hover:bg-gray-400 transition-all 0.3s ease-in-out"
-          v-for="(i, index) in items"
-          :key="index"
-          @click="onSelect(i)"
-          :class="[
-            index === 0 ? 'rounded-t-lg' : '',
-            index === items.length - 1 ? 'rounded-b-lg' : '',
-          ]"
-        >
-          <h2>
-            {{ i[labelKey] }}
-          </h2>
-        </li>
+        <h2>
+          {{ i[labelKey] }}
+        </h2>
       </ul>
     </Transition>
   </div>
