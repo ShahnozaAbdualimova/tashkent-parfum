@@ -1,5 +1,6 @@
 <template>
   <div class="flex flex-col gap-4">
+    <!-- TODO:jaxangir Create component for brands row -->
     <!-- First line -->
     <div class="relative overflow-hidden group">
       <div

@@ -2,7 +2,7 @@
   <div class="pb-16">
     <!-- About Section -->
     <div class="max-w-7xl container mx-auto px-6 py-12">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="grid lg:grid-cols-2 gap-12 items-center ">
         <!-- Left Content -->
         <div>
           <h1 class="lg:text-3xl text-2xl md:text-xl font-bold mb-4">О нас</h1>
@@ -34,7 +34,7 @@
     </div>
 
     <!-- Statistics Section -->
-    <div class="bg-white">
+    <div class="bg-white py-8 mt-4">
       <div class="max-w-7xl container mx-auto px-6 py-8">
         <h2 class="lg:text-3xl text-lg md:text-xl font-bold mb-8">
           Статистика
