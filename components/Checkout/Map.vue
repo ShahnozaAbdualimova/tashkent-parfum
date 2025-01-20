@@ -1,5 +1,5 @@
 <template>
-  <div id="map" class="h-[336px] mt-8 z-10 relative">
+  <div id="map" class="h-[336px] mt-8 z-10 relative ">
     <button
       @click.stop="getPosition"
       :disabled="isLoading"
