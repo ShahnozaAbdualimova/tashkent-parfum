@@ -4,9 +4,7 @@
       <div class="modal-overlay" v-if="props.isVisible">
         <div class="flex items-center justify-center">
           <slot></slot>
-
         </div>
-
       </div>
     </Transition>
   </Teleport>
@@ -17,14 +15,29 @@ const props = defineProps({
   isVisible: { type: Boolean, default: false },
 });
 
+watch(
+  () => props.isVisible,
+  (newVal) => {
+    if (newVal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  },
+  { immediate: true }
+);
 
 onMounted(() => {
-  document.body.classList.add('noscroll');
+  if (props.isVisible) {
+    document.body.style.overflow = 'hidden';
+  }
 });
+
 onUnmounted(() => {
-  document.body.classList.remove('noscroll');
+  document.body.style.overflow = '';
 });
 </script>
+
 <style scoped>
 .modal-enter-active,
 .modal-leave-active {
@@ -36,12 +49,10 @@ onUnmounted(() => {
   opacity: 0;
 }
 
-/* Modal Content Transition */
+
 .modal-content {
   transform: scale(0.95);
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 0;
 }
 
@@ -54,6 +65,7 @@ onUnmounted(() => {
   transform: scale(0.95);
   opacity: 0;
 }
+
 .modal-overlay {
   position: fixed;
   top: 0;

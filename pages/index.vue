@@ -1,6 +1,5 @@
 <template>
   <div>
-    <CommonBreadcrumbs/>
     <HomeHeroSection />
     <HomeRecommendedSection />
     <HomeStoriesSection />

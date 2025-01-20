@@ -1,57 +1,78 @@
 <template>
-  <div class=" tickers w-full ">
-    <div class=" ticker marquee overflow-hidden">
-      <img :src="brand.logo" :alt="brand.name" class="shadow-md rounded-lg items-center gap-4 p-4 ml-3" />
-      
+  <div class="flex flex-col gap-4">
+    <!-- TODO:jaxangir Create component for brands row -->
+    <!-- First line -->
+    <div class="relative overflow-hidden group">
+      <div
+        class="flex animate-marquee-rtl gap-4 pause-animation transition-all duration-300 cursor-pointer object-cover"
+      >
+        <NuxtLink
+          v-for="(item, index) in brandList.concat(brandList)"
+          :key="'row1-' + index"
+          to="#"
+          class=""
+        >
+          <img
+            :src="item.logo"
+            :alt="item.name"
+            class="min-w-[220px] sm:min-w-[234px] h-[106px] sm:h-[112px] px-2 sm:px-4 py-2 sm:py-4 rounded-2xl bg-white-500 grayscale hover:grayscale-0 transition-all duration-300 object-center"
+          />
+        </NuxtLink>
+      </div>
+    </div>
+
+    <!-- Second line -->
+    <div class="relative overflow-hidden group">
+      <div
+        class="flex animate-marquee-ltr gap-4 pause-animation transition-all duration-300 cursor-pointer object-cover"
+      >
+        <NuxtLink
+          to="#"
+          v-for="(item, index) in brandList.concat(brandList)"
+          :key="'row2-' + index"
+          class=""
+        >
+          <img
+            :src="item.logo"
+            :alt="item.name"
+            class="min-w-[220px] sm:min-w-[234px] h-[106px] sm:h-[112px] px-2 sm:px-4 py-2 sm:py-4 rounded-2xl bg-white-500 grayscale hover:grayscale-0 transition-all duration-300 object-center"
+          />
+        </NuxtLink>
+      </div>
+    </div>
+
+    <!-- Third line -->
+    <div class="relative overflow-hidden group">
+      <div
+        class="flex animate-marquee-rtl pause-animation gap-4 transition-all duration-300 cursor-pointer object-cover"
+      >
+        <NuxtLink
+          v-for="(item, index) in brandList.concat(brandList)"
+          :key="'row1-' + index"
+          to="#"
+          class=""
+        >
+          <img
+            :src="item.logo"
+            :alt="item.name"
+            class="min-w-[220px] sm:min-w-[234px] h-[106px] sm:h-[112px] px-2 sm:px-4 py-2 sm:py-4 rounded-2xl bg-white-500 grayscale hover:grayscale-0 transition-all duration-300 object-center"
+          />
+        </NuxtLink>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
 defineProps({
-  brand: {
-    type: Object,
+  brandList: {
+    type: Array,
     required: true,
   },
 });
 </script>
-
 <style scoped>
-.ticker-inline {
-  margin: 0 auto;
-  overflow: hidden;
+.pause-animation:hover {
+  animation-play-state: paused;
 }
-
-
-
-.tickers {
-  position: relative;
-  display: inline-block;
-  white-space: nowrap;
-  animation: marquee 8s linear infinite;
-  
-}
-
-
-.ticker {
-  display: flex;
-  color: #969696;
-  animation: marquee 8s linear infinite;
-  white-space: nowrap;
-  margin: 0 auto;
-  
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(-300%);
-  }
-  100% {
-    transform: translateX(300%);
-  }
-}
-
-
-
-
 </style>

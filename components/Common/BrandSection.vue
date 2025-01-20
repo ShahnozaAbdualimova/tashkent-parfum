@@ -1,19 +1,19 @@
 <template>
-  <div class="container mx-auto mt-16 mb-11">
+  <div class=" bg-white">
+  <div class="py-4 ">
    
     <CommonSectionWrapper
       title="Популярные бренды"
       link-text="Все бренды"
     />
 
-    <div class="grid grid-cols-5 grid-rows-1 gap-4 ">
+    <div class="">
       <CommonPopularBrands
-        v-for="(brand, index) in brands"
-        :key="brand.name + index"
-        :brand="brand"
+       
+        :brandList="brands"
       />
     </div>
-  </div>
+  </div></div>
 </template>
 
 <script setup>

@@ -33,7 +33,7 @@ let iconPosition = props.iconPosition;
 
 const computedClass = computed(() => {
   const baseClass =
-    'px-4 py-2 rounded text-sm font-medium transition-all duration-300 flex items-center justify-center';
+    'px-4 py-1 rounded-lg text-sm font-medium transition-all duration-300 flex items-center justify-center sm:text-xs md:text-sm';
 
   const variantClass = {
     primary:
@@ -50,7 +50,7 @@ const computedClass = computed(() => {
       'transform transition-transform active:scale-95 bg-red-950  px-4 py-2.5 font-normal  text-red-500',
     light:
       ' px-4 py-3 bg-transparent rounded-lg font-normal text-base text-white  hover:bg-white hover:text-black-300 group border border-white',
-  }
+  };
 
   let iconPositionClass;
 
