@@ -1,3 +1,8 @@
+<script setup lang="ts">
+
+
+</script>
+
 <template>
   <div>
     <CommonStepper
@@ -19,6 +24,7 @@
         },
       ]"
     />
+    
     
   </div>
 </template>

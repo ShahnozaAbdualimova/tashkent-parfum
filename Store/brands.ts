@@ -6,6 +6,3 @@ interface Brands {
     override_price: number,
     warehouse: number
 }
-
-
-

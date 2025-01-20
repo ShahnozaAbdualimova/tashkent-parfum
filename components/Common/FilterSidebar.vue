@@ -29,7 +29,9 @@
             v-model="allSections"
             class="form-checkbox h-4 w-4 text-pink-500 rounded border-gray-300"
           />
-          <span class="ml-3 text-sm font-normal text-black-500">Все разделы</span>
+          <span class="ml-3 text-sm font-normal text-black-500"
+            >Все разделы</span
+          >
         </label>
 
         <div
@@ -47,8 +49,6 @@
               section.name
             }}</span>
           </label>
-          
-          
         </div>
 
         <button
