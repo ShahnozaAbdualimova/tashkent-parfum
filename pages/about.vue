@@ -9,9 +9,9 @@
             <p
               class="text-base font-normal text-black-500 lg:text-lg md:text-sm"
             >
-              Интернет-магазин элитной парфюмерии и косметики
-              <span class="font-medium">PARFUM TASHKENT</span> был создан в 2019
-              году. Каждый день мы заботимся о расширении ассортимента,
+            Интернет-магазин элитной парфюмерии и косметики
+            <span class="font-medium">PARFUM TASHKENT</span> был создан в 2019
+            году. Каждый день мы заботимся о расширении ассортимента,
               улучшении функциональных возможностей электронного обслуживания и
               доставки, чтобы ваши покупки были комфортными и приносили
               удовольствие с первого клика!
@@ -37,8 +37,8 @@
     </div>
 
     <!-- Statistics -->
-    <div class="bg-white">
-      <div class="max-w-7xl container mx-auto px-6 py-8">
+    <div class="bg-white py-8 mt-4">
+      <div class="max-w-7xl container mx-auto">
         <h2 class="lg:text-3xl text-lg md:text-xl font-bold mb-8">
           Статистика
         </h2>
