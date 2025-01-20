@@ -21,7 +21,7 @@
           :fill="activeTab === index ? '#F62559' : '#EAEBED'"
         />
       </svg>
-      <img :src="getCardImage(card)" alt="card img" class="min-w-[50px] min-h-[50px]" />
+      <img :src="getCardImage(card)" alt="card img" class="w-[50px] h-[50px]" />
       <span class="pl-1">{{ card }}</span>
     </button>
   </div>
@@ -58,7 +58,7 @@ const getCardImage = (cardNumber) => {
 
 <style scoped>
 .tab-button {
-  @apply relative py-2  pr-6 h-[66px] min-w-[231px]  border border-gray-400 rounded-xl transition ease-in-out duration-300 text-center text-black-500  font-bold text-sm leading-[130%];
+  @apply relative py-2  pr-4 h-[66px] min-w-[200px]   border border-gray-400 rounded-xl transition ease-in-out duration-300 text-center text-black-500  font-bold text-sm leading-[130%];
 }
 .tab-button.active {
   @apply border-2 border-red-500 shadow-[0px_8px_24px_0px_rgba(246,37,89,0.10)] bg-red-50;

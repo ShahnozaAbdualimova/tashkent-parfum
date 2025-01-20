@@ -9,7 +9,7 @@
         autocomplete="off"
         :type
         :placeholder
-        class="w-full h-full text-base font-normal bg-white-400 py-2.5 pl-3 outline-none text-black-500 placeholder-gray-100"
+        class="w-full h-full text-base font-normal bg-white-400 py-3 pl-3 outline-none text-black-500 placeholder-gray-100"
       />
       <slot name="suffix" />
     </div>
