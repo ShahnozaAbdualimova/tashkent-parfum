@@ -33,7 +33,7 @@
               <label class="block text-sm mb-2">Текст</label>
               <textarea
                 placeholder="Напишите свое имя"
-                class="w-full pb-20 rounded-lg text-base font-normal bg-white-400 py-2.5 pl-3 outline-none text-black-500 placeholder-gray-100"
+                class="w-full pb-20 rounded-lg text-base font-normal bg-white-400 py-2.5 pl-3 outline-none text-black-500 placeholder-gray-100 resize-none"
               ></textarea>
             </div>
             <div class="w-full mt-4 flex justify-end">
