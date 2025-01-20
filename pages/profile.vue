@@ -4,12 +4,14 @@
     <h1 class="text-black-500 leading-[130%] text-[32px] font-bold mt-5 mb-6">
       Профиль
     </h1>
-    <div class="flex gap-6 justify-between">
-      <nav class="w-96 bg-white p-4 rounded-xl">
+    <div class="flex md:flex-row flex-col gap-6 justify-between">
+      <nav class="md:w-1/3 bg-white p-4 rounded-xl">
         <!-- Profile Header -->
-        <div class="flex items-center gap-4">
+        <div
+          class="flex md:flex-row flex-col items-center gap-4 max-w-[225px] mx-auto sm:max-w-full"
+        >
           <div
-            class="w-20 h-20 rounded-full overflow-hidden border-[1.5px] border-gray-500"
+            class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-[1.5px] border-gray-500"
           >
             <img
               src="/images/profile.png"
@@ -18,7 +20,9 @@
             />
           </div>
           <div>
-            <h3 class="font-semibold text-xl text-black-500">
+            <h3
+              class="font-semibold text-lg text-center sm:text-left sm:text-xl text-black-500"
+            >
               Мухаммадамин Домлахонов
             </h3>
           </div>
@@ -48,7 +52,7 @@
           </li>
         </ul>
       </nav>
-      <div class="flex-1">
+      <div class="md:w-2/3">
         <NuxtPage />
       </div>
     </div>
