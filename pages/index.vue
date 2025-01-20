@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <HomeHeroSection /> -->
+    <HomeHeroSection />
     <CategoryCard />
     <!-- <HomeRecommendedSection /> -->
     <StoriesSection />
@@ -10,5 +10,4 @@
     <CommonTopBrandsSection />
     <!--    <PagesFavorites/>-->
   </div>
-  <Breadcrumb />
 </template>

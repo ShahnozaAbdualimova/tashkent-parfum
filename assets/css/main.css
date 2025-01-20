@@ -1,31 +1,38 @@
 @import '../icomoon/style.css';
+@import '../fonts/Proxima/stylesheet.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .transition-300 {
+    transition: all 0.3s ease;
+  }
+}
+
 body {
+  font-family: 'Proxima Nova', sans-serif;
   background-color: #f7f8fa;
   overflow-x: hidden;
 }
 
 .container {
-  max-width: 1184px;
+  max-width: 1184px !important;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 32px !important;
 }
 
 @media screen and (max-width: 1280px) {
   .container {
     max-width: 992px;
-    padding: 0 10px;
+    padding: 0 10px !important;
   }
 }
 
 @media screen and (max-width: 992px) {
   .container {
     max-width: 740px;
-    padding: 0 10px;
+    padding: 0 10px !important;
   }
 }
-

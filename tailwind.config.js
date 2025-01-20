@@ -4,10 +4,7 @@ export default {
   theme: {
     extend: {
       lineHeight: {
-        '130': '130%',
-      },
-      fontFamily: {
-        proxima: ['Proxima', 'sans-serif'],
+        130: '130%',
       },
       colors: {
 
@@ -23,6 +20,7 @@ export default {
           800: '#F97495',
           900: '#FA89A5',
           950: '#FEEBF0',
+          
         },
         yellow: {
           100: '#F8AF02',
@@ -48,18 +46,22 @@ export default {
           300: '#F9F9F9',
           400: '#F2F3F5',
           500: '#F7F8FA',
-          600: '#FFF6F9',
+          600: '#EEEEEE',
         },
         gray: {
           100: '#9E9EA5',
           200: '#6F6F6F',
           400: '#EAEBED',
           500: '#CDCDD0',
-         
+          
         },
         grey: {
           100: '#9E9EA5',
           500: '#CDCDD0',
+        },
+        brown: {
+          100: '#D3C0A9',
+          200: '#D4C3BA',
         },
       },
       backgroundImage: {
@@ -88,7 +90,6 @@ export default {
         'marquee-rtl': 'marqueeRtl 100s linear infinite',
         'marquee-ltr': 'marqueeLtr 100s linear infinite',
       },
-     
     },
   },
   plugins: [],
