@@ -1,5 +1,5 @@
 <template>
-  <div class="relative font-sans w-[363px] text-gray-100 mt-2">
+  <div class="relative font-sans w-[363px] text-gray-100 mt-2" ref="dropdownRef">
     <div
       class="flex items-center justify-between px-4 py-2 border-none rounded-lg cursor-pointer border-gray-5x00"
       :class="[
@@ -29,7 +29,7 @@
           :class="[
             '!w-full px-4 py-2 cursor-pointer border-b border-gray-400',
             option === selectedOption
-              ? 'text-black'
+              ? 'text-black hover:bg-white-400 transform transition-all duration-300'
               : 'hover:bg-white-400 transform transition-all duration-300',
           ]"
         >
@@ -41,7 +41,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { defineProps, defineEmits } from 'vue';
 
 const props = defineProps({
@@ -61,6 +61,7 @@ const props = defineProps({
 
 const emit = defineEmits(['update:modelValue']);
 
+const dropdownRef = ref(null);
 const dropdownOpen = ref(false);
 const selectedOption = ref(null);
 
@@ -73,14 +74,26 @@ const selectOption = (option) => {
   emit('update:modelValue', option);
   dropdownOpen.value = false;
 };
+
+const handleClickOutside = (event) => {
+  if (dropdownRef.value && !dropdownRef.value.contains(event.target)) {
+    dropdownOpen.value = false;
+  }
+};
+
+onMounted(() => {
+  document.addEventListener('click', handleClickOutside);
+});
+
+onUnmounted(() => {
+  document.removeEventListener('click', handleClickOutside);
+});
 </script>
 
 <style>
 .slide-fade-enter-active,
 .slide-fade-leave-active {
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   transform-origin: top;
 }
 
