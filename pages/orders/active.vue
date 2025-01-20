@@ -4,12 +4,12 @@
       class="w-full lg:w-[780px] mb-14 bg-white rounded-lg p-4 md:p-5 shadow-md"
     >
       <div v-for="order in orders" :key="order.id">
-        <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5">
+        <div class="flex flex-col md:flex-col lg:flex-col sm:flex-row sm:items-center gap-4 sm:gap-5">
           <div class="w-full sm:w-auto">
             <img
               :src="order.mainImage"
               :alt="'Order ' + order.id"
-              class="w-full sm:w-[120px] h-[120px] rounded-lg object-cover"
+              class=" sm:w-[180px] md:w-[180px] lg:w-[180px] h-[150px] rounded-lg object-cover"
             />
           </div>
           <div class="flex-grow">
