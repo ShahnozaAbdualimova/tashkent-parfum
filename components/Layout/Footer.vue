@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-[#F62559] h-2 w-screen relative -top-9"></div>
   <footer class="pr-10">
+    
     <div class="container mx-auto flex flex-wrap justify-between px-20 relative">
       <!-- Contact Section -->
       <div class="h-20 px-5 py-4 w-full flex justify-between bg-gray-400 rounded-2xl">

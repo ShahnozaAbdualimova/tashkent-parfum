@@ -1,9 +1,12 @@
 <template>
   <section>
-    <div class="container mx-auto flex justify-between items-center">
+    <div class="container mx-auto mt-6 flex justify-between items-center">
       <!-- Title Section -->
       <div>
-        <h2 v-if="title" class="text-2xl font-bold text-gray-800">
+        <h2
+          v-if="title"
+          class="font-bold text-gray-800 lg:text-2xl text-xs sm:text-sm md:text-xl"
+        >
           {{ title }}
         </h2>
         <slot name="title" v-else>
@@ -17,7 +20,7 @@
         <slot name="link">
           <NuxtLink
             :to="linkHref"
-            class="text-sm text-[#9E9EA5] hover:text-gray-800 flex items-center"
+            class="lg:text-sm text-xs sm:text-sm md:text-sm text-[#9E9EA5] hover:text-gray-800 flex items-center"
           >
             {{ linkText }}
             <i

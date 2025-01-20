@@ -100,6 +100,6 @@ const basketSubmit = () => {
   };
   localStorage.setItem('basketData', JSON.stringify(data));
 
-  window.location.href = '/checkout';
+  router.push('/checkout');
 };
 </script>

@@ -1,7 +1,14 @@
 <template>
-  <div
-    class="col-span-1 w-full sm:w-[180px] bg-white-400 rounded-xl overflow-hidden cursor-pointer transition-300 border border-white-400 hover:border-gray-500 hover:shadow-xl"
+  <article
+    class="mx-auto w-[166px] sm:w-[166px] md:w-[180px] lg:w-[180px] bg-white-400 rounded-xl overflow-hidden cursor-pointer transition-300 border border-white hover:shadow-md"
   >
+    <!-- TODO:
+  1. Destructure component
+  2. Move to Product folder
+  3. Fix swiper
+  4. Fix counter
+  5. Fix terminal warnings
+  -->
     <div class="relative">
       <!-- Swiper -->
       <swiper
@@ -17,7 +24,7 @@
           <img
             :src="images"
             alt="product image"
-            class="w-full object-cover object-center rounded"
+            class="w-full object-cover object-center rounded-t-xl h-[150px] sm:h-[180px] md:h-[180px] lg:h-[180px]"
           />
         </swiper-slide>
       </swiper>
@@ -32,38 +39,38 @@
       <button
         @click="toggleFavorite"
         :class="[
-          'absolute top-3 right-3 border border-white-400/80 bg-white-400/80 text-black-500 text-xs p-2 hover:border-red-500/20 transition duration-300 w-9 h-9 rounded-md flex justify-center items-center group',
-          { 'border-red-500': isFavorite },
+          {
+            'border-red-500': isFavorite,
+          },
         ]"
+        class="absolute top-3 right-3 border border-white-400/80 bg-white-400/80 text-black-500 text-xs p-2 hover:border-red-500/20 transition duration-300 w-9 h-9 rounded-md flex justify-center items-center group"
       >
         <i
-          :class="[
-            'icon-heart text-base transition-all duration-200',
-            {
-              'text-red-500 scale': isFavorite,
-              'text-black scale': !isFavorite,
-            },
-          ]"
+          :class="{
+            'text-red-500 scale': isFavorite,
+            'text-black scale': !isFavorite,
+          }"
+          class="icon-heart text-base transition-all duration-200"
         ></i>
       </button>
     </div>
 
     <div class="p-4 gap-1">
       <!-- product name -->
-      <h3 class="text-red-500 text-xs font-normal truncate ">
+      <h3 class="text-red-500 text-xs truncate sm:text-sm md:text-base">
         {{ product.name }}
       </h3>
-      <p class="text-black-500 font-normal text-sm ">
+      <p class="text-black-500 text-sm sm:text-xs md:text-sm">
         {{ product.brand }}
       </p>
       <!-- price -->
       <div class="flex flex-col mt-1">
         <span
-          class="text-red-500 line-through text-sm font-normal "
+          class="text-red-500 line-through font-medium text-sm sm:text-xs md:text-sm"
         >
           {{ product.oldPrice }} UZS
         </span>
-        <span class="text-black-500 font-normal text-base ">
+        <span class="text-black-500 font-bold text-base sm:text-xs md:text-sm">
           {{ product.price }} UZS
         </span>
       </div>
@@ -76,8 +83,9 @@
         <span class="ml-1 text-gray-500 text-sm">({{ product.rating }})</span>
       </div>
       <!-- counter -->
-
-      <BaseCounter/>
+      <div v-if="isCounterVisible">
+        <BaseCounter v-model="counter" :maxLimit="maxLimit" />
+      </div>
       <div v-else class="flex group justify-center mt-2">
         <BaseButton
           :variant="'basketBtn'"
@@ -92,7 +100,7 @@
         </BaseButton>
       </div>
     </div>
-  </div>
+  </article>
 </template>
 
 <script setup>

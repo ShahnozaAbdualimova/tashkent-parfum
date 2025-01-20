@@ -1,0 +1,29 @@
+<svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+>
+    <circle
+            cx="10.0007"
+            cy="10"
+            r="6.66667"
+            stroke="#26D176"
+            stroke-width="1.6"
+    ></circle>
+    <path
+            d="M10 13.3334V9.33337"
+            stroke="#26D176"
+            stroke-width="1.6"
+            stroke-linecap="round"
+    ></path>
+    <ellipse
+            cx="0.666667"
+            cy="0.666667"
+            rx="0.666667"
+            ry="0.666667"
+            transform="matrix(1 0 0 -1 9.33398 8)"
+            fill="#26D176"
+    ></ellipse></svg
+>
