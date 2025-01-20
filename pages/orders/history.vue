@@ -9,10 +9,10 @@
             <img
               :src="order.mainImage"
               :alt="'Order ' + order.id"
-              class="w-full sm:w-[120px] h-[120px] rounded-lg object-cover"
+              class=" sm:w-[120px] h-[120px] rounded-lg object-cover"
             />
           </div>
-          <div class="flex-grow">
+          <div class="flex-row">
             <NuxtLink :to="`/order/${order.id}`">
               <h3
                 class="text-lg font-bold mb-2 text-black-500 hover:text-red-500 transition-colors"
