@@ -1,4 +1,3 @@
-import { useAsyncData } from 'nuxt/app';
 
 export function useDataFetcher() {
   const url = 'https://toshkent-parfum.xn--h28h.uz/api/v1/common/story/';
@@ -13,6 +12,6 @@ export function useDataFetcher() {
 
   return {
     data,
-    error
+    error,
   };
 }

@@ -1,5 +1,5 @@
 <template>
-  <div
+  <article
     class="col-span-1 w-[180px] bg-white-400 shadow-lg rounded-xl overflow-hidden"
   >
     <div class="relative">
@@ -20,21 +20,21 @@
 
     <div class="p-4 gap-1">
       <!-- Product name -->
-      <h3 class="text-red-500 text-xs font-normal truncate font-proxima">
+      <h3 class="text-red-500 text-xs font-normal truncate ">
         {{ product.name }}
       </h3>
-      <p class="text-black-500 font-normal text-sm font-proxima">
+      <p class="text-black-500 font-normal text-sm ">
         {{ product.brand }}
       </p>
 
       <!-- price -->
       <div class="flex flex-col mt-1">
         <span
-          class="text-red-500 line-through text-sm font-normal font-proxima"
+          class="text-red-500 line-through text-sm font-normal "
         >
           {{ product.oldPrice }} UZS
         </span>
-        <span class="text-black-500 font-normal text-base font-proxima">
+        <span class="text-black-500 font-normal text-base ">
           {{ product.price }} UZS
         </span>
       </div>
