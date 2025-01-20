@@ -1,5 +1,8 @@
 <template>
-  <div class="relative font-sans w-[363px] text-gray-100 mt-2" ref="dropdownRef">
+  <div
+    class="relative font-sans w-[363px] text-gray-100 mt-2"
+    ref="dropdownRef"
+  >
     <div
       class="flex items-center justify-between px-4 py-2 border-none rounded-lg cursor-pointer border-gray-5x00"
       :class="[
@@ -9,12 +12,9 @@
     >
       <span>{{ selectedOption || placeholder }}</span>
       <i
-        :class="[
-          'icon-chevron-down text-black-500',
-          dropdownOpen ? 'rotate-180' : '',
-          'transition-transform duration-300 ease-in-out',
-        ]"
-      ></i>
+        class="icon-chevron-down text-black-500 transition-transform duration-300 ease-in-out"
+        :class="{ 'rotate-180': dropdownOpen }"
+      />
     </div>
 
     <transition name="slide-fade">
@@ -25,13 +25,13 @@
         <li
           v-for="(option, index) in options"
           :key="index"
-          @click="selectOption(option)"
           :class="[
             '!w-full px-4 py-2 cursor-pointer border-b border-gray-400',
             option === selectedOption
               ? 'text-black hover:bg-white-400 transform transition-all duration-300'
               : 'hover:bg-white-400 transform transition-all duration-300',
           ]"
+          @click="selectOption(option)"
         >
           {{ option }}
         </li>
@@ -93,7 +93,9 @@ onUnmounted(() => {
 <style>
 .slide-fade-enter-active,
 .slide-fade-leave-active {
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
   transform-origin: top;
 }
 
