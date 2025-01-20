@@ -1,14 +1,13 @@
 <template>
   <div class="pb-16">
+    <!-- About Section -->
     <div class="max-w-7xl container mx-auto px-6 py-12">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <!-- Left Content -->
         <div>
           <h1 class="lg:text-3xl text-2xl md:text-xl font-bold mb-4">О нас</h1>
           <div class="space-y-4 mx-auto">
-            <p
-              class="text-base font-normal text-black-500 lg:text-lg md:text-sm"
-            >
+            <p class="text-base font-normal text-black-500 lg:text-lg md:text-sm">
               Интернет-магазин элитной парфюмерии и косметики
               <span class="font-medium">PARFUM TASHKENT</span> был создан в 2019
               году. Каждый день мы заботимся о расширении ассортимента,
@@ -16,9 +15,7 @@
               доставки, чтобы ваши покупки были комфортными и приносили
               удовольствие с первого клика!
             </p>
-            <p
-              class="text-base font-normal text-black-500 lg:text-lg md:text-sm"
-            >
+            <p class="text-base font-normal text-black-500 lg:text-lg md:text-sm">
               Наша основная задача - качественная работа с клиентами с одной
               единственной целью, чтобы как можно большее количество наших
               покупателей стали нашими постоянными клиентами и рекомендовали нас
@@ -36,7 +33,7 @@
       </div>
     </div>
 
-    <!-- Statistics -->
+    <!-- Statistics Section -->
     <div class="bg-white">
       <div class="max-w-7xl container mx-auto px-6 py-8">
         <h2 class="lg:text-3xl text-lg md:text-xl font-bold mb-8">
@@ -48,16 +45,13 @@
             :key="index"
             class="statistics-item flex items-center text-start gap-4"
           >
-            <img :src="item.images" alt="" />
+            <img :src="item.images" alt="Статистика изображение" />
             <div class="lg:text-3xl text-xl font-bold">
-              <CountUp
-                class="lg:text-3xl text-xl font-bold gap-1"
-                :end-val="item.value"
-                :suffix="item.suffix"
-              />
-              <p
-                class="mt-2 lg:text-base text-xs md:text-xs font-normal text-gray-100"
-              >
+              
+              <span class="lg:text-3xl text-xl font-bold gap-1">
+                {{ animatedValues[index] }}
+              </span>
+              <p class="mt-2 lg:text-base text-xs md:text-xs font-normal text-gray-100">
                 {{ item.label }}
               </p>
             </div>
@@ -65,57 +59,13 @@
         </div>
       </div>
     </div>
+
+    <!-- Top Brands Section -->
     <CommonTopBrandsSection />
   </div>
 </template>
 
 <script setup>
-// TODO:jaxangir
-// 1. write in Composition API
-// 2. Make your transition animation global
-
-// Simple CountUp component with number formatting
-const CountUp = defineComponent({
-  props: {
-    endVal: {
-      type: Number,
-      required: true,
-    },
-    suffix: {
-      type: String,
-      default: '',
-    },
-  },
-  setup(props) {
-    const currentValue = ref(0);
-
-    // Formatter for numbers
-    const numberFormatter = new Intl.NumberFormat('ru-RU');
-
-    onMounted(() => {
-      const duration = 2000; // 2 seconds
-      const steps = 60;
-      const increment = props.endVal / steps;
-      let current = 0;
-
-      const timer = setInterval(() => {
-        current += increment;
-        currentValue.value = Math.min(Math.floor(current), props.endVal);
-
-        if (current >= props.endVal) {
-          clearInterval(timer);
-        }
-      }, duration / steps);
-    });
-
-    return () =>
-      h(
-        'span',
-        null,
-        `${numberFormatter.format(currentValue.value)}${props.suffix}`
-      );
-  },
-});
 
 // Statistics data
 const stats = ref([
@@ -138,6 +88,36 @@ const stats = ref([
     images: '/svg/users.svg',
   },
 ]);
+
+
+const animatedValues = ref(stats.value.map(() => 0));
+
+
+const animateNumbers = () => {
+  const duration = 2000; 
+  const steps = 60; 
+  const intervalDuration = duration / steps; 
+
+  stats.value.forEach((stat, index) => {
+    const increment = stat.value / steps; 
+    let currentValue = 0;
+
+    const interval = setInterval(() => {
+      currentValue += increment;
+      animatedValues.value[index] = Math.round(currentValue);
+
+      if (currentValue >= stat.value) {
+        animatedValues.value[index] = stat.value; 
+        clearInterval(interval);
+      }
+    }, intervalDuration);
+  });
+};
+
+
+onMounted(() => {
+  animateNumbers();
+});
 </script>
 
 <style scoped>

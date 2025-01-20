@@ -1,6 +1,7 @@
 <template>
   <div>
     <CommonTopBrandsSection />
+    
   </div>
 </template>
 
