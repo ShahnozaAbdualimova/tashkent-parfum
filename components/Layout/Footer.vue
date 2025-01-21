@@ -1,12 +1,12 @@
 <template>
-  <footer class="bg-white w-full">
+  <footer class="bg-white w-full mt-40">
     <div class="bg-red-500 h-1 w-full"></div>
-    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6  lg:px-8 relative">
       <!-- Contact Section -->
       <div
         class="hidden md:flex min-h-[80px] px-5 py-4 mt-8 w-full items-start justify-between bg-white-500 rounded-2xl">
         <CommonLogo type="dark" />
-        <div class="flex items-center absolute right-1/2 py-4">
+        <div class="absolute  py-4 mx-40">
           <span class="hover:text-red-500 cursor-pointer text-base">
             <i class="icon-phone mr-2 text-gray-100 text-base"></i>
             <span class="black-500">+998 71 209 78 87</span>
@@ -29,19 +29,19 @@
           <h4 class="text-lg font-semibold">Покупателям</h4>
           <ul class="mt-2 space-y-2">
             <li>
-              <NuxtLink to="#" class="text-gray-600 hover:text-red-500">О магазине</NuxtLink>
+              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">О магазине</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="#" class="text-gray-600 hover:text-red-500">Рекомендации</NuxtLink>
+              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Рекомендации</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="#" class="text-gray-600 hover:text-red-500">Бренды</NuxtLink>
+              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Бренды</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="#" class="text-gray-600 hover:text-red-500">Конфиденциальность</NuxtLink>
+              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Конфиденциальность</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="#" class="text-gray-600 hover:text-red-500">Обратная связь</NuxtLink>
+              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Обратная связь</NuxtLink>
             </li>
           </ul>
         </div>
@@ -51,19 +51,19 @@
           <h4 class="text-lg font-semibold">Разделы</h4>
           <ul class="mt-2 space-y-2">
             <li>
-              <NuxtLink to="#" class="text-gray-600 hover:text-red-500">Парфюмерия</NuxtLink>
+              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Парфюмерия</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="#" class="text-gray-600 hover:text-red-500">Тело и ванна</NuxtLink>
+              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Тело и ванна</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="#" class="text-gray-600 hover:text-red-500">Волосы</NuxtLink>
+              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Волосы</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="#" class="text-gray-600 hover:text-red-500">Лицо</NuxtLink>
+              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Лицо</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="#" class="text-gray-600 hover:text-red-500">Все разделы</NuxtLink>
+              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Все разделы</NuxtLink>
             </li>
           </ul>
         </div>
@@ -73,23 +73,23 @@
           <h4 class="text-lg font-semibold">Пользователь</h4>
           <ul class="mt-2 space-y-2">
             <li>
-              <NuxtLink to="#" class="text-gray-600 hover:text-red-500">Вход</NuxtLink>
+              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Вход</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="#" class="text-gray-600 hover:text-red-500">Регистрация</NuxtLink>
+              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Регистрация</NuxtLink>
             </li>
           </ul>
           <h4 class="mt-6 text-lg font-semibold">Наши соц. сети</h4>
           <div class="flex space-x-4 mt-2">
-            <a href="#"><i class="icon-facebook text-xl text-gray-600 hover:text-red-500"></i></a>
-            <a href="#"><i class="icon-instagram text-xl text-gray-600 hover:text-red-500"></i></a>
-            <a href="#"><i class="icon-telegram text-xl text-gray-600 hover:text-red-500"></i></a>
+            <a href="#"><i class="icon-facebook text-xl text-gray-100 hover:text-red-500"></i></a>
+            <a href="#"><i class="icon-instagram text-xl text-gray-100 hover:text-red-500"></i></a>
+            <a href="#"><i class="icon-telegram text-xl text-gray-100 hover:text-red-500"></i></a>
           </div>
         </div>
 
         <!-- Telegram Section Desktop -->
-        <div class="w-[580px] h-[156px] bg-white-500 rounded-2xl p-5 flex justify-between items-start">
-          <div class="w-3/4">
+        <div class="w-[580px] h-[156px] bg-white-500 rounded-2xl p-5 flex lg:mt-0 md:mt-12 justify-between items-start">
+          <div class="w-3/4 max-md:-my-4">
             <h4 class="text-dark font-bold text-xl mb-4 pl-5">
               Будьте в курсе всех последних новостей через Telegram
             </h4>
@@ -122,11 +122,11 @@
             <!-- Contact Info -->
             <div class="flex flex-col space-y-2 mb-6">
               <div class="flex items-center">
-                <i class="icon-phone mr-2 text-gray-400"></i>
+                <i class="icon-phone mr-2 text-gray-100"></i>
                 <span>+998 71 209 78 87</span>
               </div>
               <div class="flex items-center">
-                <i class="icon-email mr-2 text-gray-400"></i>
+                <i class="icon-email mr-2 text-gray-100"></i>
                 <span>toshkentparfum@gmail.com</span>
               </div>
             </div>
@@ -136,7 +136,7 @@
             <!-- Sections -->
             <div>
               <h4 class="font-medium mb-3">Разделы</h4>
-              <ul class="space-y-2 text-gray-600">
+              <ul class="space-y-2 text-gray-100">
                 <li>
                   <NuxtLink to="#">Парфюмерия</NuxtLink>
                 </li>
@@ -149,7 +149,7 @@
                 <li>
                   <NuxtLink to="#">Лицо</NuxtLink>
                 </li>
-                <li>
+                <li> 
                   <NuxtLink to="#">Все разделы</NuxtLink>
                 </li>
               </ul>
@@ -158,7 +158,7 @@
             <!-- Customers -->
             <div>
               <h4 class="font-medium mb-3">Покупателям</h4>
-              <ul class="space-y-2 text-gray-600">
+              <ul class="space-y-2 text-gray-100">
                 <li>
                   <NuxtLink to="#">О магазине</NuxtLink>
                 </li>
@@ -180,7 +180,7 @@
             <!-- User -->
             <div>
               <h4 class="font-medium mb-3">Пользователь</h4>
-              <ul class="space-y-2 text-gray-600">
+              <ul class="space-y-2 text-gray-100">
                 <li>
                   <NuxtLink to="#">Вход</NuxtLink>
                 </li>
@@ -192,18 +192,18 @@
 
             <!-- Social Media -->
             <div>
-              <h4 class="font-medium mb-3">Пользователь</h4>
+              <h4 class="mb-3">Пользователь</h4>
               <div class="flex space-x-4">
-                <a href="#" class="text-gray-600"><i class="icon-facebook"></i></a>
-                <a href="#" class="text-gray-600"><i class="icon-instagram"></i></a>
-                <a href="#" class="text-gray-600"><i class="icon-telegram"></i></a>
+                <a href="#" class="text-gray-100 text-2xl"><i class="icon-facebook"></i></a>
+                <a href="#" class="text-gray-100 text-2xl"><i class="icon-instagram"></i></a>
+                <a href="#" class="text-gray-100 text-2xl"><i class="icon-telegram"></i></a>
               </div>
             </div>
           </div>
 
           <!-- Telegram Section Mobile -->
           <div class="mb-8 p-3 bg-white-500 rounded-2xl w-full">
-            <h4 class="font-medium mb-4">Будьте в курсе всех последних новостей через Telegram</h4>
+            <h4 class="font-bold text-base mb-4">Будьте в курсе всех последних новостей через Telegram</h4>
             <a href="https://t.me/toshkent_parfume"
               class="flex items-center p-3 bg-[#2684FC] bg-opacity-[8%] rounded-lg">
               <i class="icon-telegram text-blue-500 mr-2"></i>
@@ -212,15 +212,16 @@
           </div>
         </div>
       </div>
+       
     </div>
     <!-- Footer Mobile -->
     <div class="w-full bg-white-500 md:hidden lg:hidden px-4 py-5 flex flex-col items-start">
       <div class="w-full flex justify-between items-end">
         <div>
-          <p class="text-sm text-gray-600  mb-4">Toshkent Parfum© 2023. Все права защищены.</p>
-          <NuxtLink to="#" class="text-sm text-gray-600">Политика конфеденциальности</NuxtLink>
+          <p class="text-xs font-medium text-black-500 mb-4 w-44">Toshkent Parfum© 2023. Все права защищены.</p>
+          <NuxtLink to="#" class="text-sm font-medium text-black-500">Политика конфеденциальности</NuxtLink>
         </div>
-        <img src="/svg/UicLogo.svg" alt="UicLogo" class="h-8 my-4 w-auto" />
+        <img src="/svg/UicLogo.svg" alt="UicLogo" class="h-8 relative -top-9 w-auto" />
       </div>
     </div>
     <!-- Desktop Footer Bottom -->
