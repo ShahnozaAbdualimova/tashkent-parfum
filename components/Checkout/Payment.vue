@@ -17,7 +17,7 @@
         </button>
       </div>
       <div v-else class="flex items-center gap-6 justify-center py-3">
-        <CommonCardTabs :cards="banks" @tabSelected="handleTabSelected" />
+        <CommonPaymentTabs :cards="payments" @tabSelected="handleTabSelected" />
       </div>
     </div>
 
@@ -56,10 +56,12 @@ const cards = [
   '8600 81** **** 1234',
   '5440 81** **** 1234',
 ]
-const banks = [
-  ' ',
-  ' ',
-  ' ',
+const payments = [
+  'cash',
+  'uzum',
+  'payme',
+  'click',
+  'paynet',
 ]
 
 const handleTabSelected = index => {

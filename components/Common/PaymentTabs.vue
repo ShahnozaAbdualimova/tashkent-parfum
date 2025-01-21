@@ -21,8 +21,8 @@
           :fill="activeTab === index ? '#F62559' : '#EAEBED'"
         />
       </svg>
-      <img :src="getCardImage(card)" alt="card img" class="w-[50px] h-[50px]" />
-      <span class="pl-1">{{ card }}</span>
+      <img :src="getCardImage(card)"  alt="card img" :class="index === 0 ? 'h-[65px]' : ''" />
+      <span v-if="index===0" class="pl-1">Наличные</span>
     </button>
   </div>
 </template>
@@ -42,17 +42,17 @@ const selectTab = (index) => {
 };
 
 const getCardImage = (cardNumber) => {
-  if (!cardNumber) return '/svg/uzum.svg';
+  if (!cardNumber) return '/images/cash-logo.png';
 
-  const firstFour = cardNumber.slice(0, 4);
+  const type = cardNumber;
   const cardImages = {
-    8600: '/svg/uzcard.svg',
-    5440: '/svg/humo.svg',
-    4400: '/svg/visa.svg',
-    5400: '/svg/mastercard.svg',
+    'uzum': '/svg/uzum.svg',
+    'payme': '/svg/payme.svg',
+    'click': '/svg/click.svg',
+    'paynet': '/svg/paynet.svg',
   };
 
-  return cardImages[firstFour] || '/svg/uzum.svg';
+  return cardImages[type] || '/images/cash-logo.png';
 };
 </script>
 
