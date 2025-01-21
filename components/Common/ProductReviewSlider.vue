@@ -6,15 +6,15 @@
           :slides-per-view="3.5"
           :space-between="30"
           :autoplay="{
-            delay: 3000,
+           delay: 3000,
             disableOnInteraction: false,
           }"
           :breakpoints="{
             400: { slidesPerView: 1, spaceBetween: 9 },
             300: { slidesPerView: 1, spaceBetween: 9 },
             500: { slidesPerView: 1, spaceBetween: 9 },
-            640: { slidesPerView: 1.5, spaceBetween: 20 },
-            768: { slidesPerView: 2.5, spaceBetween: 25 },
+            640: { slidesPerView: 1, spaceBetween: 20 },
+            768: { slidesPerView: 1, spaceBetween: 25 },
             1000: { slidesPerView: 3.5, spaceBetween: 30 }
           }"
           

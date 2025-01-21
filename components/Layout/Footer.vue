@@ -88,7 +88,7 @@
         </div>
 
         <!-- Telegram Section Desktop -->
-        <div class="w-[580px] h-[156px] bg-white-500 rounded-2xl p-5 flex lg:mt-0 md:mt-12 justify-between items-start">
+        <div class="bg-white-500 rounded-2xl pt-7 p-5 flex lg:mt-0 md:mt-12 justify-between items-start">
           <div class="w-3/4 max-md:-my-4">
             <h4 class="text-dark font-bold text-xl mb-4 pl-5">
               Будьте в курсе всех последних новостей через Telegram
