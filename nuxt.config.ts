@@ -1,8 +1,8 @@
 export default defineNuxtConfig({
-  css: ['~/assets/css/main.css'],
+  css: ['leaflet/dist/leaflet.css','~/assets/css/main.css'],
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
-  modules: ['@nuxtjs/tailwindcss'], // Only include this once
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/leaflet', '@nuxtjs/tailwindcss'],
   app: {
     head: {
       title: 'Tashkent Parfum',
@@ -12,5 +12,8 @@ export default defineNuxtConfig({
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }],
     },
+  },
+  router: {
+    trailingSlash: false,
   },
 });

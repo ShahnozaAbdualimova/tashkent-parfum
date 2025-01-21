@@ -13,23 +13,24 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@nuxtjs/leaflet": "^1.2.6",
     "@nuxtjs/tailwindcss": "6.12.2",
+    "leaflet": "^1.9.4",
     "maska": "^1.5.0",
     "nuxt": "^3.14.1592",
-    "swiper": "^11.1.15",
+    "swiper": "^11.2.1",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
     "@eslint/js": "^9.16.0",
+    "@types/leaflet": "^1",
     "eslint": "^9.16.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-vue": "^9.32.0",
     "globals": "^15.13.0",
-    "prettier": "^3.4.2",
-    "rollup": "^4.28.1"
+    "prettier": "^3.4.2"
   },
-  "packageManager": "yarn@4.5.1+sha512.341db9396b6e289fecc30cd7ab3af65060e05ebff4b3b47547b278b9e67b08f485ecd8c79006b405446262142c7a38154445ef7f17c1d5d1de7d90bf9ce7054d"
+  "packageManager": "yarn@1.22.22"
 }

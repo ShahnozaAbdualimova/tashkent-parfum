@@ -1,4 +1,4 @@
-<!-- <template>
+ <template>
     <nav aria-label="Breadcrumb">
         <ol class="flex items-center space-x-2 text-sm text-gray-500">
             <li>
@@ -8,7 +8,7 @@
                 <img src="/images/circle.svg" alt="" />
             </div>
             <li v-for="(crumb, index) in breadcrumbs" :key="index">
-                <span :class="[
+                <span :class="[ 
                     {
                         'text-white-500 leading-[130%]': index === breadcrumbs.length - 1,
                     },
@@ -42,4 +42,4 @@ const breadcrumbs = computed(() => {
             };
         });
 });
-</script> -->
+</script> 
