@@ -11,7 +11,7 @@
   -->
     <div class="relative">
       <!-- Swiper -->
-      <swiper
+      <!-- <swiper
         :slides-per-view="1"
         :space-between="10"
         :loop="true"
@@ -24,14 +24,14 @@
           v-for="(image, index) in product.image"
           :key="index"
           class="swiper-slide"
-        >
-          <img
-            :src="image"
-            alt="product image"
-            class="w-full object-cover object-center rounded-t-xl h-[150px] sm:h-[180px] md:h-[180px] lg:h-[180px]"
-          />
-        </swiper-slide>
-      </swiper>
+        > -->
+      <!-- <img
+        :src="image"
+        alt="product image"
+        class="w-full object-cover object-center rounded-t-xl h-[150px] sm:h-[180px] md:h-[180px] lg:h-[180px]"
+      /> -->
+      <!-- </swiper-slide>
+      </swiper> -->
 
       <!-- Discount -->
       <div
