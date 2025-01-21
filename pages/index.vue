@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- <HomeHeroSection /> -->
-    <HomeRecommendedSection />
+    <!-- <HomeRecommendedSection /> -->
     <HomeStoriesSection />
        <CommonProductReviewSlider />
   </div>

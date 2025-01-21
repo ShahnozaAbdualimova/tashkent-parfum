@@ -5,7 +5,7 @@
       <!-- Contact Section -->
       <div
         class="hidden md:flex min-h-[80px] px-5 py-4 mt-8 w-full items-start justify-between bg-white-500 rounded-2xl">
-        <CommonLogo type="dark" />
+        <CommonLogo type="dark"/>
         <div class="absolute  py-4 mx-40">
           <span class="hover:text-red-500 cursor-pointer text-base">
             <i class="icon-phone mr-2 text-gray-100 text-base"></i>
@@ -111,7 +111,7 @@
         <div class="flex flex-col w-full">
           <!-- Logo -->
           <div class="bg-white-500 p-4 rounded-2xl">
-            <CommonLogo type="dark" class="mb-6" />
+           <CommonLogo type="dark" :width="89" :height="36" class="mb-6"/>
 
             <!-- App Store Buttons -->
             <div class="flex space-x-4 mb-6">

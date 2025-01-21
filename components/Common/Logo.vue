@@ -138,5 +138,7 @@ const logoStyles = computed(() => {
     return 'text-white'
   }
   return props.type === 'light' ? 'text-red-500' : 'text-black';
+  
 });
-</script>
+
+</script> 
