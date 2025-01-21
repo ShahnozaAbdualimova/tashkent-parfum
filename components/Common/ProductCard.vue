@@ -5,37 +5,42 @@
     <!-- TODO:
   1. Destructure component
   2. Move to Product folder
-  3. Fix swiper
-  4. Fix counter
+  3. Fix swiper -
+  4. Fix counter 
   5. Fix terminal warnings
   -->
     <div class="relative">
       <!-- Swiper -->
       <swiper
-        :slidesPerView="1"
-        spaceBetween="10"
-        loop="true"
-        autoplay="true"
-        pagination="true"
-        navigation="true"
+        :slides-per-view="1"
+        :space-between="10"
+        :loop="true"
+        :autoplay="{ delay: 3000 }"
+        :pagination="{ clickable: true }"
+        :navigation="true"
         class="swiper-container"
       >
-        <swiper-slide v-for="(images, index) in product.image" :key="index">
+        <swiper-slide
+          v-for="(image, index) in product.image"
+          :key="index"
+          class="swiper-slide"
+        >
           <img
-            :src="images"
+            :src="image"
             alt="product image"
             class="w-full object-cover object-center rounded-t-xl h-[150px] sm:h-[180px] md:h-[180px] lg:h-[180px]"
           />
         </swiper-slide>
       </swiper>
 
-      <!-- discount -->
+      <!-- Discount -->
       <div
         v-if="product.discountTag"
         class="absolute top-3 left-3 border-2 border-green-200 rotate bg-green-100 text-white text-xs px-4 rounded-xl"
       >
         <i class="icon-sale text-white-100 text-2xl"></i>
       </div>
+      <!-- Favorite Button -->
       <button
         @click="toggleFavorite"
         :class="[
@@ -55,15 +60,16 @@
       </button>
     </div>
 
+    <!-- Product Info -->
     <div class="p-4 gap-1">
-      <!-- product name -->
+      <!-- Product Name -->
       <h3 class="text-red-500 text-xs truncate sm:text-sm md:text-base">
         {{ product.name }}
       </h3>
       <p class="text-black-500 text-sm sm:text-xs md:text-sm">
         {{ product.brand }}
       </p>
-      <!-- price -->
+      <!-- Price -->
       <div class="flex flex-col mt-1">
         <span
           class="text-red-500 line-through font-medium text-sm sm:text-xs md:text-sm"
@@ -74,7 +80,7 @@
           {{ product.price }} UZS
         </span>
       </div>
-      <!-- rating -->
+      <!-- Rating -->
       <div class="mt-2 flex items-center gap-1">
         <span v-for="n in 5" :key="n" class="text-yellow-100 text-sm">
           <i v-if="n <= product.rating" class="icon-star"></i>
@@ -82,14 +88,13 @@
         </span>
         <span class="ml-1 text-gray-500 text-sm">({{ product.rating }})</span>
       </div>
-      <!-- counter -->
+      <!-- Counter -->
       <div v-if="isCounterVisible">
         <BaseCounter v-model="counter" :maxLimit="maxLimit" />
       </div>
       <div v-else class="flex group justify-center mt-2">
         <BaseButton
           :variant="'basketBtn'"
-          class=""
           :type="'button'"
           :disabled="false"
           :icon="'icon-basket'"
@@ -104,12 +109,12 @@
 </template>
 
 <script setup>
-import { products } from '~/data/mainProductSection';
-
+// Import Swiper components and styles
 // import { Swiper, SwiperSlide } from 'swiper/vue';
-// import 'swiper/css';
-// import 'swiper/css/pagination';
-// import 'swiper/css/navigation';
+// import 'swiper/swiper-bundle.min.css';
+
+// // Import your data or props
+// import { products } from '~/data/mainProductSection';
 
 // Props
 defineProps({
@@ -119,69 +124,24 @@ defineProps({
   },
 });
 
-const isFavorite = ref(false); // For tracking the favorite state
-const isCounterVisible = ref(false); // Display counter visibility
-const counter = ref(1); // Current counter value
-const maxLimit = 5; // Maximum value for the counter
-const showMaxTooltip = ref(false); // Display the "Max" tooltip
+// States
+const isFavorite = ref(false);
+const isCounterVisible = ref(false);
+const counter = ref(1);
+const maxLimit = 5;
 
 // Methods
 const toggleFavorite = () => {
-  isFavorite.value = !isFavorite.value; // Toggle favorite state
+  isFavorite.value = !isFavorite.value;
 };
-// Bascket
+
 const basketProduct = () => {
   isCounterVisible.value = true;
-};
-
-const increment = () => {
-  if (counter.value < maxLimit) {
-    counter.value++;
-    hideMaxTooltip();
-  } else {
-    displayMaxTooltip();
-  }
-};
-
-const decrement = () => {
-  if (counter.value > 1) {
-    counter.value--;
-  } else {
-    isCounterVisible.value = false; // Hide the counter when decreasing to 1
-  }
-};
-
-const validateCounter = () => {
-  if (counter.value < 1) {
-    counter.value = 1; // Minimum value
-  } else if (counter.value > maxLimit) {
-    counter.value = maxLimit; // Maximum value
-  }
-};
-
-const displayMaxTooltip = () => {
-  showMaxTooltip.value = true;
-  setTimeout(hideMaxTooltip, 500);
-};
-
-const hideMaxTooltip = () => {
-  showMaxTooltip.value = false;
 };
 </script>
 
 <style scoped>
 .rotate {
   transform: rotate(-11deg);
-}
-
-/* no spin */
-.no-spin::-webkit-inner-spin-button,
-.no-spin::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.no-spin {
-  -moz-appearance: textfield;
 }
 </style>

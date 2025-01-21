@@ -13,32 +13,30 @@
         <div class="bg-white p-4 sm:p-6 rounded-xl">
           <form @submit.prevent="submitForm" class="flex flex-col">
             <div
-              class="flex flex-col sm:flex-col md:flex-col lg:flex-row gap-4 "
+              class="flex flex-col sm:flex-col md:flex-col lg:flex-row gap-4"
             >
-              <div class="w-full ">
+              <div class="w-full">
                 <label class="block text-sm mb-2">Имя</label>
                 <BaseInput
                   placeholder="Напишите свое имя"
                   class="w-full rounded-lg"
                 />
               </div>
-              <div class="w-full ">
+              <div class="w-full">
                 <label class="block text-sm mb-2">Номер телефона</label>
                 <div class="flex">
-                  <CommonPhoneInput
-                    class="w-full rounded-lg"
-                  />
+                  <CommonPhoneInput class="w-full rounded-lg" />
                 </div>
               </div>
             </div>
             <div class="w-full mt-4">
               <label class="block text-sm mb-2">Текст</label>
-              <BaseInput
+              <textarea
                 placeholder="Напишите свое имя"
-                class="w-full  pb-20 h-[120px] rounded-lg"
-              />
+                class="w-full pb-20 rounded-lg text-base font-normal bg-white-400 py-2.5 pl-3 outline-none text-black-500 placeholder-gray-100 resize-none"
+              ></textarea>
             </div>
-            <div class="w-full mt-4">
+            <div class="w-full mt-4 flex justify-end">
               <BaseButton
                 :variant="'basketBtn'"
                 class="w-full py-2 sm:w-[150px]"
@@ -53,20 +51,24 @@
 
         <!-- Company Info -->
         <div class="bg-white p-4 sm:p-6 rounded-xl">
-          <h2 class="text-lg sm:text-xl md:text-2xl font-bold mb-2">Tashkent Parfume</h2>
+          <h2 class="text-lg sm:text-xl md:text-2xl font-bold mb-2">
+            Tashkent Parfume
+          </h2>
           <p class="text-gray-100 text-sm sm:text-base mb-4">
             Наслаждайтесь шоппингом и покупайте любимые ароматы и новинки по
             приятным ценам.
           </p>
 
           <div class="space-y-4">
-            <div class="flex flex-col md:flex-col lg:flex-row sm:flex-row gap-4">
+            <div
+              class="flex flex-col md:flex-col lg:flex-row sm:flex-row gap-4"
+            >
               <!-- clock -->
               <div
-                class="flex border items-center w-full border-gray-400 rounded-xl pt-2.5 pb-2 pl-2 gap-2 hover:border-red-500 duration-300 transition-all cursor-pointer group"
+                class="flex border items-center w-full border-gray-400 rounded-xl pt-2.5 pb-2 pl-2 gap-2 lg:hover:border-red-500 duration-300 transition-all cursor-pointer group"
               >
                 <i
-                  class="icon-clock text-3xl text-gray-100 hover:text-red-500 duration-300"
+                  class="icon-clock text-3xl text-gray-100 lg:hover:text-red-500 duration-300"
                 ></i>
 
                 <div>
@@ -76,10 +78,10 @@
               </div>
               <!-- phone -->
               <div
-                class="flex border items-center w-full border-gray-400 rounded-xl pt-2.5 pb-2 pl-2 gap-2 hover:border-red-500 duration-300 transition-all cursor-pointer group"
+                class="flex border items-center w-full border-gray-400 rounded-xl pt-2.5 pb-2 pl-2 gap-2 lg:hover:border-red-500 duration-300 transition-all cursor-pointer group"
               >
                 <i
-                  class="icon-help text-2xl text-gray-100 hover:text-red-500 duration-300"
+                  class="icon-help text-2xl text-gray-100 lg:hover:text-red-500 duration-300"
                 ></i>
 
                 <div>
@@ -91,12 +93,14 @@
               </div>
             </div>
             <!-- email -->
-            <div class="flex flex-col md:flex-col lg:flex-row sm:flex-row gap-4">
+            <div
+              class="flex flex-col md:flex-col lg:flex-row sm:flex-row gap-4"
+            >
               <div
-                class="flex border items-center w-full border-gray-400 rounded-xl pt-2.5 pb-2 pl-2 gap-2 hover:border-red-500 duration-300 transition-all cursor-pointer group"
+                class="flex border items-center w-full border-gray-400 rounded-xl pt-2.5 pb-2 pl-2 gap-2 lg:hover:border-red-500 duration-300 transition-all cursor-pointer group"
               >
                 <i
-                  class="icon-email text-3xl gap-2 text-gray-100 hover:text-red-500 duration-300"
+                  class="icon-email text-3xl gap-2 text-gray-100 lg:hover:text-red-500 duration-300"
                 ></i>
 
                 <div>
@@ -110,10 +114,10 @@
               </div>
               <!-- address -->
               <div
-                class="flex border items-center w-full border-gray-400 rounded-xl pt-2.5 pb-2 pl-2 gap-2 hover:border-red-500 duration-300 transition-all cursor-pointer group"
+                class="flex border items-center w-full border-gray-400 rounded-xl pt-2.5 pb-2 pl-2 gap-2 lg:hover:border-red-500 duration-300 transition-all cursor-pointer group"
               >
                 <i
-                  class="icon-location text-3xl gap-2 text-gray-100 hover:text-red-500 duration-300"
+                  class="icon-location text-3xl gap-2 text-gray-100 lg:hover:text-red-500 duration-300"
                 ></i>
 
                 <div>
@@ -130,25 +134,25 @@
             <div class="flex gap-4 mt-6">
               <a
                 href="#"
-                class="text-gray-100 hover:text-red-500 group hover:bg-red-700 transition-all duration-300 cursor-pointer bg-white-500 px-3 py-2 rounded-xl"
+                class="text-gray-100 lg:hover:text-red-500 group lg:hover:bg-red-700 transition-all duration-300 cursor-pointer bg-white-500 px-3 py-2 rounded-xl"
               >
                 <i class="icon-twitter"></i>
               </a>
               <a
                 href="#"
-                class="text-gray-100 hover:text-red-500 group hover:bg-red-700 transition-all duration-300 cursor-pointer bg-white-500 px-3 py-2 rounded-xl"
+                class="text-gray-100 lg:hover:text-red-500 group lg:hover:bg-red-700 transition-all duration-300 cursor-pointer bg-white-500 px-3 py-2 rounded-xl"
               >
                 <i class="icon-instagram"></i>
               </a>
               <a
                 href="#"
-                class="text-gray-100 hover:text-red-500 group hover:bg-red-700 transition-all duration-300 cursor-pointer bg-white-500 px-3 py-2 rounded-xl"
+                class="text-gray-100 lg:hover:text-red-500 group lg:hover:bg-red-700 transition-all duration-300 cursor-pointer bg-white-500 px-3 py-2 rounded-xl"
               >
                 <i class="icon-instagram"></i>
               </a>
               <a
                 href="#"
-                class="text-gray-100 hover:text-red-500 group hover:bg-red-700 transition-all duration-300 cursor-pointer bg-white-500 px-3 py-2 rounded-xl"
+                class="text-gray-100 lg:hover:text-red-500 group lg:hover:bg-red-700 transition-all duration-300 cursor-pointer bg-white-500 px-3 py-2 rounded-xl"
               >
                 <i class="icon-telegram"></i>
               </a>
@@ -172,15 +176,4 @@
   </div>
 </template>
 
-<script setup>
-// const form = reactive({
-//   name: '',
-//   phone: '',
-//   message: '',
-// });
-
-// Handle form submission
-// const submitForm = () => {
-//   console.log(form);
-// };
-</script>
+<script setup></script>

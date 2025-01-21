@@ -9,7 +9,6 @@ export function useDataFetcher() {
     }
     return await response.json();
   });
-
   return {
     data,
     error,

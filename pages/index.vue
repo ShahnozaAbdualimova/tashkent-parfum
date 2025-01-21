@@ -3,7 +3,7 @@
     <!-- <HomeHeroSection /> -->
     <HomeRecommendedSection />
     <HomeStoriesSection />
-    <!-- <CommonProductReviewSlider />-->
+    <!--    <CommonProductReviewSlider />-->
   </div>
   <Breadcrumb />
 </template>
