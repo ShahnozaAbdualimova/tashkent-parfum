@@ -1,7 +1,7 @@
 <template>
   <div>
-    <!-- <LayoutSubHeader class="hidden lg:block" /> -->
-    <!-- <LayoutHeader class="mb-7 " /> -->
+    <LayoutSubHeader class="hidden lg:block" />
+    <LayoutHeader class="mb-7 " />
     <NuxtPage />
     <LayoutFooter />
   </div>
