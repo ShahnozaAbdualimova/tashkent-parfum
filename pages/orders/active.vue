@@ -1,23 +1,26 @@
 <template>
   <div class="container mx-auto">
     <div
-      class="w-full lg:w-[780px] mb-14 bg-white rounded-lg p-4 md:p-5 shadow-md"
+      class="w-full lg:w-[780px] mb-14 bg-white rounded-lg p-4 md:p-5 shadow-sm"
     >
       <div v-for="order in orders" :key="order.id">
-        <div
-          class="flex flex-col md:flex-col lg:flex-col sm:flex-row sm: gap-4 sm:gap-5"
-        >
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5">
           <div class="w-full sm:w-auto">
             <img
               :src="order.mainImage"
               :alt="'Order ' + order.id"
-              class="sm:w-[120px] md:w-[120px] lg:w-[180px] h-[150px] rounded-lg object-cover"
+              class="sm:w-[120px] h-[120px] rounded-lg object-cover"
             />
           </div>
           <div class="flex-row">
-            <h3 class="text-lg font-bold mb-2 text-black-500">
-              #{{ order.id }}
-            </h3>
+            <NuxtLink :to="`/order/${order.id}`">
+              <h3
+                class="text-lg font-bold mb-2 text-black-500 hover:text-red-500 transition-colors"
+              >
+                #{{ order.id }}
+              </h3>
+            </NuxtLink>
+
             <p class="text-sm text-gray-500 mb-1">
               Всего: {{ order.itemCount }} товаров
             </p>
@@ -41,6 +44,7 @@
 
 <script setup>
 import { ref } from 'vue';
+const route = useRoute();
 
 const orders = ref([
   {

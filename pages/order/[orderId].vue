@@ -3,7 +3,7 @@
     <div class="flex gap-4 items-center mb-6">
       <NuxtLink to="/orders/history" class="inline-flex">
         <i
-          class="icon-left rotate-90 text-[24px] bg-gray-500 p-2 rounded-md"
+          class="icon-left rotate-180 text-[24px] bg-gray-500 p-2 rounded-md"
         ></i>
       </NuxtLink>
       <h3 class="text-black-500 font-bold text-2xl md:text-3xl">#346283</h3>
@@ -19,7 +19,7 @@
               <img
                 :src="order.mainImage"
                 :alt="'Order ' + order.id"
-                class="w-full sm:w-[120px] h-[120px] rounded-lg object-cover"
+                class="sm:w-[120px] h-[120px] rounded-lg object-cover"
               />
             </div>
             <div class="flex-grow">
