@@ -1,9 +1,9 @@
 <template>
   <div>
     <!-- <HomeHeroSection /> -->
-    <!-- <HomeRecommendedSection /> -->
+    <HomeRecommendedSection />
     <HomeStoriesSection />
-       <CommonProductReviewSlider />
+    <CommonProductReviewSlider />
   </div>
   <Breadcrumb />
 </template>
