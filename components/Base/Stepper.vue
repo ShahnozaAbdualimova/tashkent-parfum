@@ -15,7 +15,7 @@ const props = defineProps({
 const getStepStyle = computed(
   () => (step) =>
     props.activeStep === step.id
-      ? 'bg-white-600'
+      ? 'bg-red-950'
       : props.activeStep > step.id
         ? 'bg-red-500'
         : 'bg-white-400'
@@ -69,7 +69,7 @@ const isLabelVisible = computed(
     >
       <div
         class="w-[250%] transition-all duration-300 h-0.5 absolute right-0 -z-10"
-        :class="activeStep >= step.id ? 'bg-red-500' : 'bg-white-400'"
+        :class="activeStep+1 >= step.id ? 'bg-red-500' : 'bg-white-400'"
       ></div>
       <i class="text-2xl" :class="[step.icon, getIconStyle(step)]"></i>
       <span
