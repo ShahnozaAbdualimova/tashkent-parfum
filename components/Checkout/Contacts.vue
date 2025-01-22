@@ -3,7 +3,7 @@
     <div class="flex gap-4 pt-5">
       <div class="w-full">
         <p class="text-gray-200 text-sm font-medium pb-2">Ф.И.О</p>
-        <BaseInput placeholder="Введите полное имя" />
+        <BaseInput placeholder="Введите полное имя" v-model="name" />
       </div>
 
       <div class="w-full">
@@ -11,6 +11,7 @@
         <CommonPhoneInput
           placeholder="(__) ___-__-__"
           v-maska="'(##) ###-##-##'"
+          v-model="phone"
         />
       </div>
     </div>
@@ -27,17 +28,20 @@
 
         <div v-else>
           <p class="text-gray-200 text-sm font-medium pb-2">Телефон номер</p>
-          <div class="flex items-center bg-white-400 rounded-lg pr-1.5 w-auto">
+          <form class="flex items-center bg-white-400 rounded-lg pr-1.5 w-auto" @submit.prevent="showModal = !showModal">
             <CommonPhoneInput
               class="w-full"
               placeholder="(__) ___-__-__"
               v-maska="{ mask: '(##) ###-##-##' }"
+              v-model="newNumber"
             />
+
             <button
               @click="addNumber"
               class="icon-cancel text-gray-200 text-2xl hover:text-red-500 duration-200 ease-in-out"
             ></button>
-          </div>
+
+          </form>
         </div>
       </Transition>
     </div>
@@ -58,12 +62,18 @@
         <i class="icon-left"></i>
       </button>
     </div>
+    <ModalPhoneConfirmation
+      :phoneNumber="newNumber"
+      v-if="showModal"
+      :isVisible="showModal"
+      @closeModal="closeModal"
+    />
   </CheckoutWrapper>
 </template>
 
 <script setup>
 onMounted(() => {
-  if (import.meta.client) { 
+  if (import.meta.client) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 });
@@ -71,6 +81,15 @@ const showInput = ref(false);
 const addNumber = () => {
   showInput.value = !showInput.value;
 };
+const phone = ref(944139119);
+const name = ref('Nodir Khusniddinov');
+
+const showModal = ref(false);
+
+const closeModal = () => {
+  showModal.value = false;
+};
+const newNumber = ref(null);
 </script>
 
 <style>

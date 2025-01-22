@@ -15,6 +15,7 @@
         <CommonPhoneInput
           type="tel"
           placeholder="(__) ___-__-__"
+          v-maska="'(##) ###-##-##'"
         />
       </div>
       <button
