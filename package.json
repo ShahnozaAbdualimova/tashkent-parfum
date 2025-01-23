@@ -15,6 +15,7 @@
   "dependencies": {
     "@nuxtjs/leaflet": "^1.2.6",
     "@nuxtjs/tailwindcss": "6.12.2",
+    "@vueuse/core": "^12.5.0",
     "leaflet": "^1.9.4",
     "maska": "^1.5.0",
     "nuxt": "^3.14.1592",
