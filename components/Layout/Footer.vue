@@ -4,17 +4,27 @@
     <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <!-- Contact Section -->
       <div
-        class="hidden md:flex lg:flex-row px-5 py-4 mt-8 w-full items-center lg:px-1/2 justify-between bg-white-500 rounded-2xl">
+        class="hidden md:flex lg:flex-row px-5 py-4 mt-8 w-full items-center lg:px-1/2 justify-between bg-white-500 rounded-2xl"
+      >
         <div class="flex items-center gap-9">
           <CommonLogo type="dark" class="mb-4 lg:mb-0" />
-          <div class="flex flex-col lg:flex-row lg:items-start lg:justify-start space-y-2 lg:space-y-0 lg:space-x-4">
-            <span class="cursor-pointer text-base flex items-start hover-parent">
+          <div
+            class="flex flex-col lg:flex-row lg:items-start lg:justify-start space-y-2 lg:space-y-0 lg:space-x-4"
+          >
+            <span
+              class="cursor-pointer text-base flex items-start hover-parent"
+            >
               <i class="icon-phone mr-2 text-gray-100 text-base"></i>
               <span class="text-black-500 font-normal">+998 71 209 78 87</span>
             </span>
-            <a href="mailto:toshkentparfum@gmail.com" class="cursor-pointer flex items-start hover-parent">
+            <a
+              href="mailto:toshkentparfum@gmail.com"
+              class="cursor-pointer flex items-start hover-parent"
+            >
               <i class="icon-email text-gray-100 text-base mr-2"></i>
-              <span class="text-black-500 font-normal">toshkentparfum@gmail.com</span>
+              <span class="text-black-500 font-normal"
+                >toshkentparfum@gmail.com</span
+              >
             </a>
           </div>
         </div>
@@ -26,7 +36,9 @@
       </div>
 
       <!-- Desktop Links Section -->
-      <div class="hidden md:flex flex-wrap lg:flex-nowrap justify-between mt-12 sm:mt-20">
+      <div
+        class="hidden md:flex flex-wrap lg:flex-nowrap justify-between mt-12 sm:mt-20"
+      >
         <!-- Customer Links -->
         <div class="w-1/4">
           <h4 class="text-lg font-semibold">Покупателям</h4>
@@ -63,27 +75,38 @@
           </ul>
           <h4 class="mt-6 text-lg font-semibold">Наши соц. сети</h4>
           <div class="flex space-x-4 mt-2">
-            <a v-for="social in socialLinks" :key="social.icon" :href="social.href">
+            <a
+              v-for="social in socialLinks"
+              :key="social.icon"
+              :href="social.href"
+            >
               <i :class="[social.icon, 'text-xl text-gray-100']"></i>
             </a>
           </div>
         </div>
 
         <!-- Telegram Section Desktop -->
-        <div class="bg-white-500 rounded-2xl pt-7 p-5 flex lg:mt-0 md:mt-12 justify-between items-start">
+        <div
+          class="bg-white-500 rounded-2xl pt-7 p-5 flex lg:mt-0 md:mt-12 justify-between items-start"
+        >
           <div class="w-3/4 max-md:-my-4">
             <h4 class="text-dark font-bold text-xl mb-4 pl-5">
               Будьте в курсе всех последних новостей через Telegram
             </h4>
-            <a href="https://t.me/toshkent_parfume"
-              class="w-full bg-[#2684FC] bg-opacity-[8%] rounded-[8px] flex items-center p-2 duration-300 border border-transparent group hover:border hover:border-blue-500">
-              <span class="ml-2 text-dark font-semibold text-base duration-300 group-hover:text-blue-500">
-                <i class='icon-telegram text-blue-500'></i> Связаться через Telegram
+            <a
+              href="https://t.me/toshkent_parfume"
+              class="w-full bg-[#2684FC] bg-opacity-[8%] rounded-[8px] flex items-center p-2 duration-300 border border-transparent group hover:border hover:border-blue-500"
+            >
+              <span
+                class="ml-2 text-dark font-semibold text-base duration-300 group-hover:text-blue-500"
+              >
+                <i class="icon-telegram text-blue-500"></i> Связаться через
+                Telegram
               </span>
             </a>
           </div>
           <div class="w-1/4 flex justify-end my-6">
-            <img src="/svg/sentimg.svg" alt="footerLogo" class="w-16 h-16">
+            <img src="/svg/sentimg.svg" alt="footerLogo" class="w-16 h-16" />
           </div>
         </div>
       </div>
@@ -155,7 +178,12 @@
             <div>
               <h4 class="mb-3">Наши соц. сети</h4>
               <div class="flex space-x-4">
-                <a v-for="social in socialLinks" :key="social.icon" :href="social.href" class="text-gray-100 text-2xl">
+                <a
+                  v-for="social in socialLinks"
+                  :key="social.icon"
+                  :href="social.href"
+                  class="text-gray-100 text-2xl"
+                >
                   <i :class="social.icon"></i>
                 </a>
               </div>
@@ -164,9 +192,13 @@
 
           <!-- Telegram Section Mobile -->
           <div class="mb-8 p-3 bg-white-500 rounded-2xl w-full">
-            <h4 class="font-bold text-base mb-4">Будьте в курсе всех последних новостей через Telegram</h4>
-            <a href="https://t.me/toshkent_parfume"
-              class="flex items-center p-3 bg-[#2684FC] bg-opacity-[8%] rounded-lg">
+            <h4 class="font-bold text-base mb-4">
+              Будьте в курсе всех последних новостей через Telegram
+            </h4>
+            <a
+              href="https://t.me/toshkent_parfume"
+              class="flex items-center p-3 bg-[#2684FC] bg-opacity-[8%] rounded-lg"
+            >
               <i class="icon-telegram text-blue-500 mr-2"></i>
               <span>Связаться через Telegram</span>
             </a>
@@ -175,17 +207,29 @@
       </div>
     </div>
     <!-- Footer Mobile -->
-    <div class="w-full bg-white-500 md:hidden lg:hidden px-4 py-5 flex flex-col items-start">
+    <div
+      class="w-full bg-white-500 md:hidden lg:hidden px-4 py-5 flex flex-col items-start"
+    >
       <div class="w-full flex justify-between items-end">
         <div>
-          <p class="text-xs font-medium text-black-500 mb-4 w-44">Toshkent Parfum© 2023. Все права защищены.</p>
-          <NuxtLink to="#" class="text-sm font-medium text-black-500">Политика конфеденциальности</NuxtLink>
+          <p class="text-xs font-medium text-black-500 mb-4 w-44">
+            Toshkent Parfum© 2023. Все права защищены.
+          </p>
+          <NuxtLink to="#" class="text-sm font-medium text-black-500"
+            >Политика конфеденциальности</NuxtLink
+          >
         </div>
-        <img src="/svg/UicLogo.svg" alt="UicLogo" class="h-8 relative -top-9 w-auto" />
+        <img
+          src="/svg/UicLogo.svg"
+          alt="UicLogo"
+          class="h-8 relative -top-9 w-auto"
+        />
       </div>
     </div>
     <!-- Desktop Footer Bottom -->
-    <div class="hidden md:flex justify-between items-center w-full h-14 mt-20 bg-white-500 px-8 lg:px-32">
+    <div
+      class="hidden md:flex justify-between items-center w-full h-14 mt-20 bg-white-500 px-8 lg:px-32"
+    >
       <p class="text-sm text-black-500 font-semibold">
         &copy; Toshkent Parfum, 2023. Все права защищены.
       </p>
@@ -197,39 +241,36 @@
   </footer>
 </template>
 <style>
-ul li:hover {
-  color: #F62559;
-  text-decoration: none;
-  transform: translateX(8px);
+ul li,
+i {
   transition: all 0.4s ease;
 }
 
-
+ul li:hover {
+  color: #f62559;
+  text-decoration: none;
+  transform: translateX(8px);
+}
 
 ul li a:hover {
-  color: #F62559;
-  transition: all 0.6s ease;
+  color: #f62559;
 }
 
 span:hover {
-  color: #F62559;
-  transition: all 0.4s ease;
+  color: #f62559;
 }
 
 i:hover {
-  color: #F62559;
-  transition: all 0.6s ease;
+  color: #f62559;
 }
 
 .hover-parent:hover .icon-phone,
 .hover-parent:hover .black-500 {
-  color: #F62559;
-  transition: color 0.3s ease;
+  color: #f62559;
 }
 
 .hover-parent:hover .icon-email {
-  color: #F62559;
-  transition: color 0.3s ease;
+  color: #f62559;
 }
 </style>
 <script setup>
