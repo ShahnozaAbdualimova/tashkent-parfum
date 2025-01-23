@@ -1,7 +1,9 @@
 <template>
   <div class="container w-full mb-32">
     <BaseBreadCrumb />
-    <h1 class="text-black-500 leading-[130%] text-[32px] font-bold mt-5 mb-6">
+    <h1
+      class="text-black-500 leading-[130%] text-xl md:text-[32px] font-bold mt-5 mb-6"
+    >
       Профиль
     </h1>
     <div class="flex md:flex-row flex-col gap-6 justify-between">
