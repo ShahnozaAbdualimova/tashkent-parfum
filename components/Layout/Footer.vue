@@ -4,18 +4,21 @@
     <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <!-- Contact Section -->
       <div
-        class="hidden md:flex flex-col lg:flex-row min-h-[80px] px-5 py-4 mt-8 w-full items-center lg:px-1/2 justify-between bg-white-500 rounded-2xl">
-        <CommonLogo type="dark" class="mb-4 lg:mb-0" />
-        <div class="flex flex-col lg:flex-row lg:pr-60  items-start space-y-2 lg:space-y-0 lg:space-x-4">
-          <span class="cursor-pointer text-base flex items-center hover-parent">
-            <i class="icon-phone mr-2 text-gray-100 text-base"></i>
-            <span class="black-500">+998 71 209 78 87</span>
-          </span>
-          <a href="mailto:toshkentparfum@gmail.com" class="cursor-pointer flex items-center hover-parent">
-            <i class="icon-email text-gray-100 text-base mr-2"></i>
-            <span class="black-500 text-base">toshkentparfum@gmail.com</span>
-          </a>
+        class="hidden md:flex lg:flex-row px-5 py-4 mt-8 w-full items-center lg:px-1/2 justify-between bg-white-500 rounded-2xl">
+        <div class="flex items-center gap-9">
+          <CommonLogo type="dark" class="mb-4 lg:mb-0" />
+          <div class="flex flex-col lg:flex-row lg:items-start lg:justify-start space-y-2 lg:space-y-0 lg:space-x-4">
+            <span class="cursor-pointer text-base flex items-start hover-parent">
+              <i class="icon-phone mr-2 text-gray-100 text-base"></i>
+              <span class="text-black-500 font-normal">+998 71 209 78 87</span>
+            </span>
+            <a href="mailto:toshkentparfum@gmail.com" class="cursor-pointer flex items-start hover-parent">
+              <i class="icon-email text-gray-100 text-base mr-2"></i>
+              <span class="text-black-500 font-normal">toshkentparfum@gmail.com</span>
+            </a>
+          </div>
         </div>
+
         <div class="flex space-x-4 mt-4 lg:mt-0">
           <img src="/svg/FooterAppStore.svg" alt="AppStore" class="h-10" />
           <img src="/svg/googleplay.svg" alt="GooglePlay" class="h-10" />
@@ -205,10 +208,12 @@ ul li {
   color: black;
   transition: all 0.4s ease;
 }
+
 ul li a:hover {
   color: #F62559;
 }
-span:hover{
+
+span:hover {
   color: #F62559;
 }
 
@@ -218,14 +223,14 @@ i:hover {
 }
 
 .hover-parent:hover .icon-phone,
-.hover-parent:hover .black-500{
-  color: #F62559; 
-  transition: color 0.3s ease; 
+.hover-parent:hover .black-500 {
+  color: #F62559;
+  transition: color 0.3s ease;
 }
 
-.hover-parent:hover .icon-email{
-  color: #F62559; 
-  transition: color 0.3s ease; 
+.hover-parent:hover .icon-email {
+  color: #F62559;
+  transition: color 0.3s ease;
 }
 </style>
 <script setup>
