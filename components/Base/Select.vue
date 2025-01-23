@@ -6,13 +6,13 @@
     <h1
       class="text-black-500 font-proxima leading-[130%] relative "
       :class="
-        selectedOptions === null && !locationDistrict  ? 'text-gray-100' : ''
+        selectedOptions === null && !locationDistrict ? 'text-gray-100' : ''
       "
     >
       {{ locationDistrict || locationCity ? locationDistrict || locationCity : selectedOptionsText }}
     </h1>
     <i
-      class="text-sm text-gray-100 icon-chevron-down"
+      class="icon-chevron-down text-sm text-black-500 duration-300 ease-in-out"
       :class="{ rotated: isRotated }"
     ></i>
     <Transition name="dropdown">
@@ -20,9 +20,20 @@
         class="font-proxima text-black-500 text-sm font-medium max-h-64 overflow-y-auto mt-2 absolute z-50 rounded-lg flex flex-col w-full top-10 left-0 drop-show h-auto bg-white shadow-[0_4px_36px_rgba(56,56,56,0.16)]"
         v-if="show"
       >
-        <h2>
-          {{ i[labelKey] }}
-        </h2>
+        <li
+          class="w-full h-auto py-2 px-3 border-b flex flex-col border-gray-400 last:border-none cursor-pointer hover:bg-gray-400 transition-all 0.3s ease-in-out"
+          v-for="(i, index) in items"
+          :key="index"
+          @click="onSelect(i)"
+          :class="[
+            index === 0 ? 'rounded-t-lg' : '',
+            index === items.length - 1 ? 'rounded-b-lg' : '',
+          ]"
+        >
+          <h2>
+            {{ i[labelKey] }}
+          </h2>
+        </li>
       </ul>
     </Transition>
   </div>
@@ -71,10 +82,10 @@ const props = defineProps({
     type: String,
     required: false,
   },
-  locationCity: {
+  locationCity:{
     type: String,
     required: false,
-  },
+  }
 });
 
 const selectedOptions = defineModel();

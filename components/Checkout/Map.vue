@@ -1,5 +1,5 @@
 <template>
-  <div id="map" class="h-[336px] mt-8 z-10 relative ">
+  <div id="map" class="h-[336px] mt-8 z-10 relative">
     <button
       @click.stop="getPosition"
       :disabled="isLoading"
@@ -36,51 +36,53 @@ const emitLocationData = (data) => {
 };
 
 onMounted(() => {
-  map.value = L.map('map', {
-    zoomControl: false,
-    attributionControl: false,
-  }).setView([41.3112652, 69.2674975], 11);
+  if (import.meta.client) {
+    map.value = L.map('map', {
+      zoomControl: false,
+      attributionControl: false,
+    }).setView([41.3112652, 69.2674975], 11);
 
-  L.tileLayer(
-    `https://tile.jawg.io/jawg-streets/{z}/{x}/{y}{r}.png?access-token=JFnGBtHuJqKGqV4hmDWT9Li3gQ6zTCTks28FetIKx2dJ9WB7jmwtCokZBudRvEfv`
-  ).addTo(map.value);
+    L.tileLayer(
+      `https://tile.jawg.io/jawg-streets/{z}/{x}/{y}{r}.png?access-token=JFnGBtHuJqKGqV4hmDWT9Li3gQ6zTCTks28FetIKx2dJ9WB7jmwtCokZBudRvEfv`
+    ).addTo(map.value);
 
-  const userIcon = L.divIcon({
-    className: 'custom-svg-icon',
-    html: `<img src="/svg/marker.svg" alt="location">`,
-    iconSize: [110, 100],
-    iconAnchor: [55, 50],
-  });
+    const userIcon = L.divIcon({
+      className: 'custom-svg-icon',
+      html: `<img src="/svg/marker.svg" alt="location">`,
+      iconSize: [110, 100],
+      iconAnchor: [55, 50],
+    });
 
-  marker.value = L.marker([0, 0], { icon: userIcon, draggable: true }).addTo(
-    map.value
-  );
+    marker.value = L.marker([0, 0], { icon: userIcon, draggable: true }).addTo(
+      map.value
+    );
 
-  marker.value.on('dragend', async (event) => {
-    const { lat, lng } = event.target.getLatLng();
-    map.value.setView([lat, lng], map.value.getZoom());
-    locationData.value = await getLocationInfo(lat, lng);
-    emitLocationData(locationData.value);
-  });
+    marker.value.on('dragend', async (event) => {
+      const { lat, lng } = event.target.getLatLng();
+      map.value.setView([lat, lng], map.value.getZoom());
+      locationData.value = await getLocationInfo(lat, lng);
+      emitLocationData(locationData.value);
+    });
 
-  map.value.on('click', async (event) => {
-    const { lat, lng } = event.latlng;
-    marker.value.setLatLng([lat, lng]);
-    map.value.setView([lat, lng], map.value.getZoom());
-    locationData.value = await getLocationInfo(lat, lng);
-    emitLocationData(locationData.value);
-  });
+    map.value.on('click', async (event) => {
+      const { lat, lng } = event.latlng;
+      marker.value.setLatLng([lat, lng]);
+      map.value.setView([lat, lng], map.value.getZoom());
+      locationData.value = await getLocationInfo(lat, lng);
+      emitLocationData(locationData.value);
+    });
 
-  nextTick(() => {
-    if (map.value) {
-      window.dispatchEvent(new Event('resize'));
-    }
-  });
-  setTimeout(() => {
-    if (map.value) {
-      map.value.invalidateSize();
-    }
-  }, 200);
+    nextTick(() => {
+      if (map.value) {
+        window.dispatchEvent(new Event('resize'));
+      }
+    });
+    setTimeout(() => {
+      if (map.value) {
+        map.value.invalidateSize();
+      }
+    }, 200);
+  }
 });
 
 watch(branches, (newBranches) => {

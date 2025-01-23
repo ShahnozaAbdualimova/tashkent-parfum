@@ -1,10 +1,12 @@
 <template>
   <div>
-    <!-- <HomeHeroSection /> -->
+    <HomeHeroSection />
     <HomeRecommendedSection />
-    <HomeStoriesSection class="mb-8" />
+    <ClientOnly>
+      <HomeStoriesSection class="mb-8" />
+    </ClientOnly>
     <HomeBrandSection class="mb-16" />
     <!--    <CommonProductReviewSlider />-->
   </div>
-  <Breadcrumb />
 </template>
+
