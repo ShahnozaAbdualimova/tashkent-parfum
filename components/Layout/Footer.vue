@@ -204,17 +204,16 @@ ul li:hover {
   transition: all 0.4s ease;
 }
 
-ul li {
-  color: black;
-  transition: all 0.4s ease;
-}
+
 
 ul li a:hover {
   color: #F62559;
+  transition: all 0.6s ease;
 }
 
 span:hover {
   color: #F62559;
+  transition: all 0.4s ease;
 }
 
 i:hover {
