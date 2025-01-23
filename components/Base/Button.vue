@@ -33,7 +33,7 @@ let iconPosition = props.iconPosition;
 
 const computedClass = computed(() => {
   const baseClass =
-    'px-4 py-1 rounded-lg text-sm font-medium transition-all duration-300 flex items-center justify-center sm:text-xs md:text-sm';
+    'px-4 py-1 rounded-lg text-sm font-medium transition-300 flex items-center justify-center sm:text-xs md:text-sm';
 
   const variantClass = {
     primary:
