@@ -8,7 +8,6 @@
       </NuxtLink>
       <h3 class="text-black-500 font-bold text-2xl md:text-3xl">#346283</h3>
     </div>
-
     <div class="flex flex-col lg:flex-row gap-4 lg:gap-6">
       <div
         class="w-full lg:w-[780px] mb-6 lg:mb-14 bg-white rounded-lg p-4 md:p-5 shadow-md"
@@ -48,7 +47,6 @@
           <div class="border border-white-500 my-5"></div>
         </div>
       </div>
-
       <div class="w-full lg:w-[380px] mb-6 lg:mb-11 space-y-6">
         <div class="bg-white p-4 md:p-5 rounded-lg shadow-sm">
           <div
