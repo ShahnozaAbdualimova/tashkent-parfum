@@ -8,7 +8,7 @@
         labelKey="title"
         valueKey="id"
         v-model="selectedRegion"
-
+        :locationCity="location?.info?.city"
       />
     </div>
 
@@ -20,17 +20,53 @@
         labelKey="title"
         valueKey="id"
         v-model="selectedDistrict"
-        :class="{'pointer-events-none opacity-50': !selectedRegion}"
+        :locationDistrict="location?.info?.county"
+
       />
     </div>
   </div>
-  <div class="w-full pt-4">
+  <div class="w-full pt-4 relative">
     <p class="text-gray-200 text-sm font-medium pb-2">Адрес</p>
-    <BaseInput placeholder="Введите адрес доставки" />
+    <BaseInput
+      placeholder="Введите адрес доставки"
+      :model-value="location?.address"
+      v-model="searchQuery"
+      ref="searchInputRef"
+    />
+
+    <Transition name="dropdown">
+      <ul
+        v-if="showDropdown"
+        class="font-proxima text-black-500 text-sm font-medium absolute top-[82px] max-h-64 overflow-y-auto mt-2 z-[20] rounded-lg flex flex-col w-full left-0 drop-show h-auto bg-white shadow-[0_4px_36px_rgba(56,56,56,0.16)]"
+        @click="showDropdown = false"
+      >
+        <li
+          v-for="(location, index) in results"
+          :key="location?.place_id"
+          @click="selectLocation(location)"
+          class="w-full h-auto py-2 px-3 border-b flex flex-col border-gray-400 last:border-none cursor-pointer hover:bg-gray-400 transition-all 0.3s ease-in-out"
+          :class="[
+            index === 0 ? 'rounded-t-lg' : '',
+            index === results.length - 1 ? 'rounded-b-lg' : '',
+          ]"
+        >
+          {{ location?.display_name }}
+        </li>
+      </ul>
+    </Transition>
   </div>
 </template>
 
 <script setup>
+import { onClickOutside } from '@vueuse/core'
+
+const props = defineProps({
+  location: {
+    type: Object,
+    required: false,
+    default: () => null,
+  },
+});
 const { regionList, fetchRegionData } = useRegionData();
 const { districtList, fetchDistrictData } = useDistrictData();
 const selectedRegion = ref(null);
@@ -39,21 +75,84 @@ const filteredDistricts = ref([]);
 
 onMounted(() => {
   fetchRegionData();
-  fetchDistrictData().then(() => {
-    console.log('District List:', districtList.value);
-  });
+  fetchDistrictData();
 });
 
 watch(selectedRegion, (newRegion) => {
-  console.log('Selected Region :', newRegion);
-
   if (newRegion) {
     filteredDistricts.value = districtList.value.filter((district) => {
-      const regionId = district.region.id;
-      return regionId === newRegion.id;
+      return district.region.soato === newRegion.soato;
     });
+    selectedDistrict.value = null;
   } else {
     filteredDistricts.value = [];
   }
 });
+
+watch(
+  () => props.location,
+  (newLocation) => {
+    if (newLocation) {
+      selectedRegion.value = regionList.value.find(
+        (region) => region.soato === newLocation.region.soato
+      );
+    }
+  }
+);
+
+const searchInputRef = ref(null)
+onClickOutside(searchInputRef, event => {
+  console.log('Hello', event)
+})
+
+const showDropdown = ref(false)
+const searchQuery = ref('');
+const { results, loading, error, searchLocations } = useNominatimSearch();
+
+watch(loading, (newValue) => {
+  if (!newValue && results.value.length > 0) {
+    showDropdown.value = true;
+  }
+})
+
+watch(searchQuery, (newValue) => {
+  searchLocations(newValue);
+});
+
+watch(
+  () => props.location,
+  (newLocation) => {
+    if (newLocation?.address) {
+      searchQuery.value = newLocation.address;
+    }
+  },
+  { immediate: true }
+);
+
+const emit = defineEmits(['update-location']);
+
+const selectLocation = (selectedLocation) => {
+  searchQuery.value = selectedLocation.display_name;
+  results.value = [];
+
+  emit('update-location', {
+    lat: selectedLocation.lat,
+    lng: selectedLocation.lon,
+  });
+};
 </script>
+<style>
+.dropdown-enter-active {
+  transition: all 0.2s ease;
+}
+
+.dropdown-leave-active {
+  transition: all 0.2s ease;
+}
+
+.dropdown-enter-from,
+.dropdown-leave-to {
+  transform: translateY(20px);
+  opacity: 0;
+}
+</style>

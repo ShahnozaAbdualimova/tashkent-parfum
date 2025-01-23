@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto">
     <div
-      class="w-full lg:w-[780px] mb-14 bg-white rounded-lg p-4 md:p-5 shadow-sm"
+      class="w-full lg:w-[780px]   mb-14 bg-white rounded-lg p-4 md:p-5 shadow-sm"
     >
       <div v-for="order in orders" :key="order.id">
         <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5">
@@ -13,18 +13,20 @@
             />
           </div>
           <div class="flex-row">
-            <NuxtLink :to="`/order/${order.id}`">
+            <NuxtLink :to="`${order.id}`">
               <h3
                 class="text-lg font-bold mb-2 text-black-500 hover:text-red-500 transition-colors"
               >
                 #{{ order.id }}
               </h3>
             </NuxtLink>
-
-            <p class="text-sm text-gray-500 mb-1">
-              Всего: {{ order.itemCount }} товаров
+            <p class="text-sm text-gray-100 mb-1">
+              Всего:
+              <span class="text-black-500">{{ order.itemCount }} товаров</span>
             </p>
-            <p class="text-sm text-gray-500">Адрес: {{ order.address }}</p>
+            <p class="text-sm font-normal text-gray-100">
+              Адрес: <span class="text-black-500">{{ order.address }}</span>
+            </p>
             <div
               class="mt-2 flex items-center gap-2 bg-yellow-100/20 rounded-lg p-1 w-fit"
             >
@@ -43,7 +45,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+
 const route = useRoute();
 
 const orders = ref([

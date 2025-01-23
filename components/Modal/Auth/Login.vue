@@ -1,21 +1,22 @@
 <template>
-  <h1 class="font-proxima text-2xl text-black-500 leading-[30px] font-bold">
+  <h1 class=" text-2xl text-black-500 leading-[30px] font-bold">
     Добро пожаловать 👋
   </h1>
-  <h3 class="font-proxima text-xl text-black-500 font-bold mb-4 mt-[52px]">
+  <h3 class=" text-xl text-black-500 font-bold mb-4 mt-[52px]">
     Вход
   </h3>
   <form @submit.prevent class="min-w-[323px] h-full">
     <div class="flex flex-col justify-between h-full">
       <div class="flex flex-col gap-4 mt-4">
-        <label class="font-proxima text-sm text-gray-200 leading-[13.8px]"
+        <label class=" text-sm text-gray-200 leading-[13.8px]"
           >Номер телефона</label
         >
         <CommonPhoneInput
           type="tel"
           placeholder="(__) ___-__-__"
+          v-maska="'(##) ###-##-##'"
         />
-        <label class="font-proxima text-sm text-gray-200 leading-[13.8px]"
+        <label class=" text-sm text-gray-200 leading-[13.8px]"
           >Пароль</label
         >
         <CommonPasswordInput placeholder="Введите пароль" />

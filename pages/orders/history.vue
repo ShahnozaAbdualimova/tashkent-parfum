@@ -9,7 +9,7 @@
             <img
               :src="order.mainImage"
               :alt="'Order ' + order.id"
-              class=" sm:w-[120px] h-[120px] rounded-lg object-cover"
+              class="sm:w-[120px] h-[120px] rounded-lg object-cover"
             />
           </div>
           <div class="flex-row">
@@ -21,10 +21,13 @@
               </h3>
             </NuxtLink>
 
-            <p class="text-sm text-gray-500 mb-1">
-              Всего: {{ order.itemCount }} товаров
+            <p class="text-sm text-gray-100 mb-1">
+              Всего:
+              <span class="text-black-500">{{ order.itemCount }} товаров</span>
             </p>
-            <p class="text-sm text-gray-500">Адрес: {{ order.address }}</p>
+            <p class="text-sm text-gray-100">
+              Адрес: <span class="text-black-500">{{ order.address }}</span>
+            </p>
             <div
               class="mt-2 flex items-center gap-2 bg-green-100/10 rounded-lg p-1 w-fit"
             >

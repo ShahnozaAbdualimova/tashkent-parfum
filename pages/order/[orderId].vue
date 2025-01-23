@@ -8,6 +8,7 @@
       </NuxtLink>
       <h3 class="text-black-500 font-bold text-2xl md:text-3xl">#346283</h3>
     </div>
+
     <div class="flex flex-col lg:flex-row gap-4 lg:gap-6">
       <div
         class="w-full lg:w-[780px] mb-6 lg:mb-14 bg-white rounded-lg p-4 md:p-5 shadow-md"
@@ -29,10 +30,15 @@
                   #{{ order.id }}
                 </h3>
               </NuxtLink>
-              <p class="text-sm text-gray-500 mb-1">
-                Всего: {{ order.itemCount }} товаров
+              <p class="text-sm text-gray-100 mb-1">
+                Всего:
+                <span class="text-black-500"
+                  >{{ order.itemCount }} товаров</span
+                >
               </p>
-              <p class="text-sm text-gray-500">Адрес: {{ order.address }}</p>
+              <p class="text-sm text-gray-100">
+                Адрес: <span class="text-black-500">{{ order.address }}</span>
+              </p>
               <div
                 class="mt-2 flex items-center gap-2 bg-green-100/10 rounded-lg p-1 w-fit"
               >
@@ -101,7 +107,6 @@
               <p class="font-normal text-base">-100 000 uzs</p>
             </div>
           </div>
-
           <div class="space-y-3 mt-6 md:mt-11">
             <div
               @click="isOpen = !isOpen"
@@ -147,6 +152,7 @@
 
 <script setup>
 import { ref } from 'vue';
+
 const route = useRoute();
 
 const orders = ref([

@@ -11,10 +11,10 @@
     </div>
 
     <div class="flex flex-col items-center">
-      <h3 class="font-proxima text-xl text-black-500 font-bold mb-2">
+      <h3 class=" text-xl text-black-500 font-bold mb-2">
         Введите код
       </h3>
-      <p class="font-proxima text-gray-200 text-sm">
+      <p class=" text-gray-200 text-sm">
         Код подтверждения был отправлен на номер:
       </p>
       <div class="flex items-center justify-center gap-1 mb-5">
