@@ -33,7 +33,7 @@
         :label="'Ф.И.О'"
         :label-style="'text-base !text-black-500'"
       >
-        <BaseInput id="name" />
+        <BaseInput id="name" class="!border"/>
       </BaseFormGroup>
       <BaseFormGroup
         id="name"
@@ -47,14 +47,14 @@
       <BaseButton
         variant="secondary"
         @click="navigateTo('/profile/edit')"
-        class="text-sm text-red-500 !px-11"
+        class="text-sm text-red-500 !px-11 font-semibold"
       >
         Отменить
       </BaseButton>
       <BaseButton
         variant="primary"
         @click="navigateTo('/profile/edit')"
-        class="!px-11 "
+        class="!px-11 font-semibold"
       >
         Сохранить
       </BaseButton>
