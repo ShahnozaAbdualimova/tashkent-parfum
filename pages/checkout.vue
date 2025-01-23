@@ -39,8 +39,6 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from 'vue';
-
 const basketData = ref({});
 const checkoutStatus = ref('address');
 
@@ -84,18 +82,6 @@ const activeStep = computed(() => {
     contacts: 2,
     payment: 3,
   };
-  return statusMap[checkoutStatus.value] ;
+  return statusMap[checkoutStatus.value];
 });
 </script>
-
-<style>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>

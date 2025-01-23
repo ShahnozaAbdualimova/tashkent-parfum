@@ -29,7 +29,6 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue';
 const show = ref(false);
 const isRotated = ref(false);
 

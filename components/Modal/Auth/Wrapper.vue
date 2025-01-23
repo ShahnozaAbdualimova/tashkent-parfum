@@ -62,15 +62,3 @@ const showConfirmation = () => {
   activeComponent.value = 'confirmation';
 };
 </script>
-
-<style scoped>
-/* Fade transition styles */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>

@@ -16,8 +16,6 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-
 const otp = ref(Array(6).fill(''));
 
 const inputRefs = ref([]);

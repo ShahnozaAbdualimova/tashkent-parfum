@@ -12,7 +12,7 @@
             >
               <span
                 :class="isActive(nav.routePath) ? 'bg-red-500' : 'bg-gray-500'"
-                class="p-2  rounded flex items-center justify-center transition-colors duration-200"
+                class="p-2 rounded flex items-center justify-center transition-colors duration-200"
               >
                 <i
                   class="text-xl md:text-2xl transition-colors duration-200"
@@ -43,7 +43,7 @@
                   :class="
                     isActive(nav.routePath) ? 'bg-red-500' : 'bg-gray-500'
                   "
-                  class="p-2 rounded  flex items-center justify-center transition-colors duration-200"
+                  class="p-2 rounded flex items-center justify-center transition-colors duration-200"
                 >
                   <i
                     class="text-xl md:text-2xl transition-colors duration-200"
@@ -69,7 +69,7 @@
       </div>
 
       <Transition name="fade" mode="out-in">
-        <main class="lg:hidden mt-4" :key="$route.path">
+        <main  class="lg:hidden mt-4" :key="$route.path">
           <NuxtPage />
         </main>
       </Transition>

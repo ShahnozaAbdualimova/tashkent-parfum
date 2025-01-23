@@ -1,8 +1,11 @@
 <template>
   <div class="w-full py-2 bg-gray-50 px-5 xl:px-32">
-    <div class="w-full py-1 flex justify-between items-center">
+    <div class="container py-1 flex justify-between items-center">
       <div class="flex gap-6">
-        <i class="icon-close block lg:hidden" @click.self="$emit('close-menu')"></i>
+        <i
+          class="icon-close block lg:hidden"
+          @click.self="$emit('close-menu')"
+        ></i>
         <a
           class="w-auto h-auto items-center gap-2 cursor-pointer hover:text-red-500 hidden lg:flex"
           href="tel:+998712007007"
@@ -48,16 +51,13 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script setup>
-
 const selectedLanguage = ref('O‘zbekcha');
 const languages = ref(['O‘zbekcha', 'Русский', 'English']);
 // Funksiyalar
 const updateLanguage = (language) => {
   selectedLanguage.value = language;
 };
-
 </script>

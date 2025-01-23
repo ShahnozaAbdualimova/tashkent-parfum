@@ -41,9 +41,6 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
-import { defineProps, defineEmits } from 'vue';
-
 const props = defineProps({
   options: {
     type: Array,
