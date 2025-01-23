@@ -2,14 +2,9 @@
   <div>
     <!-- <HomeHeroSection /> -->
     <HomeRecommendedSection />
-    <HomeStoriesSection />
+    <HomeStoriesSection class="mb-8" />
+    <HomeBrandSection class="mb-16" />
     <!--    <CommonProductReviewSlider />-->
   </div>
   <Breadcrumb />
 </template>
-
-<script>
-definePageMeta({
-  breadcrumb: [{ name: 'Home', link: '/' }],
-});
-</script>
