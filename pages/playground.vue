@@ -1,7 +1,8 @@
 <template>
   <div>
     <CommonTopBrandsSection />
-    
+    <CommonPopularBrands /> 
+    <CommonBrandSection />
   </div>
 </template>
 
