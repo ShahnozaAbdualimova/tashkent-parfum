@@ -1,7 +1,7 @@
 <template>
   <div class="container w-full min-h-screen pb-40">
     <h1
-      class="text-black-500 font-proxima leading-[130%] text-[32px] font-semibold"
+      class="text-black-500  leading-[130%] text-[32px] font-semibold"
     >
       Корзина
     </h1>
@@ -15,7 +15,12 @@
         />
       </div>
       <div class="lg:col-span-4 col-span-12 mt-4 lg:mt-0">
-        <BasketInvoice :totalPrice="totalPrice" :totalItems="totalItems" :totalDiscount="totalDiscount" :totalArr="totalArr"/>
+        <BasketInvoice
+          :totalPrice="totalPrice"
+          :totalItems="totalItems"
+          :totalDiscount="totalDiscount"
+          :totalArr="totalArr"
+        />
 
         <button
           @click="basketSubmit"
@@ -29,7 +34,6 @@
 </template>
 
 <script setup>
-
 const router = useRouter();
 
 const arr = ref([
@@ -76,13 +80,12 @@ const totalPrice = computed(() => {
   return arr.value.reduce((sum, item) => sum + item.price * item.amount, 0);
 });
 
-
 const totalItems = computed(() => {
   return arr.value.reduce((sum, item) => sum + item.amount, 0);
 });
 const totalArr = computed(() => {
-  return arr.value
-})
+  return arr.value;
+});
 
 const totalDiscount = computed(() => {
   return arr.value.reduce((sum, item) => sum + item.discount * item.amount, 0);
@@ -97,6 +100,6 @@ const basketSubmit = () => {
   };
   localStorage.setItem('basketData', JSON.stringify(data));
 
-  window.location.href = '/checkout';
+  router.push('/checkout');
 };
 </script>

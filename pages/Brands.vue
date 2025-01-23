@@ -12,19 +12,16 @@
         </BaseInput>
       </div>
       <div class="grid grid-cols-4 gap-6 items-center justify-center mt-5">
-        <div
-          class="bg-white p-4 rounded-2xl justify-center items-center shadow-xl overflow-hidden"
-          v-for="(brand, index) in brands"
-          :key="index"
-        >
+        <div class="bg-white p-4 rounded-2xl justify-center items-center shadow-xl overflow-hidden"
+          v-for="(brand, index) in brands" :key="index">
           <img :src="brand.imgBrand" alt="brand-img" />
         </div>
       </div>
       <div class="items-center justify-center flex mt-8">
         <BaseButton variant="lightDanger">
           <i class="icon-left text-[20px] rotate-90"></i>
-          Загрузить еще</BaseButton
-        >
+          Загрузить еще
+        </BaseButton>
       </div>
     </div>
   </div>

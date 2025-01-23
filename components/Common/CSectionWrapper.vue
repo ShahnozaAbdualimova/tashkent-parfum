@@ -7,7 +7,7 @@
           {{ title }}
         </h2>
         <slot name="title" v-else>
-          <h2 class="text-2xl font-normal font-ProximaNova text-[#383838]">
+          <h2 class="text-2xl font-normal Nova text-[#383838]">
            
           </h2>
         </slot>
