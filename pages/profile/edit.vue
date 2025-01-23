@@ -12,7 +12,7 @@
       <div class="relative group">
         <div
           @click="triggerFileInput"
-          class="w-16 h-16 flex-shrink-0 md:w-[120px] md:h-[120px] rounded-full overflow-hidden border-[1.5px] border-gray-500 my-5 cursor-pointer"
+          class="flex-shrink-0 w-[120px] h-[120px] rounded-full overflow-hidden border-[1.5px] border-gray-500 my-5 cursor-pointer"
         >
           <transition name="fade" mode="out-in">
             <img
@@ -26,7 +26,7 @@
         <div
           @click="imagePreview = null"
           v-if="imagePreview"
-          class="absolute top-0 left-0 w-16 h-16 flex-shrink-0 flex items-center justify-center md:w-[120px] md:h-[120px] rounded-full overflow-hidden border-[1.5px] border-gray-500 my-5 cursor-pointer bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300"
+          class="absolute top-0 left-0 flex-shrink-0 flex items-center justify-center w-[120px] h-[120px] rounded-full overflow-hidden border-[1.5px] border-gray-500 my-5 cursor-pointer bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300"
         >
           <div
             class="w-11 h-11 bg-white flex items-center justify-center rounded-full opacity-0 group-hover:opacity-100 transition-300"
