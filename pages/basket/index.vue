@@ -49,7 +49,7 @@ const arr = ref([
   },
   {
     id: 2,
-    name: 'Armand Basi парфюмерная  вода In RED',
+    name: 'Armand Basi парфюмерная вода In RED',
     img: '/images/cards/parfumeria.svg',
     stars: 3.25,
     review_amount: 68,
@@ -59,7 +59,7 @@ const arr = ref([
   },
   {
     id: 3,
-    name: 'Dilis Parfum духи  Classic Collection',
+    name: 'Dilis Parfum духи Classic Collection',
     img: '/images/cards/hair.svg',
     stars: 2.5,
     review_amount: 38,
