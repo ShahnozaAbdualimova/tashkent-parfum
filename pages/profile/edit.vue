@@ -27,10 +27,17 @@
         Изменить фото</BaseButton
       >
     </div>
-    <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <form class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-0">
       <BaseFormGroup
         id="name"
         :label="'Ф.И.О'"
+        :label-style="'text-base !text-black-500'"
+      >
+        <BaseInput id="name" />
+      </BaseFormGroup>
+      <BaseFormGroup
+        id="name"
+        :label="'Адрес'"
         :label-style="'text-base !text-black-500'"
       >
         <BaseInput id="name" />

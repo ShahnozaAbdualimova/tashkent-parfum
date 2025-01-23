@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-20 flex flex-col gap-2">
+  <div class="flex flex-col gap-2">
     <label
       :class="labelStyle"
       :for="id"
