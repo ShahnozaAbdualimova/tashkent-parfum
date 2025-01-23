@@ -22,7 +22,7 @@
       class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-[1.5px] border-gray-500 max-md:mx-auto my-5"
     >
       <img
-        src="/images/profile.png"
+        src="/images/profile-user.png"
         alt=""
         class="object-cover w-full h-full"
       />

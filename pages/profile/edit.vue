@@ -17,7 +17,7 @@
           <transition name="fade" mode="out-in">
             <img
               :key="imagePreview"
-              :src="imagePreview || '/images/profile.png'"
+              :src="imagePreview || '/images/profile-user.png'"
               alt="Profile Picture"
               class="object-cover w-full h-full"
             />
