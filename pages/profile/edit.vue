@@ -27,7 +27,7 @@
         Изменить фото</BaseButton
       >
     </div>
-    <form class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-0">
+    <form class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-0 justify-end">
       <BaseFormGroup
         id="name"
         :label="'Ф.И.О'"
@@ -42,13 +42,22 @@
       >
         <BaseInput id="name" />
       </BaseFormGroup>
-      <BaseFormGroup
-        id="name"
-        :label="'Адрес'"
-        :label-style="'text-base !text-black-500'"
-      >
-        <BaseInput id="name" />
-      </BaseFormGroup>
     </form>
+    <div class="flex gap-4 mt-11 justify-end">
+      <BaseButton
+        variant="secondary"
+        @click="navigateTo('/profile/edit')"
+        class="text-sm text-red-500 !px-11"
+      >
+        Отменить
+      </BaseButton>
+      <BaseButton
+        variant="primary"
+        @click="navigateTo('/profile/edit')"
+        class="!px-11 "
+      >
+        Сохранить
+      </BaseButton>
+    </div>
   </div>
 </template>
