@@ -15,7 +15,7 @@
         <label class=" text-sm text-gray-200 leading-[13.8px]"
           >Номер телефона</label
         >
-        <CommonPhoneInput type="tel" placeholder="(__) ___-__-__" />
+        <CommonPhoneInput type="tel" placeholder="(__) ___-__-__" v-maska="'(##) ###-##-##'"/>
       </div>
 
       <div class="flex flex-col gap-5 mt-8 sm:mt-0">

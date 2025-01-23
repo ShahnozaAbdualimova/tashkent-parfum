@@ -126,7 +126,7 @@
 <script setup>
 import { computed } from 'vue';
 
-const props = defineProps({
+const props = defineProps({ 
   type: {
     type: String,
     default: 'dark', // 'light' yoki 'dark' ni qabul qiladi

@@ -1,24 +1,24 @@
 <template>
   <footer class="bg-white w-full mt-40">
     <div class="bg-red-500 h-1 w-full"></div>
-    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6  lg:px-8 relative">
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <!-- Contact Section -->
       <div
-        class="hidden md:flex min-h-[80px] px-5 py-4 mt-8 w-full items-start justify-between bg-white-500 rounded-2xl">
-        <CommonLogo type="dark"/>
-        <div class="absolute  py-4 mx-40">
-          <span class="hover:text-red-500 cursor-pointer text-base">
+        class="hidden md:flex flex-col lg:flex-row min-h-[80px] px-5 py-4 mt-8 w-full items-center lg:px-1/2 justify-between bg-white-500 rounded-2xl">
+        <CommonLogo type="dark" class="mb-4 lg:mb-0" />
+        <div class="flex flex-col lg:flex-row lg:pr-60  items-start space-y-2 lg:space-y-0 lg:space-x-4">
+          <span class="cursor-pointer text-base flex items-center hover-parent">
             <i class="icon-phone mr-2 text-gray-100 text-base"></i>
             <span class="black-500">+998 71 209 78 87</span>
           </span>
-          <a href="mailto:toshkentparfum@gmail.com" class="pl-4 hover:text-red-500 cursor-pointer">
-            <i class="icon-email text-gray-100 text-base"></i>
-            <span class="pl-4 black-500 text-base">toshkentparfum@gmail.com</span>
+          <a href="mailto:toshkentparfum@gmail.com" class="cursor-pointer flex items-center hover-parent">
+            <i class="icon-email text-gray-100 text-base mr-2"></i>
+            <span class="black-500 text-base">toshkentparfum@gmail.com</span>
           </a>
         </div>
-        <div class="py-2 flex space-x-4">
-          <img src="/svg/FooterAppStore.svg" alt="AppStore" />
-          <img src="/svg/googleplay.svg" alt="GooglePlay" />
+        <div class="flex space-x-4 mt-4 lg:mt-0">
+          <img src="/svg/FooterAppStore.svg" alt="AppStore" class="h-10" />
+          <img src="/svg/googleplay.svg" alt="GooglePlay" class="h-10" />
         </div>
       </div>
 
@@ -28,20 +28,10 @@
         <div class="w-1/4">
           <h4 class="text-lg font-semibold">Покупателям</h4>
           <ul class="mt-2 space-y-2">
-            <li>
-              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">О магазине</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Рекомендации</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Бренды</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Конфиденциальность</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Обратная связь</NuxtLink>
+            <li v-for="link in customerLinks" :key="link.text">
+              <NuxtLink :to="link.href" class="text-gray-100 font-semibold">
+                {{ link.text }}
+              </NuxtLink>
             </li>
           </ul>
         </div>
@@ -50,20 +40,10 @@
         <div class="w-1/4">
           <h4 class="text-lg font-semibold">Разделы</h4>
           <ul class="mt-2 space-y-2">
-            <li>
-              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Парфюмерия</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Тело и ванна</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Волосы</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Лицо</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Все разделы</NuxtLink>
+            <li v-for="link in sectionLinks" :key="link.text">
+              <NuxtLink :to="link.href" class="text-gray-100 font-semibold">
+                {{ link.text }}
+              </NuxtLink>
             </li>
           </ul>
         </div>
@@ -72,18 +52,17 @@
         <div class="w-1/4">
           <h4 class="text-lg font-semibold">Пользователь</h4>
           <ul class="mt-2 space-y-2">
-            <li>
-              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Вход</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="#" class="text-gray-100 hover:text-red-500">Регистрация</NuxtLink>
+            <li v-for="link in userLinks" :key="link.text">
+              <NuxtLink :to="link.href" class="text-gray-100 font-semibold">
+                {{ link.text }}
+              </NuxtLink>
             </li>
           </ul>
           <h4 class="mt-6 text-lg font-semibold">Наши соц. сети</h4>
           <div class="flex space-x-4 mt-2">
-            <a href="#"><i class="icon-facebook text-xl text-gray-100 hover:text-red-500"></i></a>
-            <a href="#"><i class="icon-instagram text-xl text-gray-100 hover:text-red-500"></i></a>
-            <a href="#"><i class="icon-telegram text-xl text-gray-100 hover:text-red-500"></i></a>
+            <a v-for="social in socialLinks" :key="social.icon" :href="social.href">
+              <i :class="[social.icon, 'text-xl text-gray-100']"></i>
+            </a>
           </div>
         </div>
 
@@ -111,7 +90,7 @@
         <div class="flex flex-col w-full">
           <!-- Logo -->
           <div class="bg-white-500 p-4 rounded-2xl">
-           <CommonLogo type="dark" :width="89" :height="36" class="mb-6"/>
+            <CommonLogo type="dark" :width="89" :height="36" class="mb-6" />
 
             <!-- App Store Buttons -->
             <div class="flex space-x-4 mb-6">
@@ -137,20 +116,10 @@
             <div>
               <h4 class="font-medium mb-3">Разделы</h4>
               <ul class="space-y-2 text-gray-100">
-                <li>
-                  <NuxtLink to="#">Парфюмерия</NuxtLink>
-                </li>
-                <li>
-                  <NuxtLink to="#">Тело и ванна</NuxtLink>
-                </li>
-                <li>
-                  <NuxtLink to="#">Волосы</NuxtLink>
-                </li>
-                <li>
-                  <NuxtLink to="#">Лицо</NuxtLink>
-                </li>
-                <li> 
-                  <NuxtLink to="#">Все разделы</NuxtLink>
+                <li v-for="link in sectionLinks" :key="link.text">
+                  <NuxtLink :to="link.href" class="text-gray-100 font-semibold">
+                    {{ link.text }}
+                  </NuxtLink>
                 </li>
               </ul>
             </div>
@@ -159,20 +128,10 @@
             <div>
               <h4 class="font-medium mb-3">Покупателям</h4>
               <ul class="space-y-2 text-gray-100">
-                <li>
-                  <NuxtLink to="#">О магазине</NuxtLink>
-                </li>
-                <li>
-                  <NuxtLink to="#">Скидки и акции</NuxtLink>
-                </li>
-                <li>
-                  <NuxtLink to="#">Рекомендации</NuxtLink>
-                </li>
-                <li>
-                  <NuxtLink to="#">Бренды</NuxtLink>
-                </li>
-                <li>
-                  <NuxtLink to="#">Конфеденциальность</NuxtLink>
+                <li v-for="link in customerLinks" :key="link.text">
+                  <NuxtLink :to="link.href" class="text-gray-100 font-semibold">
+                    {{ link.text }}
+                  </NuxtLink>
                 </li>
               </ul>
             </div>
@@ -181,22 +140,21 @@
             <div>
               <h4 class="font-medium mb-3">Пользователь</h4>
               <ul class="space-y-2 text-gray-100">
-                <li>
-                  <NuxtLink to="#">Вход</NuxtLink>
-                </li>
-                <li>
-                  <NuxtLink to="#">Регистрация</NuxtLink>
+                <li v-for="link in userLinks" :key="link.text">
+                  <NuxtLink :to="link.href" class="text-gray-100 font-semibold">
+                    {{ link.text }}
+                  </NuxtLink>
                 </li>
               </ul>
             </div>
 
             <!-- Social Media -->
             <div>
-              <h4 class="mb-3">Пользователь</h4>
+              <h4 class="mb-3">Наши соц. сети</h4>
               <div class="flex space-x-4">
-                <a href="#" class="text-gray-100 text-2xl"><i class="icon-facebook"></i></a>
-                <a href="#" class="text-gray-100 text-2xl"><i class="icon-instagram"></i></a>
-                <a href="#" class="text-gray-100 text-2xl"><i class="icon-telegram"></i></a>
+                <a v-for="social in socialLinks" :key="social.icon" :href="social.href" class="text-gray-100 text-2xl">
+                  <i :class="social.icon"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -212,7 +170,6 @@
           </div>
         </div>
       </div>
-       
     </div>
     <!-- Footer Mobile -->
     <div class="w-full bg-white-500 md:hidden lg:hidden px-4 py-5 flex flex-col items-start">
@@ -226,13 +183,76 @@
     </div>
     <!-- Desktop Footer Bottom -->
     <div class="hidden md:flex justify-between items-center w-full h-14 mt-20 bg-white-500 px-8 lg:px-32">
-      <p class="text-sm text-gray-600 font-medium">
+      <p class="text-sm text-black-500 font-semibold">
         &copy; Toshkent Parfum, 2023. Все права защищены.
       </p>
       <img src="/svg/UicLogo.svg" alt="UicLogo" />
-      <h5 class="text-sm text-gray-600 cursor-pointer hover:text-red-500 font-medium">
+      <h5 class="text-sm cursor-pointer text-black-500 font-semibold">
         Политика конфеденциальности
       </h5>
     </div>
   </footer>
 </template>
+<style>
+ul li:hover {
+  color: #F62559;
+  text-decoration: none;
+  transform: translateX(8px);
+  transition: all 0.4s ease;
+}
+
+ul li {
+  color: black;
+  transition: all 0.4s ease;
+}
+ul li a:hover {
+  color: #F62559;
+}
+span:hover{
+  color: #F62559;
+}
+
+i:hover {
+  color: #F62559;
+  transition: all 0.6s ease;
+}
+
+.hover-parent:hover .icon-phone,
+.hover-parent:hover .black-500{
+  color: #F62559; 
+  transition: color 0.3s ease; 
+}
+
+.hover-parent:hover .icon-email{
+  color: #F62559; 
+  transition: color 0.3s ease; 
+}
+</style>
+<script setup>
+const customerLinks = [
+  { text: 'О магазине', href: '#' },
+  { text: 'Рекомендации', href: '#' },
+  { text: 'Бренды', href: '#' },
+  { text: 'Конфиденциальность', href: '#' },
+  { text: 'Обратная связь', href: '#' },
+];
+
+const sectionLinks = [
+  { text: 'Парфюмерия', href: '#' },
+  { text: 'Тело и ванна', href: '#' },
+  { text: 'Волосы', href: '#' },
+  { text: 'Лицо', href: '#' },
+  { text: 'Все разделы', href: '#' },
+];
+
+const userLinks = [
+  { text: 'Вход', href: '#' },
+  { text: 'Регистрация', href: '#' },
+];
+
+const socialLinks = [
+  { icon: 'icon-facebook', href: '#' },
+  { icon: 'icon-instagram', href: '#' },
+  { icon: 'icon-telegram', href: '#' },
+];
+</script>
