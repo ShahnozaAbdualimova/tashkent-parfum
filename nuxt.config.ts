@@ -3,7 +3,12 @@ export default defineNuxtConfig({
   css: ['leaflet/dist/leaflet.css', '~/assets/css/main.css'],
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/leaflet', '@nuxtjs/tailwindcss'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/leaflet',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/i18n',
+  ],
   app: {
     head: {
       title: 'Tashkent Parfum',
