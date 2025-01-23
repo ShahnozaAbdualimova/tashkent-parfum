@@ -4,10 +4,12 @@
       :location="locationInfo"
       @updateLocation="handleLocationUpdate"
     />
+
     <CheckoutMap
-      @getAddress="handleLocationFetched"
       :locationFromInput="locationFromInput"
+      @getAddress="handleLocationFetched"
     />
+
     <div class="mt-6 pt-5 border-t border-white-500 flex justify-between">
       <button
         @click="router.back()"

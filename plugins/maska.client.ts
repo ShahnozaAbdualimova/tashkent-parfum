@@ -1,5 +1,5 @@
-// import * as Maska from 'maska'
+import * as Maska from 'maska';
 
-// export default defineNuxtPlugin((nuxtApp) => {
-//   nuxtApp.vueApp.use(Maska)
-// })
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.vueApp.use(Maska);
+});

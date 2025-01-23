@@ -1,8 +1,8 @@
 <template>
   <div class="mx-auto my-4 sm:my-6 px-2 sm:px-6">
-    <CommonSectionWrapper title="Истории" linkText="Все истории">
+    <!-- <CommonSectionWrapper title="Истории" linkText="Все истории">
       <div class="overflow-hidden relative container mx-auto">
-        <swiper
+        <Swiper
           class="mySwiper"
           :slidesPerView="2.5"
           :spaceBetween="12"
@@ -12,14 +12,14 @@
             1024: { slidesPerView: 8.5, spaceBetween: 24 },
           }"
         >
-          <swiper-slide v-for="(story, index) in stories" :key="story.id">
+          <SwiperSlide v-for="(story, index) in stories" :key="story.id">
             <StoriesCard
               :story="story"
-              @click="openModal(index)"
               :borderColor="getStoryBorderColor(story.id)"
+              @click="openModal(index)"
             />
-          </swiper-slide>
-        </swiper>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </CommonSectionWrapper>
 
@@ -43,7 +43,7 @@
           :style="{ width: progressBarWidth + '%' }"
         ></div>
       </div>
-    </ModalStories>
+    </ModalStories> -->
   </div>
 </template>
 
