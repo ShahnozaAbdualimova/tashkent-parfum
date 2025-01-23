@@ -8,9 +8,9 @@
       </h2>
     </div>
     <hr class="mt-2.5 h-px border-none bg-white-500" />
-    <div class="flex items-center gap-4">
+    <div class="flex items-center">
       <div
-        class="w-16 h-16 md:w-[120px] md:h-[120px] rounded-full overflow-hidden border-[1.5px] border-gray-500 max-md:mx-auto my-5"
+        class="w-16 h-16 md:w-[120px] md:h-[120px] rounded-full overflow-hidden border-[1.5px] border-gray-500 my-5"
       >
         <img
           src="/images/profile.png"
@@ -18,42 +18,40 @@
           class="object-cover w-full h-full"
         />
       </div>
-      <BaseButton
-        variant="outline"
-        class="text-gray-200 font-semibold flex gap-1"
+      <BaseButton variant="outline" class="text-gray-200 font-semibold gap-1"
         ><i
           class="icon-edit text-xl w-5 h-5 flex items-center justify-center"
         ></i>
         Изменить фото</BaseButton
       >
     </div>
-    <form class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-0 justify-end">
+    <form class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 justify-end">
       <BaseFormGroup
         id="name"
         :label="'Ф.И.О'"
-        :label-style="'text-base !text-black-500'"
+        :label-style="'text-base !text-black-500 '"
       >
-        <BaseInput id="name" class="!border"/>
+        <BaseInput id="name" v-model="fullName" type="text" />
       </BaseFormGroup>
       <BaseFormGroup
         id="name"
         :label="'Адрес'"
-        :label-style="'text-base !text-black-500'"
+        :label-style="'text-base !text-black-500 '"
       >
-        <BaseInput id="name" />
+        <BaseInput id="name" v-model="address" type="text" />
       </BaseFormGroup>
     </form>
     <div class="flex gap-4 mt-11 justify-end">
       <BaseButton
         variant="secondary"
-        @click="navigateTo('/profile/edit')"
+        @click="navigateTo('/profile')"
         class="text-sm text-red-500 !px-11 font-semibold"
       >
         Отменить
       </BaseButton>
       <BaseButton
         variant="primary"
-        @click="navigateTo('/profile/edit')"
+        @click="navigateTo('/profile')"
         class="!px-11 font-semibold"
       >
         Сохранить
@@ -61,3 +59,8 @@
     </div>
   </div>
 </template>
+
+<script setup>
+const fullName = ref('Мухаммадамин Домлахонов');
+const address = ref('Tashkent, Uzbekistan');
+</script>
