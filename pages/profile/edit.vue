@@ -72,7 +72,7 @@
     <div class="flex gap-4 mt-11 justify-end">
       <BaseButton
         variant="secondary"
-        @click="navigateTo('/profile')"
+        @click="() => navigateTo('/profile')"
         class="text-sm text-red-500 !px-11 font-semibold"
       >
         Отменить
@@ -88,26 +88,32 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { navigateTo } from '#imports';
 
-const router = useRouter();
-const fullName = ref('Мухаммадамин Домлахонов');
-const address = ref('Tashkent, Uzbekistan');
-const imagePreview = ref(null);
-const fileInput = ref(null);
+definePageMeta({
+  layout: 'default',
+});
+
+const fullName = ref<string>('Мухаммадамин Домлахонов');
+const address = ref<string>('Tashkent, Uzbekistan');
+const imagePreview = ref<string | null>(null);
+const fileInput = ref<HTMLInputElement | null>(null);
 
 const triggerFileInput = () => {
-  fileInput.value.click();
+  if (fileInput.value) {
+    fileInput.value.click();
+  }
 };
 
-const onFileSelected = (event) => {
-  const file = event.target.files[0];
+const onFileSelected = (event: Event) => {
+  const target = event.target as HTMLInputElement;
+  const file = target.files?.[0];
   if (file) {
     const reader = new FileReader();
-    reader.onload = (e) => {
-      imagePreview.value = e.target.result;
+    reader.onload = (e: ProgressEvent<FileReader>) => {
+      imagePreview.value = e.target?.result as string;
     };
     reader.readAsDataURL(file);
   }
@@ -118,7 +124,7 @@ const saveProfile = () => {
     fullName: fullName.value,
     address: address.value,
   });
-  router.push('/profile');
+  navigateTo('/profile');
 };
 </script>
 

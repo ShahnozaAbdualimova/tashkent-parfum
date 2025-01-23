@@ -68,14 +68,21 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed, reactive } from 'vue';
 import { useRoute } from 'vue-router';
+
+interface NavItem {
+  title: string;
+  link: string;
+  icon: string;
+  active: string[];
+}
 
 const route = useRoute();
 const isActive = computed(() => route.path.split('/').reverse()[0]);
 
-const navItems = reactive([
+const navItems: NavItem[] = reactive([
   {
     title: 'Персональные данные',
     link: '/profile',
