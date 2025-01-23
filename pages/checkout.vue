@@ -84,7 +84,7 @@ const activeStep = computed(() => {
     contacts: 2,
     payment: 3,
   };
-  return statusMap[checkoutStatus.value] || 1;
+  return statusMap[checkoutStatus.value] ;
 });
 </script>
 
