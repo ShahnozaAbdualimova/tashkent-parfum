@@ -102,9 +102,9 @@ const navItems = reactive([
   },
   {
     title: 'Правила пользования',
-    link: '/profile/rules',
+    link: '/profile/terms-of-use',
     icon: 'icon-important',
-    active: ['rules'],
+    active: ['terms-of-use'],
   },
   {
     title: 'Кешбек',
