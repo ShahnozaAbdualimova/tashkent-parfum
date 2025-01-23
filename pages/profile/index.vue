@@ -46,7 +46,7 @@
     <BaseButton
       variant="primary"
       class="px-6 w-full md:w-auto rounded-md gap-1 font-semibold mt-4 ml-auto"
-      @click="console.log('click')"
+      @click="navigateTo('/profile/edit')"
     >
       <i class="icon-edit text-xl w-5 h-5 flex items-center justify-center"></i>
       Изменить
