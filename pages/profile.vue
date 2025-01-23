@@ -17,7 +17,7 @@
           >
             <img
               src="/images/profile.png"
-              alt=""
+              alt="Profile Image"
               class="object-cover w-full h-full"
             />
           </div>
@@ -55,7 +55,9 @@
         </ul>
       </nav>
       <div class="md:w-2/3">
-        <NuxtPage />
+        <Transition>
+          <NuxtPage />
+        </Transition>
       </div>
     </div>
   </div>
@@ -112,3 +114,16 @@ const navItems = reactive([
 
 import { useRoute } from 'vue-router';
 </script>
+
+<style scoped>
+/* we will explain what these classes do next! */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.7s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+</style>
