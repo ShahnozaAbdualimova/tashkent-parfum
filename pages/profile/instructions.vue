@@ -28,8 +28,14 @@
   </div>
 </template>
 
-<script setup>
-const instructions = [
+<script setup lang="ts">
+interface InstructionItems {
+  id: number;
+  title: string;
+  description: string;
+}
+
+const instructions: InstructionItems[] = reactive([
   {
     id: 1,
     title: 'Регистрация в приложения',
@@ -54,5 +60,5 @@ const instructions = [
     description:
       'Регистрация состоит из 3-х разделов, на 1-м этапе вы вводите личную информацию (Ф.И.О, номер телефона и адрес проживания)',
   },
-];
+]);
 </script>
