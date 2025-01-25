@@ -7,7 +7,6 @@ export default {
         130: '130%',
       },
       colors: {
-
         red: {
           50: '#FFF6F9',
           100: '#FDD3DE',
@@ -20,7 +19,6 @@ export default {
           800: '#F97495',
           900: '#FA89A5',
           950: '#FEEBF0',
-          
         },
         yellow: {
           100: '#F8AF02',
@@ -53,7 +51,6 @@ export default {
           200: '#6F6F6F',
           400: '#EAEBED',
           500: '#CDCDD0',
-         
         },
         grey: {
           100: '#9E9EA5',

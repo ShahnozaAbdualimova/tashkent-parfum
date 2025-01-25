@@ -14,6 +14,7 @@
         <CommonPhoneInput
           type="tel"
           placeholder="(__) ___-__-__"
+          v-maska="'(##) ###-##-##'"
         />
         <label class=" text-sm text-gray-200 leading-[13.8px]"
           >Пароль</label

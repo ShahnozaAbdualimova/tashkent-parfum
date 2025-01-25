@@ -1,18 +1,18 @@
 <template>
-    <div
-      class="relative bg-white-400 rounded-lg flex items-center border border-transparent border-solid focus:within-border-black-500"
-      :class="{ 'border-red-400': error }"
-    >
-      <slot name="prefix" />
-      <input
-        v-model="model"
-        autocomplete="off"
-        :type
-        :placeholder
-        class="w-full h-full text-base font-normal bg-white-400 py-3 pl-3 outline-none text-black-500 placeholder-gray-100"
-      />
-      <slot name="suffix" />
-    </div>
+  <div
+    class="relative bg-white-400 rounded-lg flex items-center border border-transparent border-solid focus:within-border-black-500"
+    :class="{ 'border-red-400': error }"
+  >
+    <slot name="prefix" />
+    <input
+      v-model="model"
+      autocomplete="off"
+      :type
+      :placeholder
+      class="w-full h-full text-base font-normal rounded-lg bg-white-400 py-3 pl-3 outline-none text-black-500 placeholder-gray-100"
+    />
+    <slot name="suffix" />
+  </div>
 </template>
 
 <script setup>

@@ -3,7 +3,7 @@
     <div class="relative overflow-hidden group">
       <div
         class="flex gap-4 pause-animation transition-all duration-300 cursor-pointer object-cover"
-        :class="animate"
+        :class="animation"
       >
         <NuxtLink
           v-for="(item, index) in brandList.concat(brandList)"
@@ -28,7 +28,7 @@ defineProps({
     type: Array,
     required: true,
   },
-  animate: {
+  animation: {
     type: String,
     default: 'animate-marquee-rtl',
   },
