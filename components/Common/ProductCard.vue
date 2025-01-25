@@ -11,32 +11,31 @@
   -->
     <div class="relative">
       <!-- Swiper -->
-      <!-- <swiper
+      <Swiper
         :slides-per-view="1"
         :space-between="10"
         :loop="true"
         :autoplay="{ delay: 3000 }"
         :pagination="{ clickable: true }"
-        :navigation="true"
         class="swiper-container"
       >
-        <swiper-slide
+        <Swiper-Slide
           v-for="(image, index) in product.image"
           :key="index"
-          class="swiper-slide"
-        > -->
-      <!-- <img
-        :src="image"
-        alt="product image"
-        class="w-full object-cover object-center rounded-t-xl h-[150px] sm:h-[180px] md:h-[180px] lg:h-[180px]"
-      /> -->
-      <!-- </swiper-slide>
-      </swiper> -->
+          class="swiper-slide bg-white border-2 rounded-t-xl   border-white-400 "
+        >
+          <img
+            :src="image"
+            alt="product image"
+            class="w-full object-cover object-center rounded-t-xl h-[150px] sm:h-[180px] md:h-[180px] lg:h-[180px]"
+          />
+        </Swiper-Slide>
+      </Swiper>
 
       <!-- Discount -->
       <div
         v-if="product.discountTag"
-        class="absolute top-3 left-3 border-2 border-green-200 rotate bg-green-100 text-white text-xs px-4 rounded-xl"
+        class="absolute top-3 left-3 border-2 z-10 border-green-200 rotate bg-green-100 text-white text-xs px-4 rounded-xl"
       >
         <i class="icon-sale text-white-100 text-2xl"></i>
       </div>
@@ -48,7 +47,7 @@
             'border-red-500': isFavorite,
           },
         ]"
-        class="absolute top-3 right-3 border border-white-400/80 bg-white-400/80 text-black-500 text-xs p-2 hover:border-red-500/20 transition duration-300 w-9 h-9 rounded-md flex justify-center items-center group"
+        class="absolute top-3 z-10 right-3 border border-white-400/80 bg-white-400/80 text-black-500 text-xs p-2 hover:border-red-500/20 transition duration-300 w-9 h-9 rounded-md flex justify-center items-center group"
       >
         <i
           :class="{
@@ -61,7 +60,7 @@
     </div>
 
     <!-- Product Info -->
-    <div class="p-4 gap-1">
+    <div class="px-4 pb-4 gap-1">
       <!-- Product Name -->
       <h3 class="text-red-500 text-xs truncate sm:text-sm md:text-base">
         {{ product.name }}
@@ -109,9 +108,11 @@
 </template>
 
 <script setup>
-// Import Swiper components and styles
-// import { Swiper, SwiperSlide } from 'swiper/vue';
-// import 'swiper/swiper-bundle.min.css';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
 
 // // Import your data or props
 // import { products } from '~/data/mainProductSection';
@@ -144,4 +145,5 @@ const basketProduct = () => {
 .rotate {
   transform: rotate(-11deg);
 }
+
 </style>
