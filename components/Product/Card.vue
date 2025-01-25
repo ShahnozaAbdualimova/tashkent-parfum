@@ -1,111 +1,102 @@
 <template>
   <article
-    class="col-span-1 w-[180px] bg-white-400 shadow-lg rounded-xl overflow-hidden"
+    class="mx-auto w-[166px] sm:w-[166px] md:w-[180px] lg:w-[180px] bg-white-400 rounded-xl overflow-hidden cursor-pointer transition-300 border border-white hover:shadow-md"
   >
+    <!-- Swiper -->
     <div class="relative">
-      <!-- images -->
-      <img
-        :src="product.image"
-        alt="img"
-        class="w-full object-cover object-center"
-      />
-      <!-- discount -->
+      <ClientOnly>
+        <Swiper
+          :slides-per-view="1"
+          :space-between="10"
+          :loop="true"
+          :autoplay="{ delay: 3000 }"
+          :pagination="{ clickable: true }"
+          :modules="[Pagination, Autoplay]"
+          class="swiper-container"
+        >
+          <Swiper-Slide
+            v-for="(image, index) in product.image"
+            :key="index"
+            class="swiper-slide bg-white border-2 rounded-t-xl border-white-400"
+          >
+            <img
+              :src="image"
+              alt="product image"
+              class="w-full object-cover object-center rounded-t-xl h-[150px] sm:h-[180px] md:h-[180px] lg:h-[180px]"
+            />
+          </Swiper-Slide>
+        </Swiper>
+      </ClientOnly>
+
+      <!-- Discount -->
       <div
         v-if="product.discountTag"
-        class="absolute top-3 left-3 border-2 border-green-200 rotate bg-green-100 text-white text-xs px-4 rounded-xl"
+        class="absolute top-3 left-3 border-2 z-10 border-green-200 rotate bg-green-100 text-white text-xs px-4 rounded-xl"
       >
         <i class="icon-sale text-white-100 text-2xl"></i>
       </div>
+
+      <!-- Favorite Button -->
+      <button
+        @click="toggleFavorite"
+        :class="{
+          'border-red-500': isFavorite,
+        }"
+        class="absolute top-3 z-10 right-3 border border-white-400/80 bg-white-400/80 text-black-500 text-xs p-2 hover:border-red-500/20 transition duration-300 w-9 h-9 rounded-md flex justify-center items-center group"
+      >
+        <i
+          :class="{
+            'text-red-500 scale': isFavorite,
+            'text-black scale': !isFavorite,
+          }"
+          class="icon-heart text-base transition-all duration-200"
+        ></i>
+      </button>
     </div>
 
-    <div class="p-4 gap-1">
-      <!-- Product name -->
-      <h3 class="text-red-500 text-xs font-normal truncate ">
+    <!-- Product Info -->
+    <div class="px-4 pb-4 gap-1">
+      <!-- Product Name -->
+      <h3 class="text-red-500 text-xs truncate sm:text-sm md:text-base">
         {{ product.name }}
       </h3>
-      <p class="text-black-500 font-normal text-sm ">
+      <p class="text-black-500 text-sm sm:text-xs md:text-sm">
         {{ product.brand }}
       </p>
 
-      <!-- price -->
+      <!-- Price -->
       <div class="flex flex-col mt-1">
         <span
-          class="text-red-500 line-through text-sm font-normal "
+          class="text-red-500 line-through font-medium text-sm sm:text-xs md:text-sm"
         >
           {{ product.oldPrice }} UZS
         </span>
-        <span class="text-black-500 font-normal text-base ">
+        <span class="text-black-500 font-bold text-base sm:text-xs md:text-sm">
           {{ product.price }} UZS
         </span>
       </div>
 
-      <!-- rating -->
-      <div class="mt-2 flex items-center">
+      <!-- Rating -->
+      <div class="mt-2 flex items-center gap-1">
         <span v-for="n in 5" :key="n" class="text-yellow-100 text-sm">
           <i v-if="n <= product.rating" class="icon-star"></i>
-          <i v-else class="icon-star"></i>
+          <i v-else class="icon-star text-gray-300"></i>
         </span>
-        <span class="ml-2 text-grey-200 text-sm">({{ product.rating }})</span>
+        <span class="ml-1 text-gray-500 text-sm">({{ product.rating }})</span>
       </div>
-
-      <!-- Counter -->
-      <div
-        v-if="isCounterVisible"
-        class="flex items-center relative justify-center mt-4 gap-1"
-      >
-        <button
-          class="px-3 py-2.5 flex items-center justify-center bg-white-100 rounded-l-lg rounded-r-sm"
-          @click="decrement"
-        >
-          <i class="icon-minus text-[20px] text-red-500"></i>
-        </button>
-
-        <span
-          class="text-lg rounded-lg px-6 py-1.5 text-black-500 bg-white-100 font-normal"
-        >
-          {{ counter }}
-        </span>
-
-        <button
-          :class="{
-            'bg-gray-400': counter === maxLimit,
-            'bg-white-100': counter < maxLimit,
-          }"
-          class="px-3 py-2.5 flex items-center justify-center rounded-r-lg rounded-l-sm"
-          @click="increment"
-        >
-          <i
-            :class="{
-              'text-gray-500': counter === maxLimit,
-              'text-green-100': counter < maxLimit,
-            }"
-            class="icon-plus text-[20px]"
-          ></i>
-        </button>
-
-        <div
-          v-if="showMaxTooltip"
-          class="absolute top-[-10px] -right-5 transform -translate-x-1/2 bg-black-700 text-white px-2 py-1 rounded-md text-xs"
-        >
-          Max
-        </div>
-      </div>
-      <div v-else class="flex justify-center mt-2">
-        <BaseButton
-          class="text-white-100"
-          @click="showCounter"
-        >
-          <i
-            class="icon-basket text-[24px] items-center flex text-white-100 duration-300 group-hover:text-white-100"
-          ></i>
-          В корзину
-        </BaseButton>
-      </div>
+      <CommonAddCounterButton />
     </div>
-  </div>
+  </article>
 </template>
+
 <script setup>
-// Props for the product data
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+
+// Props
 defineProps({
   product: {
     type: Object,
@@ -113,45 +104,12 @@ defineProps({
   },
 });
 
-// Reactive state variables
-const isCounterVisible = ref(false); // Display counter visibility
-const counter = ref(1); // Current counter value
-const maxLimit = 2; // Maximum value for the counter
-const showMaxTooltip = ref(false); // Display the "Max" tooltip
+// States
+const isFavorite = ref(false);
 
-// Show the counter
-const showCounter = () => {
-  isCounterVisible.value = true;
-};
-
-// Increment the counter value
-const increment = () => {
-  if (counter.value < maxLimit) {
-    counter.value++;
-    hideMaxTooltip(); // Hide the "Max" tooltip if it was displayed
-  } else {
-    displayMaxTooltip(); // Show the "Max" tooltip
-  }
-};
-
-// Decrement the counter value
-const decrement = () => {
-  if (counter.value > 1) {
-    counter.value--;
-  } else {
-    isCounterVisible.value = false; // Hide the counter when decreasing to 1
-  }
-};
-
-// Show the "Max" tooltip
-const displayMaxTooltip = () => {
-  showMaxTooltip.value = true;
-  setTimeout(hideMaxTooltip, 500); // Hide the tooltip after 1.5 seconds
-};
-
-// Hide the "Max" tooltip
-const hideMaxTooltip = () => {
-  showMaxTooltip.value = false;
+// Methods
+const toggleFavorite = () => {
+  isFavorite.value = !isFavorite.value;
 };
 </script>
 
@@ -159,4 +117,9 @@ const hideMaxTooltip = () => {
 .rotate {
   transform: rotate(-11deg);
 }
+
+
+
+
+
 </style>
