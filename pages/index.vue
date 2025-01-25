@@ -3,9 +3,10 @@
     <!-- <HomeHeroSection /> -->
     <HomeRecommendedSection />
     <HomeStoriesSection />
+    <CommonBrandSection/>
     <!--    <CommonProductReviewSlider />-->
   </div>
-  <Breadcrumb />
+  <!-- <Breadcrumb /> -->
 </template>
 
 <script>
