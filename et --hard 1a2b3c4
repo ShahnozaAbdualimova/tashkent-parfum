@@ -1,0 +1,112 @@
+[33me050c04[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mzohid[m[33m, [m[1;31morigin/zohid[m[33m)[m HEAD@{0}: reset: moving to HEAD
+[33me050c04[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mzohid[m[33m, [m[1;31morigin/zohid[m[33m)[m HEAD@{1}: reset: moving to HEAD
+[33me050c04[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mzohid[m[33m, [m[1;31morigin/zohid[m[33m)[m HEAD@{2}: commit (merge): footer animation added
+[33m6912585[m HEAD@{3}: commit: footer animation adedd
+[33m3c26068[m HEAD@{4}: commit: footer text hover corrected
+[33m039c578[m HEAD@{5}: commit: footer responsive text corrected
+[33m059a0d1[m HEAD@{6}: commit (merge): footer animation corrected
+[33ma343468[m HEAD@{7}: commit (merge): footer responsive animation corected
+[33mff5c0bc[m HEAD@{8}: reset: moving to HEAD
+[33mff5c0bc[m HEAD@{9}: commit (merge): ./
+[33m58d1818[m HEAD@{10}: commit: productSlider added auto play
+[33m041309a[m HEAD@{11}: commit: fix: product review component responsive
+[33m8b46209[m[33m ([m[1;32mmain[m[33m)[m HEAD@{12}: checkout: moving from main to zohid
+[33m8b46209[m[33m ([m[1;32mmain[m[33m)[m HEAD@{13}: pull origin zohid: Fast-forward
+[33m2eeebc0[m HEAD@{14}: checkout: moving from zohid to main
+[33m8b46209[m[33m ([m[1;32mmain[m[33m)[m HEAD@{15}: checkout: moving from main to zohid
+[33m2eeebc0[m HEAD@{16}: checkout: moving from zohid to main
+[33m8b46209[m[33m ([m[1;32mmain[m[33m)[m HEAD@{17}: checkout: moving from main to zohid
+[33m2eeebc0[m HEAD@{18}: checkout: moving from zohid to main
+[33m8b46209[m[33m ([m[1;32mmain[m[33m)[m HEAD@{19}: checkout: moving from main to zohid
+[33m2eeebc0[m HEAD@{20}: checkout: moving from zohid to main
+[33m8b46209[m[33m ([m[1;32mmain[m[33m)[m HEAD@{21}: commit (merge): ./
+[33md6bb592[m HEAD@{22}: commit: default vue commit
+[33m8893f6c[m HEAD@{23}: checkout: moving from main to zohid
+[33m2eeebc0[m HEAD@{24}: checkout: moving from zohid to main
+[33m8893f6c[m HEAD@{25}: reset: moving to HEAD
+[33m8893f6c[m HEAD@{26}: checkout: moving from main to zohid
+[33m2eeebc0[m HEAD@{27}: pull: Fast-forward
+[33mfb10b42[m HEAD@{28}: checkout: moving from zohid to main
+[33m8893f6c[m HEAD@{29}: commit: footer responsive font corrected and Product Slider responsive corrected
+[33m06c0d0e[m HEAD@{30}: commit: footer responsive corrected
+[33m351e043[m HEAD@{31}: commit: added navbar api
+[33m8ec6449[m HEAD@{32}: commit: footer responsive
+[33mb62190f[m HEAD@{33}: commit: footer responsive
+[33m46e3137[m HEAD@{34}: checkout: moving from main to zohid
+[33mfb10b42[m HEAD@{35}: pull: Fast-forward
+[33md67b351[m HEAD@{36}: checkout: moving from zohid to main
+[33m46e3137[m HEAD@{37}: commit (merge): a
+[33mbf47a12[m HEAD@{38}: checkout: moving from main to zohid
+[33md67b351[m HEAD@{39}: reset: moving to HEAD
+[33md67b351[m HEAD@{40}: pull: Fast-forward
+[33m38c606e[m HEAD@{41}: checkout: moving from zohid to main
+[33mbf47a12[m HEAD@{42}: reset: moving to HEAD
+[33mbf47a12[m HEAD@{43}: commit: ProductSlider adedd fonts
+[33ma32ad4c[m HEAD@{44}: commit: fonts aded
+[33me3bdd93[m HEAD@{45}: checkout: moving from main to zohid
+[33m38c606e[m HEAD@{46}: checkout: moving from main to main
+[33m38c606e[m HEAD@{47}: reset: moving to HEAD
+[33m38c606e[m HEAD@{48}: checkout: moving from zohid to main
+[33me3bdd93[m HEAD@{49}: checkout: moving from main to zohid
+[33m38c606e[m HEAD@{50}: pull origin main: Fast-forward
+[33me0f7cc3[m HEAD@{51}: checkout: moving from zohid to main
+[33me3bdd93[m HEAD@{52}: reset: moving to HEAD
+[33me3bdd93[m HEAD@{53}: checkout: moving from main to zohid
+[33me0f7cc3[m HEAD@{54}: pull: Fast-forward
+[33m0c63714[m HEAD@{55}: checkout: moving from zohid to main
+[33me3bdd93[m HEAD@{56}: checkout: moving from main to zohid
+[33m0c63714[m HEAD@{57}: pull: Fast-forward
+[33m03660e9[m HEAD@{58}: checkout: moving from zohid to main
+[33me3bdd93[m HEAD@{59}: commit: footer
+[33mcae1612[m HEAD@{60}: commit: Footer added hover
+[33ma37e37f[m HEAD@{61}: commit (merge): nimadurlar
+[33mbe45ec0[m HEAD@{62}: commit: nimadur
+[33m59fa37d[m HEAD@{63}: reset: moving to HEAD
+[33m59fa37d[m HEAD@{64}: commit (merge): nimadur
+[33m0dbd424[m HEAD@{65}: commit (merge): footer
+[33m868f116[m HEAD@{66}: reset: moving to HEAD
+[33m868f116[m HEAD@{67}: commit: footer add
+[33ma9523b2[m HEAD@{68}: checkout: moving from main to zohid
+[33m03660e9[m HEAD@{69}: pull origin main: Fast-forward
+[33m3d5513e[m HEAD@{70}: checkout: moving from zohid to main
+[33ma9523b2[m HEAD@{71}: commit (merge): footer aded icon
+[33maa709f4[m HEAD@{72}: checkout: moving from main to zohid
+[33m3d5513e[m HEAD@{73}: checkout: moving from zohid to main
+[33maa709f4[m HEAD@{74}: reset: moving to HEAD
+[33maa709f4[m HEAD@{75}: checkout: moving from main to zohid
+[33m3d5513e[m HEAD@{76}: pull origin main: Fast-forward
+[33ma914e26[m HEAD@{77}: checkout: moving from zohid to main
+[33maa709f4[m HEAD@{78}: commit: Footer adedd
+[33m68acb97[m HEAD@{79}: commit: ReviewCard Slider adedd
+[33m6ead16c[m HEAD@{80}: checkout: moving from main to zohid
+[33ma914e26[m HEAD@{81}: commit: navbar reponsive
+[33ma2f5e99[m HEAD@{82}: commit: fix: The color of the header logo has been corrected
+[33m17d52fc[m HEAD@{83}: commit: fix Paddings and margins have been corrected
+[33m1c1c1e7[m HEAD@{84}: pull origin main: Fast-forward
+[33mf284eb1[m HEAD@{85}: pull origin main: Fast-forward
+[33mea5370d[m HEAD@{86}: checkout: moving from zohid to main
+[33m6ead16c[m HEAD@{87}: commit (merge): fix: Review Slider
+[33mc195917[m HEAD@{88}: commit: fix: toolbar edited
+[33m5a9ed97[m HEAD@{89}: commit: fix: Toolbar defects have been corrected
+[33m5b1a993[m HEAD@{90}: pull origin main: Fast-forward
+[33m8e43476[m HEAD@{91}: reset: moving to HEAD
+[33m8e43476[m HEAD@{92}: reset: moving to HEAD
+[33m8e43476[m HEAD@{93}: pull origin main: Fast-forward
+[33m67554bd[m HEAD@{94}: commit: fix: SectionWrapper added
+[33m1040096[m HEAD@{95}: pull origin main: updating HEAD
+[33m1040096[m HEAD@{96}: pull origin main: updating HEAD
+[33m1040096[m HEAD@{97}: checkout: moving from zohid to zohid
+[33m1040096[m HEAD@{98}: reset: moving to HEAD
+[33m1040096[m HEAD@{99}: pull origin main: updating HEAD
+[33m1040096[m HEAD@{100}: pull origin main: updating HEAD
+[33m1040096[m HEAD@{101}: commit: fix: remove coment
+[33m169de2f[m HEAD@{102}: pull origin main: Fast-forward
+[33mc20089f[m HEAD@{103}: commit: fix: aded logoVue component
+[33mf4f7d16[m HEAD@{104}: commit (merge): Merge branch 'main' of https://github.com/ShahnozaAbdualimova/tashkent-parfum into zohid
+[33m820f32c[m HEAD@{105}: checkout: moving from main to zohid
+[33mea5370d[m HEAD@{106}: checkout: moving from zohid to main
+[33m820f32c[m HEAD@{107}: checkout: moving from main to zohid
+[33mea5370d[m HEAD@{108}: pull origin main: Fast-forward
+[33m83085d5[m HEAD@{109}: checkout: moving from zohid to main
+[33m820f32c[m HEAD@{110}: checkout: moving from main to zohid
+[33m83085d5[m HEAD@{111}: clone: from https://github.com/ShahnozaAbdualimova/tashkent-parfum.git
