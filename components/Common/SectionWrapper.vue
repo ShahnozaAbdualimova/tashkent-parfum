@@ -1,31 +1,26 @@
 <template>
-  <section>
-    <div class="container mx-auto mt-6 flex justify-between items-center">
+  <section class="mt-10 container">
+    <div class="mx-auto flex justify-between items-center">
       <!-- Title Section -->
       <div>
-        <h2
-          v-if="title"
-          class="font-bold text-gray-800 lg:text-2xl text-xs sm:text-sm md:text-xl"
-        >
+        <h2 v-if="title" class="text-2xl font-bold text-black-500">
           {{ title }}
         </h2>
         <slot name="title" v-else>
-          <h2 class="text-2xl font-normal Nova text-[#383838]">
-            Default Title
+          <h2 class="text-3xl font-normal Nova text-black-500">
+           
           </h2>
         </slot>
       </div>
       <!-- Link Section -->
       <div>
-        <slot name="link">
-          <NuxtLink
-            :to="linkHref"
-            class="text-sm text-[#9E9EA5]  hover:text-gray-800 flex items-center"
-          >
-            {{ linkText }}
-            <i class="icon-left ml-2 text-[#9E9EA5] group-hover:text-gray-800"></i>
-          </NuxtLink>
-        </slot>
+        <NuxtLink
+          to="#"
+          class="text-gray-100  text-base flex items-center hover:text-red-500 duration-300 ease-in-out"
+        >
+          Все разделы
+          <i class="icon-left ml-2"></i>
+        </NuxtLink>
       </div>
     </div>
     <!-- Content Section -->
@@ -48,7 +43,7 @@ export default {
     },
     linkHref: {
       type: String,
-      default: '#',
+      default: "#",
     },
   },
 };
