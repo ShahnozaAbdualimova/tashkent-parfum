@@ -8,13 +8,16 @@
         <div class="flex items-center gap-9">
           <CommonLogo type="dark" class="mb-4 lg:mb-0" />
           <div class="flex flex-col lg:flex-row lg:items-start lg:justify-start space-y-2 lg:space-y-0 lg:space-x-4">
-            <span class="cursor-pointer text-base flex items-start hover-parent">
-              <i class="icon-phone mr-2 text-gray-100 text-base"></i>
-              <span class="text-black-500 font-normal">+998 71 209 78 87</span>
+            <span class="cursor-pointer text-base flex items-start group transition-colors duration-200 ease-in-out">
+              <i class="icon-phone mr-2 text-gray-100 text-base group-hover:text-red-500 duration-200 ease-in-out"></i>
+              <span class="text-gray-700 font-normal group-hover:text-red-500 duration-200 ease-in-out">+998 71 209 78
+                87</span>
             </span>
-            <a href="mailto:toshkentparfum@gmail.com" class="cursor-pointer flex items-start hover-parent">
-              <i class="icon-email text-gray-100 text-base mr-2"></i>
-              <span class="text-black-500 font-normal">toshkentparfum@gmail.com</span>
+            <a href="mailto:toshkentparfum@gmail.com"
+              class="cursor-pointer flex items-start group transition-colors duration-200 ease-in-out gap-2">
+              <i class="icon-email text-gray-100 text-base group-hover:text-red-500 duration-200 ease-in-out"></i>
+              <span
+                class="text-gray-700 font-normal group-hover:text-red-500 duration-200 ease-in-out">toshkentparfum@gmail.com</span>
             </a>
           </div>
         </div>
@@ -32,7 +35,8 @@
           <h4 class="text-lg font-semibold">Покупателям</h4>
           <ul class="mt-2 space-y-2">
             <li v-for="link in customerLinks" :key="link.text">
-              <NuxtLink :to="link.href" class="text-gray-100 font-semibold">
+              <NuxtLink :to="link.href"
+                class="inline-block text-gray-100 font-semibold hover:text-red-500 duration-200 ease-in-out hover:translate-x-2">
                 {{ link.text }}
               </NuxtLink>
             </li>
@@ -44,7 +48,8 @@
           <h4 class="text-lg font-semibold">Разделы</h4>
           <ul class="mt-2 space-y-2">
             <li v-for="link in sectionLinks" :key="link.text">
-              <NuxtLink :to="link.href" class="text-gray-100 font-semibold">
+              <NuxtLink :to="link.href"
+                class="inline-block text-gray-100 font-semibold hover:text-red-500 duration-200 ease-in-out hover:translate-x-2">
                 {{ link.text }}
               </NuxtLink>
             </li>
@@ -56,15 +61,17 @@
           <h4 class="text-lg font-semibold">Пользователь</h4>
           <ul class="mt-2 space-y-2">
             <li v-for="link in userLinks" :key="link.text">
-              <NuxtLink :to="link.href" class="text-gray-100 font-semibold">
+              <NuxtLink :to="link.href"
+                class=" text-gray-100 font-semibold hover:text-red-500  duration-200 ease-in-out">
                 {{ link.text }}
               </NuxtLink>
             </li>
           </ul>
           <h4 class="mt-6 text-lg font-semibold">Наши соц. сети</h4>
           <div class="flex space-x-4 mt-2">
-            <a v-for="social in socialLinks" :key="social.icon" :href="social.href">
-              <i :class="[social.icon, 'text-xl text-gray-100']"></i>
+            <a v-for="social in socialLinks" :key="social.icon" :href="social.href"
+              class="text-gray-100 text-2xl transition-colors duration-200 ease-in-out hover:text-red-500">
+              <i :class="social.icon"></i>
             </a>
           </div>
         </div>
@@ -119,8 +126,9 @@
             <div>
               <h4 class="font-medium mb-3">Разделы</h4>
               <ul class="space-y-2 text-gray-100">
-                <li v-for="link in sectionLinks" :key="link.text">
-                  <NuxtLink :to="link.href" class="text-gray-100 font-semibold">
+                <li v-for="link in customerLinks" :key="link.text">
+                  <NuxtLink :to="link.href"
+                    class="text-gray-100 font-semibold hover:text-red-500 duration-200 ease-in-out">
                     {{ link.text }}
                   </NuxtLink>
                 </li>
@@ -132,7 +140,7 @@
               <h4 class="font-medium mb-3">Покупателям</h4>
               <ul class="space-y-2 text-gray-100">
                 <li v-for="link in customerLinks" :key="link.text">
-                  <NuxtLink :to="link.href" class="text-gray-100 font-semibold">
+                  <NuxtLink :to="link.href" class="text-gray-100 font-semibold  hover:text-red-500 block">
                     {{ link.text }}
                   </NuxtLink>
                 </li>
@@ -144,7 +152,7 @@
               <h4 class="font-medium mb-3">Пользователь</h4>
               <ul class="space-y-2 text-gray-100">
                 <li v-for="link in userLinks" :key="link.text">
-                  <NuxtLink :to="link.href" class="text-gray-100 font-semibold">
+                  <NuxtLink :to="link.href" class="text-gray-100 font-semibold  hover:text-red-500">
                     {{ link.text }}
                   </NuxtLink>
                 </li>
@@ -154,8 +162,9 @@
             <!-- Social Media -->
             <div>
               <h4 class="mb-3">Наши соц. сети</h4>
-              <div class="flex space-x-4">
-                <a v-for="social in socialLinks" :key="social.icon" :href="social.href" class="text-gray-100 text-2xl">
+              <div class="flex space-x-4 ">
+                <a v-for="social in socialLinks" :key="social.icon" :href="social.href"
+                  class="text-gray-100 text-2xl text-gray-100 text-2xl transition-colors duration-200 ease-in-out hover:text-red-500">
                   <i :class="social.icon"></i>
                 </a>
               </div>
@@ -196,42 +205,7 @@
     </div>
   </footer>
 </template>
-<style>
-ul li:hover {
-  color: #F62559;
-  text-decoration: none;
-  transform: translateX(8px);
-  transition: all 0.4s ease;
-}
 
-
-
-ul li a:hover {
-  color: #F62559;
-  transition: all 0.6s ease;
-}
-
-span:hover {
-  color: #F62559;
-  transition: all 0.4s ease;
-}
-
-i:hover {
-  color: #F62559;
-  transition: all 0.6s ease;
-}
-
-.hover-parent:hover .icon-phone,
-.hover-parent:hover .black-500 {
-  color: #F62559;
-  transition: color 0.3s ease;
-}
-
-.hover-parent:hover .icon-email {
-  color: #F62559;
-  transition: color 0.3s ease;
-}
-</style>
 <script setup>
 const customerLinks = [
   { text: 'О магазине', href: '#' },
