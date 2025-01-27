@@ -1,5 +1,5 @@
 <template>
-  <CommonCSectionWrapper title="Отзывы">
+  <CommonSectionWrapper title="Отзывы">
     <div class="h-screen">
       <Swiper
         class="h-full w-screen px-4"
@@ -56,7 +56,7 @@
         </SwiperSlide>
       </Swiper>
     </div>
-  </CommonCSectionWrapper>
+  </CommonSectionWrapper>
 </template>
 
 <script>
