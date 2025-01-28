@@ -165,7 +165,7 @@
               <h4 class="mb-3">Наши соц. сети</h4>
               <div class="flex space-x-4 ">
                 <a v-for="social in socialLinks" :key="social.icon" :href="social.href"
-                  class="text-gray-100 text-2xl text-gray-100 text-2xl transition-colors duration-200 ease-in-out hover:text-red-500">
+                  class="text-gray-100 text-2xl transition-colors duration-200 ease-in-out hover:text-red-500">
                   <i :class="social.icon"></i>
                 </a>
               </div>
