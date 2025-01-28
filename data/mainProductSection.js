@@ -41,7 +41,7 @@ export const products = [
     brand: 'Dior',
     oldPrice: '200 000',
     price: '180 000',
-    discountTag: false,
+    discountTag: true,
     rating: 4,
   },
   {
