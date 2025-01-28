@@ -19,11 +19,8 @@
   </nav>
 </template>
 <script setup>
-import { computed } from 'vue';
-import { useRoute } from 'vue-router';
 const route = useRoute();
-console.log(route.path);
-// const breadcrumbs = computed(() => {});
+
 const breadcrumbs = computed(() => {
   const path = route.path;
   if (path === '/') return [];

@@ -17,6 +17,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1184px !important;
   margin-left: auto;
