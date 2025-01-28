@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxtjs/leaflet',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
+    '@nuxt/test-utils/module',
   ],
   app: {
     head: {
@@ -21,5 +22,10 @@ export default defineNuxtConfig({
   },
   router: {
     trailingSlash: false,
+  },
+  vite: {
+    test: {
+      environment: 'happy-dom',
+    },
   },
 });
