@@ -31,12 +31,14 @@
       placeholder="Введите адрес доставки"
       :model-value="location?.address"
       v-model="searchQuery"
+      ref="searchInputRef"
     />
 
     <Transition name="dropdown">
       <ul
-        v-if="results.length"
+        v-if="showDropdown"
         class="font-proxima text-black-500 text-sm font-medium absolute top-[82px] max-h-64 overflow-y-auto mt-2 z-[20] rounded-lg flex flex-col w-full left-0 drop-show h-auto bg-white shadow-[0_4px_36px_rgba(56,56,56,0.16)]"
+        @click="showDropdown = false"
       >
         <li
           v-for="(location, index) in results"
@@ -56,6 +58,8 @@
 </template>
 
 <script setup>
+import { onClickOutside } from '@vueuse/core'
+
 const props = defineProps({
   location: {
     type: Object,
@@ -96,8 +100,20 @@ watch(
   }
 );
 
+const searchInputRef = ref(null)
+onClickOutside(searchInputRef, event => {
+  console.log('Hello', event)
+})
+
+const showDropdown = ref(false)
 const searchQuery = ref('');
 const { results, loading, error, searchLocations } = useNominatimSearch();
+
+watch(loading, (newValue) => {
+  if (!newValue && results.value.length > 0) {
+    showDropdown.value = true;
+  }
+})
 
 watch(searchQuery, (newValue) => {
   searchLocations(newValue);

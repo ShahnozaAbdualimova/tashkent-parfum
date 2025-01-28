@@ -24,7 +24,7 @@
       </div>
     </div>
     <!-- Content Section -->
-    <div class="mt-4">
+    <div class="mt-4" :class="bodyClass">
       <slot />
     </div>
   </section>
@@ -44,6 +44,10 @@ export default {
     linkHref: {
       type: String,
       default: "#",
+    },
+    bodyClass: {
+      type: String,
+      default: '',
     },
   },
 };

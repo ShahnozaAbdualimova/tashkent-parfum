@@ -72,65 +72,164 @@ import { ref } from 'vue';
 
 export default {
   components: { Swiper, SwiperSlide },
-  setup() {
-    const modules = [Pagination, Autoplay];
-
-    const testimonials = ref([
-      {
-        image: '/images/ReviewCards/image-title.svg',
-        title: 'Cборка Coco chanel',
-        description: 'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
-        reviewerImage: '/images/ReviewCards/person-img.svg',
-        reviewerName: 'Шохрух Шавкиев',
-        date: '09.01.2023',
-        time: '14:21',
-        rating: 4.5,
-      },
-      {
-        image: '/images/ReviewCards/image-title.svg',
-        title: 'Cборка Coco chanel',
-        description: 'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
-        reviewerImage: '/images/ReviewCards/person-img.svg',
-        reviewerName: 'Шохрух Шавкиев',
-        date: '09.01.2023',
-        time: '14:21',
-        rating: 4.5,
-      },
-      {
-        image: '/images/ReviewCards/image-title.svg',
-        title: 'Cборка Coco chanel',
-        description: 'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
-        reviewerImage: '/images/ReviewCards/person-img.svg',
-        reviewerName: 'Шохрух Шавкиев',
-        date: '09.01.2023',
-        time: '14:21',
-        rating: 4.5,
-      },
-      {
-        image: '/images/ReviewCards/image-title.svg',
-        title: 'Cборка Coco chanel',
-        description: 'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
-        reviewerImage: '/images/ReviewCards/person-img.svg',
-        reviewerName: 'Шохрух Шавкиев',
-        date: '09.01.2023',
-        time: '14:21',
-        rating: 4.5,
-      },
-      {
-        image: '/images/ReviewCards/image-title.svg',
-        title: 'Cборка Coco chanel',
-        description: 'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
-        reviewerImage: '/images/ReviewCards/person-img.svg',
-        reviewerName: 'Шохрух Шавкиев',
-        date: '09.01.2023',
-        time: '14:21',
-        rating: 4.5,
-      },
-    ]);
-
+  data() {
     return {
-      modules,
-      testimonials,
+      testimonials: [
+        {
+          image: '/images/ReviewCards/image-title.svg',
+          title: 'Cборка Coco chanel',
+          description:
+            'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+          reviewerImage: '/images/ReviewCards/person-img.svg',
+          reviewerName: 'Шохрух Шавкиев',
+          date: '09.01.2023',
+          time: '14:21',
+          rating: 4.5,
+        },
+        {
+          image: '/images/ReviewCards/image-title.svg',
+          title: 'Cборка Coco chanel',
+          description:
+            'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+          reviewerImage: '/images/ReviewCards/person-img.svg',
+          reviewerName: 'Шохрух Шавкиев',
+          date: '09.01.2023',
+          time: '14:21',
+          rating: 4.5,
+        },
+
+        {
+          image: '/images/ReviewCards/image-title.svg',
+          title: 'Cборка Coco chanel',
+          description:
+            'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+          reviewerImage: '/images/ReviewCards/person-img.svg',
+          reviewerName: 'Шохрух Шавкиев',
+          date: '09.01.2023',
+          time: '14:21',
+          rating: 4.5,
+        },
+
+        {
+          image: '/images/ReviewCards/image-title.svg',
+          title: 'Cборка Coco chanel',
+          description:
+            'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+          reviewerImage: '/images/ReviewCards/person-img.svg',
+          reviewerName: 'Шохрух Шавкиев',
+          date: '09.01.2023',
+          time: '14:21',
+          rating: 4.5,
+        },
+
+        {
+          image: '/images/ReviewCards/image-title.svg',
+          title: 'Cборка Coco chanel',
+          description:
+            'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+          reviewerImage: '/images/ReviewCards/person-img.svg',
+          reviewerName: 'Шохрух Шавкиев',
+          date: '09.01.2023',
+          time: '14:21',
+          rating: 4.5,
+        },
+
+        {
+          image: '/images/ReviewCards/image-title.svg',
+          title: 'Cборка Coco chanel',
+          description:
+            'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+          reviewerImage: '/images/ReviewCards/person-img.svg',
+          reviewerName: 'Шохрух Шавкиев',
+          date: '09.01.2023',
+          time: '14:21',
+          rating: 4.5,
+        },
+
+        {
+          image: '/images/ReviewCards/image-title.svg',
+          title: 'Cборка Coco chanel',
+          description:
+            'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+          reviewerImage: '/images/ReviewCards/person-img.svg',
+          reviewerName: 'Шохрух Шавкиев',
+          date: '09.01.2023',
+          time: '14:21',
+          rating: 4.5,
+        },
+
+        {
+          image: '/images/ReviewCards/image-title.svg',
+          title: 'Cборка Coco chanel',
+          description:
+            'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+          reviewerImage: '/images/ReviewCards/person-img.svg',
+          reviewerName: 'Шохрух Шавкиев',
+          date: '09.01.2023',
+          time: '14:21',
+          rating: 4.5,
+        },
+
+        {
+          image: '/images/ReviewCards/image-title.svg',
+          title: 'Cборка Coco chanel',
+          description:
+            'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+          reviewerImage: '/images/ReviewCards/person-img.svg',
+          reviewerName: 'Шохрух Шавкиев',
+          date: '09.01.2023',
+          time: '14:21',
+          rating: 4.5,
+        },
+
+        {
+          image: '/images/ReviewCards/image-title.svg',
+          title: 'Cборка Coco chanel',
+          description:
+            'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+          reviewerImage: '/images/ReviewCards/person-img.svg',
+          reviewerName: 'Шохрух Шавкиев',
+          date: '09.01.2023',
+          time: '14:21',
+          rating: 4.5,
+        },
+
+        {
+          image: '/images/ReviewCards/image-title.svg',
+          title: 'Cборка Coco chanel',
+          description:
+            'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+          reviewerImage: '/images/ReviewCards/person-img.svg',
+          reviewerName: 'Шохрух Шавкиев',
+          date: '09.01.2023',
+          time: '14:21',
+          rating: 4.5,
+        },
+
+        {
+          image: '/images/ReviewCards/image-title.svg',
+          title: 'Cборка Coco chanel',
+          description:
+            'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+          reviewerImage: '/images/ReviewCards/person-img.svg',
+          reviewerName: 'Шохрух Шавкиев',
+          date: '09.01.2023',
+          time: '14:21',
+          rating: 4.5,
+        },
+
+        {
+          image: '/images/ReviewCards/image-title.svg',
+          title: 'Cборка Coco chanel',
+          description:
+            'Нашел подбор парфюма, духи, гель, шампунь. Просто шикарный подбор, запах очень приятный.',
+          reviewerImage: '/images/ReviewCards/person-img.svg',
+          reviewerName: 'Шохрух Шавкиев',
+          date: '09.01.2023',
+          time: '14:21',
+          rating: 4.5,
+        },
+      ],
     };
   },
 };
@@ -141,7 +240,9 @@ export default {
 @import 'tailwindcss/tailwind.css';
 
 .custom-shadow:hover {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
 }
 </style>

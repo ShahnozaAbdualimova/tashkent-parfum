@@ -31,11 +31,18 @@
 
         <div v-else>
           <p class="text-gray-200 text-sm font-medium pb-2">Телефон номер</p>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
           <form class="flex items-center bg-white-400 rounded-lg pr-1.5 w-auto" @submit.prevent="showModal = !showModal">
 =======
           <div class="flex items-center bg-white-400 rounded-lg pr-1.5 w-auto">
 >>>>>>> Stashed changes
+=======
+          <form
+            class="flex items-center bg-white-400 rounded-lg pr-1.5 w-auto"
+            @submit.prevent="showModal = !showModal"
+          >
+>>>>>>> 101a5fb4cf04dd198e05c58522d9e9ac44b7688d
             <CommonPhoneInput
               class="w-full"
               placeholder="(__) ___-__-__"
@@ -51,8 +58,11 @@
               @click="addNumber"
               class="icon-cancel text-gray-200 text-2xl hover:text-red-500 duration-200 ease-in-out"
             ></button>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 
+=======
+>>>>>>> 101a5fb4cf04dd198e05c58522d9e9ac44b7688d
           </form>
 =======
           </div>
