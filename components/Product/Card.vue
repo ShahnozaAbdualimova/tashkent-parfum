@@ -6,29 +6,33 @@
     <div class="relative">
       <ClientOnly>
         <Swiper
-    :slides-per-view="1"
-    :space-between="10"
-    :loop="true"
-    :autoplay="{ delay: 4000 }"
-    :pagination="{ clickable: true }"
-    :modules="[Pagination, Autoplay]"
-    class="relative w-full"
-  >
-    <Swiper-Slide
-      v-for="(image, index) in product.image"
-      :key="index"
-      class="bg-white border-2 rounded-t-xl border-gray-400"
-    >
-      <img
-        :src="image"
-        alt="product image"
-        class="w-full object-cover object-center rounded-t-xl h-[150px] sm:h-[180px] md:h-[180px] lg:h-[180px]"
-      />
-    </Swiper-Slide>
+          :slides-per-view="1"
+          :space-between="10"
+          :loop="true"
+          :autoplay="{ delay: 4000 }"
+          :pagination="{
+            clickable: true,
+            bulletActiveClass: '!bg-black-500 w-1 h-1 !m-0 rounded-full',
+            bulletClass: 'bg-black-500/30',
+          }"
+          :modules="[Pagination, Autoplay]"
+          class="product-slider relative w-full"
+        >
+          <Swiper-Slide
+            v-for="(image, index) in product.image"
+            :key="index"
+            class="bg-white border-2 rounded-t-xl border-gray-400"
+          >
+            <img
+              :src="image"
+              alt="product image"
+              class="w-full object-cover object-center rounded-t-xl h-[150px] sm:h-[180px] md:h-[180px] lg:h-[180px]"
+            />
+          </Swiper-Slide>
 
-    <!-- Pagination -->
-    <div class="swiper-pagination !bottom-1"></div>
-  </Swiper>
+          <!-- Pagination -->
+          <div class="swiper-pagination !bottom-1"></div>
+        </Swiper>
       </ClientOnly>
 
       <!-- Discount -->
@@ -99,8 +103,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 
-
-
 // Props
 defineProps({
   product: {
@@ -124,7 +126,6 @@ const toggleFavorite = () => {
   transform: rotate(-11deg);
 }
 
-
 .swiper-pagination-bullet {
   @apply w-3 h-3 bg-gray-400 opacity-50 mx-1 transition-all;
 }
@@ -132,6 +133,4 @@ const toggleFavorite = () => {
 .swiper-pagination-bullet-active {
   @apply bg-black opacity-100 w-4 h-4;
 }
-
-
 </style>

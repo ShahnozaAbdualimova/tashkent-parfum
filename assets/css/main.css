@@ -38,3 +38,9 @@ body {
     padding-right: 10px;
   }
 }
+
+.product-slider .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+}
