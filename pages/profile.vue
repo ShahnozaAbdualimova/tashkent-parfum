@@ -6,71 +6,85 @@
     >
       Профиль
     </h1>
-    <div class="flex md:flex-row flex-col gap-6 justify-between">
-      <nav class="md:w-1/3 bg-white p-4 rounded-xl">
-        <!-- Profile Header -->
+
+    <div v-if="mounted">
+      <component
+        :is="isMobile ? 'Transition' : 'div'"
+        name="fade"
+        mode="out-in"
+      >
         <div
-          class="flex md:flex-row flex-col items-center gap-4 max-w-[225px] mx-auto sm:max-w-full"
+          :key="$route.path"
+          class="flex md:flex-row flex-col gap-6 justify-between"
         >
-          <div
-            class="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-[1.5px] border-gray-500"
+          <nav
+            v-show="isProfilePage || !isMobile"
+            class="md:w-1/3 bg-white p-4 rounded-xl"
           >
-            <img
-              src="/images/profile-user.png"
-              alt="Profile Image"
-              class="object-cover w-full h-full"
-            />
-          </div>
-          <div>
-            <h3
-              class="font-semibold text-lg text-center sm:text-left sm:text-xl text-black-500"
+            <!-- Profile Header -->
+            <div
+              class="flex md:flex-row flex-col items-center gap-4 max-w-[225px] mx-auto sm:max-w-full"
             >
-              Мухаммадамин Домлахонов
-            </h3>
+              <div
+                class="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-[1.5px] border-gray-500"
+              >
+                <img
+                  src="/images/profile-user.png"
+                  alt="Profile Image"
+                  class="object-cover w-full h-full"
+                />
+              </div>
+              <div>
+                <h3
+                  class="font-semibold text-lg text-center sm:text-left sm:text-xl text-black-500"
+                >
+                  Мухаммадамин Домлахонов
+                </h3>
+              </div>
+            </div>
+            <!-- Profile Divider -->
+            <hr class="my-5 h-px border-none bg-white-500" />
+            <!-- Profile Links -->
+            <ul class="flex flex-col gap-2">
+              <li v-for="item in navItems" :key="item.link" class="flex">
+                <NuxtLink
+                  :to="item.link"
+                  class="flex items-center w-full p-3 font-semibold border-[1.2px] border-transparent group rounded-lg gap-3 hover:bg-white-100 hover:border-red-500 transition-300"
+                  :class="
+                    item.active.includes(isActive)
+                      ? 'bg-red-500/10'
+                      : 'bg-white-500'
+                  "
+                >
+                  <span
+                    class="w-8 h-8 rounded flex items-center justify-center bg-gray-500 group-hover:bg-red-200 transition-300"
+                    :class="item.active.includes(isActive) ? 'bg-red-500' : ''"
+                  >
+                    <i
+                      :class="item.icon"
+                      class="text-2xl text-white group-hover:text-red-500 transition-300"
+                    ></i>
+                  </span>
+                  {{ item.title }}
+                </NuxtLink>
+              </li>
+            </ul>
+          </nav>
+          <div v-show="!isProfilePage || !isMobile" class="md:w-2/3">
+            <Transition name="fade" mode="out-in">
+              <div :key="$route.path">
+                <NuxtPage />
+              </div>
+            </Transition>
           </div>
         </div>
-        <!-- Profile Divider -->
-        <hr class="my-5 h-px border-none bg-white-500" />
-        <!-- Profile Links -->
-        <ul class="flex flex-col gap-2">
-          <li v-for="item in navItems" :key="item.link" class="flex">
-            <NuxtLink
-              :to="item.link"
-              class="flex items-center w-full p-3 font-semibold border-[1.2px] border-transparent group rounded-lg gap-3 hover:bg-white-100 hover:border-red-500 transition-300"
-              :class="
-                item.active.includes(isActive)
-                  ? 'bg-red-500/10'
-                  : 'bg-white-500'
-              "
-            >
-              <span
-                class="w-8 h-8 rounded flex items-center justify-center bg-gray-500 group-hover:bg-red-200 transition-300"
-                :class="item.active.includes(isActive) ? 'bg-red-500' : ''"
-              >
-                <i
-                  :class="item.icon"
-                  class="text-2xl text-white group-hover:text-red-500 transition-300"
-                ></i>
-              </span>
-              {{ item.title }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </nav>
-      <div class="md:w-2/3">
-        <Transition name="fade" mode="out-in">
-          <div :key="$route.path">
-            <NuxtPage />
-          </div>
-        </Transition>
-      </div>
+      </component>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed, reactive } from 'vue';
-import { useRoute } from 'vue-router';
+import { useMediaQuery } from '@vueuse/core';
 
 interface NavItem {
   title: string;
@@ -126,6 +140,20 @@ const navItems: NavItem[] = reactive([
     active: ['help'],
   },
 ]);
+
+const isMobile = useMediaQuery('(max-width: 576px)');
+
+console.log(isMobile.value);
+
+const isProfilePage = computed(() => route.path === '/profile');
+
+const mounted = ref(false);
+
+onMounted(() => {
+  setTimeout(() => {
+    mounted.value = true;
+  }, 1000);
+});
 </script>
 
 <style scoped>
