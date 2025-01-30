@@ -34,20 +34,19 @@
           >
         </label>
 
-        <div
-          v-for="section in sections"
-          :key="section.id"
-          class="flex items-center justify-between"
-        >
-          <label class="flex items-center flex-1">
-            <input
-              type="checkbox"
-              v-model="section.checked"
-              class="form-checkbox h-4 w-4 text-pink-500 rounded border-gray-300"
-            />
-            <span class="ml-3 text-sm font-normal text-black-500">{{
-              section.name
-            }}</span>
+        <div v-for="section in sections" :key="section.id">
+          <label class="w-full">
+            <div class="flex items-center flex-1 mb-2">
+              <input
+                type="checkbox"
+                v-model="section.checked"
+                class="form-checkbox h-4 w-4 text-pink-500 rounded border-gray-300"
+              />
+              <span class="ml-3 text-sm font-normal text-black-500">
+                {{ section.name }}
+              </span>
+            </div>
+            <div class="bg-white-400 w-full h-px"></div>
           </label>
         </div>
 

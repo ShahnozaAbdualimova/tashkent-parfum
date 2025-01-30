@@ -1,3 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    <CommonAllProductsSection />
+  </div>
 </template>
+
+<script setup lang="ts"></script>
