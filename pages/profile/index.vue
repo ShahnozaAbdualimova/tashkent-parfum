@@ -1,3 +1,11 @@
+<script setup lang="ts">
+const showModal = ref(false);
+
+const closeModal = () => {
+  showModal.value = false;
+};
+</script>
+
 <template>
   <!-- Profile Info -->
   <div class="bg-white rounded-xl p-5">
@@ -9,7 +17,7 @@
       <BaseButton
         variant="lightDanger"
         class="px-9 rounded-md gap-1 font-semibold hidden md:flex"
-        @click="console.log('click')"
+        @click="showModal = !showModal"
       >
         Выйти
         <i
@@ -54,12 +62,17 @@
     <BaseButton
       variant="lightDanger"
       class="px-9 rounded-md gap-1 font-semibold block md:hidden mt-3 w-full"
-      @click="console.log('click')"
+      @click="showModal = !showModal"
     >
       Выйти
       <i
         class="icon-logout text-xl w-5 h-5 flex items-center justify-center"
       ></i>
     </BaseButton>
+    <ModalLogOut
+      v-if="showModal"
+      :isVisible="showModal"
+      @closeModal="closeModal"
+    />
   </div>
 </template>
