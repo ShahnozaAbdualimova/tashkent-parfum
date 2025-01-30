@@ -99,7 +99,7 @@ const navItems: NavItem[] = reactive([
     title: 'Настройки',
     link: '/profile/settings',
     icon: 'icon-settings',
-    active: ['settings'],
+    active: ['settings', 'change-password', 'change-number'],
   },
   {
     title: 'Инструкции',
